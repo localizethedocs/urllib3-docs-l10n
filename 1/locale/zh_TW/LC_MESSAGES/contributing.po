@@ -75,11 +75,11 @@ msgstr ""
 
 #: ../../../contributing.rst:27
 msgid "$ python -m pip install --user --upgrade nox"
-msgstr ""
+msgstr "$ python -m pip install --user --upgrade nox"
 
 #: ../../../contributing.rst:31
 msgid "Running the tests"
-msgstr ""
+msgstr "執行測試"
 
 #: ../../../contributing.rst:33
 msgid ""
@@ -113,7 +113,7 @@ msgstr ""
 
 #: ../../../contributing.rst:53
 msgid "$ nox --reuse-existing-virtualenvs --sessions test"
-msgstr ""
+msgstr "$ nox --reuse-existing-virtualenvs --sessions test"
 
 #: ../../../contributing.rst:55
 msgid ""
@@ -288,7 +288,7 @@ msgstr ""
 
 #: ../../../contributing.rst:136
 msgid "$ nox -rs docs"
-msgstr ""
+msgstr "$ nox -rs docs"
 
 #: ../../../contributing.rst:140
 msgid "While writing documentation you should follow these guidelines:"

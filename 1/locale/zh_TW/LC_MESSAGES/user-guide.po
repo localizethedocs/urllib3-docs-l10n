@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:11
 msgid "$ python -m pip install urllib3"
-msgstr ""
+msgstr "$ python -m pip install urllib3"
 
 #: ../../../user-guide.rst:17
 msgid "Making Requests"
@@ -118,7 +118,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:78
 msgid "JSON Content"
-msgstr ""
+msgstr "JSON 內容"
 
 #: ../../../user-guide.rst:80
 msgid ""
@@ -136,7 +136,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:91
 msgid "Binary Content"
-msgstr ""
+msgstr "二進位內容"
 
 #: ../../../user-guide.rst:93
 msgid ""
@@ -182,7 +182,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:124
 msgid "Request Data"
-msgstr ""
+msgstr "請求資料"
 
 #: ../../../user-guide.rst:127
 msgid "Headers"
@@ -209,7 +209,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:144
 msgid "Query Parameters"
-msgstr ""
+msgstr "查詢參數"
 
 #: ../../../user-guide.rst:146
 msgid ""
@@ -387,7 +387,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:279
 msgid "$ python -m pip install certifi"
-msgstr ""
+msgstr "$ python -m pip install certifi"
 
 #: ../../../user-guide.rst:283
 msgid ""

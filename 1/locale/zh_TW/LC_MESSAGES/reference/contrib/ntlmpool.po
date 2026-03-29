@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../../../reference/contrib/ntlmpool.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:17

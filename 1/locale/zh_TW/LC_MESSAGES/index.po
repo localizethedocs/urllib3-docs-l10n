@@ -123,7 +123,7 @@ msgstr ""
 
 #: ../../../index.rst:80
 msgid "$ python -m pip install urllib3"
-msgstr ""
+msgstr "$ python -m pip install urllib3"
 
 #: ../../../index.rst:84
 msgid ""

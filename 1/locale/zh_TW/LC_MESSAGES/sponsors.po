@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../sponsors.rst:2
 msgid "Sponsors and Supporters"
-msgstr ""
+msgstr "贊助者與支持者"
 
 #: ../../../sponsors.rst:4
 msgid ""
