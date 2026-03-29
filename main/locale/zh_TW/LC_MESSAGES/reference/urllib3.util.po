@@ -44,7 +44,7 @@ msgstr ""
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.retry.Retry:1 urllib3.util.timeout.Timeout:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.retry.Retry:1
@@ -110,7 +110,7 @@ msgstr ""
 #: urllib3.util.ssl_.resolve_ssl_version:0 urllib3.util.wait.wait_for_read:0
 #: urllib3.util.wait.wait_for_write:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.retry.Retry:29
@@ -510,7 +510,7 @@ msgstr ""
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of ssl.SSLContext:1
 msgid "Bases: :py:class:`~_ssl._SSLContext`"
-msgstr ""
+msgstr "基底類別：:py:class:`~_ssl._SSLContext`"
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of ssl.SSLContext:1
 msgid ""
@@ -766,7 +766,7 @@ msgstr ""
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of urllib3.util.url.Url:1
 msgid "Bases: :py:class:`~urllib3.util.url.Url`"
-msgstr ""
+msgstr "基底類別：:py:class:`~urllib3.util.url.Url`"
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of urllib3.util.url.Url:1
 msgid ""

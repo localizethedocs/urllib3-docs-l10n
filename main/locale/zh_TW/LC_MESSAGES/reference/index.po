@@ -19,4 +19,4 @@ msgstr ""
 
 #: ../../../reference/index.rst:2
 msgid "API Reference"
-msgstr ""
+msgstr "API 參考"

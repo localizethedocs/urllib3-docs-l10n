@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:2
 msgid "User Guide"
-msgstr ""
+msgstr "使用者指南"
 
 #: ../../../user-guide.rst:7
 msgid "Installing"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:9
 msgid "urllib3 can be installed with `pip <https://pip.pypa.io>`_"
-msgstr ""
+msgstr "urllib3 可以透過 `pip <https://pip.pypa.io>`_ 進行安裝"
 
 #: ../../../user-guide.rst:11
 msgid "$ python -m pip install urllib3"
@@ -39,11 +39,11 @@ msgstr ""
 
 #: ../../../user-guide.rst:19
 msgid "First things first, import the urllib3 module:"
-msgstr ""
+msgstr "首先，匯入 urllib3 模組："
 
 #: ../../../user-guide.rst:21
 msgid "import urllib3"
-msgstr ""
+msgstr "import urllib3"
 
 #: ../../../user-guide.rst:25
 msgid ""
@@ -255,6 +255,21 @@ msgid ""
 "# </body>\n"
 "# </html>"
 msgstr ""
+"import io\n"
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\"GET\", \"https://example.com\", "
+"preload_content=False)\n"
+"resp.auto_close = False\n"
+"\n"
+"for line in io.TextIOWrapper(resp):\n"
+"    print(line)\n"
+"# <!doctype html>\n"
+"# <html>\n"
+"# <head>\n"
+"# ....\n"
+"# </body>\n"
+"# </html>"
 
 #: ../../../user-guide.rst:179
 msgid "Request Data"
@@ -285,6 +300,18 @@ msgid ""
 "print(resp.json()[\"headers\"])\n"
 "# {\"X-Something\": \"value\", ...}"
 msgstr ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/headers\",\n"
+"    headers={\n"
+"        \"X-Something\": \"value\"\n"
+"    }\n"
+")\n"
+"\n"
+"print(resp.json()[\"headers\"])\n"
+"# {\"X-Something\": \"value\", ...}"
 
 #: ../../../user-guide.rst:201
 msgid ""
@@ -337,6 +364,18 @@ msgid ""
 "print(resp.json())\n"
 "# {\"cookies\": {\"id\": \"30\", \"session\": \"f3efe9db\"}}"
 msgstr ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/cookies\",\n"
+"    headers={\n"
+"        \"Cookie\": \"session=f3efe9db; id=30\"\n"
+"    }\n"
+")\n"
+"\n"
+"print(resp.json())\n"
+"# {\"cookies\": {\"id\": \"30\", \"session\": \"f3efe9db\"}}"
 
 #: ../../../user-guide.rst:243
 msgid ""
@@ -361,6 +400,16 @@ msgid ""
 "print(resp.headers[\"Set-Cookie\"])\n"
 "# session=f3efe9db; Path=/"
 msgstr ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/cookies/set/session/f3efe9db\",\n"
+"    redirect=False\n"
+")\n"
+"\n"
+"print(resp.headers[\"Set-Cookie\"])\n"
+"# session=f3efe9db; Path=/"
 
 #: ../../../user-guide.rst:262
 msgid "Query Parameters"
@@ -411,7 +460,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:303
 msgid "Form Data"
-msgstr ""
+msgstr "標單資料"
 
 #: ../../../user-guide.rst:305
 msgid ""
@@ -465,7 +514,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:349
 msgid "Files & Binary Data"
-msgstr ""
+msgstr "檔案與二進位資料"
 
 #: ../../../user-guide.rst:351
 msgid ""
@@ -512,6 +561,13 @@ msgid ""
 "    }\n"
 ")"
 msgstr ""
+"resp = urllib3.request(\n"
+"    \"POST\",\n"
+"    \"https://httpbin.org/post\",\n"
+"    fields={\n"
+"        \"filefield\": (\"example.txt\", file_data, \"text/plain\"),\n"
+"    }\n"
+")"
 
 #: ../../../user-guide.rst:389
 msgid ""
@@ -553,7 +609,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:412
 msgid "Certificate Verification"
-msgstr ""
+msgstr "證書驗證"
 
 #: ../../../user-guide.rst:414
 msgid "*New in version 1.25:*"
@@ -753,6 +809,9 @@ msgid ""
 "\n"
 "urllib3.request(\"GET\", \"https://httpbin.org/ip\", retries=10)"
 msgstr ""
+"import urllib3\n"
+"\n"
+"urllib3.request(\"GET\", \"https://httpbin.org/ip\", retries=10)"
 
 #: ../../../user-guide.rst:550
 msgid "To disable all retry and redirect logic specify ``retries=False``:"
@@ -778,6 +837,23 @@ msgid ""
 "print(resp.status)\n"
 "# 302"
 msgstr ""
+"import urllib3\n"
+"\n"
+"urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://nxdomain.example.com\",\n"
+"    retries=False\n"
+")\n"
+"# NewConnectionError\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/redirect/1\",\n"
+"    retries=False\n"
+")\n"
+"\n"
+"print(resp.status)\n"
+"# 302"
 
 #: ../../../user-guide.rst:572
 msgid ""
@@ -904,6 +980,14 @@ msgid ""
 "    print(\"Connection failed.\")\n"
 "# Connection failed."
 msgstr ""
+"import urllib3\n"
+"\n"
+"try:\n"
+"    urllib3.request(\"GET\",\"https://nx.example.com\", retries=False)\n"
+"\n"
+"except urllib3.exceptions.NewConnectionError:\n"
+"    print(\"Connection failed.\")\n"
+"# 連接失敗。"
 
 #: ../../../user-guide.rst:648
 msgid "See :mod:`~urllib3.exceptions` for the full list of all exceptions."
@@ -911,7 +995,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:651
 msgid "Logging"
-msgstr ""
+msgstr "日誌紀錄"
 
 #: ../../../user-guide.rst:653
 msgid ""

@@ -43,7 +43,7 @@ msgstr ""
 #: urllib3.poolmanager.ProxyManager.connection_from_host:0
 #: urllib3.poolmanager.ProxyManager.urlopen:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../src/urllib3/poolmanager.py:docstring of
 #: urllib3.poolmanager.PoolManager:4
@@ -438,116 +438,116 @@ msgstr ""
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key__proxy:1
 msgid "Alias for field number 20"
-msgstr ""
+msgstr "欄位編號 20 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key__proxy_config:1
 msgid "Alias for field number 22"
-msgstr ""
+msgstr "欄位編號 22 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key__proxy_headers:1
 msgid "Alias for field number 21"
-msgstr ""
+msgstr "欄位編號 21 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key__socks_options:1
 msgid "Alias for field number 24"
-msgstr ""
+msgstr "欄位編號 24 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_assert_fingerprint:1
 msgid "Alias for field number 26"
-msgstr ""
+msgstr "欄位編號 26 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_assert_hostname:1
 msgid "Alias for field number 25"
-msgstr ""
+msgstr "欄位編號 25 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_block:1
 msgid "Alias for field number 5"
-msgstr ""
+msgstr "欄位編號 5 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_blocksize:1
 msgid "Alias for field number 28"
-msgstr ""
+msgstr "欄位編號 28 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_ca_cert_data:1
 msgid "Alias for field number 12"
-msgstr ""
+msgstr "欄位編號 12 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_ca_cert_dir:1
 msgid "Alias for field number 16"
-msgstr ""
+msgstr "欄位編號 16 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_ca_certs:1
 msgid "Alias for field number 11"
-msgstr ""
+msgstr "欄位編號 11 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_cert_file:1
 msgid "Alias for field number 9"
-msgstr ""
+msgstr "欄位編號 9 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_cert_reqs:1
 msgid "Alias for field number 10"
-msgstr ""
+msgstr "欄位編號 10 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_headers:1
 msgid "Alias for field number 19"
-msgstr ""
+msgstr "欄位編號 19 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_host:1
 msgid "Alias for field number 1"
-msgstr ""
+msgstr "欄位編號 1 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_key_file:1
 msgid "Alias for field number 7"
-msgstr ""
+msgstr "欄位編號 7 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_key_password:1
 msgid "Alias for field number 8"
-msgstr ""
+msgstr "欄位編號 8 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_maxsize:1
 msgid "Alias for field number 18"
-msgstr ""
+msgstr "欄位編號 18 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_port:1
 msgid "Alias for field number 2"
-msgstr ""
+msgstr "欄位編號 2 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_retries:1
 msgid "Alias for field number 4"
-msgstr ""
+msgstr "欄位編號 4 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_scheme:1
 msgid "Alias for field number 0"
-msgstr ""
+msgstr "欄位編號 0 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_server_hostname:1
 msgid "Alias for field number 27"
-msgstr ""
+msgstr "欄位編號 27 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_socket_options:1
 msgid "Alias for field number 23"
-msgstr ""
+msgstr "欄位編號 23 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_source_address:1
 msgid "Alias for field number 6"
-msgstr ""
+msgstr "欄位編號 6 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_context:1
 msgid "Alias for field number 17"
-msgstr ""
+msgstr "欄位編號 17 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_maximum_version:1
 msgid "Alias for field number 15"
-msgstr ""
+msgstr "欄位編號 15 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_minimum_version:1
 msgid "Alias for field number 14"
-msgstr ""
+msgstr "欄位編號 14 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_version:1
 msgid "Alias for field number 13"
-msgstr ""
+msgstr "欄位編號 13 的別名"
 
 #: ../../../docstring of urllib3.poolmanager.PoolKey.key_timeout:1
 msgid "Alias for field number 3"
-msgstr ""
+msgstr "欄位編號 3 的別名"

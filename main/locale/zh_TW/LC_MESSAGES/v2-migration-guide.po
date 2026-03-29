@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../v2-migration-guide.rst:2
 msgid "v2 Migration Guide"
-msgstr ""
+msgstr "v2 遷移指南"
 
 #: ../../../v2-migration-guide.rst:4
 msgid ""
@@ -29,7 +29,7 @@ msgstr ""
 
 #: ../../../v2-migration-guide.rst:7
 msgid "**🚀 Migrating from 1.x to 2.x**"
-msgstr ""
+msgstr "**🚀 從 1.x 遷移至 2.x**"
 
 #: ../../../v2-migration-guide.rst:9
 msgid ""
@@ -145,7 +145,7 @@ msgstr ""
 
 #: ../../../v2-migration-guide.rst:57
 msgid "**🤔 Common upgrading issues**"
-msgstr ""
+msgstr "**🤔 常見的升級議題**"
 
 #: ../../../v2-migration-guide.rst:60
 msgid "ssl module is compiled with OpenSSL 1.0.2.k-fips"

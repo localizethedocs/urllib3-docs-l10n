@@ -32,7 +32,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.response.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../src/urllib3/response.py:docstring of
 #: urllib3.response.BaseHTTPResponse.close:1

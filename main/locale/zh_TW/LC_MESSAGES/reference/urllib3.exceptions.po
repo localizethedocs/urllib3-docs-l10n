@@ -30,7 +30,7 @@ msgstr ""
 #: urllib3.exceptions.TimeoutError:1 urllib3.exceptions.TimeoutStateError:1
 #: urllib3.exceptions.UnrewindableBodyError:1
 msgid "Bases: :py:class:`~urllib3.exceptions.HTTPError`"
-msgstr ""
+msgstr "基底類別：:py:class:`~urllib3.exceptions.HTTPError`"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.BodyNotHttplibCompatible:1
@@ -123,7 +123,7 @@ msgstr ""
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.HTTPError:1
 msgid "Bases: :py:class:`Exception`"
-msgstr ""
+msgstr "基底類別：:py:class:`Exception`"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.HTTPError:1
@@ -133,7 +133,7 @@ msgstr ""
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.HTTPWarning:1
 msgid "Bases: :py:class:`Warning`"
-msgstr ""
+msgstr "基底類別：:py:class:`Warning`"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.HTTPWarning:1
@@ -150,7 +150,7 @@ msgstr ""
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.HostChangedError:1 urllib3.exceptions.MaxRetryError:1
 msgid "Bases: :py:class:`~urllib3.exceptions.RequestError`"
-msgstr ""
+msgstr "基底類別：:py:class:`~urllib3.exceptions.RequestError`"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.HostChangedError:1
@@ -305,7 +305,7 @@ msgstr ""
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.ProxySchemeUnsupported:1
 msgid "Bases: :py:class:`ValueError`"
-msgstr ""
+msgstr "基底類別：:py:class:`ValueError`"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.ProxySchemeUnsupported:1

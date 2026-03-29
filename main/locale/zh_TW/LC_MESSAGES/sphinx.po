@@ -1530,7 +1530,7 @@ msgstr ""
 
 #: _cli/__init__.py:203
 msgid "Logging"
-msgstr ""
+msgstr "日誌紀錄"
 
 #: _cli/__init__.py:210
 msgid "Increase verbosity (can be repeated)"
@@ -2965,7 +2965,7 @@ msgstr ""
 #: domains/c/__init__.py:326 domains/cpp/__init__.py:483
 #: domains/python/_object.py:190 ext/napoleon/docstring.py:974
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: domains/python/_object.py:206
 msgid "Variables"
@@ -4184,7 +4184,7 @@ msgstr ""
 #: ext/autodoc/__init__.py:1966
 #, python-format
 msgid "Bases: %s"
-msgstr ""
+msgstr "基底類別：%s"
 
 #: ext/autodoc/__init__.py:1985
 #, python-format
