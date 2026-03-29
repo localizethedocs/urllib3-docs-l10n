@@ -1,0 +1,605 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Andrey Petrov
+# This file is distributed under the same license as the urllib3 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: urllib3 main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../v2-migration-guide.rst:2
+msgid "v2 Migration Guide"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:4
+msgid ""
+"**urllib3 2.x is now available!** Read below for how to get started and what "
+"is contained in the new major release."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:7
+msgid "**🚀 Migrating from 1.x to 2.x**"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:9
+msgid ""
+"We're maintaining **functional API compatibility for most users** to make "
+"the migration an easy choice for almost everyone. Most changes are either to "
+"default configurations, supported Python versions, or internal "
+"implementation details. So unless you're in a specific situation you should "
+"notice no changes! 🎉"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:16
+msgid ""
+"If you have difficulty migrating to 2.x or following this guide you can "
+"`open an issue on GitHub <https://github.com/urllib3/urllib3/issues>`_ or "
+"reach out in `our community Discord channel <https://discord.gg/urllib3>`_."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:22
+msgid "What are the important changes?"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:24
+msgid ""
+"Here's a short summary of which changes in urllib3 2.x are most important:"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:26
+msgid ""
+"Python version must be **3.10 or later** (previously supported Python 2.7, "
+"and 3.5 to 3.9)."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:27
+msgid ""
+"Removed support for non-OpenSSL TLS libraries (like LibreSSL and wolfSSL)."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:28
+msgid "Removed support for OpenSSL versions older than 1.1.1."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:29
+msgid ""
+"Removed support for Python implementations that aren't CPython or PyPy3 "
+"(previously supported Google App Engine, Jython)."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:30
+msgid "Removed the ``urllib3.contrib.ntlmpool`` module."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:31
+msgid "Removed the ``urllib3.contrib.securetransport`` module."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:32
+msgid "Removed the ``urllib3[secure]`` extra."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:33
+msgid ""
+"Deprecated URLs without a scheme (ie 'https://') and will be raising an "
+"error in a future version of urllib3."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:34
+msgid ""
+"Changed the default minimum TLS version to TLS 1.2 (previously was TLS 1.0)."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:35
+msgid "Changed the default request body encoding from 'ISO-8859-1' to 'UTF-8'."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:36
+msgid ""
+"Removed support for verifying certificate hostnames via ``commonName``, now "
+"only ``subjectAltName`` is used."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:37
+msgid ""
+"Removed the default set of TLS ciphers, instead now urllib3 uses the list of "
+"ciphers configured by the system."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:39
+msgid ""
+"For a full list of changes you can look at `the changelog <https://github."
+"com/urllib3/urllib3/blob/main/CHANGES.rst>`_."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:44
+msgid "Sunsetting urllib3 1.26.x"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:46
+msgid ""
+"urllib3 1.26.x is not currently maintained. urllib3 2.x is the best version "
+"of urllib3 and is widely supported by the larger Python ecosystem. That "
+"said, urllib3 1.26.x still sees significant download numbers, mainly because "
+"the botocore package still requires urllib3 1.26.x for Python 3.9 and "
+"earlier. If your organization would benefit from the continued support of "
+"urllib3 1.26.x, please contact sethmichaellarson@gmail.com to discuss "
+"sponsorship or contribution opportunities."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:53
+msgid ""
+"However, upgrading is still recommended as **no new feature developments or "
+"fixes will be shipped to the 1.26.x release stream**."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:57
+msgid "**🤔 Common upgrading issues**"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:60
+msgid "ssl module is compiled with OpenSSL 1.0.2.k-fips"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:62
+msgid ""
+"ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' "
+"module is compiled with 'OpenSSL 1.0.2k-fips  26 Jan 2017'.\n"
+"See: https://github.com/urllib3/urllib3/issues/2168"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:67
+msgid "Remediation depends on your system:"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:69
+msgid ""
+"**AWS Lambda**: Upgrade to the Python 3.10 (or later) runtime as it uses "
+"OpenSSL 1.1.1. Alternatively, you can use a `custom Docker image <https://"
+"aws.amazon.com/blogs/aws/new-for-aws-lambda-container-image-support/>`_ and "
+"ensure you use a Python build that uses OpenSSL 1.1.1 or later."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:73
+msgid ""
+"**Amazon Linux 2**: Upgrade to `Amazon Linux 2023 <https://aws.amazon.com/"
+"linux/amazon-linux-2023/>`_. Alternatively, you can install OpenSSL 1.1.1 on "
+"Amazon Linux 2 using ``yum install openssl11 openssl11-devel`` and then "
+"install Python with a tool like pyenv."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:77
+msgid "**Red Hat Enterpritse Linux 7 (RHEL 7)**: Upgrade to RHEL 8 or later."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:78
+msgid ""
+"**Read the Docs**: Upgrade your `configuration file to use Ubuntu 22.04 "
+"<https://docs.readthedocs.io/en/stable/config-file/v2.html>`_ by using ``os: "
+"ubuntu-22.04`` in the ``build`` section. Feel free to use the `urllib3 "
+"configuration <https://github.com/urllib3/urllib3/blob/2.0.0/.readthedocs."
+"yml>`_ as an inspiration."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:84
+msgid ""
+"docker.errors.dockerexception: error while fetching server api version: "
+"request() got an unexpected keyword argument 'chunked'"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:86
+msgid "Upgrade to ``docker==6.1.0`` that is compatible with urllib3 2.0."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:89
+msgid ""
+"ImportError: cannot import name 'gaecontrib' from 'requests_toolbelt._compat'"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:91
+msgid ""
+"To be compatible with urllib3 2.0, Requests Toolbelt released version 1.0.0 "
+"without Google App Engine Standard Python 2.7 support. Most users that "
+"reported this issue were using the `Pyrebase <https://github.com/thisbejim/"
+"Pyrebase>`_ library that provides an API for the Firebase API. This library "
+"is unmaintained, but `replacements exist <https://github.com/thisbejim/"
+"Pyrebase/issues/435>`_."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:98
+msgid ""
+"``ImportError: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util."
+"ssl_'``"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:100
+msgid ""
+"This likely happens because you're using botocore which `does not support "
+"urllib3 2.0 yet <https://github.com/boto/botocore/issues/2921>`_. The good "
+"news is that botocore explicitly declares in its dependencies that it only "
+"supports ``urllib3<2``. Make sure to use a recent pip. That way, pip will "
+"install urllib3 1.26.x for versions of botocore that do not support urllib3 "
+"2.0."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:105
+msgid ""
+"If you're deploying to an AWS environment such as Lambda with the Python 3.9 "
+"runtime or a host using Amazon Linux 2, you'll need to explicitly pin to "
+"``urllib3<2`` in your project to ensure urllib3 2.0 isn't brought into your "
+"environment. Otherwise, this may result in unintended side effects with the "
+"default boto3 installation."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:111
+msgid ""
+"AttributeError: module 'urllib3.connectionpool' has no attribute "
+"'VerifiedHTTPSConnection'"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:113
+msgid ""
+"The ``VerifiedHTTPSConnection`` class has always been documented to be in "
+"the :mod:`~urllib3.connection` module. It used to be possible to import it "
+"from :mod:`~urllib3.connectionpool` but that was acccidental and is no "
+"longer possible due to a refactoring in urllib3 2.0."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:118
+msgid ""
+"Note that the new name of this class is :class:`~urllib3.connection."
+"HTTPSConnection`. It can be used starting from urllib3 1.25.9."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:122
+msgid "AttributeError: 'HTTPResponse' object has no attribute 'strict'"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:124
+msgid ""
+"The ``strict`` parameter is unneeded with Python 3 and should be removed."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:129
+msgid "Migrating as an application developer?"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:131
+msgid ""
+"If you're someone who writes Python but doesn't ship as a package (things "
+"like web services, data science, tools, and more) this section is for you."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:133
+msgid ""
+"Python environments only allow for one version of a dependency to be "
+"installed per environment which means that **all of your dependencies using "
+"urllib3 need to support 2.x for you to upgrade**."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:136
+msgid ""
+"The best way to visualize relationships between your dependencies is using "
+"`pipdeptree <https://pypi.org/project/pipdeptree>`_ and ``$ pipdeptree --"
+"reverse``:"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:138
+msgid ""
+"# From inside your Python environment:\n"
+"$ python -m pip install pipdeptree\n"
+"# We only care about packages requiring urllib3\n"
+"$ pipdeptree --reverse | grep \"requires: urllib3\"\n"
+"├── botocore==1.38.36 [requires: urllib3>=1.25.4,<1.27]\n"
+"└── requests==2.32.4 [requires: urllib3>=1.21.1,<3]"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:147
+msgid ""
+"Reading the output from above, there are two packages which depend on "
+"urllib3: ``botocore`` and ``requests``. While requests supports urllib3 2.x "
+"(with the ``<3`` specified), botocore requires urllib3 1.26.x (with the "
+"``<1.27`` version specifier). Note that botocore does support urllib3 2.x, "
+"but it only supports it on Python 3.10 and later, which mandates OpenSSL "
+"1.1.1+."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:151
+msgid ""
+"It's important to know `urllib3 does not receive security fixes at the "
+"moment <#sunsetting-urllib3-1-26-x>`."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:155
+msgid "Migrating as a package maintainer?"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:157
+msgid ""
+"If you're a maintainer of a package that uses urllib3 under the hood then "
+"this section is for you. You may have already seen an issue opened from "
+"someone on our team about the upcoming release."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:160
+msgid ""
+"The primary goal for migrating to urllib3 2.x should be to ensure your "
+"package supports **both urllib3 v1.26.x and 2.x for some time**. This is to "
+"reduce the chance that diamond dependencies are introduced into your users' "
+"dependencies which will then cause issues with them upgrading to the latest "
+"version of **your package**."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:164
+msgid ""
+"The first step to supporting urllib3 2.x is to make sure the version 2.x not "
+"being excluded by ``install_requires``. You should ensure your package "
+"allows for both urllib3 1.26.x and 2.x to be used:"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:167
+msgid ""
+"# setup.py (setuptools)\n"
+"setup(\n"
+"  ...\n"
+"  install_requires=[\"urllib3>=1.26,<3\"]\n"
+")\n"
+"\n"
+"# pyproject.toml (hatch)\n"
+"[project]\n"
+"dependencies = [\n"
+"  \"urllib3>=1.26,<3\"\n"
+"]"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:181
+msgid ""
+"Next you should try installing urllib3 v2.x locally and run your test suite."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:183
+msgid "$ python -m pip install -U 'urllib3>=2'"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:187
+msgid ""
+"Because there are new ``FutureWarnings`` you should ensure that you're able "
+"to see those warnings when running your test suite. To do so you can add the "
+"following to your test setup to ensure even ``FutureWarnings`` are output to "
+"the terminal:"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:192
+msgid ""
+"# Set PYTHONWARNING=default to show all warnings.\n"
+"$ export PYTHONWARNINGS=\"default\"\n"
+"\n"
+"# Run your test suite and look for failures.\n"
+"# Pytest automatically prints all warnings.\n"
+"$ pytest tests/"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:201
+msgid "or you can opt-in within your Python code:"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:203
+msgid ""
+"# You can change warning filters according to the filter rules:\n"
+"# https://docs.python.org/3/library/warnings.html#warning-filter\n"
+"import warnings\n"
+"warnings.filterwarnings(\"default\", category=FutureWarning)"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:210
+msgid ""
+"Any failures or deprecation warnings you receive should be fixed as urllib3 "
+"v3.0 will remove all deprecated features. Many deprecation warnings will "
+"make suggestions about what to do to avoid the deprecated feature."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:213
+msgid "Warnings will look something like this:"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:215
+msgid ""
+"FutureWarning: 'ssl_version' option is deprecated and will be removed\n"
+"in urllib3 v3.0. Instead use 'ssl_minimum_version'"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:220
+msgid ""
+"Continue removing deprecation warnings until there are no more. After this "
+"you can publish a new release of your package that supports both urllib3 "
+"1.26.x and 2.x."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:225
+msgid ""
+"If you're not able to support both 1.26.x and 2.x of urllib3 at the same "
+"time with your package please `open an issue on GitHub <https://github.com/"
+"urllib3/urllib3/issues>`_ or reach out in `our community Discord channel "
+"<https://discord.gg/urllib3>`_."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:231
+msgid "**💪 User-friendly features**"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:233
+msgid ""
+"urllib3 has always billed itself as a **user-friendly HTTP client library**. "
+"In the spirit of being even more user-friendly we've added two features "
+"which should make using urllib3 for tinkering sessions, throw-away scripts, "
+"and smaller projects a breeze!"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:239
+msgid "urllib3.request()"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:241
+msgid ""
+"Previously the highest-level API available for urllib3 was a "
+"``PoolManager``, but for many cases configuring a poolmanager is extra steps "
+"for no benefit. To make using urllib3 as simple as possible we've added a "
+"top-level function for sending requests from a global poolmanager instance:"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:246
+msgid ""
+">>> import urllib3\n"
+">>> resp = urllib3.request(\"GET\", \"https://example.com\")\n"
+">>> resp.status\n"
+"200"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:254
+msgid "JSON support for requests and responses"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:256
+msgid "JSON is everywhere – and now it's in urllib3, too!"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:258
+msgid ""
+"If you'd like to send JSON in a request body or deserialize a response body "
+"from JSON into Python objects you can now use the new ``json=`` parameter "
+"for requests and ``HTTPResponse.json()`` method on responses:"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:262
+msgid ""
+"import urllib3\n"
+"\n"
+"# Send a request with a JSON body.\n"
+"# This adds 'Content-Type: application/json' by default.\n"
+"resp = urllib3.request(\n"
+"    \"POST\", \"https://example.api.com\",\n"
+"    json={\"key\": \"value\"}\n"
+")\n"
+"\n"
+"# Receive a JSON body in the response.\n"
+"resp = urllib3.request(\"GET\", \"https://xkcd.com/2347/info.0.json\")\n"
+"\n"
+"# There's always an XKCD...\n"
+"resp.json()\n"
+"{\n"
+"  \"num\": 2347,\n"
+"  \"img\": \"https://imgs.xkcd.com/comics/dependency.png\",\n"
+"  \"title\": \"Dependency\",\n"
+"  ...\n"
+"}"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:287
+msgid "**✨ Optimized for Python 3.10+**"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:289
+msgid ""
+"urllib3 2.x specifically targets CPython 3.10+ and PyPy 7.3.17+ (compatible "
+"with CPython 3.10) and dropping support for Python versions 2.7, and 3.5 to "
+"3.9."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:292
+msgid ""
+"By dropping end-of-life Python versions we're able to optimize the codebase "
+"for Python 3.10+ by using new features to improve performance and reduce the "
+"amount of code that needs to be executed in order to support legacy versions."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:299
+msgid "**📜 Type-hinted APIs**"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:301
+msgid ""
+"You're finally able to run Mypy or other type-checkers on code using "
+"urllib3. This also means that for IDEs that support type hints you'll "
+"receive better suggestions from auto-complete. No more confusion with "
+"``**kwargs``!"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:306
+msgid ""
+"We've also added API interfaces like ``BaseHTTPResponse`` and "
+"``BaseHTTPConnection`` to ensure that when you're sub-classing an interface "
+"you're only using supported public APIs to ensure compatibility and minimize "
+"breakages down the road."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:313
+msgid ""
+"If you're one of the rare few who is subclassing connections or responses "
+"you should take a closer look at detailed changes in `the changelog <https://"
+"github.com/urllib3/urllib3/blob/main/CHANGES.rst>`_."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:319
+msgid "**🔐 Modern security by default**"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:322
+msgid "HTTPS requires TLS 1.2+"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:324
+msgid ""
+"Greater than 95% of websites support TLS 1.2 or above. At this point we're "
+"comfortable switching the default minimum TLS version to be 1.2 to ensure "
+"high security for users without breaking services."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:329
+msgid ""
+"Dropping TLS 1.0 and 1.1 by default means you won't be vulnerable to TLS "
+"downgrade attacks if a vulnerability in TLS 1.0 or 1.1 were discovered in "
+"the future. Extra security for free! By dropping TLS 1.0 and TLS 1.1 we also "
+"tighten the list of ciphers we need to support to ensure high security for "
+"data traveling over the wire."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:337
+msgid ""
+"If you still need to use TLS 1.0 or 1.1 in your application you can still "
+"upgrade to v2.x, you'll only need to set ``ssl_minimum_version`` to the "
+"proper value to continue using legacy TLS versions."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:344
+msgid "Stop verifying commonName in certificates"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:346
+msgid ""
+"Dropping support the long deprecated ``commonName`` field on certificates in "
+"favor of only verifying ``subjectAltName`` to put us in line with browsers "
+"and other HTTP client libraries and to improve security for our users."
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:353
+msgid "Certificate verification via SSLContext"
+msgstr ""
+
+#: ../../../v2-migration-guide.rst:355
+msgid ""
+"By default certificate verification is handled by urllib3 to support legacy "
+"Python versions, but now we can rely on Python's certificate verification "
+"instead! This should result in a speedup for verifying certificates and "
+"means that any improvements made to certificate verification in Python or "
+"OpenSSL will be immediately available."
+msgstr ""
