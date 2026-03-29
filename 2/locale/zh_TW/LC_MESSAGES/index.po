@@ -126,7 +126,7 @@ msgstr ""
 
 #: ../../../index.rst:81
 msgid "$ python -m pip install urllib3"
-msgstr ""
+msgstr "$ python -m pip install urllib3"
 
 #: ../../../index.rst:85
 msgid ""
@@ -140,6 +140,9 @@ msgid ""
 "$ cd urllib3\n"
 "$ pip install ."
 msgstr ""
+"$ git clone https://github.com/urllib3/urllib3.git\n"
+"$ cd urllib3\n"
+"$ pip install ."
 
 #: ../../../index.rst:94
 msgid "Usage"
