@@ -63,7 +63,7 @@ msgstr ""
 #: urllib3.exceptions.ReadTimeoutError:0 urllib3.exceptions.RequestError:0
 #: urllib3.exceptions.URLSchemeUnknown:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../reference/urllib3.exceptions.rst:0
 #: ../../../../src/urllib3/__init__.py:docstring of urllib3.disable_warnings:0

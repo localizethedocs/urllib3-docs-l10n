@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../changelog.rst:3
 msgid "Changelog"
-msgstr ""
+msgstr "變更日誌"
 
 #: ../../../../CHANGES.rst:2
 msgid "2.6.3 (2026-01-07)"

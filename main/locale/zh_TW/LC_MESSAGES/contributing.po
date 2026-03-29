@@ -81,11 +81,11 @@ msgstr ""
 
 #: ../../../contributing.rst:29
 msgid "$ python -m pip install --user --upgrade nox"
-msgstr ""
+msgstr "$ python -m pip install --user --upgrade nox"
 
 #: ../../../contributing.rst:33
 msgid "Running the tests"
-msgstr ""
+msgstr "執行測試"
 
 #: ../../../contributing.rst:35
 msgid ""
@@ -100,6 +100,9 @@ msgid ""
 "[ Nox will create virtualenv if needed, install the specified dependencies, "
 "and run the commands in order.]"
 msgstr ""
+"$ nox --reuse-existing-virtualenvs --sessions test-3.12 test-pypy3.10\n"
+"[ Nox will create virtualenv if needed, install the specified dependencies, "
+"and run the commands in order.]"
 
 #: ../../../contributing.rst:43
 msgid ""
@@ -116,6 +119,11 @@ msgid ""
 "$ which pypy3.10\n"
 "~/.pyenv/versions/pypy3.10-7.3.13/bin/pypy3.10"
 msgstr ""
+"$ which python3.12\n"
+"~/.pyenv/versions/3.12.1/bin/python3.12\n"
+"\n"
+"$ which pypy3.10\n"
+"~/.pyenv/versions/pypy3.10-7.3.13/bin/pypy3.10"
 
 #: ../../../contributing.rst:55
 msgid ""
@@ -125,7 +133,7 @@ msgstr ""
 
 #: ../../../contributing.rst:58
 msgid "$ nox --reuse-existing-virtualenvs --sessions test"
-msgstr ""
+msgstr "$ nox --reuse-existing-virtualenvs --sessions test"
 
 #: ../../../contributing.rst:60
 msgid ""
@@ -150,6 +158,18 @@ msgid ""
 "nox > Session test-3.15 was successful.\n"
 "nox > Session test-pypy was successful."
 msgstr ""
+"$ nox --reuse-existing-virtualenvs --sessions test\n"
+"[ Nox will create virtualenv if needed, install the specified dependencies, "
+"and run the commands in order.]\n"
+".......\n"
+".......\n"
+"nox > Session test-3.10 was successful.\n"
+"nox > Session test-3.11 was successful.\n"
+"nox > Session test-3.12 was successful.\n"
+"nox > Session test-3.13 was successful.\n"
+"nox > Session test-3.14 was successful.\n"
+"nox > Session test-3.15 was successful.\n"
+"nox > Session test-pypy was successful."
 
 #: ../../../contributing.rst:77
 msgid ""
@@ -305,7 +325,7 @@ msgstr ""
 
 #: ../../../contributing.rst:142
 msgid "$ python -m dummyserver.proxy"
-msgstr ""
+msgstr "$ python -m dummyserver.proxy"
 
 #: ../../../contributing.rst:146
 msgid "Run an HTTPS proxy locally:"
@@ -313,7 +333,7 @@ msgstr ""
 
 #: ../../../contributing.rst:148
 msgid "$ python -m dummyserver.https_proxy"
-msgstr ""
+msgstr "$ python -m dummyserver.https_proxy"
 
 #: ../../../contributing.rst:153
 msgid "Contributing to documentation"
@@ -325,7 +345,7 @@ msgstr ""
 
 #: ../../../contributing.rst:157
 msgid "$ nox -rs docs"
-msgstr ""
+msgstr "$ nox -rs docs"
 
 #: ../../../contributing.rst:161
 msgid "While writing documentation you should follow these guidelines:"
