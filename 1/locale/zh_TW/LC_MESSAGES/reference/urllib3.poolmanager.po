@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.poolmanager.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
 #: of urllib3.poolmanager.PoolManager:4

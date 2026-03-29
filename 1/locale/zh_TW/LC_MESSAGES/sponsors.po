@@ -25,13 +25,14 @@ msgstr "贊助者與支持者"
 msgid ""
 "Please consider sponsoring urllib3 development, especially if your company "
 "benefits from this library."
-msgstr ""
+msgstr "請考慮贊助 urllib3 的開發，特別是如果您的公司受益於此程式庫。"
 
 #: ../../../sponsors.rst:7
 msgid ""
 "Your contribution will go towards adding new features to urllib3 and making "
 "sure all functionality continues to meet our high quality standards."
 msgstr ""
+"您的貢獻將用於為 urllib3 新增功能，並確保所有功能持續符合我們的高品質標準。"
 
 #: ../../../sponsors.rst:12
 msgid "v2.0 Sponsor Perks"

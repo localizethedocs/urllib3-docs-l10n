@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:2
 msgid "Advanced Usage"
-msgstr ""
+msgstr "進階用法"
 
 #: ../../../advanced-usage.rst:8
 msgid "Customizing Pool Behavior"
@@ -92,7 +92,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:54
 msgid "Streaming and I/O"
-msgstr ""
+msgstr "串流與 I/O"
 
 #: ../../../advanced-usage.rst:56
 msgid ""
@@ -409,7 +409,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:269
 msgid "python -m pip install urllib3[socks]"
-msgstr ""
+msgstr "python -m pip install urllib3[socks]"
 
 #: ../../../advanced-usage.rst:271
 msgid ""
@@ -433,7 +433,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:287
 msgid "Custom TLS Certificates"
-msgstr ""
+msgstr "自訂 TLS 證書"
 
 #: ../../../advanced-usage.rst:289
 msgid ""
@@ -714,7 +714,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:478
 msgid "$ python -m pip install urllib3[brotli]"
-msgstr ""
+msgstr "$ python -m pip install urllib3[brotli]"
 
 #: ../../../advanced-usage.rst:482
 msgid ""

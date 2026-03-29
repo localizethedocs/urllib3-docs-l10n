@@ -99,7 +99,7 @@ msgstr ""
 #: urllib3.util.request.make_headers:0 urllib3.util.url.parse_url:0
 #: ../../../reference/urllib3.util.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:23

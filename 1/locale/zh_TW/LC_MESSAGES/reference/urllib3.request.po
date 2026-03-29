@@ -70,7 +70,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.request.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
 #: of urllib3.request.RequestMethods:23

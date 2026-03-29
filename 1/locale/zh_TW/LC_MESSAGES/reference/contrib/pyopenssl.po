@@ -73,7 +73,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
 #: of urllib3.contrib.pyopenssl:17
 msgid "$ python -m pip install pyopenssl cryptography idna"
-msgstr ""
+msgstr "$ python -m pip install pyopenssl cryptography idna"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
 #: of urllib3.contrib.pyopenssl:21
@@ -93,6 +93,11 @@ msgid ""
 "except ImportError:\n"
 "    pass"
 msgstr ""
+"try:\n"
+"    import urllib3.contrib.pyopenssl\n"
+"    urllib3.contrib.pyopenssl.inject_into_urllib3()\n"
+"except ImportError:\n"
+"    pass"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
 #: of urllib3.contrib.pyopenssl:35

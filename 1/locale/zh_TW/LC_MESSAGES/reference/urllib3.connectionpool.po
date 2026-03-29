@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.connectionpool.rst:2
 msgid "Connection Pools"
-msgstr ""
+msgstr "連接池"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool:1
@@ -28,7 +28,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.connectionpool.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool:3

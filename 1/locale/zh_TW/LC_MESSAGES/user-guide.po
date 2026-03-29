@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:2
 msgid "User Guide"
-msgstr ""
+msgstr "使用者指南"
 
 #: ../../../user-guide.rst:7
 msgid "Installing"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:9
 msgid "urllib3 can be installed with `pip <https://pip.pypa.io>`_"
-msgstr ""
+msgstr "urllib3 可以透過 `pip <https://pip.pypa.io>`_ 進行安裝"
 
 #: ../../../user-guide.rst:11
 msgid "$ python -m pip install urllib3"
@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:19
 msgid "First things first, import the urllib3 module:"
-msgstr ""
+msgstr "首先，匯入 urllib3 模組："
 
 #: ../../../user-guide.rst:21
 msgid ">>> import urllib3"
@@ -247,7 +247,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:176
 msgid "Form Data"
-msgstr ""
+msgstr "標單資料"
 
 #: ../../../user-guide.rst:178
 msgid ""
@@ -295,7 +295,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:214
 msgid "Files & Binary Data"
-msgstr ""
+msgstr "檔案與二進位資料"
 
 #: ../../../user-guide.rst:216
 msgid ""
@@ -359,7 +359,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:267
 msgid "Certificate Verification"
-msgstr ""
+msgstr "證書驗證"
 
 #: ../../../user-guide.rst:269
 msgid "*New in version 1.25:*"
@@ -723,7 +723,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:528
 msgid "Logging"
-msgstr ""
+msgstr "日誌紀錄"
 
 #: ../../../user-guide.rst:530
 msgid ""

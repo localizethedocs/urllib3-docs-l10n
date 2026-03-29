@@ -32,7 +32,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.fields.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.RequestField:3
