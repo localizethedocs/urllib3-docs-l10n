@@ -19,17 +19,17 @@ msgstr ""
 
 #: ../../../contributing.rst:2
 msgid "Contributing"
-msgstr ""
+msgstr "貢獻指南"
 
 #: ../../../contributing.rst:4
 msgid ""
 "urllib3 is a community-maintained project and we happily accept "
 "contributions."
-msgstr ""
+msgstr "urllib3 是一個由社群維護的專案，我們非常歡迎大家的貢獻。"
 
 #: ../../../contributing.rst:6
 msgid "If you wish to add a new feature or fix a bug:"
-msgstr ""
+msgstr "如果您想要新增功能或修復臭蟲："
 
 #: ../../../contributing.rst:8
 msgid ""
@@ -71,13 +71,15 @@ msgstr ""
 
 #: ../../../contributing.rst:24
 msgid "Setting up your development environment"
-msgstr ""
+msgstr "設定您的開發環境"
 
 #: ../../../contributing.rst:26
 msgid ""
 "In order to setup the development environment all that you need is `nox "
 "<https://nox.thea.codes/en/stable/index.html>`_ installed in your machine::"
 msgstr ""
+"為了設定開發環境，您只需要在機器上安裝 `nox <https://nox.thea.codes/en/"
+"stable/index.html>`_\\ ：\\ ::"
 
 #: ../../../contributing.rst:29
 msgid "$ python -m pip install --user --upgrade nox"
@@ -219,6 +221,15 @@ msgid ""
 "%24300%22%2C%22%F0%9F%92%B0+Bounty+%24400%22%2C%22%F0%9F%92%B0+Bounty+"
 "%24500%22+no%3Aassignee>`_ then you're eligible to be paid for your work."
 msgstr ""
+"urllib3 `在 Open Collective 上擁有一筆資金 <https://opencollective.com/"
+"urllib3#category-BUDGET>`_\\ ，團隊會用這筆錢來支付貢獻者的工作報酬。您也可以"
+"成為其中一員！如果你完成了一個標有\\ `「💰 Bounty $X00」標籤 <https://github."
+"com/urllib3/urllib3/issues?"
+"q=is%3Aopen+is%3Aissue+label%3A%22%F0%9F%92%B0+Bounty+"
+"%24100%22%2C%22%F0%9F%92%B0+Bounty+%24200%22%2C%22%F0%9F%92%B0+Bounty+"
+"%24300%22%2C%22%F0%9F%92%B0+Bounty+%24400%22%2C%22%F0%9F%92%B0+Bounty+"
+"%24500%22+no%3Aassignee>`_\\ 的議題中的所有任務，您就有資格獲得該項工作的報"
+"酬。"
 
 #: ../../../contributing.rst:110
 msgid ""
@@ -326,7 +337,7 @@ msgstr "$ python -m dummyserver.https_proxy"
 
 #: ../../../contributing.rst:154
 msgid "Contributing to documentation"
-msgstr ""
+msgstr "貢獻文件"
 
 #: ../../../contributing.rst:156
 msgid "You can build the docs locally using ``nox``:"

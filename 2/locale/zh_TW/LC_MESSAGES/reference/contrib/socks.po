@@ -117,7 +117,7 @@ msgstr ""
 #: urllib3.contrib.socks.SOCKSConnection:0
 #: urllib3.contrib.socks.SOCKSHTTPSConnection:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../src/urllib3/contrib/socks.py:docstring of
 #: urllib3.contrib.socks.SOCKSHTTPConnectionPool:1

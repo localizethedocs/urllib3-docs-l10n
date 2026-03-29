@@ -19,21 +19,23 @@ msgstr ""
 
 #: ../../../index.rst:4 ../../../index.rst:45
 msgid "For Enterprise"
-msgstr ""
+msgstr "企業方案"
 
 #: ../../../index.rst:4
 msgid "Community Discord"
-msgstr ""
+msgstr "Discord 社群"
 
 #: ../../../index.rst:2
 msgid "urllib3"
-msgstr ""
+msgstr "urllib3"
 
 #: ../../../index.rst:18
 msgid ""
 "urllib3 is a powerful, *user-friendly* HTTP client for Python. :ref:`Much of "
 "the Python ecosystem already uses <who-uses>` urllib3 and you should too."
 msgstr ""
+"urllib3 是一個功能強大且\\ *易於使用*\\ 的 Python HTTP 客戶端。:ref:`許多 "
+"Python 生態系統已經在使用 <who-uses>` urllib3，您也應該使用它。"
 
 #: ../../../index.rst:21
 msgid ""
@@ -43,15 +45,15 @@ msgstr ""
 
 #: ../../../index.rst:24
 msgid "Thread safety."
-msgstr ""
+msgstr "執行序安全。"
 
 #: ../../../index.rst:25
 msgid "Connection pooling."
-msgstr ""
+msgstr "連接池。"
 
 #: ../../../index.rst:26
 msgid "Client-side TLS/SSL verification."
-msgstr ""
+msgstr "客戶端 TLS/SSL 驗證。"
 
 #: ../../../index.rst:27
 msgid "File uploads with multipart encoding."
@@ -71,11 +73,11 @@ msgstr ""
 
 #: ../../../index.rst:31
 msgid "100% test coverage."
-msgstr ""
+msgstr "100% 測試覆蓋率。"
 
 #: ../../../index.rst:33
 msgid "urllib3 is powerful and easy to use:"
-msgstr ""
+msgstr "urllib3 功能強大且易於使用："
 
 #: ../../../index.rst:35
 msgid ""
@@ -86,14 +88,20 @@ msgid ""
 ">>> resp.data\n"
 "b\"User-agent: *\\nDisallow: /deny\\n\""
 msgstr ""
+">>> import urllib3\n"
+">>> resp = urllib3.request(\"GET\", \"https://httpbin.org/robots.txt\")\n"
+">>> resp.status\n"
+"200\n"
+">>> resp.data\n"
+"b\"User-agent: *\\nDisallow: /deny\\n\""
 
 #: ../../../index.rst:54
 msgid "|tideliftlogo|_"
-msgstr ""
+msgstr "|tideliftlogo|_"
 
 #: ../../../index.rst:47
 msgid "Tidelift"
-msgstr ""
+msgstr "Tidelift"
 
 #: ../../../index.rst:55
 msgid ""
@@ -122,7 +130,7 @@ msgstr ""
 
 #: ../../../index.rst:79
 msgid "urllib3 can be installed with `pip <https://pip.pypa.io>`_"
-msgstr ""
+msgstr "urllib3 可以透過 `pip <https://pip.pypa.io>`_ 進行安裝"
 
 #: ../../../index.rst:81
 msgid "$ python -m pip install urllib3"
@@ -133,6 +141,8 @@ msgid ""
 "Alternatively, you can grab the latest source code from `GitHub <https://"
 "github.com/urllib3/urllib3>`_:"
 msgstr ""
+"或者，你也可以從 `GitHub <https://github.com/urllib3/urllib3>`_ 取得最新的來"
+"源碼："
 
 #: ../../../index.rst:87
 msgid ""
@@ -146,7 +156,7 @@ msgstr ""
 
 #: ../../../index.rst:94
 msgid "Usage"
-msgstr ""
+msgstr "使用方式"
 
 #: ../../../index.rst:96
 msgid ""
@@ -158,11 +168,11 @@ msgstr ""
 #: ../../../index.rst:99
 msgid ""
 "The :doc:`reference/index` documentation provides API-level documentation."
-msgstr ""
+msgstr ":doc:`reference/index`\\ 文件提供了 API 層級的文件。"
 
 #: ../../../index.rst:104
 msgid "Who uses urllib3?"
-msgstr ""
+msgstr "誰在使用 urllib3？"
 
 #: ../../../index.rst:106
 msgid ""
@@ -174,7 +184,7 @@ msgstr ""
 
 #: ../../../index.rst:111
 msgid "License"
-msgstr ""
+msgstr "授權條款"
 
 #: ../../../index.rst:113
 msgid ""
@@ -184,7 +194,7 @@ msgstr ""
 
 #: ../../../index.rst:116
 msgid "Contributing"
-msgstr ""
+msgstr "貢獻指南"
 
 #: ../../../index.rst:118
 msgid ""

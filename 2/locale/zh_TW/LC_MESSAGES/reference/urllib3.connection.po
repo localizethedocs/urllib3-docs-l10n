@@ -83,7 +83,7 @@ msgstr ""
 #: urllib3.connection.HTTPConnection.set_tunnel:0
 #: urllib3.connection.HTTPSConnection.set_cert:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../src/urllib3/connection.py:docstring of
 #: urllib3.connection.HTTPConnection.close:1
@@ -253,17 +253,17 @@ msgstr ""
 
 #: ../../../docstring of urllib3.connection.ProxyConfig.assert_fingerprint:1
 msgid "Alias for field number 3"
-msgstr ""
+msgstr "欄位編號 3 的別名"
 
 #: ../../../docstring of urllib3.connection.ProxyConfig.assert_hostname:1
 msgid "Alias for field number 2"
-msgstr ""
+msgstr "欄位編號 2 的別名"
 
 #: ../../../docstring of urllib3.connection.ProxyConfig.ssl_context:1
 msgid "Alias for field number 0"
-msgstr ""
+msgstr "欄位編號 0 的別名"
 
 #: ../../../docstring of
 #: urllib3.connection.ProxyConfig.use_forwarding_for_https:1
 msgid "Alias for field number 1"
-msgstr ""
+msgstr "欄位編號 1 的別名"

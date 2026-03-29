@@ -32,7 +32,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.request.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:6
 msgid "HTTP request method (such as GET, POST, PUT, etc.)"

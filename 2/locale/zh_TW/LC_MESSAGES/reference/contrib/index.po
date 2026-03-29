@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../reference/contrib/index.rst:2
 msgid "Third-Party Modules"
-msgstr ""
+msgstr "第三方模組"
 
 #: ../../../reference/contrib/index.rst:4
 msgid ""

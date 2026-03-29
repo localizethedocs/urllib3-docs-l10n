@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.connectionpool.rst:2
 msgid "Connection Pools"
-msgstr ""
+msgstr "連接池"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool:1
@@ -38,7 +38,7 @@ msgstr ""
 #: urllib3.connectionpool.HTTPConnectionPool.is_same_host:0
 #: urllib3.connectionpool.connection_from_url:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool:3
@@ -324,7 +324,7 @@ msgstr ""
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.ConnectionPool:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.ConnectionPool:1
