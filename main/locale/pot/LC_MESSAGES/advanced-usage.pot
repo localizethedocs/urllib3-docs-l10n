@@ -1,0 +1,900 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Andrey Petrov
+# This file is distributed under the same license as the urllib3 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: urllib3 main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../advanced-usage.rst:2
+msgid "Advanced Usage"
+msgstr ""
+
+#: ../../../advanced-usage.rst:8
+msgid "Customizing Pool Behavior"
+msgstr ""
+
+#: ../../../advanced-usage.rst:10
+msgid ""
+"The :class:`~poolmanager.PoolManager` class automatically handles creating :"
+"class:`~connectionpool.ConnectionPool` instances for each host as needed. By "
+"default, it will keep a maximum of 10 :class:`~connectionpool."
+"ConnectionPool` instances. If you're making requests to many different hosts "
+"it might improve performance to increase this number."
+msgstr ""
+
+#: ../../../advanced-usage.rst:16
+msgid ""
+"import urllib3\n"
+"\n"
+"http = urllib3.PoolManager(num_pools=50)"
+msgstr ""
+
+#: ../../../advanced-usage.rst:22
+msgid ""
+"However, keep in mind that this does increase memory and socket consumption."
+msgstr ""
+
+#: ../../../advanced-usage.rst:24
+msgid ""
+"Similarly, the :class:`~connectionpool.ConnectionPool` class keeps a pool of "
+"individual :class:`~connection.HTTPConnection` instances. These connections "
+"are used during an individual request and returned to the pool when the "
+"request is complete. By default only one connection will be saved for re-"
+"use. If you are making many requests to the same host simultaneously it "
+"might improve performance to increase this number."
+msgstr ""
+
+#: ../../../advanced-usage.rst:31
+msgid ""
+"import urllib3\n"
+"\n"
+"http = urllib3.PoolManager(maxsize=10)\n"
+"# Alternatively\n"
+"pool = urllib3.HTTPConnectionPool(\"google.com\", maxsize=10)"
+msgstr ""
+
+#: ../../../advanced-usage.rst:39
+msgid ""
+"The behavior of the pooling for :class:`~connectionpool.ConnectionPool` is "
+"different from :class:`~poolmanager.PoolManager`. By default, if a new "
+"request is made and there is no free connection in the pool then a new "
+"connection will be created. However, this connection will not be saved if "
+"more than ``maxsize`` connections exist. This means that ``maxsize`` does "
+"not determine the maximum number of connections that can be open to a "
+"particular host, just the maximum number of connections to keep in the pool. "
+"However, if you specify ``block=True`` then there can be at most ``maxsize`` "
+"connections open to a particular host."
+msgstr ""
+
+#: ../../../advanced-usage.rst:48
+msgid ""
+"http = urllib3.PoolManager(maxsize=10, block=True)\n"
+"\n"
+"# Alternatively\n"
+"pool = urllib3.HTTPConnectionPool(\"google.com\", maxsize=10, block=True)"
+msgstr ""
+
+#: ../../../advanced-usage.rst:55
+msgid ""
+"Any new requests will block until a connection is available from the pool. "
+"This is a great way to prevent flooding a host with too many connections in "
+"multi-threaded applications."
+msgstr ""
+
+#: ../../../advanced-usage.rst:63
+msgid "Streaming and I/O"
+msgstr ""
+
+#: ../../../advanced-usage.rst:65
+msgid ""
+"When using ``preload_content=True`` (the default setting) the response body "
+"will be read immediately into memory and the HTTP connection will be "
+"released back into the pool without manual intervention."
+msgstr ""
+
+#: ../../../advanced-usage.rst:69
+msgid ""
+"However, when dealing with responses of large or unknown length, it's often "
+"better to stream the response content using ``preload_content=False``. "
+"Setting ``preload_content`` to ``False`` means that urllib3 will only read "
+"from the socket when data is requested."
+msgstr ""
+
+#: ../../../advanced-usage.rst:74
+msgid ""
+"When using ``preload_content=False``, you need to manually release the HTTP "
+"connection back to the connection pool so that it can be re-used. To ensure "
+"the HTTP connection is in a valid state before being re-used all data should "
+"be read off the wire."
+msgstr ""
+
+#: ../../../advanced-usage.rst:79
+msgid ""
+"You can call the  :meth:`~response.HTTPResponse.drain_conn` to throw away "
+"unread data still on the wire. This call isn't necessary if data has already "
+"been completely read from the response."
+msgstr ""
+
+#: ../../../advanced-usage.rst:83
+msgid ""
+"After all data is read you can call :meth:`~response.HTTPResponse."
+"release_conn` to release the connection into the pool."
+msgstr ""
+
+#: ../../../advanced-usage.rst:86
+msgid ""
+"You can call the :meth:`~response.HTTPResponse.close` to close the "
+"connection, but this call doesn’t return the connection to the pool, throws "
+"away the unread data on the wire, and leaves the connection in an undefined "
+"protocol state. This is desirable if you prefer not reading data from the "
+"socket to re-using the HTTP connection."
+msgstr ""
+
+#: ../../../advanced-usage.rst:92
+msgid ""
+":meth:`~response.HTTPResponse.stream` lets you iterate over chunks of the "
+"response content."
+msgstr ""
+
+#: ../../../advanced-usage.rst:94
+msgid ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/bytes/1024\",\n"
+"    preload_content=False\n"
+")\n"
+"\n"
+"for chunk in resp.stream(32):\n"
+"    print(chunk)\n"
+"    # b\"\\x9e\\xa97'\\x8e\\x1eT ....\n"
+"\n"
+"resp.release_conn()"
+msgstr ""
+
+#: ../../../advanced-usage.rst:110
+msgid ""
+"However, you can also treat the :class:`~response.HTTPResponse` instance as "
+"a file-like object. This allows you to do buffering:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:113
+msgid ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/bytes/1024\",\n"
+"    preload_content=False\n"
+")\n"
+"\n"
+"print(resp.read(4))\n"
+"# b\"\\x88\\x1f\\x8b\\xe5\""
+msgstr ""
+
+#: ../../../advanced-usage.rst:126
+msgid ""
+"Calls to :meth:`~response.HTTPResponse.read()` will block until more "
+"response data is available."
+msgstr ""
+
+#: ../../../advanced-usage.rst:129
+msgid ""
+"import io\n"
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/bytes/1024\",\n"
+"    preload_content=False\n"
+")\n"
+"\n"
+"reader = io.BufferedReader(resp, 8)\n"
+"print(reader.read(4))\n"
+"# b\"\\xbf\\x9c\\xd6\"\n"
+"\n"
+"resp.release_conn()"
+msgstr ""
+
+#: ../../../advanced-usage.rst:146
+msgid ""
+"You can use this file-like object to do things like decode the content "
+"using :mod:`codecs`:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:149
+msgid ""
+"import codecs\n"
+"import json\n"
+"import urllib3\n"
+"\n"
+"reader = codecs.getreader(\"utf-8\")\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/ip\",\n"
+"    preload_content=False\n"
+")\n"
+"\n"
+"print(json.load(reader(resp)))\n"
+"# {\"origin\": \"127.0.0.1\"}\n"
+"\n"
+"resp.release_conn()"
+msgstr ""
+
+#: ../../../advanced-usage.rst:171
+msgid "Proxies"
+msgstr ""
+
+#: ../../../advanced-usage.rst:173
+msgid ""
+"You can use :class:`~poolmanager.ProxyManager` to tunnel requests through an "
+"HTTP proxy:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:176
+msgid ""
+"import urllib3\n"
+"\n"
+"proxy = urllib3.ProxyManager(\"https://localhost:3128/\")\n"
+"proxy.request(\"GET\", \"https://google.com/\")"
+msgstr ""
+
+#: ../../../advanced-usage.rst:183
+msgid ""
+"The usage of :class:`~poolmanager.ProxyManager` is the same as :class:"
+"`~poolmanager.PoolManager`."
+msgstr ""
+
+#: ../../../advanced-usage.rst:186
+msgid ""
+"You can connect to a proxy using HTTP, HTTPS or SOCKS. urllib3's behavior "
+"will be different depending on the type of proxy you selected and the "
+"destination you're contacting."
+msgstr ""
+
+#: ../../../advanced-usage.rst:191
+msgid "HTTP and HTTPS Proxies"
+msgstr ""
+
+#: ../../../advanced-usage.rst:193
+msgid ""
+"Both HTTP/HTTPS proxies support HTTP and HTTPS destinations. The only "
+"difference between them is if you need to establish a TLS connection to the "
+"proxy first. You can specify which proxy you need to contact by specifying "
+"the proper proxy scheme. (i.e ``http://`` or ``https://``)"
+msgstr ""
+
+#: ../../../advanced-usage.rst:198
+msgid ""
+"urllib3's behavior will be different depending on your proxy and destination:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:200
+msgid "HTTP proxy + HTTP destination"
+msgstr ""
+
+#: ../../../advanced-usage.rst:201
+msgid ""
+"Your request will be forwarded with the `absolute URI <https://datatracker."
+"ietf.org/doc/html/rfc9112#name-absolute-form>`_."
+msgstr ""
+
+#: ../../../advanced-usage.rst:204
+msgid "HTTP proxy + HTTPS destination"
+msgstr ""
+
+#: ../../../advanced-usage.rst:205
+msgid ""
+"A TCP tunnel will be established with a `HTTP CONNECT <https://datatracker."
+"ietf.org/doc/html/rfc9110#name-connect>`_. Afterward a TLS connection will "
+"be established with the destination and your request will be sent."
+msgstr ""
+
+#: ../../../advanced-usage.rst:210
+msgid "HTTPS proxy + HTTP destination"
+msgstr ""
+
+#: ../../../advanced-usage.rst:211
+msgid ""
+"A TLS connection will be established to the proxy and later your request "
+"will be forwarded with the `absolute URI <https://datatracker.ietf.org/doc/"
+"html/rfc9112#name-absolute-form>`_."
+msgstr ""
+
+#: ../../../advanced-usage.rst:215
+msgid "HTTPS proxy + HTTPS destination"
+msgstr ""
+
+#: ../../../advanced-usage.rst:216
+msgid ""
+"A TLS-in-TLS tunnel will be established.  An initial TLS connection will be "
+"established to the proxy, then an `HTTP CONNECT <https://datatracker.ietf."
+"org/doc/html/rfc9110#name-connect>`_ will be sent to establish a TCP "
+"connection to the destination and finally a second TLS connection will be "
+"established to the destination. You can customize the :class:`ssl."
+"SSLContext` used for the proxy TLS connection through the "
+"``proxy_ssl_context`` argument of the :class:`~poolmanager.ProxyManager` "
+"class."
+msgstr ""
+
+#: ../../../advanced-usage.rst:225
+msgid ""
+"For HTTPS proxies we also support forwarding your requests to HTTPS "
+"destinations with an `absolute URI <https://datatracker.ietf.org/doc/html/"
+"rfc9112#name-absolute-form>`_ if the ``use_forwarding_for_https`` argument "
+"is set to ``True``. We strongly recommend you **only use this option with "
+"trusted or corporate proxies** as the proxy will have full visibility of "
+"your requests."
+msgstr ""
+
+#: ../../../advanced-usage.rst:234
+msgid "Your proxy appears to only use HTTP and not HTTPS"
+msgstr ""
+
+#: ../../../advanced-usage.rst:236
+msgid ""
+"If you're receiving the :class:`~urllib3.exceptions.ProxyError` and it "
+"mentions your proxy only speaks HTTP and not HTTPS here's what to do to "
+"solve your issue:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:239
+msgid ""
+"If you're using ``urllib3`` directly, make sure the URL you're passing into :"
+"class:`urllib3.ProxyManager` starts with ``http://`` instead of ``https://``:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:242
+msgid ""
+"# Do this:\n"
+"http = urllib3.ProxyManager(\"http://...\")\n"
+"\n"
+"# Not this:\n"
+"http = urllib3.ProxyManager(\"https://...\")"
+msgstr ""
+
+#: ../../../advanced-usage.rst:250
+msgid ""
+"If instead you're using ``urllib3`` through another library like Requests "
+"there are multiple ways your proxy could be mis-configured. You need to "
+"figure out where the configuration isn't correct and make the fix there. "
+"Some common places to look are environment variables like ``HTTP_PROXY``, "
+"``HTTPS_PROXY``, and ``ALL_PROXY``."
+msgstr ""
+
+#: ../../../advanced-usage.rst:255
+msgid ""
+"Ensure that the values for all of these environment variables starts with "
+"``http://`` and not ``https://``:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:258
+msgid ""
+"# Check your existing environment variables in bash\n"
+"$ env | grep \"_PROXY\"\n"
+"HTTP_PROXY=http://127.0.0.1:8888\n"
+"HTTPS_PROXY=https://127.0.0.1:8888  # <--- This setting is the problem!\n"
+"\n"
+"# Make the fix in your current session and test your script\n"
+"$ export HTTPS_PROXY=\"http://127.0.0.1:8888\"\n"
+"$ python test-proxy.py  # This should now pass.\n"
+"\n"
+"# Persist your change in your shell 'profile' (~/.bashrc, ~/.profile, ~/."
+"bash_profile, etc)\n"
+"# You may need to logout and log back in to ensure this works across all "
+"programs.\n"
+"$ vim ~/.bashrc"
+msgstr ""
+
+#: ../../../advanced-usage.rst:273
+msgid ""
+"If you're on Windows or macOS your proxy may be getting set at a system "
+"level. To check this first ensure that the above environment variables "
+"aren't set then run the following:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:277
+msgid "$ python -c 'import urllib.request; print(urllib.request.getproxies())'"
+msgstr ""
+
+#: ../../../advanced-usage.rst:281
+msgid "If the output of the above command isn't empty and looks like this:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:283
+msgid ""
+"{\n"
+"  \"http\": \"http://127.0.0.1:8888\",\n"
+"  \"https\": \"https://127.0.0.1:8888\"  # <--- This setting is the "
+"problem!\n"
+"}"
+msgstr ""
+
+#: ../../../advanced-usage.rst:290
+msgid ""
+"Search how to configure proxies on your operating system and change the "
+"``https://...`` URL into ``http://``. After you make the change the return "
+"value of ``urllib.request.getproxies()`` should be:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:293
+msgid ""
+"{  # Everything is good here! :)\n"
+"  \"http\": \"http://127.0.0.1:8888\",\n"
+"  \"https\": \"http://127.0.0.1:8888\"\n"
+"}"
+msgstr ""
+
+#: ../../../advanced-usage.rst:300
+msgid ""
+"If you still can't figure out how to configure your proxy after all these "
+"steps please `join our community Discord <https://discord.gg/urllib3>`_ and "
+"we'll try to help you with your issue."
+msgstr ""
+
+#: ../../../advanced-usage.rst:304
+msgid "SOCKS Proxies"
+msgstr ""
+
+#: ../../../advanced-usage.rst:307
+msgid ""
+"For SOCKS, you can use :class:`~contrib.socks.SOCKSProxyManager` to connect "
+"to SOCKS4 or SOCKS5 proxies. In order to use SOCKS proxies you will need to "
+"install `PySocks <https://pypi.org/project/PySocks/>`_ or install urllib3 "
+"with the ``socks`` extra:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:312
+msgid "python -m pip install urllib3[socks]"
+msgstr ""
+
+#: ../../../advanced-usage.rst:316
+msgid ""
+"Once PySocks is installed, you can use :class:`~contrib.socks."
+"SOCKSProxyManager`:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:319
+msgid ""
+"from urllib3.contrib.socks import SOCKSProxyManager\n"
+"\n"
+"proxy = SOCKSProxyManager(\"socks5h://localhost:8889/\")\n"
+"proxy.request(\"GET\", \"https://google.com/\")"
+msgstr ""
+
+#: ../../../advanced-usage.rst:327
+msgid ""
+"It is recommended to use ``socks5h://`` or ``socks4a://`` schemes in your "
+"``proxy_url`` to ensure that DNS resolution is done from the remote server "
+"instead of client-side when connecting to a domain name."
+msgstr ""
+
+#: ../../../advanced-usage.rst:335
+msgid "Custom TLS Certificates"
+msgstr ""
+
+#: ../../../advanced-usage.rst:337
+msgid ""
+"Instead of using `certifi <https://certifi.io/>`_ you can provide your own "
+"certificate authority bundle. This is useful for cases where you've "
+"generated your own certificates or when you're using a private certificate "
+"authority. Just provide the full path to the certificate bundle when "
+"creating a :class:`~poolmanager.PoolManager`:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:343
+msgid ""
+"import urllib3\n"
+"\n"
+"http = urllib3.PoolManager(\n"
+"    cert_reqs=\"CERT_REQUIRED\",\n"
+"    ca_certs=\"/path/to/your/certificate_bundle\"\n"
+")\n"
+"resp = http.request(\"GET\", \"https://example.com\")"
+msgstr ""
+
+#: ../../../advanced-usage.rst:353
+msgid ""
+"When you specify your own certificate bundle only requests that can be "
+"verified with that bundle will succeed. It's recommended to use a separate :"
+"class:`~poolmanager.PoolManager` to make requests to URLs that do not need "
+"the custom certificate."
+msgstr ""
+
+#: ../../../advanced-usage.rst:361
+msgid "Custom SNI Hostname"
+msgstr ""
+
+#: ../../../advanced-usage.rst:363
+msgid ""
+"If you want to create a connection to a host over HTTPS which uses SNI, "
+"there are two places where the hostname is expected. It must be included in "
+"the Host header sent, so that the server will know which host is being "
+"requested. The hostname should also match the certificate served by the "
+"server, which is checked by urllib3."
+msgstr ""
+
+#: ../../../advanced-usage.rst:369
+msgid ""
+"Normally, urllib3 takes care of setting and checking these values for you "
+"when you connect to a host by name. However, it's sometimes useful to set a "
+"connection's expected Host header and certificate hostname (subject), "
+"especially when you are connecting without using name resolution. For "
+"example, you could connect to a server by IP using HTTPS like so:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:375
+msgid ""
+"import urllib3\n"
+"\n"
+"pool = urllib3.HTTPSConnectionPool(\n"
+"    \"104.154.89.105\",\n"
+"    server_hostname=\"badssl.com\"\n"
+")\n"
+"pool.request(\n"
+"    \"GET\",\n"
+"    \"/\",\n"
+"    headers={\"Host\": \"badssl.com\"},\n"
+"    assert_same_host=False\n"
+")"
+msgstr ""
+
+#: ../../../advanced-usage.rst:391
+msgid ""
+"Note that when you use a connection in this way, you must specify "
+"``assert_same_host=False``."
+msgstr ""
+
+#: ../../../advanced-usage.rst:394
+msgid ""
+"This is useful when DNS resolution for ``example.org`` does not match the "
+"address that you would like to use. The IP may be for a private interface, "
+"or you may want to use a specific host under round-robin DNS."
+msgstr ""
+
+#: ../../../advanced-usage.rst:402
+msgid "Verifying TLS against a different host"
+msgstr ""
+
+#: ../../../advanced-usage.rst:404
+msgid ""
+"If the server you're connecting to presents a different certificate than the "
+"hostname or the SNI hostname, you can use ``assert_hostname``:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:407
+msgid ""
+"import urllib3\n"
+"\n"
+"pool = urllib3.HTTPSConnectionPool(\n"
+"    \"wrong.host.badssl.com\",\n"
+"    assert_hostname=\"badssl.com\",\n"
+")\n"
+"pool.request(\"GET\", \"/\")"
+msgstr ""
+
+#: ../../../advanced-usage.rst:421
+msgid "Client Certificates"
+msgstr ""
+
+#: ../../../advanced-usage.rst:423
+msgid ""
+"You can also specify a client certificate. This is useful when both the "
+"server and the client need to verify each other's identity. Typically these "
+"certificates are issued from the same authority. To use a client "
+"certificate, provide the full path when creating a :class:`~poolmanager."
+"PoolManager`:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:428
+msgid ""
+"http = urllib3.PoolManager(\n"
+"    cert_file=\"/path/to/your/client_cert.pem\",\n"
+"    cert_reqs=\"CERT_REQUIRED\",\n"
+"    ca_certs=\"/path/to/your/certificate_bundle\"\n"
+")"
+msgstr ""
+
+#: ../../../advanced-usage.rst:436
+msgid ""
+"If you have an encrypted client certificate private key you can use the "
+"``key_password`` parameter to specify a password to decrypt the key."
+msgstr ""
+
+#: ../../../advanced-usage.rst:439
+msgid ""
+"http = urllib3.PoolManager(\n"
+"    cert_file=\"/path/to/your/client_cert.pem\",\n"
+"    cert_reqs=\"CERT_REQUIRED\",\n"
+"    key_file=\"/path/to/your/client.key\",\n"
+"    key_password=\"keyfile_password\"\n"
+")"
+msgstr ""
+
+#: ../../../advanced-usage.rst:448
+msgid ""
+"If your key isn't encrypted the ``key_password`` parameter isn't required."
+msgstr ""
+
+#: ../../../advanced-usage.rst:451
+msgid "TLS minimum and maximum versions"
+msgstr ""
+
+#: ../../../advanced-usage.rst:453
+msgid ""
+"When the configured TLS versions by urllib3 aren't compatible with the TLS "
+"versions that the server is willing to use you'll likely see an error like "
+"this one:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:456
+msgid ""
+"SSLError(1, '[SSL: UNSUPPORTED_PROTOCOL] unsupported protocol (_ssl.c:1124)')"
+msgstr ""
+
+#: ../../../advanced-usage.rst:460
+msgid ""
+"Starting in v2.0 by default urllib3 uses TLS 1.2 and later so servers that "
+"only support TLS 1.1 or earlier will not work by default with urllib3."
+msgstr ""
+
+#: ../../../advanced-usage.rst:463
+msgid ""
+"To fix the issue you'll need to use the ``ssl_minimum_version`` option along "
+"with the `TLSVersion enum`_ in the standard library ``ssl`` module to "
+"configure urllib3 to accept a wider range of TLS versions."
+msgstr ""
+
+#: ../../../advanced-usage.rst:466
+msgid ""
+"For the best security it's a good idea to set this value to the version of "
+"TLS that's being used by the server. For example if the server requires TLS "
+"1.0 you'd configure urllib3 like so:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:469
+msgid ""
+"import ssl\n"
+"import urllib3\n"
+"\n"
+"http = urllib3.PoolManager(\n"
+"    ssl_minimum_version=ssl.TLSVersion.TLSv1\n"
+")\n"
+"# This request works!\n"
+"resp = http.request(\"GET\", \"https://tls-v1-0.badssl.com:1010\")"
+msgstr ""
+
+#: ../../../advanced-usage.rst:486
+msgid "Certificate Validation and macOS"
+msgstr ""
+
+#: ../../../advanced-usage.rst:488
+msgid ""
+"Apple-provided Python and OpenSSL libraries contain a patches that make them "
+"automatically check the system keychain's certificates. This can be "
+"surprising if you specify custom certificates and see requests unexpectedly "
+"succeed. For example, if you are specifying your own certificate for "
+"validation and the server presents a different certificate you would expect "
+"the connection to fail. However, if that server presents a certificate that "
+"is in the system keychain then the connection will succeed."
+msgstr ""
+
+#: ../../../advanced-usage.rst:496
+msgid ""
+"`This article <https://hynek.me/articles/apple-openssl-verification-"
+"surprises/>`_ has more in-depth analysis and explanation."
+msgstr ""
+
+#: ../../../advanced-usage.rst:502
+msgid "TLS Warnings"
+msgstr ""
+
+#: ../../../advanced-usage.rst:504
+msgid ""
+"urllib3 will issue several different warnings based on the level of "
+"certificate verification support. These warnings indicate particular "
+"situations and can be resolved in different ways."
+msgstr ""
+
+#: ../../../advanced-usage.rst:508
+msgid ":class:`~exceptions.InsecureRequestWarning`"
+msgstr ""
+
+#: ../../../advanced-usage.rst:509
+msgid ""
+"This happens when a request is made to an HTTPS URL without certificate "
+"verification enabled. Follow the :ref:`certificate verification <ssl>` guide "
+"to resolve this warning."
+msgstr ""
+
+#: ../../../advanced-usage.rst:515
+msgid ""
+"Making unverified HTTPS requests is **strongly** discouraged, however, if "
+"you understand the risks and wish to disable these warnings, you can use :"
+"func:`~urllib3.disable_warnings`:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:518
+msgid ""
+"import urllib3\n"
+"\n"
+"urllib3.disable_warnings()"
+msgstr ""
+
+#: ../../../advanced-usage.rst:524
+msgid ""
+"Alternatively you can capture the warnings with the standard :mod:`logging` "
+"module:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:526
+msgid "logging.captureWarnings(True)"
+msgstr ""
+
+#: ../../../advanced-usage.rst:530
+msgid ""
+"Finally, you can suppress the warnings at the interpreter level by setting "
+"the ``PYTHONWARNINGS`` environment variable or by using the `-W flag "
+"<https://docs.python.org/3/using/cmdline.html#cmdoption-w>`_."
+msgstr ""
+
+#: ../../../advanced-usage.rst:535
+msgid "Brotli Encoding"
+msgstr ""
+
+#: ../../../advanced-usage.rst:537
+msgid ""
+"Brotli is a compression algorithm created by Google with better compression "
+"than gzip and deflate and is supported by urllib3 if the `Brotli <https://"
+"pypi.org/Brotli>`_ package or `brotlicffi <https://github.com/python-hyper/"
+"brotlicffi>`_ package is installed. You may also request the package be "
+"installed via the ``urllib3[brotli]`` extra:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:543
+msgid "$ python -m pip install urllib3[brotli]"
+msgstr ""
+
+#: ../../../advanced-usage.rst:547
+msgid ""
+"Here's an example using brotli encoding via the ``Accept-Encoding`` header:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:549
+msgid ""
+"import urllib3\n"
+"\n"
+"urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://www.google.com/\",\n"
+"    headers={\"Accept-Encoding\": \"br\"}\n"
+")"
+msgstr ""
+
+#: ../../../advanced-usage.rst:560
+msgid "Zstandard Encoding"
+msgstr ""
+
+#: ../../../advanced-usage.rst:562
+msgid ""
+"`Zstandard <https://datatracker.ietf.org/doc/html/rfc8878>`_ is a "
+"compression algorithm created by Facebook with better compression than "
+"brotli, gzip and deflate (see `benchmarks <https://facebook.github.io/zstd/"
+"#benchmarks>`_) and is supported by urllib3 in Python 3.14+ using the "
+"`compression.zstd <https://peps.python.org/pep-0784/>`_ standard library "
+"module and for Python 3.13 and earlier if the `backports.zstd package "
+"<https://pypi.org/project/backports.zstd/>`_ is installed. You may also "
+"request the package be installed via the ``urllib3[zstd]`` extra:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:569
+msgid ""
+"# This is only necessary on Python 3.13 and earlier.\n"
+"# Otherwise zstandard support is included in the Python standard library.\n"
+"$ python -m pip install urllib3[zstd]"
+msgstr ""
+
+#: ../../../advanced-usage.rst:577
+msgid ""
+"Zstandard support in urllib3 requires using v0.18.0 or later of the "
+"``zstandard`` package. If the version installed is less than v0.18.0 then "
+"Zstandard support won't be enabled."
+msgstr ""
+
+#: ../../../advanced-usage.rst:580
+msgid ""
+"Here's an example using zstd encoding via the ``Accept-Encoding`` header:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:582
+msgid ""
+"import urllib3\n"
+"\n"
+"urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://www.facebook.com/\",\n"
+"    headers={\"Accept-Encoding\": \"zstd\"}\n"
+")"
+msgstr ""
+
+#: ../../../advanced-usage.rst:594
+msgid "Decrypting Captured TLS Sessions with Wireshark"
+msgstr ""
+
+#: ../../../advanced-usage.rst:595
+msgid ""
+"Python supports logging of TLS pre-master secrets. With these secrets tools "
+"like `Wireshark <https://wireshark.org>`_ can decrypt captured network "
+"traffic."
+msgstr ""
+
+#: ../../../advanced-usage.rst:599
+msgid "To enable this simply define environment variable `SSLKEYLOGFILE`:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:601
+msgid "export SSLKEYLOGFILE=/path/to/keylogfile.txt"
+msgstr ""
+
+#: ../../../advanced-usage.rst:605
+msgid ""
+"Then configure the key logfile in `Wireshark <https://wireshark.org>`_, see "
+"`Wireshark TLS Decryption <https://wiki.wireshark.org/TLS#TLS_Decryption>`_ "
+"for instructions."
+msgstr ""
+
+#: ../../../advanced-usage.rst:609
+msgid "Custom SSL Contexts"
+msgstr ""
+
+#: ../../../advanced-usage.rst:611
+msgid ""
+"You can exercise fine-grained control over the urllib3 SSL configuration by "
+"providing a :class:`ssl.SSLContext <python:ssl.SSLContext>` object. For "
+"purposes of compatibility, we recommend you obtain one from :func:`~urllib3."
+"util.create_urllib3_context`."
+msgstr ""
+
+#: ../../../advanced-usage.rst:616
+msgid ""
+"Once you have a context object, you can mutate it to achieve whatever effect "
+"you'd like. For example, the code below loads the default SSL certificates, "
+"sets the :data:`ssl.OP_ENABLE_MIDDLEBOX_COMPAT<python:ssl."
+"OP_ENABLE_MIDDLEBOX_COMPAT>` flag that isn't set by default, and then makes "
+"a HTTPS request:"
+msgstr ""
+
+#: ../../../advanced-usage.rst:621
+msgid ""
+"import ssl\n"
+"\n"
+"from urllib3 import PoolManager\n"
+"from urllib3.util import create_urllib3_context\n"
+"\n"
+"ctx = create_urllib3_context()\n"
+"ctx.load_default_certs()\n"
+"ctx.options |= ssl.OP_ENABLE_MIDDLEBOX_COMPAT\n"
+"\n"
+"with PoolManager(ssl_context=ctx) as pool:\n"
+"    pool.request(\"GET\", \"https://www.google.com/\")"
+msgstr ""
+
+#: ../../../advanced-usage.rst:635
+msgid ""
+"Note that this is different from passing an ``options`` argument to :func:"
+"`~urllib3.util.create_urllib3_context` because we don't overwrite the "
+"default options: we only add a new one."
+msgstr ""
