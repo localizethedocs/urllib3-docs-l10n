@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Andrey Petrov
+# This file is distributed under the same license as the urllib3 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: urllib3 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/urllib3.request.rst:2
+msgid "urllib3.request()"
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:1
+msgid ""
+"A convenience, top-level request method. It uses a module-global "
+"``PoolManager`` instance. Therefore, its side effects could be shared across "
+"dependencies relying on it. To avoid side effects create a new "
+"``PoolManager`` instance and use it instead. The method does not accept low-"
+"level ``**urlopen_kw`` keyword arguments."
+msgstr ""
+
+#: ../../../reference/urllib3.request.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:6
+msgid "HTTP request method (such as GET, POST, PUT, etc.)"
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:9
+msgid "The URL to perform the request on."
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:12
+msgid ""
+"Data to send in the request body, either :class:`str`, :class:`bytes`, an "
+"iterable of :class:`str`/:class:`bytes`, or a file-like object."
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:16
+msgid "Data to encode and send in the request body."
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:19
+msgid ""
+"Dictionary of custom headers to send, such as User-Agent, If-None-Match, etc."
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:23
+msgid "If True, the response's body will be preloaded into memory."
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:26
+msgid ""
+"If True, will attempt to decode the body based on the 'content-encoding' "
+"header."
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:30
+msgid ""
+"If True, automatically handle redirects (status codes 301, 302, 303, 307, "
+"308). Each redirect counts as a retry. Disabling retries will disable "
+"redirect, too."
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:35
+msgid ""
+"Configure the number of retries to allow before raising a :class:`~urllib3."
+"exceptions.MaxRetryError` exception.  If ``None`` (default) will retry 3 "
+"times, see ``Retry.DEFAULT``. Pass a :class:`~urllib3.util.retry.Retry` "
+"object for fine-grained control over different types of retries. Pass an "
+"integer number to retry connection errors that many times, but no other "
+"types of errors. Pass zero to never retry.  If ``False``, then retries are "
+"disabled and any exception is raised immediately. Also, instead of raising a "
+"MaxRetryError on redirects, the redirect response will be returned."
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:36
+msgid ""
+"Configure the number of retries to allow before raising a :class:`~urllib3."
+"exceptions.MaxRetryError` exception."
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:39
+msgid ""
+"If ``None`` (default) will retry 3 times, see ``Retry.DEFAULT``. Pass a :"
+"class:`~urllib3.util.retry.Retry` object for fine-grained control over "
+"different types of retries. Pass an integer number to retry connection "
+"errors that many times, but no other types of errors. Pass zero to never "
+"retry."
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:45
+msgid ""
+"If ``False``, then retries are disabled and any exception is raised "
+"immediately. Also, instead of raising a MaxRetryError on redirects, the "
+"redirect response will be returned."
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:51
+msgid ""
+"If specified, overrides the default timeout for this one request. It may be "
+"a float (in seconds) or an instance of :class:`urllib3.util.Timeout`."
+msgstr ""
+
+#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:56
+msgid ""
+"Data to encode and send as JSON with UTF-encoded in the request body. The "
+"``\"Content-Type\"`` header will be set to ``\"application/json\"`` unless "
+"specified otherwise."
+msgstr ""
+
+#: ../../../reference/urllib3.request.rst:0
+msgid "Return type"
+msgstr ""

@@ -1,0 +1,860 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Andrey Petrov
+# This file is distributed under the same license as the urllib3 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: urllib3 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user-guide.rst:2
+msgid "User Guide"
+msgstr ""
+
+#: ../../../user-guide.rst:7
+msgid "Installing"
+msgstr ""
+
+#: ../../../user-guide.rst:9
+msgid "urllib3 can be installed with `pip <https://pip.pypa.io>`_"
+msgstr ""
+
+#: ../../../user-guide.rst:11
+msgid "$ python -m pip install urllib3"
+msgstr ""
+
+#: ../../../user-guide.rst:17
+msgid "Making Requests"
+msgstr ""
+
+#: ../../../user-guide.rst:19
+msgid "First things first, import the urllib3 module:"
+msgstr ""
+
+#: ../../../user-guide.rst:21
+msgid "import urllib3"
+msgstr ""
+
+#: ../../../user-guide.rst:25
+msgid ""
+"You'll need a :class:`~poolmanager.PoolManager` instance to make requests. "
+"This object handles all of the details of connection pooling and thread "
+"safety so that you don't have to:"
+msgstr ""
+
+#: ../../../user-guide.rst:29
+msgid "http = urllib3.PoolManager()"
+msgstr ""
+
+#: ../../../user-guide.rst:33
+msgid "To make a request use :meth:`~urllib3.PoolManager.request`:"
+msgstr ""
+
+#: ../../../user-guide.rst:35
+msgid ""
+"import urllib3\n"
+"\n"
+"# Creating a PoolManager instance for sending requests.\n"
+"http = urllib3.PoolManager()\n"
+"\n"
+"# Sending a GET request and getting back response as HTTPResponse object.\n"
+"resp = http.request(\"GET\", \"https://httpbin.org/robots.txt\")\n"
+"\n"
+"# Print the returned data.\n"
+"print(resp.data)\n"
+"# b\"User-agent: *\\nDisallow: /deny\\n\""
+msgstr ""
+
+#: ../../../user-guide.rst:49
+msgid ""
+"``request()`` returns a :class:`~response.HTTPResponse` object, the :ref:"
+"`response_content` section explains how to handle various responses."
+msgstr ""
+
+#: ../../../user-guide.rst:52
+msgid ""
+"You can use :meth:`~urllib3.PoolManager.request` to make requests using any "
+"HTTP verb:"
+msgstr ""
+
+#: ../../../user-guide.rst:55
+msgid ""
+"import urllib3\n"
+"\n"
+"http = urllib3.PoolManager()\n"
+"resp = http.request(\n"
+"    \"POST\",\n"
+"    \"https://httpbin.org/post\",\n"
+"    fields={\"hello\": \"world\"} #  Add custom form fields\n"
+")\n"
+"\n"
+"print(resp.data)\n"
+"# b\"{\\n \"form\": {\\n \"hello\": \"world\"\\n  }, ... }"
+msgstr ""
+
+#: ../../../user-guide.rst:69
+msgid ""
+"The :ref:`request_data` section covers sending other kinds of requests data, "
+"including JSON, files, and binary data."
+msgstr ""
+
+#: ../../../user-guide.rst:72
+msgid ""
+"For quick scripts and experiments you can also use a top-level ``urllib3."
+"request()``. It uses a module-global ``PoolManager`` instance. Because of "
+"that, its side effects could be shared across dependencies relying on it. To "
+"avoid side effects, create a new ``PoolManager`` instance and use it "
+"instead. In addition, the method does not accept the low-level "
+"``**urlopen_kw`` keyword arguments. System CA certificates are loaded on "
+"default."
+msgstr ""
+
+#: ../../../user-guide.rst:82
+msgid "Response Content"
+msgstr ""
+
+#: ../../../user-guide.rst:84
+msgid ""
+"The :class:`~response.HTTPResponse` object provides :attr:`~response."
+"HTTPResponse.status`, :attr:`~response.HTTPResponse.data`, and :attr:"
+"`~response.HTTPResponse.headers` attributes:"
+msgstr ""
+
+#: ../../../user-guide.rst:88
+msgid ""
+"import urllib3\n"
+"\n"
+"# Making the request (The request function returns HTTPResponse object)\n"
+"resp = urllib3.request(\"GET\", \"https://httpbin.org/ip\")\n"
+"\n"
+"print(resp.status)\n"
+"# 200\n"
+"print(resp.data)\n"
+"# b\"{\\n  \"origin\": \"104.232.115.37\"\\n}\\n\"\n"
+"print(resp.headers)\n"
+"# HTTPHeaderDict({\"Content-Length\": \"32\", ...})"
+msgstr ""
+
+#: ../../../user-guide.rst:105
+msgid "JSON Content"
+msgstr ""
+
+#: ../../../user-guide.rst:106
+msgid ""
+"JSON content can be loaded by :meth:`~response.HTTPResponse.json` method of "
+"the response:"
+msgstr ""
+
+#: ../../../user-guide.rst:109
+msgid ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\"GET\", \"https://httpbin.org/ip\")\n"
+"\n"
+"print(resp.json())\n"
+"# {\"origin\": \"127.0.0.1\"}"
+msgstr ""
+
+#: ../../../user-guide.rst:118
+msgid ""
+"Alternatively, Custom JSON libraries such as `orjson` can be used to encode "
+"data, retrieve data by decoding and deserializing the :attr:`~response."
+"HTTPResponse.data` attribute of the request:"
+msgstr ""
+
+#: ../../../user-guide.rst:122
+msgid ""
+"import orjson\n"
+"import urllib3\n"
+"\n"
+"encoded_data = orjson.dumps({\"attribute\": \"value\"})\n"
+"resp = urllib3.request(method=\"POST\", url=\"http://httpbin.org/post\", "
+"body=encoded_data)\n"
+"\n"
+"print(orjson.loads(resp.data)[\"json\"])\n"
+"# {'attribute': 'value'}"
+msgstr ""
+
+#: ../../../user-guide.rst:134
+msgid "Binary Content"
+msgstr ""
+
+#: ../../../user-guide.rst:136
+msgid ""
+"The :attr:`~response.HTTPResponse.data` attribute of the response is always "
+"set to a byte string representing the response content:"
+msgstr ""
+
+#: ../../../user-guide.rst:139
+msgid ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\"GET\", \"https://httpbin.org/bytes/8\")\n"
+"\n"
+"print(resp.data)\n"
+"# b\"\\xaa\\xa5H?\\x95\\xe9\\x9b\\x11\""
+msgstr ""
+
+#: ../../../user-guide.rst:148
+msgid ""
+"For responses of large or unknown length, it's sometimes better to :ref:"
+"`stream <stream>` the response."
+msgstr ""
+
+#: ../../../user-guide.rst:152
+msgid "Using io Wrappers with Response Content"
+msgstr ""
+
+#: ../../../user-guide.rst:154
+msgid ""
+"Sometimes you want to use :class:`io.TextIOWrapper` or similar objects like "
+"a CSV reader directly with :class:`~response.HTTPResponse` data. Making "
+"these two interfaces play nice together requires using the :attr:`~response."
+"HTTPResponse.auto_close` attribute by setting it to ``False``. By default "
+"HTTP responses are closed after reading all bytes, this disables that "
+"behavior:"
+msgstr ""
+
+#: ../../../user-guide.rst:159
+msgid ""
+"import io\n"
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\"GET\", \"https://example.com\", "
+"preload_content=False)\n"
+"resp.auto_close = False\n"
+"\n"
+"for line in io.TextIOWrapper(resp):\n"
+"    print(line)\n"
+"# <!doctype html>\n"
+"# <html>\n"
+"# <head>\n"
+"# ....\n"
+"# </body>\n"
+"# </html>"
+msgstr ""
+
+#: ../../../user-guide.rst:179
+msgid "Request Data"
+msgstr ""
+
+#: ../../../user-guide.rst:182
+msgid "Headers"
+msgstr ""
+
+#: ../../../user-guide.rst:184
+msgid ""
+"You can specify headers as a dictionary in the ``headers`` argument in :meth:"
+"`~urllib3.PoolManager.request`:"
+msgstr ""
+
+#: ../../../user-guide.rst:186
+msgid ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/headers\",\n"
+"    headers={\n"
+"        \"X-Something\": \"value\"\n"
+"    }\n"
+")\n"
+"\n"
+"print(resp.json()[\"headers\"])\n"
+"# {\"X-Something\": \"value\", ...}"
+msgstr ""
+
+#: ../../../user-guide.rst:201
+msgid ""
+"Or you can use the ``HTTPHeaderDict`` class to create multi-valued HTTP "
+"headers:"
+msgstr ""
+
+#: ../../../user-guide.rst:203
+msgid ""
+"import urllib3\n"
+"\n"
+"# Create an HTTPHeaderDict and add headers\n"
+"headers = urllib3.HTTPHeaderDict()\n"
+"headers.add(\"Accept\", \"application/json\")\n"
+"headers.add(\"Accept\", \"text/plain\")\n"
+"\n"
+"# Make the request using the headers\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/headers\",\n"
+"    headers=headers\n"
+")\n"
+"\n"
+"print(resp.json()[\"headers\"])\n"
+"# {\"Accept\": \"application/json, text/plain\", ...}"
+msgstr ""
+
+#: ../../../user-guide.rst:223
+msgid "Cookies"
+msgstr ""
+
+#: ../../../user-guide.rst:225
+msgid ""
+"Cookies are specified using the ``Cookie`` header with a string containing "
+"the ``;`` delimited key-value pairs:"
+msgstr ""
+
+#: ../../../user-guide.rst:228
+msgid ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/cookies\",\n"
+"    headers={\n"
+"        \"Cookie\": \"session=f3efe9db; id=30\"\n"
+"    }\n"
+")\n"
+"\n"
+"print(resp.json())\n"
+"# {\"cookies\": {\"id\": \"30\", \"session\": \"f3efe9db\"}}"
+msgstr ""
+
+#: ../../../user-guide.rst:243
+msgid ""
+"Note that the ``Cookie`` header will be stripped if the server redirects to "
+"a different host."
+msgstr ""
+
+#: ../../../user-guide.rst:246
+msgid "Cookies provided by the server are stored in the ``Set-Cookie`` header:"
+msgstr ""
+
+#: ../../../user-guide.rst:248
+msgid ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/cookies/set/session/f3efe9db\",\n"
+"    redirect=False\n"
+")\n"
+"\n"
+"print(resp.headers[\"Set-Cookie\"])\n"
+"# session=f3efe9db; Path=/"
+msgstr ""
+
+#: ../../../user-guide.rst:262
+msgid "Query Parameters"
+msgstr ""
+
+#: ../../../user-guide.rst:264
+msgid ""
+"For ``GET``, ``HEAD``, and ``DELETE`` requests, you can simply pass the "
+"arguments as a dictionary in the ``fields`` argument to :meth:`~urllib3."
+"PoolManager.request`:"
+msgstr ""
+
+#: ../../../user-guide.rst:268
+msgid ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/get\",\n"
+"    fields={\"arg\": \"value\"}\n"
+")\n"
+"\n"
+"print(resp.json()[\"args\"])\n"
+"# {\"arg\": \"value\"}"
+msgstr ""
+
+#: ../../../user-guide.rst:281
+msgid ""
+"For ``POST`` and ``PUT`` requests, you need to manually encode query "
+"parameters in the URL:"
+msgstr ""
+
+#: ../../../user-guide.rst:284
+msgid ""
+"from urllib.parse import urlencode\n"
+"import urllib3\n"
+"\n"
+"# Encode the args into url grammar.\n"
+"encoded_args = urlencode({\"arg\": \"value\"})\n"
+"\n"
+"# Create a URL with args encoded.\n"
+"url = \"https://httpbin.org/post?\" + encoded_args\n"
+"resp = urllib3.request(\"POST\", url)\n"
+"\n"
+"print(resp.json()[\"args\"])\n"
+"# {\"arg\": \"value\"}"
+msgstr ""
+
+#: ../../../user-guide.rst:303
+msgid "Form Data"
+msgstr ""
+
+#: ../../../user-guide.rst:305
+msgid ""
+"For ``PUT`` and ``POST`` requests, urllib3 will automatically form-encode "
+"the dictionary in the ``fields`` argument provided to :meth:`~urllib3."
+"PoolManager.request`:"
+msgstr ""
+
+#: ../../../user-guide.rst:309
+msgid ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"POST\",\n"
+"    \"https://httpbin.org/post\",\n"
+"    fields={\"field\": \"value\"}\n"
+")\n"
+"\n"
+"print(resp.json()[\"form\"])\n"
+"# {\"field\": \"value\"}"
+msgstr ""
+
+#: ../../../user-guide.rst:325
+msgid "JSON"
+msgstr ""
+
+#: ../../../user-guide.rst:327
+msgid ""
+"To send JSON in the body of a request, provide the data in the ``json`` "
+"argument to :meth:`~urllib3.PoolManager.request` and  urllib3 will "
+"automatically encode the data using the ``json`` module with ``UTF-8`` "
+"encoding. In addition, when ``json`` is provided, the ``\"Content-Type\"`` "
+"in headers is set to ``\"application/json\"`` if not specified otherwise."
+msgstr ""
+
+#: ../../../user-guide.rst:333
+msgid ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"POST\",\n"
+"    \"https://httpbin.org/post\",\n"
+"    json={\"attribute\": \"value\"},\n"
+"    headers={\"Content-Type\": \"application/json\"}\n"
+")\n"
+"\n"
+"print(resp.json())\n"
+"# {'headers': {'Content-Type': 'application/json', ...},\n"
+"#  'data': '{\"attribute\":\"value\"}', 'json': {'attribute': 'value'}, ...}"
+msgstr ""
+
+#: ../../../user-guide.rst:349
+msgid "Files & Binary Data"
+msgstr ""
+
+#: ../../../user-guide.rst:351
+msgid ""
+"For uploading files using ``multipart/form-data`` encoding you can use the "
+"same approach as :ref:`form_data` and specify the file field as a tuple of "
+"``(file_name, file_data)``:"
+msgstr ""
+
+#: ../../../user-guide.rst:355
+msgid ""
+"import urllib3\n"
+"\n"
+"# Reading the text file from local storage.\n"
+"with open(\"example.txt\") as fp:\n"
+"    file_data = fp.read()\n"
+"\n"
+"# Sending the request.\n"
+"resp = urllib3.request(\n"
+"    \"POST\",\n"
+"    \"https://httpbin.org/post\",\n"
+"    fields={\n"
+"       \"filefield\": (\"example.txt\", file_data),\n"
+"    }\n"
+")\n"
+"\n"
+"print(resp.json()[\"files\"])\n"
+"# {\"filefield\": \"...\"}"
+msgstr ""
+
+#: ../../../user-guide.rst:375
+msgid ""
+"While specifying the filename is not strictly required, it's recommended in "
+"order to match browser behavior. You can also pass a third item in the tuple "
+"to specify the file's MIME type explicitly:"
+msgstr ""
+
+#: ../../../user-guide.rst:379
+msgid ""
+"resp = urllib3.request(\n"
+"    \"POST\",\n"
+"    \"https://httpbin.org/post\",\n"
+"    fields={\n"
+"        \"filefield\": (\"example.txt\", file_data, \"text/plain\"),\n"
+"    }\n"
+")"
+msgstr ""
+
+#: ../../../user-guide.rst:389
+msgid ""
+"For sending raw binary data simply specify the ``body`` argument. It's also "
+"recommended to set the ``Content-Type`` header:"
+msgstr ""
+
+#: ../../../user-guide.rst:392
+msgid ""
+"import urllib3\n"
+"\n"
+"with open(\"/home/samad/example.jpg\", \"rb\") as fp:\n"
+"    binary_data = fp.read()\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"POST\",\n"
+"    \"https://httpbin.org/post\",\n"
+"    body=binary_data,\n"
+"    headers={\"Content-Type\": \"image/jpeg\"}\n"
+")\n"
+"\n"
+"print(resp.json()[\"data\"])\n"
+"# data:application/octet-stream;base64,..."
+msgstr ""
+
+#: ../../../user-guide.rst:412
+msgid "Certificate Verification"
+msgstr ""
+
+#: ../../../user-guide.rst:414
+msgid "*New in version 1.25:*"
+msgstr ""
+
+#: ../../../user-guide.rst:416
+msgid ""
+"HTTPS connections are now verified by default (``cert_reqs = "
+"\"CERT_REQUIRED\"``)."
+msgstr ""
+
+#: ../../../user-guide.rst:418
+msgid ""
+"While you can disable certification verification by setting ``cert_reqs = "
+"\"CERT_NONE\"``, it is highly recommend to leave it on."
+msgstr ""
+
+#: ../../../user-guide.rst:420
+msgid ""
+"Unless otherwise specified urllib3 will try to load the default system "
+"certificate stores. The most reliable cross-platform method is to use the "
+"`certifi <https://certifi.io/>`_ package which provides Mozilla's root "
+"certificate bundle:"
+msgstr ""
+
+#: ../../../user-guide.rst:424
+msgid "$ python -m pip install certifi"
+msgstr ""
+
+#: ../../../user-guide.rst:428
+msgid ""
+"Once you have certificates, you can create a :class:`~poolmanager."
+"PoolManager` that verifies certificates when making requests:"
+msgstr ""
+
+#: ../../../user-guide.rst:431
+msgid ""
+"import certifi\n"
+"import urllib3\n"
+"\n"
+"http = urllib3.PoolManager(\n"
+"    cert_reqs=\"CERT_REQUIRED\",\n"
+"    ca_certs=certifi.where()\n"
+")"
+msgstr ""
+
+#: ../../../user-guide.rst:441
+msgid ""
+"The :class:`~poolmanager.PoolManager` will automatically handle certificate "
+"verification and will raise :class:`~exceptions.SSLError` if verification "
+"fails:"
+msgstr ""
+
+#: ../../../user-guide.rst:444
+msgid ""
+"import certifi\n"
+"import urllib3\n"
+"\n"
+"http = urllib3.PoolManager(\n"
+"    cert_reqs=\"CERT_REQUIRED\",\n"
+"    ca_certs=certifi.where()\n"
+")\n"
+"\n"
+"http.request(\"GET\", \"https://httpbin.org/\")\n"
+"# (No exception)\n"
+"\n"
+"http.request(\"GET\", \"https://expired.badssl.com\")\n"
+"# urllib3.exceptions.SSLError ..."
+msgstr ""
+
+#: ../../../user-guide.rst:460
+msgid ""
+"You can use OS-provided certificates if desired. Just specify the full path "
+"to the certificate bundle as the ``ca_certs`` argument instead of ``certifi."
+"where()``. For example, most Linux systems store the certificates at ``/etc/"
+"ssl/certs/ca-certificates.crt``. Other operating systems can be `difficult "
+"<https://stackoverflow.com/questions/10095676/openssl-reasonable-default-for-"
+"trusted-ca-certificates>`_."
+msgstr ""
+
+#: ../../../user-guide.rst:467
+msgid "Using Timeouts"
+msgstr ""
+
+#: ../../../user-guide.rst:469
+msgid ""
+"Timeouts allow you to control how long (in seconds) requests are allowed to "
+"run before being aborted. In simple cases, you can specify a timeout as a "
+"``float`` to :meth:`~urllib3.PoolManager.request`:"
+msgstr ""
+
+#: ../../../user-guide.rst:473
+msgid ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/delay/3\",\n"
+"    timeout=4.0\n"
+")\n"
+"\n"
+"print(type(resp))\n"
+"# <class \"urllib3.response.HTTPResponse\">\n"
+"\n"
+"# This request will take more time to process than timeout.\n"
+"urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/delay/3\",\n"
+"    timeout=2.5\n"
+")\n"
+"# MaxRetryError caused by ReadTimeoutError"
+msgstr ""
+
+#: ../../../user-guide.rst:494
+msgid ""
+"For more granular control you can use a :class:`~util.timeout.Timeout` "
+"instance which lets you specify separate connect and read timeouts:"
+msgstr ""
+
+#: ../../../user-guide.rst:497
+msgid ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/delay/3\",\n"
+"    timeout=urllib3.Timeout(connect=1.0)\n"
+")\n"
+"\n"
+"print(type(resp))\n"
+"# <urllib3.response.HTTPResponse>\n"
+"\n"
+"urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/delay/3\",\n"
+"    timeout=urllib3.Timeout(connect=1.0, read=2.0)\n"
+")\n"
+"# MaxRetryError caused by ReadTimeoutError"
+msgstr ""
+
+#: ../../../user-guide.rst:518
+msgid ""
+"If you want all requests to be subject to the same timeout, you can specify "
+"the timeout at the :class:`~urllib3.poolmanager.PoolManager` level:"
+msgstr ""
+
+#: ../../../user-guide.rst:521
+msgid ""
+"import urllib3\n"
+"\n"
+"http = urllib3.PoolManager(timeout=3.0)\n"
+"\n"
+"http = urllib3.PoolManager(\n"
+"    timeout=urllib3.Timeout(connect=1.0, read=2.0)\n"
+")"
+msgstr ""
+
+#: ../../../user-guide.rst:531
+msgid ""
+"You still override this pool-level timeout by specifying ``timeout`` to :"
+"meth:`~urllib3.PoolManager.request`."
+msgstr ""
+
+#: ../../../user-guide.rst:535
+msgid "Retrying Requests"
+msgstr ""
+
+#: ../../../user-guide.rst:537
+msgid ""
+"urllib3 can automatically retry idempotent requests. This same mechanism "
+"also handles redirects. You can control the retries using the ``retries`` "
+"parameter to :meth:`~urllib3.PoolManager.request`. By default, urllib3 will "
+"retry requests 3 times and follow up to 3 redirects."
+msgstr ""
+
+#: ../../../user-guide.rst:542
+msgid "To change the number of retries just specify an integer:"
+msgstr ""
+
+#: ../../../user-guide.rst:544
+msgid ""
+"import urllib3\n"
+"\n"
+"urllib3.request(\"GET\", \"https://httpbin.org/ip\", retries=10)"
+msgstr ""
+
+#: ../../../user-guide.rst:550
+msgid "To disable all retry and redirect logic specify ``retries=False``:"
+msgstr ""
+
+#: ../../../user-guide.rst:552
+msgid ""
+"import urllib3\n"
+"\n"
+"urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://nxdomain.example.com\",\n"
+"    retries=False\n"
+")\n"
+"# NewConnectionError\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/redirect/1\",\n"
+"    retries=False\n"
+")\n"
+"\n"
+"print(resp.status)\n"
+"# 302"
+msgstr ""
+
+#: ../../../user-guide.rst:572
+msgid ""
+"To disable redirects but keep the retrying logic, specify ``redirect=False``:"
+msgstr ""
+
+#: ../../../user-guide.rst:574
+msgid ""
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/redirect/1\",\n"
+"    redirect=False\n"
+")\n"
+"\n"
+"print(resp.status)\n"
+"# 302"
+msgstr ""
+
+#: ../../../user-guide.rst:585
+msgid ""
+"For more granular control you can use a :class:`~util.retry.Retry` instance. "
+"This class allows you far greater control of how requests are retried."
+msgstr ""
+
+#: ../../../user-guide.rst:588
+msgid "For example, to do a total of 3 retries, but limit to only 2 redirects:"
+msgstr ""
+
+#: ../../../user-guide.rst:590
+msgid ""
+"urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/redirect/3\",\n"
+"    retries=urllib3.Retry(3, redirect=2)\n"
+")\n"
+"# MaxRetryError"
+msgstr ""
+
+#: ../../../user-guide.rst:599
+msgid ""
+"You can also disable exceptions for too many redirects and just return the "
+"``302`` response:"
+msgstr ""
+
+#: ../../../user-guide.rst:602
+msgid ""
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/redirect/3\",\n"
+"    retries=urllib3.Retry(\n"
+"        redirect=2,\n"
+"        raise_on_redirect=False\n"
+"    )\n"
+")\n"
+"\n"
+"print(resp.status)\n"
+"# 302"
+msgstr ""
+
+#: ../../../user-guide.rst:616
+msgid ""
+"If you want all requests to be subject to the same retry policy, you can "
+"specify the retry at the :class:`~urllib3.poolmanager.PoolManager` level:"
+msgstr ""
+
+#: ../../../user-guide.rst:619
+msgid ""
+"import urllib3\n"
+"\n"
+"http = urllib3.PoolManager(retries=False)\n"
+"\n"
+"http = urllib3.PoolManager(\n"
+"    retries=urllib3.Retry(5, redirect=2)\n"
+")"
+msgstr ""
+
+#: ../../../user-guide.rst:629
+msgid ""
+"You still override this pool-level retry policy by specifying ``retries`` "
+"to :meth:`~urllib3.PoolManager.request`."
+msgstr ""
+
+#: ../../../user-guide.rst:633
+msgid "Errors & Exceptions"
+msgstr ""
+
+#: ../../../user-guide.rst:635
+msgid "urllib3 wraps lower-level exceptions, for example:"
+msgstr ""
+
+#: ../../../user-guide.rst:637
+msgid ""
+"import urllib3\n"
+"\n"
+"try:\n"
+"    urllib3.request(\"GET\",\"https://nx.example.com\", retries=False)\n"
+"\n"
+"except urllib3.exceptions.NewConnectionError:\n"
+"    print(\"Connection failed.\")\n"
+"# Connection failed."
+msgstr ""
+
+#: ../../../user-guide.rst:648
+msgid "See :mod:`~urllib3.exceptions` for the full list of all exceptions."
+msgstr ""
+
+#: ../../../user-guide.rst:651
+msgid "Logging"
+msgstr ""
+
+#: ../../../user-guide.rst:653
+msgid ""
+"If you are using the standard library :mod:`logging` module urllib3 will "
+"emit several logs. In some cases this can be undesirable. You can use the "
+"standard logger interface to change the log level for urllib3's logger:"
+msgstr ""
+
+#: ../../../user-guide.rst:657
+msgid "logging.getLogger(\"urllib3\").setLevel(logging.WARNING)"
+msgstr ""
