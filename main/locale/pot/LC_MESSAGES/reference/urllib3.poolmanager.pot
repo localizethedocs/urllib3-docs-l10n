@@ -1,0 +1,552 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Andrey Petrov
+# This file is distributed under the same license as the urllib3 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: urllib3 main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/urllib3.poolmanager.rst:2
+msgid "Pool Manager"
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager:1
+msgid "Bases: :py:class:`~urllib3._request_methods.RequestMethods`"
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager:1
+msgid ""
+"Allows for arbitrary requests while transparently keeping track of necessary "
+"connection pools for you."
+msgstr ""
+
+#: ../../../reference/urllib3.poolmanager.rst:0
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.connection_from_context:0
+#: urllib3.poolmanager.PoolManager.connection_from_host:0
+#: urllib3.poolmanager.PoolManager.connection_from_pool_key:0
+#: urllib3.poolmanager.PoolManager.connection_from_url:0
+#: urllib3.poolmanager.PoolManager.urlopen:0
+#: urllib3.poolmanager.ProxyManager.connection_from_host:0
+#: urllib3.poolmanager.ProxyManager.urlopen:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager:4
+msgid ""
+"Number of connection pools to cache before discarding the least recently "
+"used pool."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager:8
+msgid ""
+"Headers to include with all requests, unless other headers are given "
+"explicitly."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager:12
+msgid ""
+"Additional parameters are used to create fresh :class:`urllib3."
+"connectionpool.ConnectionPool` instances."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager:16 urllib3.poolmanager.ProxyManager:32
+msgid "Example:"
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager:18
+msgid ""
+"import urllib3\n"
+"\n"
+"http = urllib3.PoolManager(num_pools=2)\n"
+"\n"
+"resp1 = http.request(\"GET\", \"https://google.com/\")\n"
+"resp2 = http.request(\"GET\", \"https://google.com/mail\")\n"
+"resp3 = http.request(\"GET\", \"https://yahoo.com/\")\n"
+"\n"
+"print(len(http.pools))\n"
+"# 2"
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.clear:1
+msgid "Empty our store of pools and direct them all to close."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.clear:3
+msgid ""
+"This will not affect in-flight connections, but they will not be re-used "
+"after completion."
+msgstr ""
+
+#: ../../../reference/urllib3.poolmanager.rst:0
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.clear:0
+#: urllib3.poolmanager.PoolManager.connection_from_context:0
+#: urllib3.poolmanager.PoolManager.connection_from_host:0
+#: urllib3.poolmanager.PoolManager.connection_from_pool_key:0
+#: urllib3.poolmanager.PoolManager.connection_from_url:0
+#: urllib3.poolmanager.PoolManager.urlopen:0
+#: urllib3.poolmanager.ProxyManager.connection_from_host:0
+#: urllib3.poolmanager.ProxyManager.urlopen:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.connection_from_context:1
+msgid ""
+"Get a :class:`urllib3.connectionpool.ConnectionPool` based on the request "
+"context."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.connection_from_context:3
+msgid ""
+"``request_context`` must at least contain the ``scheme`` key and its value "
+"must be a key in ``key_fn_by_scheme`` instance variable."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.connection_from_host:1
+#: urllib3.poolmanager.ProxyManager.connection_from_host:1
+msgid ""
+"Get a :class:`urllib3.connectionpool.ConnectionPool` based on the host, "
+"port, and scheme."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.connection_from_host:3
+#: urllib3.poolmanager.ProxyManager.connection_from_host:3
+msgid ""
+"If ``port`` isn't given, it will be derived from the ``scheme`` using "
+"``urllib3.connectionpool.port_by_scheme``. If ``pool_kwargs`` is provided, "
+"it is merged with the instance's ``connection_pool_kw`` variable and used to "
+"create the new connection pool, if one is needed."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.connection_from_pool_key:1
+msgid ""
+"Get a :class:`urllib3.connectionpool.ConnectionPool` based on the provided "
+"pool key."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.connection_from_pool_key:3
+msgid ""
+"``pool_key`` should be a namedtuple that only contains immutable objects. At "
+"a minimum it must have the ``scheme``, ``host``, and ``port`` fields."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.connection_from_url:1
+msgid "Similar to :func:`urllib3.connectionpool.connection_from_url`."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.connection_from_url:3
+msgid ""
+"If ``pool_kwargs`` is not provided and a new pool needs to be constructed, "
+"``self.connection_pool_kw`` is used to initialize the :class:`urllib3."
+"connectionpool.ConnectionPool`. If ``pool_kwargs`` is provided, it is used "
+"instead. Note that if a new pool does not need to be created for the "
+"request, the provided ``pool_kwargs`` are not used."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request:1
+msgid ""
+"Make a request using :meth:`urlopen` with the appropriate encoding of "
+"``fields`` based on the ``method`` used."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request:4
+msgid ""
+"This is a convenience method that requires the least amount of manual "
+"effort. It can be used in most situations, while still having the option to "
+"drop down to more specific methods when necessary, such as :meth:"
+"`request_encode_url`, :meth:`request_encode_body`, or even the lowest level :"
+"meth:`urlopen`."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request:10
+#: urllib3._request_methods.RequestMethods.request_encode_body:35
+#: urllib3._request_methods.RequestMethods.request_encode_url:4
+msgid "HTTP request method (such as GET, POST, PUT, etc.)"
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request:13
+#: urllib3._request_methods.RequestMethods.request_encode_body:38
+#: urllib3._request_methods.RequestMethods.request_encode_url:7
+msgid "The URL to perform the request on."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request:16
+msgid ""
+"Data to send in the request body, either :class:`str`, :class:`bytes`, an "
+"iterable of :class:`str`/:class:`bytes`, or a file-like object."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request:20
+msgid ""
+"Data to encode and send in the URL or request body, depending on ``method``."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request:23
+#: urllib3._request_methods.RequestMethods.request_encode_body:44
+#: urllib3._request_methods.RequestMethods.request_encode_url:13
+msgid ""
+"Dictionary of custom headers to send, such as User-Agent, If-None-Match, "
+"etc. If None, pool headers are used. If provided, these headers completely "
+"replace any pool-specific headers."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request:28
+msgid ""
+"Data to encode and send as JSON with UTF-encoded in the request body. The "
+"``\"Content-Type\"`` header will be set to ``\"application/json\"`` unless "
+"specified otherwise."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request_encode_body:1
+msgid ""
+"Make a request using :meth:`urlopen` with the ``fields`` encoded in the "
+"body. This is useful for request methods like POST, PUT, PATCH, etc."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request_encode_body:4
+msgid ""
+"When ``encode_multipart=True`` (default), then :func:`urllib3."
+"encode_multipart_formdata` is used to encode the payload with the "
+"appropriate content type. Otherwise :func:`urllib.parse.urlencode` is used "
+"with the 'application/x-www-form-urlencoded' content type."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request_encode_body:10
+msgid ""
+"Multipart encoding must be used when posting files, and it's reasonably safe "
+"to use it in other times too. However, it may break request signing, such as "
+"with OAuth."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request_encode_body:14
+msgid ""
+"Supports an optional ``fields`` parameter of key/value strings AND key/"
+"filetuple. A filetuple is a (filename, data, MIME type) tuple where the MIME "
+"type is optional. For example::"
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request_encode_body:18
+msgid ""
+"fields = {\n"
+"    'foo': 'bar',\n"
+"    'fakefile': ('foofile.txt', 'contents of foofile'),\n"
+"    'realfile': ('barfile.txt', open('realfile').read()),\n"
+"    'typedfile': ('bazfile.bin', open('bazfile').read(),\n"
+"                  'image/jpeg'),\n"
+"    'nonamefile': 'contents of nonamefile field',\n"
+"}"
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request_encode_body:27
+msgid ""
+"When uploading a file, providing a filename (the first parameter of the "
+"tuple) is optional but recommended to best mimic behavior of browsers."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request_encode_body:30
+msgid ""
+"Note that if ``headers`` are supplied, the 'Content-Type' header will be "
+"overwritten because it depends on the dynamic random boundary string which "
+"is used to compose the body of the request. The random boundary string can "
+"be explicitly set with the ``multipart_boundary`` parameter."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request_encode_body:41
+msgid "Data to encode and send in the request body."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request_encode_body:49
+msgid ""
+"If True, encode the ``fields`` using the multipart/form-data MIME format."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request_encode_body:53
+msgid ""
+"If not specified, then a random boundary will be generated using :func:"
+"`urllib3.filepost.choose_boundary`."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request_encode_url:1
+msgid ""
+"Make a request using :meth:`urlopen` with the ``fields`` encoded in the url. "
+"This is useful for request methods like GET, HEAD, DELETE, etc."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3._request_methods.RequestMethods.request_encode_url:10
+msgid "Data to encode and send in the URL."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.urlopen:1
+msgid ""
+"Same as :meth:`urllib3.HTTPConnectionPool.urlopen` with custom cross-host "
+"redirect logic and only sends the request-uri portion of the ``url``."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolManager.urlopen:5
+msgid ""
+"The given ``url`` parameter must be absolute, such that an appropriate :"
+"class:`urllib3.connectionpool.ConnectionPool` can be chosen for it."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.ProxyManager:1
+msgid "Bases: :py:class:`~urllib3.poolmanager.PoolManager`"
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.ProxyManager:1
+msgid ""
+"Behaves just like :class:`PoolManager`, but sends all requests through the "
+"defined proxy, using the CONNECT method for HTTPS URLs."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.ProxyManager:4
+msgid "The URL of the proxy to be used."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.ProxyManager:7
+msgid ""
+"A dictionary containing headers that will be sent to the proxy. In case of "
+"HTTP they are being sent with each request, while in the HTTPS/CONNECT case "
+"they are sent only once. Could be used for proxy authentication."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.ProxyManager:13
+msgid ""
+"The proxy SSL context is used to establish the TLS connection to the proxy "
+"when using HTTPS proxies."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.ProxyManager:17
+msgid ""
+"(Defaults to False) If set to True will forward requests to the HTTPS proxy "
+"to be made on behalf of the client instead of creating a TLS tunnel via the "
+"CONNECT method. **Enabling this flag means that request and response headers "
+"and content will be visible from the HTTPS proxy** whereas tunneling keeps "
+"request and response headers and content private.  IP address, target "
+"hostname, SNI, and port are always visible to an HTTPS proxy even when this "
+"flag is disabled."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.ProxyManager:26
+msgid "The hostname of the certificate to verify against."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.ProxyManager:29
+msgid "The fingerprint of the certificate to verify against."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.ProxyManager:34
+msgid ""
+"import urllib3\n"
+"\n"
+"proxy = urllib3.ProxyManager(\"https://localhost:3128/\")\n"
+"\n"
+"resp1 = proxy.request(\"GET\", \"https://google.com/\")\n"
+"resp2 = proxy.request(\"GET\", \"https://httpbin.org/\")\n"
+"\n"
+"print(len(proxy.pools))\n"
+"# 1\n"
+"\n"
+"resp3 = proxy.request(\"GET\", \"https://httpbin.org/\")\n"
+"resp4 = proxy.request(\"GET\", \"https://twitter.com/\")\n"
+"\n"
+"print(len(proxy.pools))\n"
+"# 3"
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.ProxyManager.urlopen:1
+msgid "Same as HTTP(S)ConnectionPool.urlopen, ``url`` must be absolute."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolKey:1
+msgid "Bases: :py:class:`~typing.NamedTuple`"
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolKey:1
+msgid ""
+"All known keyword arguments that could be provided to the pool manager, its "
+"pools, or the underlying connections."
+msgstr ""
+
+#: ../../../../src/urllib3/poolmanager.py:docstring of
+#: urllib3.poolmanager.PoolKey:4
+msgid ""
+"All custom key schemes should include the fields in this key at a minimum."
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key__proxy:1
+msgid "Alias for field number 20"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key__proxy_config:1
+msgid "Alias for field number 22"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key__proxy_headers:1
+msgid "Alias for field number 21"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key__socks_options:1
+msgid "Alias for field number 24"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_assert_fingerprint:1
+msgid "Alias for field number 26"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_assert_hostname:1
+msgid "Alias for field number 25"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_block:1
+msgid "Alias for field number 5"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_blocksize:1
+msgid "Alias for field number 28"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ca_cert_data:1
+msgid "Alias for field number 12"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ca_cert_dir:1
+msgid "Alias for field number 16"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ca_certs:1
+msgid "Alias for field number 11"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_cert_file:1
+msgid "Alias for field number 9"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_cert_reqs:1
+msgid "Alias for field number 10"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_headers:1
+msgid "Alias for field number 19"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_host:1
+msgid "Alias for field number 1"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_key_file:1
+msgid "Alias for field number 7"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_key_password:1
+msgid "Alias for field number 8"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_maxsize:1
+msgid "Alias for field number 18"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_port:1
+msgid "Alias for field number 2"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_retries:1
+msgid "Alias for field number 4"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_scheme:1
+msgid "Alias for field number 0"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_server_hostname:1
+msgid "Alias for field number 27"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_socket_options:1
+msgid "Alias for field number 23"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_source_address:1
+msgid "Alias for field number 6"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_context:1
+msgid "Alias for field number 17"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_maximum_version:1
+msgid "Alias for field number 15"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_minimum_version:1
+msgid "Alias for field number 14"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_version:1
+msgid "Alias for field number 13"
+msgstr ""
+
+#: ../../../docstring of urllib3.poolmanager.PoolKey.key_timeout:1
+msgid "Alias for field number 3"
+msgstr ""
