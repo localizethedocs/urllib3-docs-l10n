@@ -23,7 +23,7 @@ msgstr "使用者指南"
 
 #: ../../../user-guide.rst:7
 msgid "Installing"
-msgstr ""
+msgstr "安裝方式"
 
 #: ../../../user-guide.rst:9
 msgid "urllib3 can be installed with `pip <https://pip.pypa.io>`_"
@@ -446,6 +446,16 @@ msgid ""
 "print(resp.json()[\"args\"])\n"
 "# {\"arg\": \"value\"}"
 msgstr ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://httpbin.org/get\",\n"
+"    fields={\"arg\": \"value\"}\n"
+")\n"
+"\n"
+"print(resp.json()[\"args\"])\n"
+"# {\"arg\": \"value\"}"
 
 #: ../../../user-guide.rst:281
 msgid ""
@@ -532,6 +542,18 @@ msgid ""
 "# {'headers': {'Content-Type': 'application/json', ...},\n"
 "#  'data': '{\"attribute\":\"value\"}', 'json': {'attribute': 'value'}, ...}"
 msgstr ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"POST\",\n"
+"    \"https://httpbin.org/post\",\n"
+"    json={\"attribute\": \"value\"},\n"
+"    headers={\"Content-Type\": \"application/json\"}\n"
+")\n"
+"\n"
+"print(resp.json())\n"
+"# {'headers': {'Content-Type': 'application/json', ...},\n"
+"#  'data': '{\"attribute\":\"value\"}', 'json': {'attribute': 'value'}, ...}"
 
 #: ../../../user-guide.rst:349
 msgid "Files & Binary Data"
@@ -810,7 +832,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:535
 msgid "Retrying Requests"
-msgstr ""
+msgstr "重試請求"
 
 #: ../../../user-guide.rst:537
 msgid ""
@@ -836,7 +858,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:550
 msgid "To disable all retry and redirect logic specify ``retries=False``:"
-msgstr ""
+msgstr "若要停用所有重試和重新導向邏輯，請指定 ``retries=False``："
 
 #: ../../../user-guide.rst:552
 msgid ""
@@ -879,7 +901,7 @@ msgstr ""
 #: ../../../user-guide.rst:572
 msgid ""
 "To disable redirects but keep the retrying logic, specify ``redirect=False``:"
-msgstr ""
+msgstr "若要停用重新導向但保留重試邏輯，請指定 ``redirect=False``："
 
 #: ../../../user-guide.rst:574
 msgid ""

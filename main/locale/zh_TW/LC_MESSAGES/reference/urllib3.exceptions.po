@@ -182,7 +182,7 @@ msgstr ""
 #: urllib3.exceptions.NotOpenSSLWarning:1
 #: urllib3.exceptions.SystemTimeWarning:1
 msgid "Bases: :py:class:`~urllib3.exceptions.SecurityWarning`"
-msgstr ""
+msgstr "基底類別：:py:class:`~urllib3.exceptions.SecurityWarning`"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.InsecurePlatformWarning:1
@@ -250,12 +250,12 @@ msgstr ""
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.NameResolutionError:1
 msgid "Bases: :py:class:`~urllib3.exceptions.NewConnectionError`"
-msgstr ""
+msgstr "基底類別：:py:class:`~urllib3.exceptions.NewConnectionError`"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.NameResolutionError:1
 msgid "Raised when host name resolution fails."
-msgstr ""
+msgstr "當主機名稱解析失敗時引發。"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.NewConnectionError:1
