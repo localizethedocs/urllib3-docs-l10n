@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../../../index.rst:24
 msgid "Thread safety."
-msgstr "執行序安全。"
+msgstr "執行緒安全。"
 
 #: ../../../index.rst:25
 msgid "Connection pooling."

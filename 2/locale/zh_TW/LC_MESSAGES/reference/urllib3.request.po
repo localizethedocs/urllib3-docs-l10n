@@ -40,7 +40,7 @@ msgstr ""
 
 #: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:9
 msgid "The URL to perform the request on."
-msgstr ""
+msgstr "執行請求的 URL。"
 
 #: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:12
 msgid ""
@@ -65,7 +65,7 @@ msgstr ""
 msgid ""
 "If True, will attempt to decode the body based on the 'content-encoding' "
 "header."
-msgstr ""
+msgstr "若為 True，將嘗試根據「content-encoding」標頭對正文進行解碼。"
 
 #: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:30
 msgid ""

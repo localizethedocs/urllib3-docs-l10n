@@ -201,7 +201,7 @@ msgstr ""
 #: urllib3._request_methods.RequestMethods.request_encode_body:38
 #: urllib3._request_methods.RequestMethods.request_encode_url:7
 msgid "The URL to perform the request on."
-msgstr ""
+msgstr "執行請求的 URL。"
 
 #: ../../../../src/urllib3/poolmanager.py:docstring of
 #: urllib3._request_methods.RequestMethods.request:16

@@ -101,6 +101,17 @@ msgid ""
 "print(resp.data)\n"
 "# b\"{\\n \"form\": {\\n \"hello\": \"world\"\\n  }, ... }"
 msgstr ""
+"import urllib3\n"
+"\n"
+"http = urllib3.PoolManager()\n"
+"resp = http.request(\n"
+"    \"POST\",\n"
+"    \"https://httpbin.org/post\",\n"
+"    fields={\"hello\": \"world\"} #  Add custom form fields\n"
+")\n"
+"\n"
+"print(resp.data)\n"
+"# b\"{\\n \"form\": {\\n \"hello\": \"world\"\\n  }, ... }"
 
 #: ../../../user-guide.rst:69
 msgid ""
@@ -482,6 +493,16 @@ msgid ""
 "print(resp.json()[\"form\"])\n"
 "# {\"field\": \"value\"}"
 msgstr ""
+"import urllib3\n"
+"\n"
+"resp = urllib3.request(\n"
+"    \"POST\",\n"
+"    \"https://httpbin.org/post\",\n"
+"    fields={\"field\": \"value\"}\n"
+")\n"
+"\n"
+"print(resp.json()[\"form\"])\n"
+"# {\"field\": \"value\"}"
 
 #: ../../../user-guide.rst:325
 msgid "JSON"
@@ -699,7 +720,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:467
 msgid "Using Timeouts"
-msgstr ""
+msgstr "使用逾時"
 
 #: ../../../user-guide.rst:469
 msgid ""
@@ -888,7 +909,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:588
 msgid "For example, to do a total of 3 retries, but limit to only 2 redirects:"
-msgstr ""
+msgstr "例如，若要進行總共 3 次重試，但限制最多僅能有 2 次重新導向："
 
 #: ../../../user-guide.rst:590
 msgid ""

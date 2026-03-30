@@ -3322,6 +3322,7 @@ msgid ""
 "Ensure the connection is closed if no data is received, fixes connection "
 "leak on some platforms. (Issue #133)"
 msgstr ""
+"確保在未接收到資料時關閉連接，修正某些平臺上的連接洩漏問題。（議題 #133）"
 
 #: ../../../../CHANGES.rst:1531
 msgid "Added SNI support for SSL/TLS connections on Py32+. (Issue #89)"
