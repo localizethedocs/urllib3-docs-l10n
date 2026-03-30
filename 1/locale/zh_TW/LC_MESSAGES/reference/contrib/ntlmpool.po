@@ -71,7 +71,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:20
 msgid "The URL to perform the request on."
-msgstr ""
+msgstr "執行請求的 URL。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:23

@@ -46,7 +46,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.DecodeError:1
 msgid "Raised when automatic decoding based on Content-Type fails."
-msgstr ""
+msgstr "當根據 Content-Type 進行自動解碼失敗時拋出。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.DependencyWarning:1
@@ -137,7 +137,7 @@ msgstr "參數"
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.MaxRetryError:3
 msgid "The connection pool"
-msgstr ""
+msgstr "連接池"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.MaxRetryError:5

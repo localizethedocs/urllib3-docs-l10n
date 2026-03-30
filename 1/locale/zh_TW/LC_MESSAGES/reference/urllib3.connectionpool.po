@@ -131,7 +131,7 @@ msgstr ""
 #: of urllib3.connectionpool.ConnectionPool.close:1
 #: urllib3.connectionpool.HTTPConnectionPool.close:1
 msgid "Close all pooled connections and disable the pool."
-msgstr ""
+msgstr "關閉所有連接池中的連接並停用該連接池。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool.is_same_host:1
@@ -171,7 +171,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool.urlopen:20
 msgid "The URL to perform the request on."
-msgstr ""
+msgstr "執行請求的 URL。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool.urlopen:23

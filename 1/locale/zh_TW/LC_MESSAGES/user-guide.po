@@ -529,7 +529,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:385
 msgid "Using Timeouts"
-msgstr ""
+msgstr "使用逾時"
 
 #: ../../../user-guide.rst:387
 msgid ""
@@ -651,7 +651,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:475
 msgid "For example, to do a total of 3 retries, but limit to only 2 redirects:"
-msgstr ""
+msgstr "例如，若要進行總共 3 次重試，但限制最多僅能有 2 次重新導向："
 
 #: ../../../user-guide.rst:477
 msgid ""
