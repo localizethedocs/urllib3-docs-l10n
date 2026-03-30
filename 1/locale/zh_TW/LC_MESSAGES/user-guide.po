@@ -23,7 +23,7 @@ msgstr "使用者指南"
 
 #: ../../../user-guide.rst:7
 msgid "Installing"
-msgstr ""
+msgstr "安裝方式"
 
 #: ../../../user-guide.rst:9
 msgid "urllib3 can be installed with `pip <https://pip.pypa.io>`_"
@@ -594,7 +594,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:435
 msgid "Retrying Requests"
-msgstr ""
+msgstr "重試請求"
 
 #: ../../../user-guide.rst:437
 msgid ""
@@ -614,7 +614,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:448
 msgid "To disable all retry and redirect logic specify ``retries=False``:"
-msgstr ""
+msgstr "若要停用所有重試和重新導向邏輯，請指定 ``retries=False``："
 
 #: ../../../user-guide.rst:450
 msgid ""
@@ -632,7 +632,7 @@ msgstr ""
 #: ../../../user-guide.rst:462
 msgid ""
 "To disable redirects but keep the retrying logic, specify ``redirect=False``:"
-msgstr ""
+msgstr "若要停用重新導向但保留重試邏輯，請指定 ``redirect=False``："
 
 #: ../../../user-guide.rst:464
 msgid ""

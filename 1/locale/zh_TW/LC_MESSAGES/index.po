@@ -37,7 +37,7 @@ msgstr ""
 msgid ""
 "urllib3 brings many critical features that are missing from the Python "
 "standard libraries:"
-msgstr ""
+msgstr "urllib3 提供了許多 Python 標準程式庫所缺乏的重要功能："
 
 #: ../../../index.rst:22
 msgid "Thread safety."
@@ -57,7 +57,7 @@ msgstr ""
 
 #: ../../../index.rst:26
 msgid "Helpers for retrying requests and dealing with HTTP redirects."
-msgstr ""
+msgstr "用於重試請求及處理 HTTP 重新導向的輔助工具。"
 
 #: ../../../index.rst:27
 msgid "Support for gzip, deflate, and brotli encoding."
@@ -65,7 +65,7 @@ msgstr ""
 
 #: ../../../index.rst:28
 msgid "Proxy support for HTTP and SOCKS."
-msgstr ""
+msgstr "支援 HTTP 與 SOCKS 代理。"
 
 #: ../../../index.rst:29
 msgid "100% test coverage."
@@ -102,6 +102,9 @@ msgid ""
 "assurances from the experts who know it best, while seamlessly integrating "
 "with existing tools."
 msgstr ""
+"urllib3 的專業支援已包含在 `Tidelift 訂閱服務`_\\ 中。Tidelift 為軟體開發團隊"
+"提供單一的採購與維護管道，由最了解軟體的專家提供專業級保障，並能與現有工具無"
+"縫整合。"
 
 #: ../../../index.rst:63
 msgid "|learn-more|_ |request-a-demo|_"
@@ -117,7 +120,7 @@ msgstr ""
 
 #: ../../../index.rst:76
 msgid "Installing"
-msgstr ""
+msgstr "安裝方式"
 
 #: ../../../index.rst:78
 msgid "urllib3 can be installed with `pip <https://pip.pypa.io>`_"
@@ -170,6 +173,9 @@ msgid ""
 "`Requests <https://requests.readthedocs.io>`_, `Pip <https://pip.pypa.io>`_, "
 "and more!"
 msgstr ""
+"`urllib3 是 PyPI 上下載量最高的軟體包之一 <https://pypistats.org/top>`_，也是"
+"許多熱門 Python 軟體包（如 `Requests <https://requests.readthedocs.io>`_、"
+"`Pip <https://pip.pypa.io>`_ 等）的依賴項目！"
 
 #: ../../../index.rst:111
 msgid "License"
@@ -188,4 +194,4 @@ msgstr "貢獻指南"
 #: ../../../index.rst:118
 msgid ""
 "We happily welcome contributions, please see :doc:`contributing` for details."
-msgstr ""
+msgstr "我們非常歡迎各界的貢獻，詳情請參見\\ :doc:`contributing`\\ 。"
