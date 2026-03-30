@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.connection.rst:2
 msgid "Connections"
-msgstr ""
+msgstr "連接"
 
 #: ../../../../src/urllib3/connection.py:docstring of
 #: urllib3.connection.HTTPConnection:1

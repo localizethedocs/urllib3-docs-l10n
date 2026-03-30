@@ -26,6 +26,8 @@ msgid ""
 "**urllib3 2.x is now available!** Read below for how to get started and what "
 "is contained in the new major release."
 msgstr ""
+"**urllib3 2.x 現已發行！**\\ 請閱讀下文以瞭解如何開始使用，以及新的主要發行版"
+"中包含哪些內容。"
 
 #: ../../../v2-migration-guide.rst:7
 msgid "**🚀 Migrating from 1.x to 2.x**"
@@ -39,6 +41,9 @@ msgid ""
 "implementation details. So unless you're in a specific situation you should "
 "notice no changes! 🎉"
 msgstr ""
+"我們\\ **為大多數使用者維持了功能性 API 的相容性**\\ ，讓幾乎所有人都能輕鬆選"
+"擇遷移。大多數變更主要集中在默認組態、支援的 Python 版本或內部實作細節。因"
+"此，除非您處於特定情況，否則應該不會感覺到任何變化！🎉"
 
 #: ../../../v2-migration-guide.rst:16
 msgid ""
@@ -49,12 +54,12 @@ msgstr ""
 
 #: ../../../v2-migration-guide.rst:22
 msgid "What are the important changes?"
-msgstr ""
+msgstr "有哪些重要的變更？"
 
 #: ../../../v2-migration-guide.rst:24
 msgid ""
 "Here's a short summary of which changes in urllib3 2.x are most important:"
-msgstr ""
+msgstr "以下是 urllib3 2.x 中最重要的變更摘要："
 
 #: ../../../v2-migration-guide.rst:26
 msgid ""
@@ -65,11 +70,11 @@ msgstr ""
 #: ../../../v2-migration-guide.rst:27
 msgid ""
 "Removed support for non-OpenSSL TLS libraries (like LibreSSL and wolfSSL)."
-msgstr ""
+msgstr "移除了對非 OpenSSL TLS 程式庫（如 LibreSSL 和 wolfSSL）的支援。"
 
 #: ../../../v2-migration-guide.rst:28
 msgid "Removed support for OpenSSL versions older than 1.1.1."
-msgstr ""
+msgstr "移除了對 1.1.1 以前版本的 OpenSSL 支援。"
 
 #: ../../../v2-migration-guide.rst:29
 msgid ""
@@ -149,7 +154,7 @@ msgstr "**🤔 常見的升級議題**"
 
 #: ../../../v2-migration-guide.rst:60
 msgid "ssl module is compiled with OpenSSL 1.0.2.k-fips"
-msgstr ""
+msgstr "ssl 模組是使用 OpenSSL 1.0.2.k-fips 進行編譯的"
 
 #: ../../../v2-migration-guide.rst:62
 msgid ""

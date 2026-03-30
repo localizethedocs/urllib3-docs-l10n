@@ -282,6 +282,8 @@ msgid ""
 "Switched to uv for installing development dependecies. (`#3550 <https://"
 "github.com/urllib3/urllib3/issues/3550>`__)"
 msgstr ""
+"已改用 uv 來安裝開發依賴項。（`#3550 < https://github.com/urllib3/urllib3/"
+"issues/3550>`__）"
 
 #: ../../../../CHANGES.rst:134
 msgid ""

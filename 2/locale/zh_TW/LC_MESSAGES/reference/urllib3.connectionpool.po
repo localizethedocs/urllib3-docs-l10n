@@ -297,7 +297,7 @@ msgstr ""
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPSConnectionPool:1
 msgid "Bases: :py:class:`~urllib3.connectionpool.HTTPConnectionPool`"
-msgstr ""
+msgstr "基底類別：:py:class:`~urllib3.connectionpool.HTTPConnectionPool`"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPSConnectionPool:1
