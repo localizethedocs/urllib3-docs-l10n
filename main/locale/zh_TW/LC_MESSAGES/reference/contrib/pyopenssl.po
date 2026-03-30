@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../reference/contrib/pyopenssl.rst:2
 msgid "PyOpenSSL"
-msgstr ""
+msgstr "PyOpenSSL"
 
 #: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
 #: urllib3.contrib.pyopenssl:1

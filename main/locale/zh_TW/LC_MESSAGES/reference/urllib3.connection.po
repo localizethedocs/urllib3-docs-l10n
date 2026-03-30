@@ -88,7 +88,7 @@ msgstr "參數"
 #: ../../../../src/urllib3/connection.py:docstring of
 #: urllib3.connection.HTTPConnection.close:1
 msgid "Close the connection to the HTTP server."
-msgstr ""
+msgstr "關閉與 HTTP 伺服器的連接。"
 
 #: ../../../../src/urllib3/connection.py:docstring of
 #: urllib3.connection.HTTPConnection.close:0

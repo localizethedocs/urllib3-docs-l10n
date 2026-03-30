@@ -119,7 +119,7 @@ msgstr ""
 #: urllib3.connectionpool.ConnectionPool.close:1
 #: urllib3.connectionpool.HTTPConnectionPool.close:1
 msgid "Close all pooled connections and disable the pool."
-msgstr ""
+msgstr "關閉所有連接池中的連接並停用該連接池。"
 
 #: ../../../reference/urllib3.connectionpool.rst:0
 #: ../../../../src/urllib3/connectionpool.py:docstring of
@@ -168,7 +168,7 @@ msgstr ""
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool.urlopen:20
 msgid "The URL to perform the request on."
-msgstr ""
+msgstr "執行請求的 URL。"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool.urlopen:23
@@ -264,7 +264,7 @@ msgstr ""
 msgid ""
 "If True, will attempt to decode the body based on the 'content-encoding' "
 "header."
-msgstr ""
+msgstr "若為 True，將嘗試根據「content-encoding」標頭對正文進行解碼。"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool.urlopen:75
@@ -369,7 +369,7 @@ msgstr ""
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.connection_from_url:14
 msgid "Example::"
-msgstr ""
+msgstr "範例：\\ ::"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.connection_from_url:16

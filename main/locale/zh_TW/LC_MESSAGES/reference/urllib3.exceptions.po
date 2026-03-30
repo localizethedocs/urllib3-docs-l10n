@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.exceptions.rst:2
 msgid "Exceptions and Warnings"
-msgstr ""
+msgstr "例外與警告"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.BodyNotHttplibCompatible:1
@@ -43,7 +43,7 @@ msgstr ""
 #: urllib3.exceptions.ClosedPoolError:1 urllib3.exceptions.EmptyPoolError:1
 #: urllib3.exceptions.FullPoolError:1 urllib3.exceptions.RequestError:1
 msgid "Bases: :py:class:`~urllib3.exceptions.PoolError`"
-msgstr ""
+msgstr "基底類別：:py:class:`~urllib3.exceptions.PoolError`"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.ClosedPoolError:1
@@ -81,7 +81,7 @@ msgstr ""
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.ConnectTimeoutError:1
 msgid "Bases: :py:class:`~urllib3.exceptions.TimeoutError`"
-msgstr ""
+msgstr "基底類別：:py:class:`~urllib3.exceptions.TimeoutError`"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.ConnectTimeoutError:1
@@ -96,7 +96,7 @@ msgstr ""
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.DecodeError:1
 msgid "Raised when automatic decoding based on Content-Type fails."
-msgstr ""
+msgstr "當根據 Content-Type 進行自動解碼失敗時拋出。"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.DependencyWarning:1 urllib3.exceptions.SecurityWarning:1
@@ -235,7 +235,7 @@ msgstr ""
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.MaxRetryError:3
 msgid "The connection pool"
-msgstr ""
+msgstr "連接池"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.MaxRetryError:5

@@ -152,7 +152,7 @@ msgstr ""
 msgid ""
 "If True, will attempt to decode the body based on the 'content-encoding' "
 "header."
-msgstr ""
+msgstr "若為 True，將嘗試根據「content-encoding」標頭對正文進行解碼。"
 
 #: ../../../../src/urllib3/response.py:docstring of
 #: urllib3.response.HTTPResponse:18
