@@ -253,6 +253,7 @@ if     (  ( VERSION MATCHES "^(main)$"        ) OR
                 --extra brotli
                 --extra socks
                 --extra zstd
+                --no-editable
                 --format pylock.toml
                 --output-file ${PYLOCK_TOML_PATH}
         WORKING_DIRECTORY ${PROJ_OUT_REPO_DIR}
