@@ -376,7 +376,7 @@ msgstr ""
 
 #: ../../../v2-migration-guide.rst:183
 msgid "$ python -m pip install -U 'urllib3>=2'"
-msgstr ""
+msgstr "$ python -m pip install -U 'urllib3>=2'"
 
 #: ../../../v2-migration-guide.rst:187
 msgid ""
@@ -454,7 +454,7 @@ msgstr ""
 
 #: ../../../v2-migration-guide.rst:239
 msgid "urllib3.request()"
-msgstr ""
+msgstr "urllib3.request()"
 
 #: ../../../v2-migration-guide.rst:241
 msgid ""
@@ -471,6 +471,10 @@ msgid ""
 ">>> resp.status\n"
 "200"
 msgstr ""
+">>> import urllib3\n"
+">>> resp = urllib3.request(\"GET\", \"https://example.com\")\n"
+">>> resp.status\n"
+"200"
 
 #: ../../../v2-migration-guide.rst:254
 msgid "JSON support for requests and responses"

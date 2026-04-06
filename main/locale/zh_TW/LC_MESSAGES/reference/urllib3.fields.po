@@ -90,7 +90,7 @@ msgstr ""
 #: ../../../../src/urllib3/filepost.py:docstring
 #: urllib3.filepost.choose_boundary:0 urllib3.filepost.iter_field_objects:0
 msgid "Return type"
-msgstr ""
+msgstr "回傳值型別"
 
 #: ../../../../src/urllib3/fields.py:docstring of
 #: urllib3.fields.RequestField.from_tuples:1

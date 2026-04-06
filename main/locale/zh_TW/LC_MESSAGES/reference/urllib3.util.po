@@ -49,7 +49,7 @@ msgstr "基底類別：:py:class:`object`"
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.retry.Retry:1
 msgid "Retry configuration."
-msgstr ""
+msgstr "重試組態。"
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.retry.Retry:3
@@ -70,6 +70,9 @@ msgid ""
 "http = PoolManager(retries=retries)\n"
 "response = http.request(\"GET\", \"https://example.com/\")"
 msgstr ""
+"retries = Retry(connect=5, read=2, redirect=5)\n"
+"http = PoolManager(retries=retries)\n"
+"response = http.request(\"GET\", \"https://example.com/\")"
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.retry.Retry:14 urllib3.util.timeout.Timeout:17
@@ -81,6 +84,7 @@ msgstr ""
 msgid ""
 "response = http.request(\"GET\", \"https://example.com/\", retries=Retry(10))"
 msgstr ""
+"response = http.request(\"GET\", \"https://example.com/\", retries=Retry(10))"
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.retry.Retry:20
@@ -92,6 +96,7 @@ msgstr ""
 msgid ""
 "response = http.request(\"GET\", \"https://example.com/\", retries=False)"
 msgstr ""
+"response = http.request(\"GET\", \"https://example.com/\", retries=False)"
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.retry.Retry:26
@@ -345,7 +350,7 @@ msgstr ""
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.retry.Retry:111
 msgid "random.uniform(0, {backoff jitter})"
-msgstr ""
+msgstr "random.uniform(0, {backoff jitter})"
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.retry.Retry:113
@@ -441,7 +446,7 @@ msgstr ""
 #: urllib3.util.ssl_.resolve_ssl_version:0 urllib3.util.wait.wait_for_read:0
 #: urllib3.util.wait.wait_for_write:0
 msgid "Return type"
-msgstr ""
+msgstr "回傳值型別"
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.retry.Retry.get_backoff_time:1
@@ -675,7 +680,7 @@ msgstr ""
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.Timeout.connect_timeout:6
 msgid "Connect timeout."
-msgstr ""
+msgstr "連接逾時。"
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.Timeout.connect_timeout:7
@@ -829,7 +834,7 @@ msgstr ""
 #: ../../../../src/urllib3/util/__init__.py:docstring of urllib3.util.Url.url:8
 #: urllib3.util.request.make_headers:31 urllib3.util.url.parse_url:12
 msgid "Example:"
-msgstr ""
+msgstr "範例："
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.Url.url:10
@@ -848,6 +853,19 @@ msgid ""
 "    )\n"
 "# \"https://username:password@host.com:80/path?query#fragment\""
 msgstr ""
+"import urllib3\n"
+"\n"
+"U = urllib3.util.parse_url(\"https://google.com/mail/\")\n"
+"\n"
+"print(U.url)\n"
+"# \"https://google.com/mail/\"\n"
+"\n"
+"print( urllib3.util.Url(\"https\", \"username:password\",\n"
+"                        \"host.com\", 80, \"/path\", \"query\", "
+"\"fragment\"\n"
+"                        ).url\n"
+"    )\n"
+"# \"https://username:password@host.com:80/path?query#fragment\""
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.ssl_.assert_fingerprint:1
@@ -1016,6 +1034,13 @@ msgid ""
 "print(urllib3.util.make_headers(accept_encoding=True))\n"
 "# {'accept-encoding': 'gzip,deflate'}"
 msgstr ""
+"import urllib3\n"
+"\n"
+"print(urllib3.util.make_headers(keep_alive=True, "
+"user_agent=\"Batman/1.0\"))\n"
+"# {'connection': 'keep-alive', 'user-agent': 'Batman/1.0'}\n"
+"print(urllib3.util.make_headers(accept_encoding=True))\n"
+"# {'accept-encoding': 'gzip,deflate'}"
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.url.parse_url:1
@@ -1056,6 +1081,16 @@ msgid ""
 "print( urllib3.util.parse_url('/foo?bar'))\n"
 "# Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)"
 msgstr ""
+"import urllib3\n"
+"\n"
+"print( urllib3.util.parse_url('http://google.com/mail/'))\n"
+"# Url(scheme='http', host='google.com', port=None, path='/mail/', ...)\n"
+"\n"
+"print( urllib3.util.parse_url('google.com:80'))\n"
+"# Url(scheme=None, host='google.com', port=80, path=None, ...)\n"
+"\n"
+"print( urllib3.util.parse_url('/foo?bar'))\n"
+"# Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)"
 
 #: ../../../../src/urllib3/util/__init__.py:docstring of
 #: urllib3.util.ssl_.resolve_cert_reqs:1

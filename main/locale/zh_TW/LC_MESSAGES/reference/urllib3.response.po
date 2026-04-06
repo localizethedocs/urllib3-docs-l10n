@@ -28,7 +28,7 @@ msgstr ""
 #: ../../../../src/urllib3/response.py:docstring of
 #: urllib3.response.BaseHTTPResponse:1
 msgid "Bases: :py:class:`~io.IOBase`"
-msgstr ""
+msgstr "基底類別：:py:class:`~io.IOBase`"
 
 #: ../../../reference/urllib3.response.rst:0
 msgid "Parameters"
@@ -56,7 +56,7 @@ msgstr ""
 #: urllib3.response.HTTPResponse.supports_chunked_reads:0
 #: urllib3.response.HTTPResponse.tell:0
 msgid "Return type"
-msgstr ""
+msgstr "回傳值型別"
 
 #: ../../../../src/urllib3/response.py:docstring of
 #: urllib3.response.BaseHTTPResponse.get_redirect_location:1
@@ -253,7 +253,7 @@ msgstr ""
 #: ../../../../src/urllib3/response.py:docstring of
 #: urllib3.response.HTTPResponse.read1:5
 msgid "How much of the content to read."
-msgstr ""
+msgstr "要讀取多少內容。"
 
 #: ../../../../src/urllib3/response.py:docstring of
 #: urllib3.response.HTTPResponse.read_chunked:1

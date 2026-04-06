@@ -1900,7 +1900,7 @@ msgstr ""
 #: domains/c/__init__.py:345 domains/javascript.py:293
 #: domains/python/_object.py:227
 msgid "Return type"
-msgstr ""
+msgstr "回傳值型別"
 
 #: domains/javascript.py:370
 #, python-format

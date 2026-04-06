@@ -64,6 +64,11 @@ msgid ""
 "# Alternatively\n"
 "pool = urllib3.HTTPConnectionPool(\"google.com\", maxsize=10)"
 msgstr ""
+"import urllib3\n"
+"\n"
+"http = urllib3.PoolManager(maxsize=10)\n"
+"# 或者\n"
+"pool = urllib3.HTTPConnectionPool(\"google.com\", maxsize=10)"
 
 #: ../../../advanced-usage.rst:39
 msgid ""
@@ -424,6 +429,7 @@ msgstr ""
 #: ../../../advanced-usage.rst:277
 msgid "$ python -c 'import urllib.request; print(urllib.request.getproxies())'"
 msgstr ""
+"$ python -c 'import urllib.request; print(urllib.request.getproxies())'"
 
 #: ../../../advanced-usage.rst:281
 msgid "If the output of the above command isn't empty and looks like this:"
@@ -437,6 +443,11 @@ msgid ""
 "problem!\n"
 "}"
 msgstr ""
+"{\n"
+"  \"http\": \"http://127.0.0.1:8888\",\n"
+"  \"https\": \"https://127.0.0.1:8888\"  # <--- This setting is the "
+"problem!\n"
+"}"
 
 #: ../../../advanced-usage.rst:290
 msgid ""
@@ -489,6 +500,10 @@ msgid ""
 "proxy = SOCKSProxyManager(\"socks5h://localhost:8889/\")\n"
 "proxy.request(\"GET\", \"https://google.com/\")"
 msgstr ""
+"from urllib3.contrib.socks import SOCKSProxyManager\n"
+"\n"
+"proxy = SOCKSProxyManager(\"socks5h://localhost:8889/\")\n"
+"proxy.request(\"GET\", \"https://google.com/\")"
 
 #: ../../../advanced-usage.rst:327
 msgid ""
@@ -607,6 +622,13 @@ msgid ""
 ")\n"
 "pool.request(\"GET\", \"/\")"
 msgstr ""
+"import urllib3\n"
+"\n"
+"pool = urllib3.HTTPSConnectionPool(\n"
+"    \"wrong.host.badssl.com\",\n"
+"    assert_hostname=\"badssl.com\",\n"
+")\n"
+"pool.request(\"GET\", \"/\")"
 
 #: ../../../advanced-usage.rst:421
 msgid "Client Certificates"
@@ -629,6 +651,11 @@ msgid ""
 "    ca_certs=\"/path/to/your/certificate_bundle\"\n"
 ")"
 msgstr ""
+"http = urllib3.PoolManager(\n"
+"    cert_file=\"/path/to/your/client_cert.pem\",\n"
+"    cert_reqs=\"CERT_REQUIRED\",\n"
+"    ca_certs=\"/path/to/your/certificate_bundle\"\n"
+")"
 
 #: ../../../advanced-usage.rst:436
 msgid ""
@@ -645,6 +672,12 @@ msgid ""
 "    key_password=\"keyfile_password\"\n"
 ")"
 msgstr ""
+"http = urllib3.PoolManager(\n"
+"    cert_file=\"/path/to/your/client_cert.pem\",\n"
+"    cert_reqs=\"CERT_REQUIRED\",\n"
+"    key_file=\"/path/to/your/client.key\",\n"
+"    key_password=\"keyfile_password\"\n"
+")"
 
 #: ../../../advanced-usage.rst:448
 msgid ""
@@ -653,7 +686,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:451
 msgid "TLS minimum and maximum versions"
-msgstr ""
+msgstr "TLS 最低與最高版本"
 
 #: ../../../advanced-usage.rst:453
 msgid ""
@@ -722,7 +755,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:502
 msgid "TLS Warnings"
-msgstr ""
+msgstr "TLS 警告"
 
 #: ../../../advanced-usage.rst:504
 msgid ""
@@ -733,7 +766,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:508
 msgid ":class:`~exceptions.InsecureRequestWarning`"
-msgstr ""
+msgstr ":class:`~exceptions.InsecureRequestWarning`"
 
 #: ../../../advanced-usage.rst:509
 msgid ""
@@ -755,6 +788,9 @@ msgid ""
 "\n"
 "urllib3.disable_warnings()"
 msgstr ""
+"import urllib3\n"
+"\n"
+"urllib3.disable_warnings()"
 
 #: ../../../advanced-usage.rst:524
 msgid ""
@@ -764,7 +800,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:526
 msgid "logging.captureWarnings(True)"
-msgstr ""
+msgstr "logging.captureWarnings(True)"
 
 #: ../../../advanced-usage.rst:530
 msgid ""
@@ -775,7 +811,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:535
 msgid "Brotli Encoding"
-msgstr ""
+msgstr "Brotli 編碼"
 
 #: ../../../advanced-usage.rst:537
 msgid ""
@@ -808,7 +844,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:560
 msgid "Zstandard Encoding"
-msgstr ""
+msgstr "Zstandard 編碼"
 
 #: ../../../advanced-usage.rst:562
 msgid ""
@@ -851,6 +887,13 @@ msgid ""
 "    headers={\"Accept-Encoding\": \"zstd\"}\n"
 ")"
 msgstr ""
+"import urllib3\n"
+"\n"
+"urllib3.request(\n"
+"    \"GET\",\n"
+"    \"https://www.facebook.com/\",\n"
+"    headers={\"Accept-Encoding\": \"zstd\"}\n"
+")"
 
 #: ../../../advanced-usage.rst:594
 msgid "Decrypting Captured TLS Sessions with Wireshark"

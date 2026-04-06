@@ -57,7 +57,7 @@ msgstr "客戶端 TLS/SSL 驗證。"
 
 #: ../../../index.rst:27
 msgid "File uploads with multipart encoding."
-msgstr ""
+msgstr "使用 multipart 編碼上傳檔案。"
 
 #: ../../../index.rst:28
 msgid "Helpers for retrying requests and dealing with HTTP redirects."
@@ -117,15 +117,15 @@ msgstr ""
 
 #: ../../../index.rst:64
 msgid "|learn-more|_ |request-a-demo|_"
-msgstr ""
+msgstr "|learn-more|_ |request-a-demo|_"
 
 #: ../../../index.rst:66
 msgid "Learn more about Tidelift Subscription"
-msgstr ""
+msgstr "了解更多關於 Tidelift 訂閱服務的資訊"
 
 #: ../../../index.rst:71
 msgid "Request a Demo for the Tidelift Subscription"
-msgstr ""
+msgstr "請求 Tidelift 訂閱服務的示範"
 
 #: ../../../index.rst:77
 msgid "Installing"
@@ -167,6 +167,8 @@ msgid ""
 "accomplish common tasks. The more in-depth :doc:`advanced-usage` guide is "
 "the place to go for lower-level tweaking."
 msgstr ""
+":doc:`user-guide`\\ 是學習如何使用此程式庫以及完成常見任務的地方。更深入的"
+"\\ :doc:`advanced-usage`\\ 指南則適合需要進行底層調整的使用者。"
 
 #: ../../../index.rst:99
 msgid ""
@@ -197,6 +199,8 @@ msgid ""
 "urllib3 is made available under the MIT License. For more details, see "
 "`LICENSE.txt <https://github.com/urllib3/urllib3/blob/master/LICENSE.txt>`_."
 msgstr ""
+"urllib3 採用 MIT 授權條款。如需更多細節，請參見 `LICENSE.txt <https://github."
+"com/urllib3/urllib3/blob/master/LICENSE.txt>`_。"
 
 #: ../../../index.rst:116
 msgid "Contributing"
