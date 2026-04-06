@@ -44,7 +44,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:1
 msgid "Retry configuration."
-msgstr ""
+msgstr "重試組態。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:3
@@ -416,7 +416,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.util.rst:0
 msgid "Return type"
-msgstr ""
+msgstr "回傳值型別"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry.get_retry_after:1
@@ -646,7 +646,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.Timeout.connect_timeout:6
 msgid "Connect timeout."
-msgstr ""
+msgstr "連接逾時。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.Timeout.connect_timeout:7

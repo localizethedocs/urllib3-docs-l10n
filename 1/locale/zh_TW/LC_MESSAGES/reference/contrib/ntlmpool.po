@@ -66,7 +66,7 @@ msgstr "參數"
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:17
 msgid "HTTP request method (such as GET, POST, PUT, etc.)"
-msgstr ""
+msgstr "HTTP 請求方法（例如 GET、POST、PUT 等）"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:20
@@ -79,6 +79,8 @@ msgid ""
 "Data to send in the request body, either :class:`str`, :class:`bytes`, an "
 "iterable of :class:`str`/:class:`bytes`, or a file-like object."
 msgstr ""
+"要發送到請求正文中的資料，可以是 :class:`str`、:class:`bytes`、:class:`str`/:"
+"class:`bytes` 的可疊代物件，或是類似檔案的物件。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:27

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.poolmanager.rst:2
 msgid "Pool Manager"
-msgstr ""
+msgstr "池管理器"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
 #: of urllib3.poolmanager.PoolManager:1

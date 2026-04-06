@@ -45,7 +45,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
 #: of urllib3.connection.HTTPConnection:8
 msgid "``source_address``: Set the source address for the current connection."
-msgstr ""
+msgstr "``source_address``：設定當前連接的來源地址。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
 #: of urllib3.connection.HTTPConnection:9
@@ -70,6 +70,9 @@ msgid ""
 "    (socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1),\n"
 "]"
 msgstr ""
+"HTTPConnection.default_socket_options + [\n"
+"    (socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1),\n"
+"]"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
 #: of urllib3.connection.HTTPConnection:22
@@ -82,7 +85,7 @@ msgstr ""
 #: of urllib3.connection.HTTPConnection.connect:1
 #: urllib3.connection.HTTPSConnection.connect:1
 msgid "Connect to the host and port specified in __init__."
-msgstr ""
+msgstr "連接到 __init__ 中指定的主機和埠號。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
 #: of urllib3.connection.HTTPConnection.default_socket_options:1
@@ -134,7 +137,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
 #: of urllib3.connection.HTTPConnection.request:1
 msgid "Send a complete request to the server."
-msgstr ""
+msgstr "向伺服器發送完整的請求。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
 #: of urllib3.connection.HTTPConnection.request_chunked:1

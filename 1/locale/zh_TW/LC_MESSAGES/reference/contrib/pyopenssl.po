@@ -68,7 +68,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
 #: of urllib3.contrib.pyopenssl:15
 msgid "You can install them with the following command:"
-msgstr ""
+msgstr "您可以使用以下命令安裝它們："
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
 #: of urllib3.contrib.pyopenssl:17

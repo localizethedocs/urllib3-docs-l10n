@@ -359,6 +359,7 @@ msgstr ""
 #: ../../../advanced-usage.rst:234
 msgid "$ python -c 'import urllib.request; print(urllib.request.getproxies())'"
 msgstr ""
+"$ python -c 'import urllib.request; print(urllib.request.getproxies())'"
 
 #: ../../../advanced-usage.rst:238
 msgid "If the output of the above command isn't empty and looks like this:"
@@ -372,6 +373,11 @@ msgid ""
 "problem!\n"
 "}"
 msgstr ""
+"{\n"
+"  \"http\": \"http://127.0.0.1:8888\",\n"
+"  \"https\": \"https://127.0.0.1:8888\"  # <--- This setting is the "
+"problem!\n"
+"}"
 
 #: ../../../advanced-usage.rst:247
 msgid ""
@@ -575,7 +581,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:390
 msgid "TLS Warnings"
-msgstr ""
+msgstr "TLS 警告"
 
 #: ../../../advanced-usage.rst:392
 msgid ""
@@ -586,7 +592,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:396
 msgid ":class:`~exceptions.InsecureRequestWarning`"
-msgstr ""
+msgstr ":class:`~exceptions.InsecureRequestWarning`"
 
 #: ../../../advanced-usage.rst:397
 msgid ""
@@ -701,7 +707,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:470
 msgid "Brotli Encoding"
-msgstr ""
+msgstr "Brotli 編碼"
 
 #: ../../../advanced-usage.rst:472
 msgid ""

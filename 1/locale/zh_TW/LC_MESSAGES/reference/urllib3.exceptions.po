@@ -63,12 +63,12 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.HTTPError:1
 msgid "Base exception used by this module."
-msgstr ""
+msgstr "此模組使用的基底例外。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.HTTPWarning:1
 msgid "Base warning used by this module."
-msgstr ""
+msgstr "此模組使用的基底警告。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.HeaderParsingError:1
@@ -142,12 +142,12 @@ msgstr "連接池"
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.MaxRetryError:5
 msgid "The requested Url"
-msgstr ""
+msgstr "請求的網址"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.MaxRetryError:6
 msgid "The underlying error"
-msgstr ""
+msgstr "底層錯誤"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.NewConnectionError:1
