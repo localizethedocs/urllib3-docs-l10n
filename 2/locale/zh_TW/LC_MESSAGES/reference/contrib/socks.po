@@ -139,7 +139,7 @@ msgstr ""
 #: ../../../../src/urllib3/contrib/socks.py:docstring of
 #: urllib3.contrib.socks.SOCKSProxyManager:1
 msgid "Bases: :py:class:`~urllib3.poolmanager.PoolManager`"
-msgstr ""
+msgstr "基底類別：:py:class:`~urllib3.poolmanager.PoolManager`"
 
 #: ../../../../src/urllib3/contrib/socks.py:docstring of
 #: urllib3.contrib.socks.SOCKSProxyManager:1

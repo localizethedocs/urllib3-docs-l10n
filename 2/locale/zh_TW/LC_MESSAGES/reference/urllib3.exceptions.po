@@ -76,7 +76,7 @@ msgstr "參數"
 #: urllib3.exceptions.ProxySchemeUnknown:0
 #: urllib3.exceptions.ReadTimeoutError:0 urllib3.exceptions.RequestError:0
 msgid "Return type"
-msgstr ""
+msgstr "回傳值型別"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.ConnectTimeoutError:1
@@ -128,7 +128,7 @@ msgstr "基底類別：:py:class:`Exception`"
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.HTTPError:1
 msgid "Base exception used by this module."
-msgstr ""
+msgstr "此模組使用的基底例外。"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.HTTPWarning:1
@@ -138,7 +138,7 @@ msgstr "基底類別：:py:class:`Warning`"
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.HTTPWarning:1
 msgid "Base warning used by this module."
-msgstr ""
+msgstr "此模組使用的基底警告。"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.HeaderParsingError:1
@@ -209,7 +209,7 @@ msgstr ""
 #: urllib3.exceptions.LocationParseError:1
 #: urllib3.exceptions.URLSchemeUnknown:1
 msgid "Bases: :py:class:`~urllib3.exceptions.LocationValueError`"
-msgstr ""
+msgstr "基底類別：:py:class:`~urllib3.exceptions.LocationValueError`"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.LocationParseError:1
@@ -240,12 +240,12 @@ msgstr "連接池"
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.MaxRetryError:5
 msgid "The requested Url"
-msgstr ""
+msgstr "請求的網址"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.MaxRetryError:6
 msgid "The underlying error"
-msgstr ""
+msgstr "底層錯誤"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.NameResolutionError:1

@@ -31,7 +31,7 @@ msgstr ""
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool:1
 msgid "Thread-safe connection pool for one host."
-msgstr ""
+msgstr "適用於單一主機的執行緒安全連接池。"
 
 #: ../../../reference/urllib3.connectionpool.rst:0
 #: ../../../../src/urllib3/connectionpool.py:docstring of
@@ -81,6 +81,9 @@ msgid ""
 "multithreaded situations where one does not want to use more than maxsize "
 "connections per host to prevent flooding."
 msgstr ""
+"若設為 True，則同一時間最多只會使用 ``maxsize`` 個連接。當沒有可用連接時，呼"
+"叫將會阻塞直到有連接被釋放。這在某些多執行緒情境下是一個有用的副作用，可防止"
+"對單一主機使用超過 maxsize 個連接而造成泛洪。"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool:31
@@ -128,7 +131,7 @@ msgstr "關閉所有連接池中的連接並停用該連接池。"
 #: urllib3.connectionpool.HTTPConnectionPool.is_same_host:0
 #: urllib3.connectionpool.connection_from_url:0
 msgid "Return type"
-msgstr ""
+msgstr "回傳值型別"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool.is_same_host:1
@@ -163,7 +166,7 @@ msgstr ""
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool.urlopen:17
 msgid "HTTP request method (such as GET, POST, PUT, etc.)"
-msgstr ""
+msgstr "HTTP 請求方法（例如 GET、POST、PUT 等）"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool.urlopen:20
@@ -176,6 +179,8 @@ msgid ""
 "Data to send in the request body, either :class:`str`, :class:`bytes`, an "
 "iterable of :class:`str`/:class:`bytes`, or a file-like object."
 msgstr ""
+"要發送到請求正文中的資料，可以是 :class:`str`、:class:`bytes`、:class:`str`/:"
+"class:`bytes` 的可疊代物件，或是類似檔案的物件。"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool.urlopen:27
@@ -377,3 +382,5 @@ msgid ""
 ">>> conn = connection_from_url('http://google.com/')\n"
 ">>> r = conn.request('GET', '/')"
 msgstr ""
+">>> conn = connection_from_url('http://google.com/')\n"
+">>> r = conn.request('GET', '/')"

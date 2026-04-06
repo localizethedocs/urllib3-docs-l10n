@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../reference/contrib/emscripten.rst:2
 msgid "Pyodide, Emscripten, and PyScript"
-msgstr ""
+msgstr "Pyodide、Emscripten 與 PyScript"
 
 #: ../../../reference/contrib/emscripten.rst:4
 msgid ""
@@ -46,6 +46,8 @@ msgid ""
 "libraries that depend on urllib3 may now be usable from Emscripten and "
 "Pyodide environments, too."
 msgstr ""
+"由於 urllib3 對 Emscripten 的支援具備 API 相容性，這意味著依賴 urllib3 的程式"
+"庫現在也能在 Emscripten 和 Pyodide 環境中使用。"
 
 #: ../../../reference/contrib/emscripten.rst:18
 msgid ""
@@ -126,6 +128,11 @@ msgid ""
 "print(resp.status_code)  # 200\n"
 "print(resp.headers)"
 msgstr ""
+"import requests\n"
+"resp = requests.request(\"GET\", \"https://httpbin.org/anything\")\n"
+"\n"
+"print(resp.status_code)  # 200\n"
+"print(resp.headers)"
 
 #: ../../../reference/contrib/emscripten.rst:59
 msgid "Features"
@@ -161,11 +168,11 @@ msgstr ""
 
 #: ../../../reference/contrib/emscripten.rst:69
 msgid "Decompressing response bodies"
-msgstr ""
+msgstr "解壓縮回應正文"
 
 #: ../../../reference/contrib/emscripten.rst:71
 msgid "Features which don't work with Emscripten:"
-msgstr ""
+msgstr "無法與 Emscripten 相容的功能："
 
 #: ../../../reference/contrib/emscripten.rst:73
 msgid "Proxies, both forwarding and tunneling"
@@ -199,7 +206,7 @@ msgstr ""
 
 #: ../../../reference/contrib/emscripten.rst:86
 msgid "Node.js support"
-msgstr ""
+msgstr "Node.js 支援"
 
 #: ../../../reference/contrib/emscripten.rst:87
 msgid ""

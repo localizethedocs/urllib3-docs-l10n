@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.request.rst:2
 msgid "urllib3.request()"
-msgstr ""
+msgstr "urllib3.request()"
 
 #: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:1
 msgid ""
@@ -36,7 +36,7 @@ msgstr "參數"
 
 #: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:6
 msgid "HTTP request method (such as GET, POST, PUT, etc.)"
-msgstr ""
+msgstr "HTTP 請求方法（例如 GET、POST、PUT 等）"
 
 #: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:9
 msgid "The URL to perform the request on."
@@ -47,10 +47,12 @@ msgid ""
 "Data to send in the request body, either :class:`str`, :class:`bytes`, an "
 "iterable of :class:`str`/:class:`bytes`, or a file-like object."
 msgstr ""
+"要發送到請求正文中的資料，可以是 :class:`str`、:class:`bytes`、:class:`str`/:"
+"class:`bytes` 的可疊代物件，或是類似檔案的物件。"
 
 #: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:16
 msgid "Data to encode and send in the request body."
-msgstr ""
+msgstr "要在請求正文中編碼並發送的資料。"
 
 #: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:19
 msgid ""
@@ -59,7 +61,7 @@ msgstr ""
 
 #: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:23
 msgid "If True, the response's body will be preloaded into memory."
-msgstr ""
+msgstr "若為 True，則回應的正文將預先載入記憶體中。"
 
 #: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:26
 msgid ""
@@ -123,4 +125,4 @@ msgstr ""
 
 #: ../../../reference/urllib3.request.rst:0
 msgid "Return type"
-msgstr ""
+msgstr "回傳值型別"

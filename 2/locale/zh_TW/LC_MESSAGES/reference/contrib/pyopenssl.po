@@ -60,7 +60,7 @@ msgstr ""
 #: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
 #: urllib3.contrib.pyopenssl:15
 msgid "You can install them with the following command:"
-msgstr ""
+msgstr "您可以使用以下命令安裝它們："
 
 #: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
 #: urllib3.contrib.pyopenssl:17
@@ -100,7 +100,7 @@ msgstr ""
 #: urllib3.contrib.pyopenssl.extract_from_urllib3:0
 #: urllib3.contrib.pyopenssl.inject_into_urllib3:0
 msgid "Return type"
-msgstr ""
+msgstr "回傳值型別"
 
 #: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
 #: urllib3.contrib.pyopenssl.inject_into_urllib3:1

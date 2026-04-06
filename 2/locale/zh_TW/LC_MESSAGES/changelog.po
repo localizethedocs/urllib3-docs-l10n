@@ -73,7 +73,7 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:33
 msgid "Security"
-msgstr ""
+msgstr "安全性"
 
 #: ../../../../CHANGES.rst:35
 msgid ""
@@ -84,6 +84,10 @@ msgid ""
 "(`GHSA-2xpw-w6gg-jr37 <https://github.com/urllib3/urllib3/security/"
 "advisories/GHSA-2xpw-w6gg-jr37>`__)"
 msgstr ""
+"修正了一項安全性議題：串流 API 可能無法正確處理高壓縮比的 HTTP 內容（「解壓縮"
+"炸彈」），導致即使只請求少量資料，也會造成過度的資源消耗。現在讀取小塊壓縮資"
+"料變得更安全且更有效率。（`GHSA-2xpw-w6gg-jr37 <https://github.com/urllib3/"
+"urllib3/security/advisories/GHSA-2xpw-w6gg-jr37>`__）"
 
 #: ../../../../CHANGES.rst:40
 msgid ""
@@ -94,6 +98,10 @@ msgid ""
 "5. (`GHSA-gm62-xv2j-4w53 <https://github.com/urllib3/urllib3/security/"
 "advisories/GHSA-gm62-xv2j-4w53>`__)"
 msgstr ""
+"修復了一項安全性議題：攻擊者可建構一個在 ``Content-Encoding`` 標頭中包含幾乎"
+"無限連結的 HTTP 回應，進而可能在解碼過程中耗盡系統資源，導致阻斷服務（DoS）攻"
+"擊。現在允許的鏈接編碼數量限制為 5 個。（`GHSA-gm62-xv2j-4w53 <https://"
+"github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53>`__）"
 
 #: ../../../../CHANGES.rst:47
 msgid ""
@@ -152,7 +160,7 @@ msgstr ""
 #: ../../../../CHANGES.rst:125 ../../../../CHANGES.rst:151
 #: ../../../../CHANGES.rst:171
 msgid "Bugfixes"
-msgstr ""
+msgstr "臭蟲修正"
 
 #: ../../../../CHANGES.rst:75
 msgid ""
