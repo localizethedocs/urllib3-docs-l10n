@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"POT-Creation-Date: 2026-04-06 09:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,90 +25,96 @@ msgstr ""
 msgid "Fields"
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of urllib3.fields.RequestField:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField:1
 msgid "Bases: :py:class:`object`"
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of urllib3.fields.RequestField:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField:1
 msgid "A data container for request body parameters."
 msgstr ""
 
-#: ../../../reference/urllib3.fields.rst:0
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField.from_tuples:0
-#: ../../../../src/urllib3/filepost.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField.from_tuples:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/filepost.py:docstring
 #: urllib3.filepost.iter_field_objects:0
+#: ../../../reference/urllib3.fields.rst:0
 msgid "Parameters"
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of urllib3.fields.RequestField:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField:3
 msgid "The name of this request field. Must be unicode."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of urllib3.fields.RequestField:5
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField:5
 msgid "The data/value body."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of urllib3.fields.RequestField:7
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField:7
 msgid "An optional filename of the request field. Must be unicode."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of urllib3.fields.RequestField:9
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField:9
 msgid "An optional dict-like object of headers to initially use for the field."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField:12
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField:12
 msgid ""
 "The ``header_formatter`` parameter is deprecated and will be removed in "
 "urllib3 v3.0."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField._render_part:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField._render_part:1
 msgid ""
 "Override this method to change how each multipart header parameter is "
 "formatted. By default, this calls :func:`format_multipart_header_param`."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField._render_part:5
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField._render_part:5
 #: urllib3.fields.format_multipart_header_param:12
 msgid "The name of the parameter, an ASCII-only ``str``."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField._render_part:7
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField._render_part:7
 #: urllib3.fields.format_multipart_header_param:14
 msgid "The value of the parameter, a ``str`` or UTF-8 encoded ``bytes``."
 msgstr ""
 
-#: ../../../reference/urllib3.fields.rst:0
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField.from_tuples:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField.from_tuples:0
 #: urllib3.fields.RequestField.render_headers:0
-#: ../../../../src/urllib3/filepost.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/filepost.py:docstring
 #: urllib3.filepost.choose_boundary:0 urllib3.filepost.iter_field_objects:0
+#: ../../../reference/urllib3.fields.rst:0
 msgid "Return type"
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField.from_tuples:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField.from_tuples:1
 msgid ""
 "A :class:`~urllib3.fields.RequestField` factory from old-style tuple "
 "parameters."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField.from_tuples:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField.from_tuples:3
 msgid ""
 "Supports constructing :class:`~urllib3.fields.RequestField` from parameter "
 "of key/value strings AND key/filetuple. A filetuple is a (filename, data, "
 "MIME type) tuple where the MIME type is optional. For example::"
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField.from_tuples:8
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField.from_tuples:8
 msgid ""
 "'foo': 'bar',\n"
 "'fakefile': ('foofile.txt', 'contents of foofile'),\n"
@@ -116,73 +123,73 @@ msgid ""
 "'nonamefile': 'contents of nonamefile field',"
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField.from_tuples:14
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField.from_tuples:14
 msgid "Field names and filenames must be unicode."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField.make_multipart:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField.make_multipart:1
 msgid "Makes this request field into a multipart request field."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField.make_multipart:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField.make_multipart:3
 msgid ""
 "This method overrides \"Content-Disposition\", \"Content-Type\" and "
 "\"Content-Location\" headers to the request parameter."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField.make_multipart:6
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField.make_multipart:6
 msgid "The 'Content-Disposition' of the request body. Defaults to 'form-data'"
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField.make_multipart:8
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField.make_multipart:8
 msgid "The 'Content-Type' of the request body."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField.make_multipart:10
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField.make_multipart:10
 msgid "The 'Content-Location' of the request body."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.RequestField.render_headers:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.RequestField.render_headers:1
 msgid "Renders the headers for this request field."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.format_header_param:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.format_header_param:1
 #: urllib3.fields.format_header_param_html5:1
 msgid ""
 "Renamed to :func:`format_multipart_header_param`. Will be removed in urllib3 "
 "v3.0."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.format_header_param_rfc2231:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.format_header_param_rfc2231:1
 msgid ""
 "Helper function to format and quote a single header parameter using the "
 "strategy defined in RFC 2231."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.format_header_param_rfc2231:4
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.format_header_param_rfc2231:4
 msgid ""
 "Particularly useful for header parameters which might contain non-ASCII "
 "values, like file names. This follows `RFC 2388 Section 4.4 <https://tools."
 "ietf.org/html/rfc2388#section-4.4>`_."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.format_header_param_rfc2231:8
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.format_header_param_rfc2231:8
 msgid "The name of the parameter, a string expected to be ASCII only."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.format_header_param_rfc2231:10
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.format_header_param_rfc2231:10
 msgid "The value of the parameter, provided as ``bytes`` or `str``."
 msgstr ""
 
@@ -190,62 +197,62 @@ msgstr ""
 msgid "Returns"
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.format_header_param_rfc2231:12
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.format_header_param_rfc2231:12
 msgid "An RFC-2231-formatted unicode string."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.format_header_param_rfc2231:15
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.format_header_param_rfc2231:15
 msgid ""
 "Will be removed in urllib3 v3.0. This is not valid for ``multipart/form-"
 "data`` header parameters."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.format_multipart_header_param:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.format_multipart_header_param:1
 msgid "Format and quote a single multipart header parameter."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.format_multipart_header_param:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.format_multipart_header_param:3
 msgid ""
 "This follows the `WHATWG HTML Standard`_ as of 2021/06/10, matching the "
 "behavior of current browser and curl versions. Values are assumed to be "
 "UTF-8. The ``\\n``, ``\\r``, and ``\"`` characters are percent encoded."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.format_multipart_header_param:17
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.format_multipart_header_param:17
 msgid "A string ``name=\"value\"`` with the escaped value."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.format_multipart_header_param:20
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.format_multipart_header_param:20
 msgid ""
 "Matches the WHATWG HTML Standard as of 2021/06/10. Control characters are no "
 "longer percent encoded."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.format_multipart_header_param:24
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.format_multipart_header_param:24
 msgid ""
 "Renamed from ``format_header_param_html5`` and ``format_header_param``. The "
 "old names will be removed in urllib3 v3.0."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.guess_content_type:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.guess_content_type:1
 msgid "Guess the \"Content-Type\" of a file."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.guess_content_type:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.guess_content_type:3
 msgid "The filename to guess the \"Content-Type\" of using :mod:`mimetypes`."
 msgstr ""
 
-#: ../../../../src/urllib3/fields.py:docstring of
-#: urllib3.fields.guess_content_type:5
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
+#: of urllib3.fields.guess_content_type:5
 msgid "If no \"Content-Type\" can be guessed, default to `default`."
 msgstr ""
 
@@ -253,39 +260,39 @@ msgstr ""
 msgid "Multipart Forms"
 msgstr ""
 
-#: ../../../../src/urllib3/filepost.py:docstring of
-#: urllib3.filepost.encode_multipart_formdata:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/filepost.py:docstring
+#: of urllib3.filepost.encode_multipart_formdata:1
 msgid ""
 "Encode a dictionary of ``fields`` using the multipart/form-data MIME format."
 msgstr ""
 
-#: ../../../../src/urllib3/filepost.py:docstring of
-#: urllib3.filepost.encode_multipart_formdata:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/filepost.py:docstring
+#: of urllib3.filepost.encode_multipart_formdata:3
 msgid ""
 "Dictionary of fields or list of (key, :class:`~urllib3.fields."
 "RequestField`). Values are processed by :func:`urllib3.fields.RequestField."
 "from_tuples`."
 msgstr ""
 
-#: ../../../../src/urllib3/filepost.py:docstring of
-#: urllib3.filepost.encode_multipart_formdata:7
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/filepost.py:docstring
+#: of urllib3.filepost.encode_multipart_formdata:7
 msgid ""
 "If not specified, then a random boundary will be generated using :func:"
 "`urllib3.filepost.choose_boundary`."
 msgstr ""
 
-#: ../../../../src/urllib3/filepost.py:docstring of
-#: urllib3.filepost.choose_boundary:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/filepost.py:docstring
+#: of urllib3.filepost.choose_boundary:1
 msgid "Our embarrassingly-simple replacement for mimetools.choose_boundary."
 msgstr ""
 
-#: ../../../../src/urllib3/filepost.py:docstring of
-#: urllib3.filepost.iter_field_objects:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/filepost.py:docstring
+#: of urllib3.filepost.iter_field_objects:1
 msgid "Iterate over fields."
 msgstr ""
 
-#: ../../../../src/urllib3/filepost.py:docstring of
-#: urllib3.filepost.iter_field_objects:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/filepost.py:docstring
+#: of urllib3.filepost.iter_field_objects:3
 msgid ""
 "Supports list of (k, v) tuples and dicts, and lists of :class:`~urllib3."
 "fields.RequestField`."
