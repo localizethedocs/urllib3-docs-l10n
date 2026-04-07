@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"POT-Creation-Date: 2026-04-06 09:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,8 +21,8 @@ msgstr ""
 msgid "PyOpenSSL"
 msgstr "PyOpenSSL"
 
-#: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
-#: urllib3.contrib.pyopenssl:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
+#: of urllib3.contrib.pyopenssl:1
 msgid ""
 "Module for using pyOpenSSL as a TLS backend. This module was relevant before "
 "the standard library ``ssl`` module supported SNI, but now that we've "
@@ -30,45 +30,45 @@ msgid ""
 "**this module is no longer recommended**."
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
-#: urllib3.contrib.pyopenssl:6
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
+#: of urllib3.contrib.pyopenssl:6
 msgid "This needs the following packages installed:"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
-#: urllib3.contrib.pyopenssl:8
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
+#: of urllib3.contrib.pyopenssl:8
 msgid "`pyOpenSSL`_ (tested with 19.0.0)"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
-#: urllib3.contrib.pyopenssl:9
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
+#: of urllib3.contrib.pyopenssl:9
 msgid "`cryptography`_ (minimum 2.3, from pyopenssl)"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
-#: urllib3.contrib.pyopenssl:10
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
+#: of urllib3.contrib.pyopenssl:10
 msgid "`idna`_ (minimum 2.1, from cryptography)"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
-#: urllib3.contrib.pyopenssl:12
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
+#: of urllib3.contrib.pyopenssl:12
 msgid ""
 "However, pyOpenSSL depends on cryptography, so while we use all three "
 "directly here we end up having relatively few packages required."
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
-#: urllib3.contrib.pyopenssl:15
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
+#: of urllib3.contrib.pyopenssl:15
 msgid "You can install them with the following command:"
 msgstr "您可以使用以下命令安裝它們："
 
-#: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
-#: urllib3.contrib.pyopenssl:17
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
+#: of urllib3.contrib.pyopenssl:17
 msgid "$ python -m pip install pyopenssl cryptography idna"
 msgstr "$ python -m pip install pyopenssl cryptography idna"
 
-#: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
-#: urllib3.contrib.pyopenssl:21
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
+#: of urllib3.contrib.pyopenssl:21
 msgid ""
 "To activate certificate checking, call :func:`~urllib3.contrib.pyopenssl."
 "inject_into_urllib3` from your Python code before you begin making HTTP "
@@ -76,8 +76,8 @@ msgid ""
 "time before your application begins using ``urllib3``, like this:"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
-#: urllib3.contrib.pyopenssl:27
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
+#: of urllib3.contrib.pyopenssl:27
 msgid ""
 "try:\n"
 "    import urllib3.contrib.pyopenssl\n"
@@ -91,18 +91,18 @@ msgstr ""
 "except ImportError:\n"
 "    pass"
 
-#: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
-#: urllib3.contrib.pyopenssl.extract_from_urllib3:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
+#: of urllib3.contrib.pyopenssl.extract_from_urllib3:1
 msgid "Undo monkey-patching by :func:`inject_into_urllib3`."
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
-#: urllib3.contrib.pyopenssl.extract_from_urllib3:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
+#: of urllib3.contrib.pyopenssl.extract_from_urllib3:0
 #: urllib3.contrib.pyopenssl.inject_into_urllib3:0
 msgid "Return type"
 msgstr "回傳值型別"
 
-#: ../../../../src/urllib3/contrib/pyopenssl.py:docstring of
-#: urllib3.contrib.pyopenssl.inject_into_urllib3:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
+#: of urllib3.contrib.pyopenssl.inject_into_urllib3:1
 msgid "Monkey-patch urllib3 with PyOpenSSL-backed SSL-support."
 msgstr ""
