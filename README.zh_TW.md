@@ -1,4 +1,12 @@
 <div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/localizethedocs/static/logo/urllib3-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/localizethedocs/static/logo/urllib3-light.svg">
+  <img height="100" src="https://cdn.jsdelivr.net/gh/localizethedocs/static/logo/urllib3-light.svg">
+</picture>
+</div>
+
+<div align="center">
 <h1 id="localization-of-the-urllib3-documentation">Localization of The Urllib3 Documentation</h1>
 </div>
 
