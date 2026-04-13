@@ -75,6 +75,8 @@ msgid ""
 "308). Each redirect counts as a retry. Disabling retries will disable "
 "redirect, too."
 msgstr ""
+"若為 True，則自動處理重新導向（狀態碼 301、302、303、307、308）。每次重新導向"
+"都算是重試。停用重試也會停用重新導向。"
 
 #: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:35
 msgid ""

@@ -1006,7 +1006,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:633
 msgid "Errors & Exceptions"
-msgstr ""
+msgstr "錯誤與例外"
 
 #: ../../../user-guide.rst:635
 msgid "urllib3 wraps lower-level exceptions, for example:"
@@ -1049,4 +1049,4 @@ msgstr ""
 
 #: ../../../user-guide.rst:657
 msgid "logging.getLogger(\"urllib3\").setLevel(logging.WARNING)"
-msgstr ""
+msgstr "logging.getLogger(\"urllib3\").setLevel(logging.WARNING)"
