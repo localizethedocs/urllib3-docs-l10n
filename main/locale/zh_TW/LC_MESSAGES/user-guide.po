@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"POT-Creation-Date: 2026-04-06 09:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1006,7 +1006,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:633
 msgid "Errors & Exceptions"
-msgstr ""
+msgstr "錯誤與例外"
 
 #: ../../../user-guide.rst:635
 msgid "urllib3 wraps lower-level exceptions, for example:"
@@ -1049,4 +1049,4 @@ msgstr ""
 
 #: ../../../user-guide.rst:657
 msgid "logging.getLogger(\"urllib3\").setLevel(logging.WARNING)"
-msgstr ""
+msgstr "logging.getLogger(\"urllib3\").setLevel(logging.WARNING)"

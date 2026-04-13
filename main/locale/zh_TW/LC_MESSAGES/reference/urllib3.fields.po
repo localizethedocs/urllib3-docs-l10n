@@ -33,7 +33,7 @@ msgstr "基底類別：:py:class:`object`"
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.RequestField:1
 msgid "A data container for request body parameters."
-msgstr ""
+msgstr "用於存放請求正文參數的資料容器。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.RequestField.from_tuples:0
@@ -126,12 +126,12 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.RequestField.from_tuples:14
 msgid "Field names and filenames must be unicode."
-msgstr ""
+msgstr "欄位名稱和檔案名稱必須為 unicode。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.RequestField.make_multipart:1
 msgid "Makes this request field into a multipart request field."
-msgstr ""
+msgstr "將該請求欄位轉換為多部分請求欄位。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.RequestField.make_multipart:3
@@ -167,6 +167,7 @@ msgid ""
 "Renamed to :func:`format_multipart_header_param`. Will be removed in urllib3 "
 "v3.0."
 msgstr ""
+"重新命名為 :func:`format_multipart_header_param`。將在 urllib3 v3.0 中刪除。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.format_header_param_rfc2231:1
@@ -208,6 +209,7 @@ msgid ""
 "Will be removed in urllib3 v3.0. This is not valid for ``multipart/form-"
 "data`` header parameters."
 msgstr ""
+"將在 urllib3 v3.0 中被刪除。這不適用於 ``multipart/form-data`` 標頭參數。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.format_multipart_header_param:1
