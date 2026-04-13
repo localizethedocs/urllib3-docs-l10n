@@ -141,7 +141,7 @@ msgstr "關閉所有連接池中的連接並停用該連接池。"
 msgid ""
 "Check if the given ``url`` is a member of the same host as this connection "
 "pool."
-msgstr ""
+msgstr "檢查給定的 ``url`` 是否與此連接池屬於同一主機。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool.urlopen:1
@@ -245,6 +245,8 @@ msgid ""
 "else will raise HostChangedError. When ``False``, you can use the pool on an "
 "HTTP proxy and request foreign hosts."
 msgstr ""
+"若為 ``True``，則確保請求池中的主機保持一致；否則，將引發 HostChangedError。"
+"若為 ``False``，則可以在 HTTP 代理上使用請求池並請求外部主機。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool.urlopen:58
@@ -308,6 +310,9 @@ msgid ""
 "``assert_hostname`` and ``host`` in this order to verify connections. If "
 "``assert_hostname`` is False, no verification is done."
 msgstr ""
+":class:`.HTTPSConnection` 使用 ``assert_fingerprint``、``assert_hostname`` "
+"和 ``host`` 之一，依此順序來驗證連接。若 ``assert_hostname`` 為 False，則不進"
+"行驗證。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPSConnectionPool:7
@@ -324,6 +329,8 @@ msgid ""
 "Base class for all connection pools, such as :class:`.HTTPConnectionPool` "
 "and :class:`.HTTPSConnectionPool`."
 msgstr ""
+"所有連接池的基底類別，例如 :class:`.HTTPConnectionPool` 和 :class:`."
+"HTTPSConnectionPool`。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.ConnectionPool:5

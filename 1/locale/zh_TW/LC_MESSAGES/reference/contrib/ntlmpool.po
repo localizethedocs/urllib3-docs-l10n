@@ -134,6 +134,8 @@ msgid ""
 "308). Each redirect counts as a retry. Disabling retries will disable "
 "redirect, too."
 msgstr ""
+"若為 True，則自動處理重新導向（狀態碼 301、302、303、307、308）。每次重新導向"
+"都算是重試。停用重試也會停用重新導向。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:53
@@ -142,6 +144,8 @@ msgid ""
 "else will raise HostChangedError. When ``False``, you can use the pool on an "
 "HTTP proxy and request foreign hosts."
 msgstr ""
+"若為 ``True``，則確保請求池中的主機保持一致；否則，將引發 HostChangedError。"
+"若為 ``False``，則可以在 HTTP 代理上使用請求池並請求外部主機。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:58

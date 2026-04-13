@@ -28,7 +28,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.RequestField:1
 msgid "A data container for request body parameters."
-msgstr ""
+msgstr "用於存放請求正文參數的資料容器。"
 
 #: ../../../reference/urllib3.fields.rst:0
 msgid "Parameters"
@@ -89,12 +89,12 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.RequestField.from_tuples:14
 msgid "Field names and filenames must be unicode."
-msgstr ""
+msgstr "欄位名稱和檔案名稱必須為 unicode。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.RequestField.make_multipart:1
 msgid "Makes this request field into a multipart request field."
-msgstr ""
+msgstr "將該請求欄位轉換為多部分請求欄位。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.RequestField.make_multipart:3
