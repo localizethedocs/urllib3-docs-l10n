@@ -65,7 +65,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.response.rst:0
 msgid "Returns"
-msgstr ""
+msgstr "回傳值"
 
 #: ../../../../src/urllib3/response.py:docstring of
 #: urllib3.response.BaseHTTPResponse.get_redirect_location:3

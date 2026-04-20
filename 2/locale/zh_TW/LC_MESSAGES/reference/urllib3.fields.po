@@ -189,7 +189,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.fields.rst:0
 msgid "Returns"
-msgstr ""
+msgstr "回傳值"
 
 #: ../../../../src/urllib3/fields.py:docstring of
 #: urllib3.fields.format_header_param_rfc2231:12

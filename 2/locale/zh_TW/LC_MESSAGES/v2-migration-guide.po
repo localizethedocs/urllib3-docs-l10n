@@ -370,7 +370,7 @@ msgstr ""
 #: ../../../v2-migration-guide.rst:181
 msgid ""
 "Next you should try installing urllib3 v2.x locally and run your test suite."
-msgstr ""
+msgstr "接下來您應該嘗試在本機安裝 urllib3 v2.x 並執行您的測試套件。"
 
 #: ../../../v2-migration-guide.rst:183
 msgid "$ python -m pip install -U 'urllib3>=2'"
@@ -393,6 +393,12 @@ msgid ""
 "# Pytest automatically prints all warnings.\n"
 "$ pytest tests/"
 msgstr ""
+"# 設定 PYTHONWARNING=default 來顯示所有警告。\n"
+"$ export PYTHONWARNINGS=\"default\"\n"
+"\n"
+"# 執行您的測試套件並查看是否有失敗項目。\n"
+"# Pytest 會自動列印所有警告。\n"
+"$ pytest tests/"
 
 #: ../../../v2-migration-guide.rst:201
 msgid "or you can opt-in within your Python code:"
@@ -480,7 +486,7 @@ msgstr ""
 
 #: ../../../v2-migration-guide.rst:256
 msgid "JSON is everywhere – and now it's in urllib3, too!"
-msgstr ""
+msgstr "JSON 無處不在 — 現在 urllib3 也支援它了！"
 
 #: ../../../v2-migration-guide.rst:258
 msgid ""
