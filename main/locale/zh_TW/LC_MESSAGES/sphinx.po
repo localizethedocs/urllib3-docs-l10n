@@ -1895,7 +1895,7 @@ msgstr ""
 #: domains/c/__init__.py:339 domains/cpp/__init__.py:502
 #: domains/javascript.py:287 domains/python/_object.py:221
 msgid "Returns"
-msgstr ""
+msgstr "回傳值"
 
 #: domains/c/__init__.py:345 domains/javascript.py:293
 #: domains/python/_object.py:227
