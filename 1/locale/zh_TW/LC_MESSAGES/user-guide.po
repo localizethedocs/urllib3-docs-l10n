@@ -72,6 +72,8 @@ msgid ""
 "``request()`` returns a :class:`~response.HTTPResponse` object, the :ref:"
 "`response_content` section explains how to handle various responses."
 msgstr ""
+"``request()`` 會回傳一個 :class:`~response.HTTPResponse` 物件，:ref:"
+"`response_content` 小節解釋了如何處理各種回應。"
 
 #: ../../../user-guide.rst:44
 msgid ""
@@ -96,7 +98,7 @@ msgstr ""
 
 #: ../../../user-guide.rst:61
 msgid "Response Content"
-msgstr ""
+msgstr "回應內容"
 
 #: ../../../user-guide.rst:63
 msgid ""

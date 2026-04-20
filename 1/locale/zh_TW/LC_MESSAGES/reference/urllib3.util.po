@@ -442,7 +442,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.util.rst:0
 msgid "Returns"
-msgstr ""
+msgstr "回傳值"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry.increment:9

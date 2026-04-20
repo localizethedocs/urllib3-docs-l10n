@@ -118,6 +118,8 @@ msgid ""
 "Contact `@sethmlarson <https://github.com/sethmlarson>`_ or `@shazow "
 "<https://github.com/shazow>`_ to arrange a grant for a core contributor."
 msgstr ""
+"請聯絡 `@sethmlarson <https://github.com/sethmlarson>`_ 或 `@shazow <https://"
+"github.com/shazow>`_ 為核心貢獻者安排一筆資助。"
 
 #: ../../../sponsors.rst:60
 msgid ""
@@ -126,6 +128,8 @@ msgid ""
 "their work hours. Let us know and we'll be glad to add you to our sponsors "
 "list."
 msgstr ""
+"我們也歡迎以時間投入的方式進行贊助。我們非常感謝那些鼓勵員工在工作時間內持續"
+"貢獻力量的公司。請與我們聯繫，我們將很樂意將您增添到我們的贊助者名單中。"
 
 #: ../../../sponsors.rst:64
 msgid ""

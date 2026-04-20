@@ -151,7 +151,7 @@ msgstr ""
 
 #: ../../../reference/urllib3.response.rst:0
 msgid "Returns"
-msgstr ""
+msgstr "回傳值"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.HTTPResponse.get_redirect_location:3
