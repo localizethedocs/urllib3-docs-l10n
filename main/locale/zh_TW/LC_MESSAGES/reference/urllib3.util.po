@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-06 09:11+0000\n"
+"POT-Creation-Date: 2026-04-20 09:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -367,12 +367,26 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
 #: of urllib3.util.retry.Retry:119
 msgid ""
+"The maximum backoff time (in seconds) between retry attempts. This value "
+"caps the computed backoff from `backoff_factor`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: of urllib3.util.retry.Retry:123
+msgid ""
+"Random jitter amount (in seconds) added to the computed backoff. Jitter is "
+"sampled uniformly from `0` to `backoff_jitter`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: of urllib3.util.retry.Retry:127
+msgid ""
 "Whether, if the number of redirects is exhausted, to raise a MaxRetryError, "
 "or to return a response with a response code in the 3xx range."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of urllib3.util.retry.Retry:123
+#: of urllib3.util.retry.Retry:131
 msgid ""
 "Similar meaning to ``raise_on_redirect``: whether we should raise an "
 "exception, or return a response, if status falls in ``status_forcelist`` "
@@ -380,7 +394,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of urllib3.util.retry.Retry:128
+#: of urllib3.util.retry.Retry:136
 msgid ""
 "The history of the request encountered during each call to :meth:`~Retry."
 "increment`. The list is in the order the requests occurred. Each list item "
@@ -388,21 +402,21 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of urllib3.util.retry.Retry:132
+#: of urllib3.util.retry.Retry:140
 msgid ""
 "Whether to respect Retry-After header on status codes defined as :attr:"
 "`Retry.RETRY_AFTER_STATUS_CODES` or not."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of urllib3.util.retry.Retry:136
+#: of urllib3.util.retry.Retry:144
 msgid ""
 "Sequence of headers to remove from the request when a response indicating a "
 "redirect is returned before firing off the redirected request."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of urllib3.util.retry.Retry:141
+#: of urllib3.util.retry.Retry:149
 msgid ""
 "Number of seconds to allow as the maximum for Retry-After headers. Defaults "
 "to :attr:`Retry.DEFAULT_RETRY_AFTER_MAX`. Any Retry-After headers larger "
