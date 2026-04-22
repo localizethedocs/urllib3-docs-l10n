@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-04 10:08:34 -0700",
-      "hash" : "d150cea52b37f4633a0dff4e26339c51d23d987b",
-      "title" : "Fix parsing behavior for ambiguous paths (#4952)"
+      "date" : "2026-04-08 00:13:29 +0300",
+      "hash" : "c21b1c16cd8c08dd26876e223bc198a2b4de4fb3",
+      "title" : "Describe Retry backoff_max and backoff_jitter params in docs (#3788)"
     }
   },
   "type" : "branch",
