@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../../reference/urllib3.response.rst:2
 msgid "Response and Decoders"
-msgstr ""
+msgstr "回應與解碼器"
 
 #: ../../../reference/urllib3.response.rst:5
 msgid "Response"
-msgstr ""
+msgstr "回應"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.BaseHTTPResponse:1
@@ -38,7 +38,7 @@ msgstr "參數"
 #: of urllib3.response.BaseHTTPResponse.close:1
 #: urllib3.response.HTTPResponse.close:1
 msgid "Flush and close the IO object."
-msgstr ""
+msgstr "清除並關閉 IO 物件。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.BaseHTTPResponse.close:3
@@ -115,12 +115,12 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.HTTPResponse:1
 msgid "Bases: :py:class:`~urllib3.response.BaseHTTPResponse`"
-msgstr ""
+msgstr "基底類別：:py:class:`~urllib3.response.BaseHTTPResponse`"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.HTTPResponse:1
 msgid "HTTP Response container."
-msgstr ""
+msgstr "HTTP 回應容器。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.HTTPResponse:3
@@ -142,7 +142,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.HTTPResponse:11
 msgid "If True, the response's body will be preloaded during construction."
-msgstr ""
+msgstr "若設為 True，回應的正文將在建構期間預先載入。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.HTTPResponse:14 urllib3.response.HTTPResponse.read:9
@@ -175,6 +175,8 @@ msgid ""
 "Enforce content length checking. Body returned by server must match value of "
 "Content-Length header, if present. Otherwise, raise error."
 msgstr ""
+"強制執行內容長度檢查。伺服器回傳的內容正文必須與 Content-Length 標頭的值相符"
+"（若有提供）。否則，將拋出錯誤。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.HTTPResponse.drain_conn:1
@@ -225,6 +227,8 @@ msgid ""
 "Similar to :meth:`http.client.HTTPResponse.read`, but with two additional "
 "parameters: ``decode_content`` and ``cache_content``."
 msgstr ""
+"與 :meth:`http.client.HTTPResponse.read` 相似，但多了兩個參數："
+"``decode_content`` 與 ``cache_content``。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.HTTPResponse.read:4
@@ -249,6 +253,8 @@ msgid ""
 "Similar to ``http.client.HTTPResponse.read1`` and documented in :meth:`io."
 "BufferedReader.read1`, but with an additional parameter: ``decode_content``."
 msgstr ""
+"與 ``http.client.HTTPResponse.read1`` 相似，且記載於 :meth:`io."
+"BufferedReader.read1` 中，但多了一個參數：``decode_content``。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.HTTPResponse.read1:5
@@ -261,6 +267,8 @@ msgid ""
 "Similar to :meth:`HTTPResponse.read`, but with an additional parameter: "
 "``decode_content``."
 msgstr ""
+"與 :meth:`http.client.HTTPResponse.read` 相似，但多了兩個參數："
+"``decode_content`` 與 ``cache_content``。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.HTTPResponse.readable:1

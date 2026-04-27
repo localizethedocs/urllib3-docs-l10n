@@ -1045,12 +1045,21 @@ msgid ""
 "    retries=urllib3.Retry(5, redirect=2)\n"
 ")"
 msgstr ""
+"import urllib3\n"
+"\n"
+"http = urllib3.PoolManager(retries=False)\n"
+"\n"
+"http = urllib3.PoolManager(\n"
+"    retries=urllib3.Retry(5, redirect=2)\n"
+")"
 
 #: ../../../user-guide.rst:629
 msgid ""
 "You still override this pool-level retry policy by specifying ``retries`` "
 "to :meth:`~urllib3.PoolManager.request`."
 msgstr ""
+"您仍然可以透過在 :meth:`~urllib3.PoolManager.request` 中指定 ``retries`` 來覆"
+"蓋此池層級的重試方針。"
 
 #: ../../../user-guide.rst:633
 msgid "Errors & Exceptions"
@@ -1058,7 +1067,7 @@ msgstr "錯誤與例外"
 
 #: ../../../user-guide.rst:635
 msgid "urllib3 wraps lower-level exceptions, for example:"
-msgstr ""
+msgstr "urllib3 包了底層的例外，例如："
 
 #: ../../../user-guide.rst:637
 msgid ""
