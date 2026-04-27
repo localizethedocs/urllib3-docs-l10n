@@ -709,7 +709,7 @@ msgstr "錯誤與例外"
 
 #: ../../../user-guide.rst:516
 msgid "urllib3 wraps lower-level exceptions, for example:"
-msgstr ""
+msgstr "urllib3 包了底層的例外，例如："
 
 #: ../../../user-guide.rst:518
 msgid ""

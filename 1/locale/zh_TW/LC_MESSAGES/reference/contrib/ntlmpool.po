@@ -58,6 +58,9 @@ msgid ""
 "because we want to make `preload_content=False` the default behaviour "
 "someday soon without breaking backwards compatibility."
 msgstr ""
+"只有在 `preload_content=False` 時，`release_conn` 的行為才會符合預期，因為我"
+"們希望在不久的將來將 `preload_content=False` 設為默認行為，同時又不破壞向後相"
+"容性。"
 
 #: ../../../reference/contrib/ntlmpool.rst:0
 msgid "Parameters"

@@ -85,7 +85,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.IncompleteRead:1
 msgid "Response length doesn't match expected Content-Length"
-msgstr ""
+msgstr "回應長度與預期的 Content-Length 不符"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.IncompleteRead:3
