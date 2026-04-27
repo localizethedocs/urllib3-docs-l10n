@@ -90,12 +90,12 @@ msgstr ""
 msgid ""
 "Headers to include with all requests, unless other headers are given "
 "explicitly."
-msgstr ""
+msgstr "除非明確提供其他標頭，否則所有請求都會包含的標頭。"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool:35
 msgid "Retry configuration to use by default with requests in this pool."
-msgstr ""
+msgstr "該連線池中的請求默認使用的重試組態。"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool:38
@@ -162,6 +162,9 @@ msgid ""
 "because we want to make `preload_content=False` the default behaviour "
 "someday soon without breaking backwards compatibility."
 msgstr ""
+"只有在 `preload_content=False` 時，`release_conn` 的行為才會符合預期，因為我"
+"們希望在不久的將來將 `preload_content=False` 設為默認行為，同時又不破壞向後相"
+"容性。"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPConnectionPool.urlopen:17
@@ -309,7 +312,7 @@ msgstr "基底類別：:py:class:`~urllib3.connectionpool.HTTPConnectionPool`"
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPSConnectionPool:1
 msgid "Same as :class:`.HTTPConnectionPool`, but HTTPS."
-msgstr ""
+msgstr "與 :class:`.HTTPConnectionPool` 相同，但用於 HTTPS。"
 
 #: ../../../../src/urllib3/connectionpool.py:docstring of
 #: urllib3.connectionpool.HTTPSConnectionPool:3

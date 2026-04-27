@@ -101,7 +101,7 @@ msgstr "當根據 Content-Type 進行自動解碼失敗時拋出。"
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.DependencyWarning:1 urllib3.exceptions.SecurityWarning:1
 msgid "Bases: :py:class:`~urllib3.exceptions.HTTPWarning`"
-msgstr ""
+msgstr "基底類別：:py:class:`~urllib3.exceptions.HTTPWarning`"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.DependencyWarning:1
@@ -167,7 +167,7 @@ msgstr ""
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.IncompleteRead:1
 msgid "Response length doesn't match expected Content-Length"
-msgstr ""
+msgstr "回應長度與預期的 Content-Length 不符"
 
 #: ../../../../src/urllib3/exceptions.py:docstring of
 #: urllib3.exceptions.IncompleteRead:3

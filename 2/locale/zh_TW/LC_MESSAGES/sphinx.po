@@ -3637,7 +3637,7 @@ msgstr ""
 
 #: ext/napoleon/docstring.py:965
 msgid "Other Parameters"
-msgstr ""
+msgstr "其他參數"
 
 #: ext/napoleon/docstring.py:1001
 msgid "Receives"
