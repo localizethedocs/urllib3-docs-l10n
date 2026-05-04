@@ -7,7 +7,7 @@
 </div>
 
 <div align="center">
-<h1 id="localization-of-the-urllib3-documentation">Localization of The Urllib3 Documentation</h1>
+<h1 id="localization-of-the-urllib3-documentation">Urllib3 文件的在地化</h1>
 </div>
 
 <details><summary><strong>切換語言</strong></summary>
