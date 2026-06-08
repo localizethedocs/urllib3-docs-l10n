@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"POT-Creation-Date: 2026-06-08 13:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -95,7 +96,7 @@ msgstr ""
 
 #: ../../../contributing.rst:39
 msgid ""
-"$ nox --reuse-existing-virtualenvs --sessions test-3.12 test-pypy3.10\n"
+"$ nox --reuse-existing-virtualenvs --sessions test-3.12 test-pypy3.11\n"
 "[ Nox will create virtualenv if needed, install the specified dependencies, "
 "and run the commands in order.]"
 msgstr ""
@@ -112,8 +113,8 @@ msgid ""
 "$ which python3.12\n"
 "~/.pyenv/versions/3.12.1/bin/python3.12\n"
 "\n"
-"$ which pypy3.10\n"
-"~/.pyenv/versions/pypy3.10-7.3.13/bin/pypy3.10"
+"$ which pypy3.11\n"
+"~/.pyenv/versions/pypy3.11-7.3.22/bin/pypy3.11"
 msgstr ""
 
 #: ../../../contributing.rst:55
@@ -141,7 +142,6 @@ msgid ""
 "and run the commands in order.]\n"
 ".......\n"
 ".......\n"
-"nox > Session test-3.9 was successful.\n"
 "nox > Session test-3.10 was successful.\n"
 "nox > Session test-3.11 was successful.\n"
 "nox > Session test-3.12 was successful.\n"
@@ -151,19 +151,19 @@ msgid ""
 "nox > Session test-pypy was successful."
 msgstr ""
 
-#: ../../../contributing.rst:78
+#: ../../../contributing.rst:77
 msgid ""
 "Our test suite `runs continuously on GitHub Actions <https://github.com/"
 "urllib3/urllib3/actions>`_ with every pull request."
 msgstr ""
 
-#: ../../../contributing.rst:81
+#: ../../../contributing.rst:80
 msgid ""
 "To run specific tests or quickly re-run without nox recreating the env, do "
 "the following::"
 msgstr ""
 
-#: ../../../contributing.rst:83
+#: ../../../contributing.rst:82
 msgid ""
 "$ nox --reuse-existing-virtualenvs --sessions test-3.13 -- pyTestArgument1 "
 "pyTestArgument2 pyTestArgumentN\n"
@@ -176,7 +176,7 @@ msgid ""
 "nox > Session test-3.13 was successful."
 msgstr ""
 
-#: ../../../contributing.rst:91
+#: ../../../contributing.rst:90
 msgid ""
 "After the ``--`` indicator, any arguments will be passed to pytest. To "
 "specify an exact test case the following syntax also works: ``test/dir/"
@@ -188,17 +188,17 @@ msgid ""
 "also possible to further parameterize pytest for local testing."
 msgstr ""
 
-#: ../../../contributing.rst:100
+#: ../../../contributing.rst:99
 msgid ""
 "For all valid arguments, check `the pytest documentation <https://docs."
 "pytest.org/en/stable/usage.html#stopping-after-the-first-or-n-failures>`_."
 msgstr ""
 
-#: ../../../contributing.rst:104
+#: ../../../contributing.rst:103
 msgid "Getting paid for your contributions"
 msgstr ""
 
-#: ../../../contributing.rst:106
+#: ../../../contributing.rst:105
 msgid ""
 "urllib3 has a `pool of money hosted on Open Collective <https://"
 "opencollective.com/urllib3#category-BUDGET>`_ which the team uses to pay "
@@ -211,7 +211,7 @@ msgid ""
 "%24500%22+no%3Aassignee>`_ then you're eligible to be paid for your work."
 msgstr ""
 
-#: ../../../contributing.rst:110
+#: ../../../contributing.rst:109
 msgid ""
 "Ensure that you're able to `receive funds from Open Collective for working "
 "on OSS <https://docs.opencollective.com/help/expenses-and-getting-paid/"
@@ -219,7 +219,7 @@ msgid ""
 "possible restrictions."
 msgstr ""
 
-#: ../../../contributing.rst:112
+#: ../../../contributing.rst:111
 msgid ""
 "If an issue is already assigned to someone on GitHub then it's likely "
 "they've made substantial progress on the issue and will be given the bounty. "
@@ -227,7 +227,7 @@ msgid ""
 "assigned to anyone."
 msgstr ""
 
-#: ../../../contributing.rst:116
+#: ../../../contributing.rst:115
 msgid ""
 "**Don't \"claim\" issues or ask whether someone is already working on an "
 "issue.** Instead, focus on researching and working on the tasks in the "
@@ -236,232 +236,232 @@ msgid ""
 "it in parallel."
 msgstr ""
 
-#: ../../../contributing.rst:120
+#: ../../../contributing.rst:119
 msgid ""
 "If you've been assigned to an issue and haven't made progress or given an "
 "update in over a week you will be unassigned from the issue to allow others "
 "a chance at solving the issue."
 msgstr ""
 
-#: ../../../contributing.rst:123
+#: ../../../contributing.rst:122
 msgid ""
 "The amount you will be paid for the completing an issue is shown in the "
 "label (either $100, $200, $300, etc)."
 msgstr ""
 
-#: ../../../contributing.rst:124
+#: ../../../contributing.rst:123
 msgid ""
 "If you have questions about how to create an invoice on Open Collective `try "
 "reading their FAQ <https://docs.opencollective.com/help/expenses-and-getting-"
 "paid/expenses>`_."
 msgstr ""
 
-#: ../../../contributing.rst:126
+#: ../../../contributing.rst:125
 msgid ""
 "If you have a proposal to work on urllib3 that's not listed in the issue "
 "tracker please open an issue with your proposal and our team will discuss "
 "whether we'd pay for your work on your proposal."
 msgstr ""
 
-#: ../../../contributing.rst:128
+#: ../../../contributing.rst:127
 msgid ""
 "If you have other questions get in contact with a maintainer in the `urllib3 "
 "Discord channel <https://discord.gg/urllib3>`_ or via email."
 msgstr ""
 
-#: ../../../contributing.rst:129
+#: ../../../contributing.rst:128
 msgid ""
 "The list above isn't an exhaustive list of criteria or rules for how/when "
 "money is distributed. **The final say on whether money will be distributed "
 "is up to maintainers.**"
 msgstr ""
 
-#: ../../../contributing.rst:132
+#: ../../../contributing.rst:131
 msgid ""
 "This program is an experiment so if you have positive or negative feedback "
 "on the process you can contact the maintainers through one of the above "
 "channels."
 msgstr ""
 
-#: ../../../contributing.rst:134
+#: ../../../contributing.rst:133
 msgid ""
 "Note that this program isn't a \"bug bounty\" program, we don't distribute "
 "funds to reporters of bugs or security vulnerabilities at this time."
 msgstr ""
 
-#: ../../../contributing.rst:137
+#: ../../../contributing.rst:136
 msgid "Running local proxies"
 msgstr ""
 
-#: ../../../contributing.rst:139
+#: ../../../contributing.rst:138
 msgid ""
 "If the feature you are developing involves a proxy, you can rely on scripts "
 "we have developed to run a proxy locally."
 msgstr ""
 
-#: ../../../contributing.rst:141
+#: ../../../contributing.rst:140
 msgid "Run an HTTP proxy locally:"
 msgstr ""
 
-#: ../../../contributing.rst:143
+#: ../../../contributing.rst:142
 msgid "$ python -m dummyserver.proxy"
 msgstr ""
 
-#: ../../../contributing.rst:147
+#: ../../../contributing.rst:146
 msgid "Run an HTTPS proxy locally:"
 msgstr ""
 
-#: ../../../contributing.rst:149
+#: ../../../contributing.rst:148
 msgid "$ python -m dummyserver.https_proxy"
 msgstr ""
 
-#: ../../../contributing.rst:154
+#: ../../../contributing.rst:153
 msgid "Contributing to documentation"
 msgstr ""
 
-#: ../../../contributing.rst:156
+#: ../../../contributing.rst:155
 msgid "You can build the docs locally using ``nox``:"
 msgstr ""
 
-#: ../../../contributing.rst:158
+#: ../../../contributing.rst:157
 msgid "$ nox -rs docs"
 msgstr ""
 
-#: ../../../contributing.rst:162
+#: ../../../contributing.rst:161
 msgid "While writing documentation you should follow these guidelines:"
 msgstr ""
 
-#: ../../../contributing.rst:164
+#: ../../../contributing.rst:163
 msgid ""
 "Use the top-level ``urllib3.request()`` function for smaller code examples. "
 "For more involved examples use PoolManager, etc."
 msgstr ""
 
-#: ../../../contributing.rst:165
+#: ../../../contributing.rst:164
 msgid "Use double quotes for all strings. (Output, Declaration etc.)"
 msgstr ""
 
-#: ../../../contributing.rst:166
+#: ../../../contributing.rst:165
 msgid ""
 "Use keyword arguments everywhere except for method and url. (ie ``http."
 "request(\"GET\", \"https://example.com\", headers={...})`` )"
 msgstr ""
 
-#: ../../../contributing.rst:167
+#: ../../../contributing.rst:166
 msgid "Use HTTPS in URLs everywhere unless HTTP is needed."
 msgstr ""
 
-#: ../../../contributing.rst:168
+#: ../../../contributing.rst:167
 msgid "Rules for code examples and naming variables:"
 msgstr ""
 
-#: ../../../contributing.rst:170
+#: ../../../contributing.rst:169
 msgid ""
 "``PoolManager`` instances should be named ``http``. (ie ``http = urllib3."
 "PoolManager(...)``)"
 msgstr ""
 
-#: ../../../contributing.rst:171
+#: ../../../contributing.rst:170
 msgid "``ProxyManager`` instances should be named ``proxy``."
 msgstr ""
 
-#: ../../../contributing.rst:172
+#: ../../../contributing.rst:171
 msgid "``ConnectionPool`` instances should be named ``pool``."
 msgstr ""
 
-#: ../../../contributing.rst:173
+#: ../../../contributing.rst:172
 msgid "``Connection`` instances should be named ``conn``."
 msgstr ""
 
-#: ../../../contributing.rst:174
+#: ../../../contributing.rst:173
 msgid "``HTTPResponse`` instances should be named ``resp``."
 msgstr ""
 
-#: ../../../contributing.rst:175
+#: ../../../contributing.rst:174
 msgid "Only use ``example.com`` or ``httpbin.org`` for example URLs"
 msgstr ""
 
-#: ../../../contributing.rst:177
+#: ../../../contributing.rst:176
 msgid ""
 "Comments within snippets should be useful, if what's being done is apparent "
 "(such as parsing JSON, making a request) then it can be skipped for that "
 "section."
 msgstr ""
 
-#: ../../../contributing.rst:179
+#: ../../../contributing.rst:178
 msgid ""
 "Comments should always go above a code section rather than below with the "
 "exception of print statements where the comment containing the result goes "
 "below."
 msgstr ""
 
-#: ../../../contributing.rst:181
+#: ../../../contributing.rst:180
 msgid ""
 "Imports should be their own section separated from the rest of the example "
 "with a line of whitespace."
 msgstr ""
 
-#: ../../../contributing.rst:182
+#: ../../../contributing.rst:181
 msgid ""
 "Imports should minimized if possible. Use import urllib3 instead of from "
 "urllib3 import X."
 msgstr ""
 
-#: ../../../contributing.rst:183
+#: ../../../contributing.rst:182
 msgid ""
 "Sort imports similarly to isort, standard library first and third-party "
 "(like urllib3) come after."
 msgstr ""
 
-#: ../../../contributing.rst:184
+#: ../../../contributing.rst:183
 msgid ""
 "No whitespace is required between the sections as normally would be in case "
 "of isort."
 msgstr ""
 
-#: ../../../contributing.rst:185
+#: ../../../contributing.rst:184
 msgid ""
 "Add print statements along with a comment below them showing the output, "
 "potentially compressed."
 msgstr ""
 
-#: ../../../contributing.rst:186
+#: ../../../contributing.rst:185
 msgid ""
 "This helps users using the copy-paste button immediately see the results "
 "from a script."
 msgstr ""
 
-#: ../../../contributing.rst:189
+#: ../../../contributing.rst:188
 msgid "Releases"
 msgstr ""
 
-#: ../../../contributing.rst:191
+#: ../../../contributing.rst:190
 msgid "A release candidate can be created by any contributor."
 msgstr ""
 
-#: ../../../contributing.rst:193
+#: ../../../contributing.rst:192
 msgid ""
 "Announce intent to release on Discord, see if anyone wants to include last "
 "minute changes."
 msgstr ""
 
-#: ../../../contributing.rst:195
+#: ../../../contributing.rst:194
 msgid ""
 "Run ``towncrier build`` to update ``CHANGES.rst`` with the release notes, "
 "adjust as necessary."
 msgstr ""
 
-#: ../../../contributing.rst:197
+#: ../../../contributing.rst:196
 msgid "Commit the changes to a ``release-X.Y.Z`` branch."
 msgstr ""
 
-#: ../../../contributing.rst:198
+#: ../../../contributing.rst:197
 msgid ""
 "Create a pull request and append ``&expand=1&template=release.md`` to the "
 "URL before submitting in order to include our release checklist in the pull "
 "request description."
 msgstr ""
 
-#: ../../../contributing.rst:200
+#: ../../../contributing.rst:199
 msgid "Follow the checklist!"
 msgstr ""
