@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-06 09:11+0000\n"
+"POT-Creation-Date: 2026-06-08 12:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,26 +23,9 @@ msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.BodyNotHttplibCompatible:1
-#: urllib3.exceptions.DecodeError:1 urllib3.exceptions.HeaderParsingError:1
-#: urllib3.exceptions.InvalidHeader:1 urllib3.exceptions.PoolError:1
-#: urllib3.exceptions.ProtocolError:1 urllib3.exceptions.ProxyError:1
-#: urllib3.exceptions.ResponseError:1 urllib3.exceptions.SSLError:1
-#: urllib3.exceptions.TimeoutError:1 urllib3.exceptions.TimeoutStateError:1
-#: urllib3.exceptions.UnrewindableBodyError:1
-msgid "Bases: :py:class:`~urllib3.exceptions.HTTPError`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.BodyNotHttplibCompatible:1
 msgid ""
 "Body should be :class:`http.client.HTTPResponse` like (have an fp attribute "
 "which returns raw chunks) for read_chunked()."
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.ClosedPoolError:1 urllib3.exceptions.EmptyPoolError:1
-#: urllib3.exceptions.FullPoolError:1 urllib3.exceptions.RequestError:1
-msgid "Bases: :py:class:`~urllib3.exceptions.PoolError`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
@@ -56,7 +39,6 @@ msgstr ""
 #: urllib3.exceptions.ClosedPoolError:0 urllib3.exceptions.EmptyPoolError:0
 #: urllib3.exceptions.FullPoolError:0 urllib3.exceptions.HeaderParsingError:0
 #: urllib3.exceptions.HostChangedError:0
-#: urllib3.exceptions.InvalidChunkLength:0
 #: urllib3.exceptions.LocationParseError:0
 #: urllib3.exceptions.NameResolutionError:0 urllib3.exceptions.PoolError:0
 #: urllib3.exceptions.ProxySchemeUnknown:0
@@ -72,17 +54,11 @@ msgstr ""
 #: urllib3.exceptions.ClosedPoolError:0 urllib3.exceptions.EmptyPoolError:0
 #: urllib3.exceptions.FullPoolError:0 urllib3.exceptions.HeaderParsingError:0
 #: urllib3.exceptions.HostChangedError:0
-#: urllib3.exceptions.InvalidChunkLength:0
 #: urllib3.exceptions.LocationParseError:0 urllib3.exceptions.PoolError:0
 #: urllib3.exceptions.ProxySchemeUnknown:0
 #: urllib3.exceptions.ReadTimeoutError:0 urllib3.exceptions.RequestError:0
 #: ../../../reference/urllib3.exceptions.rst:0
 msgid "Return type"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.ConnectTimeoutError:1
-msgid "Bases: :py:class:`~urllib3.exceptions.TimeoutError`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
@@ -98,12 +74,6 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.DecodeError:1
 msgid "Raised when automatic decoding based on Content-Type fails."
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.DependencyWarning:1
-#: urllib3.exceptions.SecurityWarning:1
-msgid "Bases: :py:class:`~urllib3.exceptions.HTTPWarning`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
@@ -125,17 +95,7 @@ msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.HTTPError:1
-msgid "Bases: :py:class:`Exception`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.HTTPError:1
 msgid "Base exception used by this module."
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.HTTPWarning:1
-msgid "Bases: :py:class:`Warning`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
@@ -151,21 +111,8 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.HostChangedError:1 urllib3.exceptions.MaxRetryError:1
-msgid "Bases: :py:class:`~urllib3.exceptions.RequestError`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.HostChangedError:1
 msgid "Raised when an existing pool gets a request for a foreign host."
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.IncompleteRead:1
-#: urllib3.exceptions.InvalidChunkLength:1
-msgid ""
-"Bases: :py:class:`~urllib3.exceptions.HTTPError`, :py:class:`~http.client."
-"IncompleteRead`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
@@ -178,14 +125,6 @@ msgstr ""
 msgid ""
 "Subclass of :class:`http.client.IncompleteRead` to allow int value for "
 "``partial`` to avoid creating large objects on streamed reads."
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.InsecurePlatformWarning:1
-#: urllib3.exceptions.InsecureRequestWarning:1
-#: urllib3.exceptions.NotOpenSSLWarning:1
-#: urllib3.exceptions.SystemTimeWarning:1
-msgid "Bases: :py:class:`~urllib3.exceptions.SecurityWarning`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
@@ -211,19 +150,7 @@ msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.LocationParseError:1
-#: urllib3.exceptions.URLSchemeUnknown:1
-msgid "Bases: :py:class:`~urllib3.exceptions.LocationValueError`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.LocationParseError:1
 msgid "Raised when get_host or similar fails to parse the URL input."
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.LocationValueError:1
-msgid ""
-"Bases: :py:class:`ValueError`, :py:class:`~urllib3.exceptions.HTTPError`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
@@ -253,19 +180,7 @@ msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.NameResolutionError:1
-msgid "Bases: :py:class:`~urllib3.exceptions.NewConnectionError`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.NameResolutionError:1
 msgid "Raised when host name resolution fails."
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.NewConnectionError:1
-msgid ""
-"Bases: :py:class:`~urllib3.exceptions.ConnectTimeoutError`, :py:class:"
-"`~urllib3.exceptions.HTTPError`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
@@ -296,31 +211,12 @@ msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.ProxySchemeUnknown:1
-msgid ""
-"Bases: :py:class:`AssertionError`, :py:class:`~urllib3.exceptions."
-"URLSchemeUnknown`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.ProxySchemeUnknown:1
 msgid "ProxyManager does not support the supplied scheme"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.ProxySchemeUnsupported:1
-msgid "Bases: :py:class:`ValueError`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.ProxySchemeUnsupported:1
 msgid "Fetching HTTPS resources through HTTPS proxies is unsupported"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.ReadTimeoutError:1
-msgid ""
-"Bases: :py:class:`~urllib3.exceptions.TimeoutError`, :py:class:`~urllib3."
-"exceptions.RequestError`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
@@ -336,12 +232,6 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
 #: of urllib3.exceptions.ResponseError:1
 msgid "Used as a container for an error reason supplied in a MaxRetryError."
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
-#: of urllib3.exceptions.ResponseNotChunked:1
-msgid ""
-"Bases: :py:class:`~urllib3.exceptions.ProtocolError`, :py:class:`ValueError`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/exceptions.py:docstring
