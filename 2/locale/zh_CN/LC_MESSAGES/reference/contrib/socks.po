@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"POT-Creation-Date: 2026-06-08 13:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,8 +21,8 @@ msgstr ""
 msgid "SOCKS Proxies"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks:1
 msgid ""
 "This module contains provisional support for SOCKS proxies from within "
 "urllib3. This module supports SOCKS4, SOCKS4A (an extension of SOCKS4), and "
@@ -30,119 +30,91 @@ msgid ""
 "module with the ``socks`` extra."
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks:6
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks:6
 msgid ""
 "The SOCKS implementation supports the full range of urllib3 features. It "
 "also supports the following SOCKS features:"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks:9
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks:9
 msgid "SOCKS4A (``proxy_url='socks4a://...``)"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks:10
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks:10
 msgid "SOCKS4 (``proxy_url='socks4://...``)"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks:11
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks:11
 msgid "SOCKS5 with remote DNS (``proxy_url='socks5h://...``)"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks:12
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks:12
 msgid "SOCKS5 with local DNS (``proxy_url='socks5://...``)"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks:13
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks:13
 msgid "Usernames and passwords for the SOCKS proxy"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks:16
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks:16
 msgid ""
 "It is recommended to use ``socks5h://`` or ``socks4a://`` schemes in your "
 "``proxy_url`` to ensure that DNS resolution is done from the remote server "
 "instead of client-side when connecting to a domain name."
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks:20
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks:20
 msgid ""
 "SOCKS4 supports IPv4 and domain names with the SOCKS4A extension. SOCKS5 "
 "supports IPv4, IPv6, and domain names."
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks:23
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks:23
 msgid ""
 "When connecting to a SOCKS4 proxy the ``username`` portion of the "
 "``proxy_url`` will be sent as the ``userid`` section of the SOCKS request:"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks:26
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks:26
 msgid "proxy_url=\"socks4a://<userid>@proxy-host\""
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks:30
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks:30
 msgid ""
 "When connecting to a SOCKS5 proxy the ``username`` and ``password`` portion "
 "of the ``proxy_url`` will be sent as the username/password to authenticate "
 "with the proxy:"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks:34
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks:34
 msgid "proxy_url=\"socks5h://<username>:<password>@proxy-host\""
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks.SOCKSConnection:1
-msgid "Bases: :py:class:`~urllib3.connection.HTTPConnection`"
-msgstr ""
-
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks.SOCKSConnection:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks.SOCKSConnection:1
 msgid "A plain-text HTTP connection that connects via a SOCKS proxy."
 msgstr ""
 
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks.SOCKSConnection:0
 #: ../../../reference/contrib/socks.rst:0
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks.SOCKSConnection:0
-#: urllib3.contrib.socks.SOCKSHTTPSConnection:0
 msgid "Parameters"
 msgstr ""
 
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks.SOCKSHTTPConnectionPool:1
-msgid "Bases: :py:class:`~urllib3.connectionpool.HTTPConnectionPool`"
-msgstr ""
-
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks.SOCKSHTTPSConnection:1
-msgid ""
-"Bases: :py:class:`~urllib3.contrib.socks.SOCKSConnection`, :py:class:"
-"`~urllib3.connection.HTTPSConnection`"
-msgstr ""
-
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks.SOCKSHTTPSConnectionPool:1
-msgid "Bases: :py:class:`~urllib3.connectionpool.HTTPSConnectionPool`"
-msgstr ""
-
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks.SOCKSProxyManager:1
-msgid "Bases: :py:class:`~urllib3.poolmanager.PoolManager`"
-msgstr ""
-
-#: ../../../../src/urllib3/contrib/socks.py:docstring of
-#: urllib3.contrib.socks.SOCKSProxyManager:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
+#: of urllib3.contrib.socks.SOCKSProxyManager:1
 msgid ""
 "A version of the urllib3 ProxyManager that routes connections via the "
 "defined SOCKS proxy."

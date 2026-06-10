@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"POT-Creation-Date: 2026-06-08 13:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,32 +21,27 @@ msgstr ""
 msgid "Connections"
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection:1
-msgid "Bases: :py:class:`~http.client.HTTPConnection`"
-msgstr ""
-
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:1
 msgid ""
 "Based on :class:`http.client.HTTPConnection` but provides an extra "
 "constructor backwards-compatibility layer between older and newer Pythons."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection:4
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:4
 msgid ""
 "Additional keyword parameters are used to configure attributes of the "
 "connection. Accepted parameters include:"
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection:7
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:7
 msgid "``source_address``: Set the source address for the current connection."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection:8
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:8
 msgid ""
 "``socket_options``: Set specific options on the underlying socket. If not "
 "specified, then defaults are loaded from ``HTTPConnection."
@@ -54,44 +49,44 @@ msgid ""
 "TCP_NODELAY to 1) unless the connection is behind a proxy."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection:12
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:12
 msgid ""
 "For example, if you wish to enable TCP Keep Alive in addition to the "
 "defaults, you might pass:"
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection:15
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:15
 msgid ""
 "HTTPConnection.default_socket_options + [\n"
 "    (socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1),\n"
 "]"
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection:21
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:21
 msgid ""
 "Or you may want to disable the defaults by passing an empty list (e.g., "
 "``[]``)."
 msgstr ""
 
-#: ../../../reference/urllib3.connection.rst:0
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.request:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.request:0
 #: urllib3.connection.HTTPConnection.request_chunked:0
 #: urllib3.connection.HTTPConnection.set_tunnel:0
 #: urllib3.connection.HTTPSConnection.set_cert:0
+#: ../../../reference/urllib3.connection.rst:0
 msgid "Parameters"
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.close:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.close:1
 msgid "Close the connection to the HTTP server."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.close:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.close:0
 #: urllib3.connection.HTTPConnection.connect:0
 #: urllib3.connection.HTTPConnection.getresponse:0
 #: urllib3.connection.HTTPConnection.request:0
@@ -102,34 +97,34 @@ msgstr ""
 msgid "Return type"
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.connect:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.connect:1
 #: urllib3.connection.HTTPSConnection.connect:1
 msgid "Connect to the host and port specified in __init__."
 msgstr ""
 
-#: ../../../docstring of
-#: urllib3.connection.HTTPConnection.default_socket_options:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.default_socket_options:1
 msgid ""
 "Disable Nagle's algorithm by default. ``[(socket.IPPROTO_TCP, socket."
 "TCP_NODELAY, 1)]``"
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.getresponse:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.getresponse:1
 msgid "Get the response from the server."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.getresponse:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.getresponse:3
 msgid ""
 "If the HTTPConnection is in the correct state, returns an instance of "
 "HTTPResponse or of whatever object is returned by the response_class "
 "variable."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.getresponse:5
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.getresponse:5
 msgid ""
 "If a request has not been sent or if a previous response has not be handled, "
 "ResponseNotReady is raised. If the HTTP response indicates that the "
@@ -137,15 +132,15 @@ msgid ""
 "returned. When the connection is closed, the underlying socket is closed."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.host:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.host:1
 msgid ""
 "Getter method to remove any trailing dots that indicate the hostname is an "
 "FQDN."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.host:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.host:3
 msgid ""
 "In general, SSL certificates don't include the trailing dot indicating a "
 "fully-qualified domain name, and thus, they don't validate properly when "
@@ -153,8 +148,8 @@ msgid ""
 "servers may not expect to receive the trailing dot when provided."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.host:8
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.host:8
 msgid ""
 "However, the hostname with trailing dot is critical to DNS resolution; doing "
 "a lookup with the trailing dot will properly only resolve the appropriate "
@@ -165,39 +160,40 @@ msgid ""
 "send HTTP requests)."
 msgstr ""
 
-#: ../../../docstring of urllib3.connection.HTTPConnection.is_verified:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.is_verified:1
 msgid "Whether this connection verifies the host's certificate."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.proxy_is_forwarding:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.proxy_is_forwarding:1
 msgid "Return True if a forwarding proxy is configured, else return False"
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.proxy_is_tunneling:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.proxy_is_tunneling:1
 msgid "Return True if a tunneling proxy is configured, else return False"
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.request:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.request:1
 msgid "Send a complete request to the server."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.request_chunked:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.request_chunked:1
 msgid ""
 "Alternative to the common request method, which sends the body with chunked "
 "encoding and not as one block"
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.set_tunnel:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.set_tunnel:1
 msgid "Set up host and port for HTTP CONNECT tunnelling."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.set_tunnel:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.set_tunnel:3
 msgid ""
 "In a connection that uses HTTP CONNECT tunnelling, the host passed to the "
 "constructor is used as a proxy server that relays all communication to the "
@@ -205,21 +201,21 @@ msgid ""
 "request to the proxy server when the connection is established."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.set_tunnel:8
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.set_tunnel:8
 msgid ""
 "This method must be called before the HTTP connection has been established."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.set_tunnel:11
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.set_tunnel:11
 msgid ""
 "The headers argument should be a mapping of extra HTTP headers to send with "
 "the CONNECT request."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPConnection.set_tunnel:14
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.set_tunnel:14
 msgid ""
 "As HTTP/1.1 is used for HTTP CONNECT tunnelling request, as per the RFC "
 "(https://tools.ietf.org/html/rfc7231#section-4.3.6), a HTTP Host: header "
@@ -229,41 +225,34 @@ msgid ""
 "automatically."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPSConnection:1
-msgid "Bases: :py:class:`~urllib3.connection.HTTPConnection`"
-msgstr ""
-
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPSConnection:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPSConnection:1
 msgid ""
 "Many of the parameters to this constructor are passed to the underlying SSL "
 "socket by means of :py:func:`urllib3.util.ssl_wrap_socket`."
 msgstr ""
 
-#: ../../../../src/urllib3/connection.py:docstring of
-#: urllib3.connection.HTTPSConnection.set_cert:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPSConnection.set_cert:1
 msgid "This method should only be called once, before the connection is used."
 msgstr ""
 
-#: ../../../../src/urllib3/_base_connection.py:docstring of
-#: urllib3._base_connection.ProxyConfig:1
-msgid "Bases: :py:class:`~typing.NamedTuple`"
-msgstr ""
-
-#: ../../../docstring of urllib3.connection.ProxyConfig.assert_fingerprint:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/_base_connection.py:docstring
+#: of urllib3.connection.ProxyConfig.assert_fingerprint:1
 msgid "Alias for field number 3"
 msgstr ""
 
-#: ../../../docstring of urllib3.connection.ProxyConfig.assert_hostname:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/_base_connection.py:docstring
+#: of urllib3.connection.ProxyConfig.assert_hostname:1
 msgid "Alias for field number 2"
 msgstr ""
 
-#: ../../../docstring of urllib3.connection.ProxyConfig.ssl_context:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/_base_connection.py:docstring
+#: of urllib3.connection.ProxyConfig.ssl_context:1
 msgid "Alias for field number 0"
 msgstr ""
 
-#: ../../../docstring of
-#: urllib3.connection.ProxyConfig.use_forwarding_for_https:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/_base_connection.py:docstring
+#: of urllib3.connection.ProxyConfig.use_forwarding_for_https:1
 msgid "Alias for field number 1"
 msgstr ""

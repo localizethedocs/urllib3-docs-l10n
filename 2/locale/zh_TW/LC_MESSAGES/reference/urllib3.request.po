@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"POT-Creation-Date: 2026-06-08 13:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,8 @@ msgstr ""
 msgid "urllib3.request()"
 msgstr "urllib3.request()"
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:1
 msgid ""
 "A convenience, top-level request method. It uses a module-global "
 "``PoolManager`` instance. Therefore, its side effects could be shared across "
@@ -34,15 +35,18 @@ msgstr ""
 msgid "Parameters"
 msgstr "參數"
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:6
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:6
 msgid "HTTP request method (such as GET, POST, PUT, etc.)"
 msgstr "HTTP 請求方法（例如 GET、POST、PUT 等）"
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:9
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:9
 msgid "The URL to perform the request on."
 msgstr "執行請求的 URL。"
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:12
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:12
 msgid ""
 "Data to send in the request body, either :class:`str`, :class:`bytes`, an "
 "iterable of :class:`str`/:class:`bytes`, or a file-like object."
@@ -50,26 +54,31 @@ msgstr ""
 "要發送到請求正文中的資料，可以是 :class:`str`、:class:`bytes`、:class:`str`/:"
 "class:`bytes` 的可疊代物件，或是類似檔案的物件。"
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:16
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:16
 msgid "Data to encode and send in the request body."
 msgstr "要在請求正文中編碼並發送的資料。"
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:19
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:19
 msgid ""
 "Dictionary of custom headers to send, such as User-Agent, If-None-Match, etc."
 msgstr ""
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:23
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:23
 msgid "If True, the response's body will be preloaded into memory."
 msgstr "若為 True，則回應的正文將預先載入記憶體中。"
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:26
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:26
 msgid ""
 "If True, will attempt to decode the body based on the 'content-encoding' "
 "header."
 msgstr "若為 True，將嘗試根據「content-encoding」標頭對正文進行解碼。"
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:30
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:30
 msgid ""
 "If True, automatically handle redirects (status codes 301, 302, 303, 307, "
 "308). Each redirect counts as a retry. Disabling retries will disable "
@@ -78,7 +87,8 @@ msgstr ""
 "若為 True，則自動處理重新導向（狀態碼 301、302、303、307、308）。每次重新導向"
 "都算是重試。停用重試也會停用重新導向。"
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:35
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:35
 msgid ""
 "Configure the number of retries to allow before raising a :class:`~urllib3."
 "exceptions.MaxRetryError` exception.  If ``None`` (default) will retry 3 "
@@ -90,13 +100,15 @@ msgid ""
 "MaxRetryError on redirects, the redirect response will be returned."
 msgstr ""
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:36
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:36
 msgid ""
 "Configure the number of retries to allow before raising a :class:`~urllib3."
 "exceptions.MaxRetryError` exception."
 msgstr ""
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:39
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:39
 msgid ""
 "If ``None`` (default) will retry 3 times, see ``Retry.DEFAULT``. Pass a :"
 "class:`~urllib3.util.retry.Retry` object for fine-grained control over "
@@ -105,20 +117,23 @@ msgid ""
 "retry."
 msgstr ""
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:45
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:45
 msgid ""
 "If ``False``, then retries are disabled and any exception is raised "
 "immediately. Also, instead of raising a MaxRetryError on redirects, the "
 "redirect response will be returned."
 msgstr ""
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:51
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:51
 msgid ""
 "If specified, overrides the default timeout for this one request. It may be "
 "a float (in seconds) or an instance of :class:`urllib3.util.Timeout`."
 msgstr ""
 
-#: ../../../../src/urllib3/__init__.py:docstring of urllib3.request:56
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
+#: of urllib3.request:56
 msgid ""
 "Data to encode and send as JSON with UTF-encoded in the request body. The "
 "``\"Content-Type\"`` header will be set to ``\"application/json\"`` unless "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"POT-Creation-Date: 2026-06-08 13:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,8 +58,8 @@ msgstr ""
 
 #: ../../../v2-migration-guide.rst:26
 msgid ""
-"Python version must be **3.9 or later** (previously supported Python 2.7, "
-"and 3.5 to 3.8)."
+"Python version must be **3.10 or later** (previously supported Python 2.7, "
+"and 3.5 to 3.9)."
 msgstr ""
 
 #: ../../../v2-migration-guide.rst:27
@@ -373,10 +373,10 @@ msgstr ""
 
 #: ../../../v2-migration-guide.rst:187
 msgid ""
-"Because there are new ``DeprecationWarnings`` you should ensure that you're "
-"able to see those warnings when running your test suite. To do so you can "
-"add the following to your test setup to ensure even ``DeprecationWarnings`` "
-"are output to the terminal:"
+"Because there are new ``FutureWarnings`` you should ensure that you're able "
+"to see those warnings when running your test suite. To do so you can add the "
+"following to your test setup to ensure even ``FutureWarnings`` are output to "
+"the terminal:"
 msgstr ""
 
 #: ../../../v2-migration-guide.rst:192
@@ -398,13 +398,13 @@ msgid ""
 "# You can change warning filters according to the filter rules:\n"
 "# https://docs.python.org/3/library/warnings.html#warning-filter\n"
 "import warnings\n"
-"warnings.filterwarnings(\"default\", category=DeprecationWarning)"
+"warnings.filterwarnings(\"default\", category=FutureWarning)"
 msgstr ""
 
 #: ../../../v2-migration-guide.rst:210
 msgid ""
 "Any failures or deprecation warnings you receive should be fixed as urllib3 "
-"v2.1.0 will remove all deprecated features. Many deprecation warnings will "
+"v3.0 will remove all deprecated features. Many deprecation warnings will "
 "make suggestions about what to do to avoid the deprecated feature."
 msgstr ""
 
@@ -414,8 +414,8 @@ msgstr ""
 
 #: ../../../v2-migration-guide.rst:215
 msgid ""
-"DeprecationWarning: 'ssl_version' option is deprecated and will be removed\n"
-"in urllib3 v2.6.0. Instead use 'ssl_minimum_version'"
+"FutureWarning: 'ssl_version' option is deprecated and will be removed\n"
+"in urllib3 v3.0. Instead use 'ssl_minimum_version'"
 msgstr ""
 
 #: ../../../v2-migration-guide.rst:220
@@ -505,20 +505,20 @@ msgid ""
 msgstr ""
 
 #: ../../../v2-migration-guide.rst:287
-msgid "**✨ Optimized for Python 3.9+**"
+msgid "**✨ Optimized for Python 3.10+**"
 msgstr ""
 
 #: ../../../v2-migration-guide.rst:289
 msgid ""
-"urllib3 2.x specifically targets CPython 3.9+ and PyPy 7.3.17+ (compatible "
-"with CPython 3.10) and dropping support for Python versions 2.7, and 3.5 to "
-"3.8."
+"urllib3 2.x specifically targets CPython 3.10+ and PyPy v7.3.20+ (compatible "
+"with CPython 3.11) and dropping support for Python versions 2.7, and 3.5 to "
+"3.9."
 msgstr ""
 
 #: ../../../v2-migration-guide.rst:292
 msgid ""
 "By dropping end-of-life Python versions we're able to optimize the codebase "
-"for Python 3.9+ by using new features to improve performance and reduce the "
+"for Python 3.10+ by using new features to improve performance and reduce the "
 "amount of code that needs to be executed in order to support legacy versions."
 msgstr ""
 

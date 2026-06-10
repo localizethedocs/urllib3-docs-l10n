@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"POT-Creation-Date: 2026-06-08 13:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,41 +25,36 @@ msgstr ""
 msgid "Response"
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.BaseHTTPResponse:1
-msgid "Bases: :py:class:`~io.IOBase`"
-msgstr ""
-
 #: ../../../reference/urllib3.response.rst:0
 msgid "Parameters"
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.BaseHTTPResponse.close:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.BaseHTTPResponse.close:1
 #: urllib3.response.HTTPResponse.close:1
 msgid "Flush and close the IO object."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.BaseHTTPResponse.close:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.BaseHTTPResponse.close:3
 #: urllib3.response.HTTPResponse.close:3
 msgid "This method has no effect if the file is already closed."
 msgstr ""
 
-#: ../../../reference/urllib3.response.rst:0
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.BaseHTTPResponse.close:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.BaseHTTPResponse.close:0
 #: urllib3.response.HTTPResponse.close:0
 #: urllib3.response.HTTPResponse.drain_conn:0
 #: urllib3.response.HTTPResponse.fileno:0 urllib3.response.HTTPResponse.flush:0
 #: urllib3.response.HTTPResponse.readable:0
 #: urllib3.response.HTTPResponse.supports_chunked_reads:0
 #: urllib3.response.HTTPResponse.tell:0
+#: ../../../reference/urllib3.response.rst:0
 msgid "Return type"
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.BaseHTTPResponse.get_redirect_location:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.BaseHTTPResponse.get_redirect_location:1
 msgid "Should we redirect and where to?"
 msgstr ""
 
@@ -67,63 +62,58 @@ msgstr ""
 msgid "Returns"
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.BaseHTTPResponse.get_redirect_location:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.BaseHTTPResponse.get_redirect_location:3
 msgid ""
 "Truthy redirect location string if we got a redirect status code and valid "
 "location. ``None`` if redirect status and no location. ``False`` if not a "
 "redirect status code."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.BaseHTTPResponse.json:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.BaseHTTPResponse.json:1
 msgid "Deserializes the body of the HTTP response as a Python object."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.BaseHTTPResponse.json:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.BaseHTTPResponse.json:3
 msgid ""
 "The body of the HTTP response must be encoded using UTF-8, as per `RFC 8529 "
 "Section 8.1 <https://www.rfc-editor.org/rfc/rfc8259#section-8.1>`_."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.BaseHTTPResponse.json:6
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.BaseHTTPResponse.json:6
 msgid ""
 "To use a custom JSON decoder pass the result of :attr:`HTTPResponse.data` to "
 "your custom decoder instead."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.BaseHTTPResponse.json:9
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.BaseHTTPResponse.json:9
 msgid ""
 "If the body of the HTTP response is not decodable to UTF-8, a "
 "`UnicodeDecodeError` will be raised. If the body of the HTTP response is not "
 "a valid JSON document, a `json.JSONDecodeError` will be raised."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.BaseHTTPResponse.json:13
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.BaseHTTPResponse.json:13
 msgid "Read more :ref:`here <json_content>`."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.BaseHTTPResponse.json:15
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.BaseHTTPResponse.json:15
 msgid "The body of the HTTP response as a Python object."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse:1
-msgid "Bases: :py:class:`~urllib3.response.BaseHTTPResponse`"
-msgstr ""
-
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse:1
 msgid "HTTP Response container."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse:3
 msgid ""
 "Backwards-compatible with :class:`http.client.HTTPResponse` but the response "
 "``body`` is loaded and decoded on-demand when the ``data`` property is "
@@ -132,20 +122,20 @@ msgid ""
 "context of that framework."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse:9
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse:9
 msgid ""
 "Extra parameters for behaviour not present in :class:`http.client."
 "HTTPResponse`:"
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse:11
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse:11
 msgid "If True, the response's body will be preloaded during construction."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse:14 urllib3.response.HTTPResponse.read:9
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse:14 urllib3.response.HTTPResponse.read:9
 #: urllib3.response.HTTPResponse.read1:8
 #: urllib3.response.HTTPResponse.read_chunked:9
 #: urllib3.response.HTTPResponse.stream:11
@@ -154,88 +144,88 @@ msgid ""
 "header."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse:18
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse:18
 msgid ""
 "When this HTTPResponse wrapper is generated from an :class:`http.client."
 "HTTPResponse` object, it's convenient to include the original for debug "
 "purposes. It's otherwise unused."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse:23
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse:23
 msgid ""
 "The retries contains the last :class:`~urllib3.util.retry.Retry` that was "
 "used during the request."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse:27
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse:27
 msgid ""
 "Enforce content length checking. Body returned by server must match value of "
 "Content-Length header, if present. Otherwise, raise error."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.drain_conn:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.drain_conn:1
 msgid ""
 "Read and discard any remaining HTTP response data in the response connection."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.drain_conn:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.drain_conn:3
 msgid ""
 "Unread data in the HTTPResponse connection blocks the connection from being "
 "released back to the pool."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.fileno:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.fileno:1
 msgid "Return underlying file descriptor if one exists."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.fileno:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.fileno:3
 msgid "Raise OSError if the IO object does not use a file descriptor."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.flush:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.flush:1
 msgid "Flush write buffers, if applicable."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.flush:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.flush:3
 msgid "This is not implemented for read-only and non-blocking streams."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.isatty:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.isatty:1
 msgid "Return whether this is an 'interactive' stream."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.isatty:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.isatty:3
 msgid "Return False if it can't be determined."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.read:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.read:1
 msgid ""
 "Similar to :meth:`http.client.HTTPResponse.read`, but with two additional "
 "parameters: ``decode_content`` and ``cache_content``."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.read:4
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.read:4
 #: urllib3.response.HTTPResponse.read_chunked:4
 msgid ""
 "How much of the content to read. If specified, caching is skipped because it "
 "doesn't make sense to cache partial content as the full response."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.read:13
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.read:13
 msgid ""
 "If True, will save the returned data such that the same result is returned "
 "despite of the state of the underlying file object. This is useful if you "
@@ -243,200 +233,200 @@ msgid ""
 "file object. (Overridden if ``amt`` is set.)"
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.read1:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.read1:1
 msgid ""
 "Similar to ``http.client.HTTPResponse.read1`` and documented in :meth:`io."
 "BufferedReader.read1`, but with an additional parameter: ``decode_content``."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.read1:5
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.read1:5
 msgid "How much of the content to read."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.read_chunked:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.read_chunked:1
 msgid ""
 "Similar to :meth:`HTTPResponse.read`, but with an additional parameter: "
 "``decode_content``."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.readable:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.readable:1
 msgid "Return whether object was opened for reading."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.readable:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.readable:3
 msgid "If False, read() will raise OSError."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.readline:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.readline:1
 msgid "Read and return a line from the stream."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.readline:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.readline:3
 msgid "If size is specified, at most size bytes will be read."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.readline:5
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.readline:5
 msgid ""
 "The line terminator is always b'\\n' for binary files; for text files, the "
 "newlines argument to open can be used to select the line terminator(s) "
 "recognized."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.readlines:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.readlines:1
 msgid "Return a list of lines from the stream."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.readlines:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.readlines:3
 msgid ""
 "hint can be specified to control the number of lines read: no more lines "
 "will be read if the total size (in bytes/characters) of all lines so far "
 "exceeds hint."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.seek:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.seek:1
 msgid "Change the stream position to the given byte offset."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.seek:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.seek:3
 msgid "offset"
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.seek:4
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.seek:4
 msgid "The stream position, relative to 'whence'."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.seek:5
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.seek:5
 msgid "whence"
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.seek:6
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.seek:6
 msgid "The relative position to seek from."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.seek:8
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.seek:8
 msgid ""
 "The offset is interpreted relative to the position indicated by whence. "
 "Values for whence are:"
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.seek:11
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.seek:11
 msgid ""
 "os.SEEK_SET or 0 -- start of stream (the default); offset should be zero or "
 "positive"
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.seek:12
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.seek:12
 msgid "os.SEEK_CUR or 1 -- current stream position; offset may be negative"
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.seek:13
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.seek:13
 msgid "os.SEEK_END or 2 -- end of stream; offset is usually negative"
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.seek:15
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.seek:15
 msgid "Return the new absolute position."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.seekable:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.seekable:1
 msgid "Return whether object supports random access."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.seekable:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.seekable:3
 msgid ""
 "If False, seek(), tell() and truncate() will raise OSError. This method may "
 "need to do a test seek()."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.stream:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.stream:1
 msgid ""
 "A generator wrapper for the read() method. A call will block until ``amt`` "
 "bytes have been read from the connection or until the connection is closed."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.stream:5
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.stream:5
 msgid ""
 "How much of the content to read. The generator will return up to much data "
 "per iteration, but may return less. This is particularly likely when using "
 "compressed data. However, the empty string will never be returned."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.supports_chunked_reads:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.supports_chunked_reads:1
 msgid ""
 "Checks if the underlying file-like object looks like a :class:`http.client."
 "HTTPResponse` object. We do this by testing for the fp attribute. If it is "
 "present we assume it returns raw chunks as processed by read_chunked()."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.tell:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.tell:1
 msgid ""
 "Obtain the number of bytes pulled over the wire so far. May differ from the "
-"amount of content returned by :meth:``urllib3.response.HTTPResponse.read`` "
-"if bytes are encoded on the wire (e.g, compressed)."
+"amount of content returned by :meth:`HTTPResponse.read` if bytes are encoded "
+"on the wire (e.g, compressed)."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.truncate:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.truncate:1
 msgid "Truncate file to size bytes."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.truncate:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.truncate:3
 msgid ""
 "File pointer is left unchanged. Size defaults to the current IO position as "
 "reported by tell(). Return the new size."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.url:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.url:1
 msgid ""
 "Returns the URL that was the source of this response. If the request that "
 "generated this response redirected, this method will return the final "
 "redirect location."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.writable:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.writable:1
 msgid "Return whether object was opened for writing."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.writable:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.writable:3
 msgid "If False, write() will raise OSError."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.writelines:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.writelines:1
 msgid "Write a list of lines to stream."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.HTTPResponse.writelines:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.HTTPResponse.writelines:3
 msgid ""
 "Line separators are not added, so it is usual for each of the lines provided "
 "to have a line separator at the end."
@@ -452,13 +442,13 @@ msgid ""
 "``Content-Encoding`` into their uncompressed binary representation."
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.MultiDecoder:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.MultiDecoder:1
 msgid "From RFC7231:"
 msgstr ""
 
-#: ../../../../src/urllib3/response.py:docstring of
-#: urllib3.response.MultiDecoder:2
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
+#: of urllib3.response.MultiDecoder:2
 msgid ""
 "If one or more encodings have been applied to a representation, the sender "
 "that applied the encodings MUST generate a Content-Encoding header field "

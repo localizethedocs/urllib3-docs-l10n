@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"POT-Creation-Date: 2026-06-08 13:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,11 +63,15 @@ msgstr ""
 msgid "2024: https://quentin.pradet.me/blog/urllib3-in-2024.html"
 msgstr ""
 
-#: ../../../sponsors.rst:21
+#: ../../../sponsors.rst:19
+msgid "2025: https://volochii.dev/blog/urllib3-in-2025/"
+msgstr ""
+
+#: ../../../sponsors.rst:22
 msgid "Sponsors and Grants (prior to 2019)"
 msgstr ""
 
-#: ../../../sponsors.rst:23
+#: ../../../sponsors.rst:24
 msgid ""
 "A grant for contiguous full-time development has the biggest impact for "
 "progress. Periods of 3 to 10 days allow a contributor to tackle substantial "
@@ -75,13 +79,13 @@ msgid ""
 "afford to not fix them."
 msgstr ""
 
-#: ../../../sponsors.rst:28
+#: ../../../sponsors.rst:29
 msgid ""
 "Contact `@sethmlarson <https://github.com/sethmlarson>`_ or `@shazow "
 "<https://github.com/shazow>`_ to arrange a grant for a core contributor."
 msgstr ""
 
-#: ../../../sponsors.rst:31
+#: ../../../sponsors.rst:32
 msgid ""
 "We also welcome sponsorship in the form of time. We greatly appreciate "
 "companies who encourage employees to contribute on an ongoing basis during "
@@ -89,48 +93,48 @@ msgid ""
 "list."
 msgstr ""
 
-#: ../../../sponsors.rst:35
+#: ../../../sponsors.rst:36
 msgid ""
 "`Spotify <https://engineering.atspotify.com/opensource/>`_ (June 2nd, 2022)"
 msgstr ""
 
-#: ../../../sponsors.rst:37
+#: ../../../sponsors.rst:38
 msgid ""
 "`GitCoin Grants <https://gitcoin.co/grants>`_ (2019-2020), sponsored "
 "`@sethmlarson <https://github.com/sethmlarson>`_ and `@pquentin <https://"
 "github.com/pquentin>`_"
 msgstr ""
 
-#: ../../../sponsors.rst:40
+#: ../../../sponsors.rst:41
 msgid ""
 "`Abbott <https://abbott.com>`_ (2018-2019), sponsored `@sethmlarson <https://"
 "github.com/sethmlarson>`_"
 msgstr ""
 
-#: ../../../sponsors.rst:42
+#: ../../../sponsors.rst:43
 msgid ""
 "`Google Cloud Platform <https://cloud.google.com>`_ (2018-2019), sponsored "
 "`@theacodes <https://github.com/theacodes>`_"
 msgstr ""
 
-#: ../../../sponsors.rst:44
+#: ../../../sponsors.rst:45
 msgid ""
 "`GOVCERT.LU <https://govcert.lu>`_ (October 23, 2018), sponsored "
 "`@sethmlarson <https://github.com/sethmlarson>`_"
 msgstr ""
 
-#: ../../../sponsors.rst:46
+#: ../../../sponsors.rst:47
 msgid ""
 "`Akamai <https://akamai.com>`_ (2017-2018) sponsored `@haikuginger <https://"
 "github.com/haikuginger>`_"
 msgstr ""
 
-#: ../../../sponsors.rst:48
+#: ../../../sponsors.rst:49
 msgid ""
 "`Hewlett Packard Enterprise <https://hpe.com>`_ (2016-2017) sponsored "
 "`@Lukasa <https://github.com/Lukasa>`_"
 msgstr ""
 
-#: ../../../sponsors.rst:51
+#: ../../../sponsors.rst:52
 msgid "`Stripe <https://stripe.com>`_ (June 23, 2014)"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"POT-Creation-Date: 2026-06-08 13:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,58 +21,53 @@ msgstr ""
 msgid "Pool Manager"
 msgstr "池管理器"
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager:1
-msgid "Bases: :py:class:`~urllib3._request_methods.RequestMethods`"
-msgstr ""
-
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager:1
 msgid ""
 "Allows for arbitrary requests while transparently keeping track of necessary "
 "connection pools for you."
 msgstr ""
 
-#: ../../../reference/urllib3.poolmanager.rst:0
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.connection_from_context:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.connection_from_context:0
 #: urllib3.poolmanager.PoolManager.connection_from_host:0
 #: urllib3.poolmanager.PoolManager.connection_from_pool_key:0
 #: urllib3.poolmanager.PoolManager.connection_from_url:0
 #: urllib3.poolmanager.PoolManager.urlopen:0
 #: urllib3.poolmanager.ProxyManager.connection_from_host:0
 #: urllib3.poolmanager.ProxyManager.urlopen:0
+#: ../../../reference/urllib3.poolmanager.rst:0
 msgid "Parameters"
 msgstr "參數"
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager:4
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager:4
 msgid ""
 "Number of connection pools to cache before discarding the least recently "
 "used pool."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager:8
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager:8
 msgid ""
 "Headers to include with all requests, unless other headers are given "
 "explicitly."
 msgstr "除非明確提供其他標頭，否則所有請求都會包含的標頭。"
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager:12
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager:12
 msgid ""
 "Additional parameters are used to create fresh :class:`urllib3."
 "connectionpool.ConnectionPool` instances."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager:16 urllib3.poolmanager.ProxyManager:32
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager:16 urllib3.poolmanager.ProxyManager:32
 msgid "Example:"
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager:18
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager:18
 msgid ""
 "import urllib3\n"
 "\n"
@@ -86,21 +81,20 @@ msgid ""
 "# 2"
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.clear:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.clear:1
 msgid "Empty our store of pools and direct them all to close."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.clear:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.clear:3
 msgid ""
 "This will not affect in-flight connections, but they will not be re-used "
 "after completion."
 msgstr ""
 
-#: ../../../reference/urllib3.poolmanager.rst:0
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.clear:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.clear:0
 #: urllib3.poolmanager.PoolManager.connection_from_context:0
 #: urllib3.poolmanager.PoolManager.connection_from_host:0
 #: urllib3.poolmanager.PoolManager.connection_from_pool_key:0
@@ -108,33 +102,34 @@ msgstr ""
 #: urllib3.poolmanager.PoolManager.urlopen:0
 #: urllib3.poolmanager.ProxyManager.connection_from_host:0
 #: urllib3.poolmanager.ProxyManager.urlopen:0
+#: ../../../reference/urllib3.poolmanager.rst:0
 msgid "Return type"
 msgstr "回傳值型別"
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.connection_from_context:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.connection_from_context:1
 msgid ""
 "Get a :class:`urllib3.connectionpool.ConnectionPool` based on the request "
 "context."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.connection_from_context:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.connection_from_context:3
 msgid ""
 "``request_context`` must at least contain the ``scheme`` key and its value "
 "must be a key in ``key_fn_by_scheme`` instance variable."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.connection_from_host:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.connection_from_host:1
 #: urllib3.poolmanager.ProxyManager.connection_from_host:1
 msgid ""
 "Get a :class:`urllib3.connectionpool.ConnectionPool` based on the host, "
 "port, and scheme."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.connection_from_host:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.connection_from_host:3
 #: urllib3.poolmanager.ProxyManager.connection_from_host:3
 msgid ""
 "If ``port`` isn't given, it will be derived from the ``scheme`` using "
@@ -143,27 +138,27 @@ msgid ""
 "create the new connection pool, if one is needed."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.connection_from_pool_key:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.connection_from_pool_key:1
 msgid ""
 "Get a :class:`urllib3.connectionpool.ConnectionPool` based on the provided "
 "pool key."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.connection_from_pool_key:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.connection_from_pool_key:3
 msgid ""
 "``pool_key`` should be a namedtuple that only contains immutable objects. At "
 "a minimum it must have the ``scheme``, ``host``, and ``port`` fields."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.connection_from_url:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.connection_from_url:1
 msgid "Similar to :func:`urllib3.connectionpool.connection_from_url`."
 msgstr "與 :func:`urllib3.connectionpool.connection_from_url` 相似。"
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.connection_from_url:3
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.connection_from_url:3
 msgid ""
 "If ``pool_kwargs`` is not provided and a new pool needs to be constructed, "
 "``self.connection_pool_kw`` is used to initialize the :class:`urllib3."
@@ -172,15 +167,15 @@ msgid ""
 "request, the provided ``pool_kwargs`` are not used."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request:1
 msgid ""
 "Make a request using :meth:`urlopen` with the appropriate encoding of "
 "``fields`` based on the ``method`` used."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request:4
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request:4
 msgid ""
 "This is a convenience method that requires the least amount of manual "
 "effort. It can be used in most situations, while still having the option to "
@@ -189,22 +184,22 @@ msgid ""
 "meth:`urlopen`."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request:10
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request:10
 #: urllib3._request_methods.RequestMethods.request_encode_body:35
 #: urllib3._request_methods.RequestMethods.request_encode_url:4
 msgid "HTTP request method (such as GET, POST, PUT, etc.)"
 msgstr "HTTP 請求方法（例如 GET、POST、PUT 等）"
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request:13
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request:13
 #: urllib3._request_methods.RequestMethods.request_encode_body:38
 #: urllib3._request_methods.RequestMethods.request_encode_url:7
 msgid "The URL to perform the request on."
 msgstr "執行請求的 URL。"
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request:16
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request:16
 msgid ""
 "Data to send in the request body, either :class:`str`, :class:`bytes`, an "
 "iterable of :class:`str`/:class:`bytes`, or a file-like object."
@@ -212,14 +207,14 @@ msgstr ""
 "要發送到請求正文中的資料，可以是 :class:`str`、:class:`bytes`、:class:`str`/:"
 "class:`bytes` 的可疊代物件，或是類似檔案的物件。"
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request:20
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request:20
 msgid ""
 "Data to encode and send in the URL or request body, depending on ``method``."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request:23
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request:23
 #: urllib3._request_methods.RequestMethods.request_encode_body:44
 #: urllib3._request_methods.RequestMethods.request_encode_url:13
 msgid ""
@@ -228,23 +223,23 @@ msgid ""
 "replace any pool-specific headers."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request:28
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request:28
 msgid ""
 "Data to encode and send as JSON with UTF-encoded in the request body. The "
 "``\"Content-Type\"`` header will be set to ``\"application/json\"`` unless "
 "specified otherwise."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request_encode_body:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request_encode_body:1
 msgid ""
 "Make a request using :meth:`urlopen` with the ``fields`` encoded in the "
 "body. This is useful for request methods like POST, PUT, PATCH, etc."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request_encode_body:4
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request_encode_body:4
 msgid ""
 "When ``encode_multipart=True`` (default), then :func:`urllib3."
 "encode_multipart_formdata` is used to encode the payload with the "
@@ -252,24 +247,24 @@ msgid ""
 "with the 'application/x-www-form-urlencoded' content type."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request_encode_body:10
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request_encode_body:10
 msgid ""
 "Multipart encoding must be used when posting files, and it's reasonably safe "
 "to use it in other times too. However, it may break request signing, such as "
 "with OAuth."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request_encode_body:14
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request_encode_body:14
 msgid ""
 "Supports an optional ``fields`` parameter of key/value strings AND key/"
 "filetuple. A filetuple is a (filename, data, MIME type) tuple where the MIME "
 "type is optional. For example::"
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request_encode_body:18
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request_encode_body:18
 msgid ""
 "fields = {\n"
 "    'foo': 'bar',\n"
@@ -281,15 +276,15 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request_encode_body:27
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request_encode_body:27
 msgid ""
 "When uploading a file, providing a filename (the first parameter of the "
 "tuple) is optional but recommended to best mimic behavior of browsers."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request_encode_body:30
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request_encode_body:30
 msgid ""
 "Note that if ``headers`` are supplied, the 'Content-Type' header will be "
 "overwritten because it depends on the dynamic random boundary string which "
@@ -297,84 +292,79 @@ msgid ""
 "be explicitly set with the ``multipart_boundary`` parameter."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request_encode_body:41
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request_encode_body:41
 msgid "Data to encode and send in the request body."
 msgstr "要在請求正文中編碼並發送的資料。"
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request_encode_body:49
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request_encode_body:49
 msgid ""
 "If True, encode the ``fields`` using the multipart/form-data MIME format."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request_encode_body:53
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request_encode_body:53
 msgid ""
 "If not specified, then a random boundary will be generated using :func:"
 "`urllib3.filepost.choose_boundary`."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request_encode_url:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request_encode_url:1
 msgid ""
 "Make a request using :meth:`urlopen` with the ``fields`` encoded in the url. "
 "This is useful for request methods like GET, HEAD, DELETE, etc."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3._request_methods.RequestMethods.request_encode_url:10
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3._request_methods.RequestMethods.request_encode_url:10
 msgid "Data to encode and send in the URL."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.urlopen:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.urlopen:1
 msgid ""
 "Same as :meth:`urllib3.HTTPConnectionPool.urlopen` with custom cross-host "
 "redirect logic and only sends the request-uri portion of the ``url``."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolManager.urlopen:5
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolManager.urlopen:5
 msgid ""
 "The given ``url`` parameter must be absolute, such that an appropriate :"
 "class:`urllib3.connectionpool.ConnectionPool` can be chosen for it."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.ProxyManager:1
-msgid "Bases: :py:class:`~urllib3.poolmanager.PoolManager`"
-msgstr "基底類別：:py:class:`~urllib3.poolmanager.PoolManager`"
-
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.ProxyManager:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.ProxyManager:1
 msgid ""
 "Behaves just like :class:`PoolManager`, but sends all requests through the "
 "defined proxy, using the CONNECT method for HTTPS URLs."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.ProxyManager:4
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.ProxyManager:4
 msgid "The URL of the proxy to be used."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.ProxyManager:7
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.ProxyManager:7
 msgid ""
 "A dictionary containing headers that will be sent to the proxy. In case of "
 "HTTP they are being sent with each request, while in the HTTPS/CONNECT case "
 "they are sent only once. Could be used for proxy authentication."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.ProxyManager:13
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.ProxyManager:13
 msgid ""
 "The proxy SSL context is used to establish the TLS connection to the proxy "
 "when using HTTPS proxies."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.ProxyManager:17
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.ProxyManager:17
 msgid ""
 "(Defaults to False) If set to True will forward requests to the HTTPS proxy "
 "to be made on behalf of the client instead of creating a TLS tunnel via the "
@@ -385,171 +375,203 @@ msgid ""
 "flag is disabled."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.ProxyManager:26
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.ProxyManager:26
 msgid "The hostname of the certificate to verify against."
 msgstr "用於驗證的證書主機名稱。"
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.ProxyManager:29
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.ProxyManager:29
 msgid "The fingerprint of the certificate to verify against."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.ProxyManager:34
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.ProxyManager:34
 msgid ""
 "import urllib3\n"
 "\n"
 "proxy = urllib3.ProxyManager(\"https://localhost:3128/\")\n"
 "\n"
-"resp1 = proxy.request(\"GET\", \"https://google.com/\")\n"
-"resp2 = proxy.request(\"GET\", \"https://httpbin.org/\")\n"
+"resp1 = proxy.request(\"GET\", \"http://google.com/\")\n"
+"resp2 = proxy.request(\"GET\", \"http://httpbin.org/\")\n"
 "\n"
+"# One pool was shared by both plain HTTP requests.\n"
 "print(len(proxy.pools))\n"
 "# 1\n"
 "\n"
 "resp3 = proxy.request(\"GET\", \"https://httpbin.org/\")\n"
 "resp4 = proxy.request(\"GET\", \"https://twitter.com/\")\n"
 "\n"
+"# A separate pool was added for each HTTPS target.\n"
 "print(len(proxy.pools))\n"
 "# 3"
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.ProxyManager.urlopen:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.ProxyManager.urlopen:1
 msgid "Same as HTTP(S)ConnectionPool.urlopen, ``url`` must be absolute."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolKey:1
-msgid "Bases: :py:class:`~typing.NamedTuple`"
-msgstr "基底類別：:py:class:`~typing.NamedTuple`"
-
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolKey:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey:1
 msgid ""
 "All known keyword arguments that could be provided to the pool manager, its "
 "pools, or the underlying connections."
 msgstr ""
 
-#: ../../../../src/urllib3/poolmanager.py:docstring of
-#: urllib3.poolmanager.PoolKey:4
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey:4
 msgid ""
 "All custom key schemes should include the fields in this key at a minimum."
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key__proxy:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key__proxy:1
 msgid "Alias for field number 20"
 msgstr "欄位編號 20 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key__proxy_config:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key__proxy_config:1
 msgid "Alias for field number 22"
 msgstr "欄位編號 22 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key__proxy_headers:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key__proxy_headers:1
 msgid "Alias for field number 21"
 msgstr "欄位編號 21 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key__socks_options:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key__socks_options:1
 msgid "Alias for field number 24"
 msgstr "欄位編號 24 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_assert_fingerprint:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_assert_fingerprint:1
 msgid "Alias for field number 26"
 msgstr "欄位編號 26 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_assert_hostname:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_assert_hostname:1
 msgid "Alias for field number 25"
 msgstr "欄位編號 25 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_block:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_block:1
 msgid "Alias for field number 5"
 msgstr "欄位編號 5 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_blocksize:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_blocksize:1
 msgid "Alias for field number 28"
 msgstr "欄位編號 28 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ca_cert_data:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ca_cert_data:1
 msgid "Alias for field number 12"
 msgstr "欄位編號 12 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ca_cert_dir:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ca_cert_dir:1
 msgid "Alias for field number 16"
 msgstr "欄位編號 16 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ca_certs:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ca_certs:1
 msgid "Alias for field number 11"
 msgstr "欄位編號 11 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_cert_file:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_cert_file:1
 msgid "Alias for field number 9"
 msgstr "欄位編號 9 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_cert_reqs:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_cert_reqs:1
 msgid "Alias for field number 10"
 msgstr "欄位編號 10 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_headers:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_headers:1
 msgid "Alias for field number 19"
 msgstr "欄位編號 19 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_host:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_host:1
 msgid "Alias for field number 1"
 msgstr "欄位編號 1 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_key_file:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_key_file:1
 msgid "Alias for field number 7"
 msgstr "欄位編號 7 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_key_password:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_key_password:1
 msgid "Alias for field number 8"
 msgstr "欄位編號 8 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_maxsize:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_maxsize:1
 msgid "Alias for field number 18"
 msgstr "欄位編號 18 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_port:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_port:1
 msgid "Alias for field number 2"
 msgstr "欄位編號 2 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_retries:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_retries:1
 msgid "Alias for field number 4"
 msgstr "欄位編號 4 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_scheme:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_scheme:1
 msgid "Alias for field number 0"
 msgstr "欄位編號 0 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_server_hostname:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_server_hostname:1
 msgid "Alias for field number 27"
 msgstr "欄位編號 27 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_socket_options:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_socket_options:1
 msgid "Alias for field number 23"
 msgstr "欄位編號 23 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_source_address:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_source_address:1
 msgid "Alias for field number 6"
 msgstr "欄位編號 6 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_context:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ssl_context:1
 msgid "Alias for field number 17"
 msgstr "欄位編號 17 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_maximum_version:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ssl_maximum_version:1
 msgid "Alias for field number 15"
 msgstr "欄位編號 15 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_minimum_version:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ssl_minimum_version:1
 msgid "Alias for field number 14"
 msgstr "欄位編號 14 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_version:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ssl_version:1
 msgid "Alias for field number 13"
 msgstr "欄位編號 13 的別名"
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_timeout:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_timeout:1
 msgid "Alias for field number 3"
 msgstr "欄位編號 3 的別名"
+
+#~ msgid "Bases: :py:class:`~urllib3.poolmanager.PoolManager`"
+#~ msgstr "基底類別：:py:class:`~urllib3.poolmanager.PoolManager`"
+
+#~ msgid "Bases: :py:class:`~typing.NamedTuple`"
+#~ msgstr "基底類別：:py:class:`~typing.NamedTuple`"
