@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-06 09:11+0000\n"
+"POT-Creation-Date: 2026-06-08 12:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,11 +24,6 @@ msgstr "回應與解碼器"
 #: ../../../reference/urllib3.response.rst:5
 msgid "Response"
 msgstr "回應"
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
-#: of urllib3.response.BaseHTTPResponse:1
-msgid "Bases: :py:class:`~io.IOBase`"
-msgstr "基底類別：:py:class:`~io.IOBase`"
 
 #: ../../../reference/urllib3.response.rst:0
 msgid "Parameters"
@@ -111,11 +106,6 @@ msgstr ""
 #: of urllib3.response.BaseHTTPResponse.json:15
 msgid "The body of the HTTP response as a Python object."
 msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
-#: of urllib3.response.HTTPResponse:1
-msgid "Bases: :py:class:`~urllib3.response.BaseHTTPResponse`"
-msgstr "基底類別：:py:class:`~urllib3.response.BaseHTTPResponse`"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.HTTPResponse:1
@@ -472,3 +462,9 @@ msgid ""
 "that applied the encodings MUST generate a Content-Encoding header field "
 "that lists the content codings in the order in which they were applied."
 msgstr ""
+
+#~ msgid "Bases: :py:class:`~io.IOBase`"
+#~ msgstr "基底類別：:py:class:`~io.IOBase`"
+
+#~ msgid "Bases: :py:class:`~urllib3.response.BaseHTTPResponse`"
+#~ msgstr "基底類別：:py:class:`~urllib3.response.BaseHTTPResponse`"

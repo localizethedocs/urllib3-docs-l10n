@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-20 09:58+0000\n"
+"POT-Creation-Date: 2026-06-08 12:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,29 +41,24 @@ msgid ""
 "components but can also be used independently."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of urllib3.util.retry.Retry:1 urllib3.util.timeout.Timeout:1
-msgid "Bases: :py:class:`object`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:1
 msgid "Retry configuration."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:3
 msgid ""
 "Each retry attempt will create a new Retry object with updated values, so "
 "they can be safely reused."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:6
 msgid "Retries can be defined as a default for a pool:"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:8
 msgid ""
 "retries = Retry(connect=5, read=2, redirect=5)\n"
@@ -71,29 +66,31 @@ msgid ""
 "response = http.request(\"GET\", \"https://example.com/\")"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of urllib3.util.retry.Retry:14 urllib3.util.timeout.Timeout:17
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
+#: of urllib3.util.retry.Retry:14
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
+#: urllib3.util.timeout.Timeout:17
 msgid "Or per-request (which overrides the default for the pool):"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:16
 msgid ""
 "response = http.request(\"GET\", \"https://example.com/\", retries=Retry(10))"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:20
 msgid "Retries can be disabled by passing ``False``:"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:22
 msgid ""
 "response = http.request(\"GET\", \"https://example.com/\", retries=False)"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:26
 msgid ""
 "Errors will be wrapped in :class:`~urllib3.exceptions.MaxRetryError` unless "
@@ -102,16 +99,18 @@ msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
 #: of urllib3.util.connection.is_connection_dropped:0
+#: urllib3.util.ssl_.resolve_cert_reqs:0
+#: urllib3.util.ssl_.resolve_ssl_version:0 urllib3.util.wait.wait_for_read:0
+#: urllib3.util.wait.wait_for_write:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: urllib3.util.retry.Retry.from_int:0
 #: urllib3.util.retry.Retry.get_retry_after:0
 #: urllib3.util.retry.Retry.is_retry:0 urllib3.util.retry.Retry.sleep:0
-#: urllib3.util.ssl_.resolve_cert_reqs:0
-#: urllib3.util.ssl_.resolve_ssl_version:0 urllib3.util.wait.wait_for_read:0
-#: urllib3.util.wait.wait_for_write:0 ../../../reference/urllib3.util.rst:0
+#: ../../../reference/urllib3.util.rst:0
 msgid "Parameters"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:29
 msgid ""
 "Total number of retries to allow. Takes precedence over other counts.  Set "
@@ -120,28 +119,28 @@ msgid ""
 "``raise_on_redirect=False``."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:30
 msgid "Total number of retries to allow. Takes precedence over other counts."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:32
 msgid ""
 "Set to ``None`` to remove this constraint and fall back on other counts."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:35
 msgid "Set to ``0`` to fail on the first retry."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:37 urllib3.util.retry.Retry:64
 msgid "Set to ``False`` to disable and imply ``raise_on_redirect=False``."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:39
 msgid ""
 "How many connection-related errors to retry on.  These are errors raised "
@@ -150,26 +149,26 @@ msgid ""
 "first retry of this type."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:40
 msgid "How many connection-related errors to retry on."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:42
 msgid ""
 "These are errors raised before the request is sent to the remote server, "
 "which we assume has not triggered the server to process the request."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:45 urllib3.util.retry.Retry:53
 #: urllib3.util.retry.Retry:62 urllib3.util.retry.Retry:72
 #: urllib3.util.retry.Retry:81
 msgid "Set to ``0`` to fail on the first retry of this type."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:47
 msgid ""
 "How many times to retry on read errors.  These errors are raised after the "
@@ -177,19 +176,19 @@ msgid ""
 "to ``0`` to fail on the first retry of this type."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:48
 msgid "How many times to retry on read errors."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:50
 msgid ""
 "These errors are raised after the request was sent to the server, so the "
 "request may have side-effects."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:55
 msgid ""
 "How many redirects to perform. Limit this to avoid infinite redirect loops.  "
@@ -198,19 +197,19 @@ msgid ""
 "disable and imply ``raise_on_redirect=False``."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:56
 msgid ""
 "How many redirects to perform. Limit this to avoid infinite redirect loops."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:59
 msgid ""
 "A redirect is a HTTP response with a status code 301, 302, 303, 307 or 308."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:66
 msgid ""
 "How many times to retry on bad status codes.  These are retries made on "
@@ -218,19 +217,19 @@ msgid ""
 "fail on the first retry of this type."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:67
 msgid "How many times to retry on bad status codes."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:69
 msgid ""
 "These are retries made on responses, where status code matches "
 "``status_forcelist``."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:74
 msgid ""
 "How many times to retry on other errors.  Other errors are errors that are "
@@ -241,12 +240,12 @@ msgid ""
 "unexpected edge cases and avoid infinite retry loops."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:75
 msgid "How many times to retry on other errors."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:77
 msgid ""
 "Other errors are errors that are not connect, read, redirect or status "
@@ -254,14 +253,14 @@ msgid ""
 "server, so the request might have side-effects."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:83
 msgid ""
 "If ``total`` is not set, it's a good idea to set this to 0 to account for "
 "unexpected edge cases and avoid infinite retry loops."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:86
 msgid ""
 "Set of uppercased HTTP method verbs that we should retry on.  By default, we "
@@ -270,12 +269,12 @@ msgid ""
 "DEFAULT_ALLOWED_METHODS`.  Set to a ``None`` value to retry on any verb."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:87
 msgid "Set of uppercased HTTP method verbs that we should retry on."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:89
 msgid ""
 "By default, we only retry on methods which are considered to be idempotent "
@@ -283,12 +282,12 @@ msgid ""
 "attr:`Retry.DEFAULT_ALLOWED_METHODS`."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:93
 msgid "Set to a ``None`` value to retry on any verb."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:95
 msgid ""
 "A set of integer HTTP status codes that we should force a retry on. A retry "
@@ -297,7 +296,7 @@ msgid ""
 "disabled with ``None``."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:96
 msgid ""
 "A set of integer HTTP status codes that we should force a retry on. A retry "
@@ -305,12 +304,12 @@ msgid ""
 "response status code is in ``status_forcelist``."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:100
 msgid "By default, this is disabled with ``None``."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:102
 msgid ""
 "A backoff factor to apply between attempts after the second try (most errors "
@@ -323,7 +322,7 @@ msgid ""
 "`backoff_max`.  By default, backoff is disabled (factor set to 0)."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:103
 msgid ""
 "A backoff factor to apply between attempts after the second try (most errors "
@@ -331,22 +330,22 @@ msgid ""
 "sleep for::"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:107
 msgid "{backoff factor} * (2 ** ({number of previous retries}))"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:109
 msgid "seconds. If `backoff_jitter` is non-zero, this sleep is extended by::"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:111
 msgid "random.uniform(0, {backoff jitter})"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:113
 msgid ""
 "seconds. For example, if the backoff_factor is 0.1, then :func:`Retry.sleep` "
@@ -354,33 +353,33 @@ msgid ""
 "will ever be longer than `backoff_max`."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:117
 msgid "By default, backoff is disabled (factor set to 0)."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:119
 msgid ""
 "The maximum backoff time (in seconds) between retry attempts. This value "
 "caps the computed backoff from `backoff_factor`."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:123
 msgid ""
 "Random jitter amount (in seconds) added to the computed backoff. Jitter is "
 "sampled uniformly from `0` to `backoff_jitter`."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:127
 msgid ""
 "Whether, if the number of redirects is exhausted, to raise a MaxRetryError, "
 "or to return a response with a response code in the 3xx range."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:131
 msgid ""
 "Similar meaning to ``raise_on_redirect``: whether we should raise an "
@@ -388,7 +387,7 @@ msgid ""
 "range and retries have been exhausted."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:136
 msgid ""
 "The history of the request encountered during each call to :meth:`~Retry."
@@ -396,21 +395,21 @@ msgid ""
 "is of class :class:`RequestHistory`."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:140
 msgid ""
 "Whether to respect Retry-After header on status codes defined as :attr:"
 "`Retry.RETRY_AFTER_STATUS_CODES` or not."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:144
 msgid ""
 "Sequence of headers to remove from the request when a response indicating a "
 "redirect is returned before firing off the redirected request."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:149
 msgid ""
 "Number of seconds to allow as the maximum for Retry-After headers. Defaults "
@@ -418,64 +417,70 @@ msgid ""
 "than this value will be limited to this value."
 msgstr ""
 
-#: ../../../docstring of urllib3.util.Retry.DEFAULT_ALLOWED_METHODS:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
+#: of urllib3.util.Retry.DEFAULT_ALLOWED_METHODS:1
 msgid "Default methods to be used for ``allowed_methods``"
 msgstr ""
 
-#: ../../../docstring of urllib3.util.Retry.DEFAULT_BACKOFF_MAX:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
+#: of urllib3.util.Retry.DEFAULT_BACKOFF_MAX:1
 msgid "Default maximum backoff time."
 msgstr ""
 
-#: ../../../docstring of
-#: urllib3.util.Retry.DEFAULT_REMOVE_HEADERS_ON_REDIRECT:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
+#: of urllib3.util.Retry.DEFAULT_REMOVE_HEADERS_ON_REDIRECT:1
 msgid "Default headers to be used for ``remove_headers_on_redirect``"
 msgstr ""
 
-#: ../../../docstring of urllib3.util.Retry.DEFAULT_RETRY_AFTER_MAX:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
+#: of urllib3.util.Retry.DEFAULT_RETRY_AFTER_MAX:1
 msgid "Default maximum allowed value for Retry-After headers in seconds"
 msgstr ""
 
-#: ../../../docstring of urllib3.util.Retry.RETRY_AFTER_STATUS_CODES:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
+#: of urllib3.util.Retry.RETRY_AFTER_STATUS_CODES:1
 msgid "Default status codes to be used for ``status_forcelist``"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry.from_int:1
 msgid "Backwards-compatibility for the old retries format."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
 #: of urllib3.util.connection.is_connection_dropped:0
+#: urllib3.util.ssl_.resolve_cert_reqs:0
+#: urllib3.util.ssl_.resolve_ssl_version:0 urllib3.util.wait.wait_for_read:0
+#: urllib3.util.wait.wait_for_write:0
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: urllib3.util.retry.Retry.from_int:0
 #: urllib3.util.retry.Retry.get_retry_after:0
 #: urllib3.util.retry.Retry.is_exhausted:0 urllib3.util.retry.Retry.is_retry:0
-#: urllib3.util.retry.Retry.sleep:0 urllib3.util.ssl_.resolve_cert_reqs:0
-#: urllib3.util.ssl_.resolve_ssl_version:0 urllib3.util.wait.wait_for_read:0
-#: urllib3.util.wait.wait_for_write:0 ../../../reference/urllib3.util.rst:0
+#: urllib3.util.retry.Retry.sleep:0 ../../../reference/urllib3.util.rst:0
 msgid "Return type"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry.get_backoff_time:1
 msgid "Formula for computing the current backoff"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry.get_retry_after:1
 msgid "Get the value of Retry-After in seconds."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry.increment:1
 msgid "Return a new Retry object with incremented retry counters."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry.increment:3
 msgid "A response object, or None, if the server did not return a response."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry.increment:6
 msgid ""
 "An error encountered during the request, or None if the response was "
@@ -486,17 +491,17 @@ msgstr ""
 msgid "Returns"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry.increment:9
 msgid "A new ``Retry`` object."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry.is_exhausted:1
 msgid "Are we out of retries?"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry.is_retry:1
 msgid ""
 "Is this method/status code retryable? (Based on allowlists and control "
@@ -506,12 +511,12 @@ msgid ""
 "the presence of the aforementioned header)"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry.sleep:1
 msgid "Sleep between retry attempts."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry.sleep:3
 msgid ""
 "This method will respect a server's ``Retry-After`` response header and "
@@ -520,29 +525,23 @@ msgid ""
 "method will return immediately."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of ssl.SSLContext:1
-msgid "Bases: :py:class:`~_ssl._SSLContext`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of ssl.SSLContext:1
+#: ../../../../../../.conda/lib/python3.13/ssl.py:docstring of ssl.SSLContext:1
 msgid ""
 "An SSLContext holds various SSL-related configuration options and data, such "
 "as certificates and possibly a private key."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:1
 msgid "Timeout configuration."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:3
 msgid "Timeouts can be defined as a default for a pool:"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:5
 msgid ""
 "import urllib3\n"
@@ -556,19 +555,19 @@ msgid ""
 "print(resp.status)"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:19
 msgid ""
 "response = http.request(\"GET\", \"https://example.com/\", "
 "timeout=Timeout(10))"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:23
 msgid "Timeouts can be disabled by setting all the parameters to ``None``:"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:25
 msgid ""
 "no_timeout = Timeout(connect=None, read=None)\n"
@@ -576,7 +575,7 @@ msgid ""
 "timeout=no_timeout)"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:31
 msgid ""
 "This combines the connect and read timeouts into one; the read timeout will "
@@ -585,7 +584,7 @@ msgid ""
 "are specified, the shorter timeout will be applied.  Defaults to None."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:32
 msgid ""
 "This combines the connect and read timeouts into one; the read timeout will "
@@ -594,12 +593,12 @@ msgid ""
 "are specified, the shorter timeout will be applied."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:37
 msgid "Defaults to None."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:41
 msgid ""
 "The maximum amount of time (in seconds) to wait for a connection attempt to "
@@ -609,7 +608,7 @@ msgid ""
 "will set an infinite timeout for connection attempts."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:51 urllib3.util.timeout.Timeout:52
 msgid ""
 "The maximum amount of time (in seconds) to wait between consecutive read "
@@ -619,14 +618,14 @@ msgid ""
 "socket.py#l535>`_. None will set an infinite timeout."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:63
 msgid ""
 "Many factors can affect the total amount of time for urllib3 to return an "
 "HTTP response."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:66
 msgid ""
 "For example, Python's DNS resolver does not obey the timeout specified on "
@@ -635,7 +634,7 @@ msgid ""
 "behaviors."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout:71
 msgid ""
 "In addition, the read and total timeouts only measure the time between read "
@@ -647,61 +646,62 @@ msgid ""
 "even though the request will take several minutes to complete."
 msgstr ""
 
-#: ../../../docstring of urllib3.util.Timeout.DEFAULT_TIMEOUT:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
+#: of urllib3.util.Timeout.DEFAULT_TIMEOUT:1
 msgid "A sentinel object representing the default timeout value"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout.clone:1
 msgid "Create a copy of the timeout object"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout.clone:3
 msgid ""
 "Timeout properties are stored per-pool but each request needs a fresh "
 "Timeout object to ensure each one has its own start/stop configured."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout.clone:6
 msgid "a copy of the timeout object"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout.clone:7
 #: urllib3.util.timeout.Timeout.from_float:11
 msgid ":class:`Timeout`"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.Timeout.connect_timeout:1
 msgid "Get the value to use when setting a connection timeout."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.Timeout.connect_timeout:3
 msgid ""
 "This will be a positive float or integer, the value None (never timeout), or "
 "the default system timeout."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.Timeout.connect_timeout:6
 msgid "Connect timeout."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.Timeout.connect_timeout:7
 msgid "int, float, :attr:`Timeout.DEFAULT_TIMEOUT` or None"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout.from_float:1
 msgid "Create a new Timeout from a legacy timeout value."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout.from_float:3
 msgid ""
 "The timeout value used by httplib.py sets the same timeout on the connect(), "
@@ -709,22 +709,22 @@ msgid ""
 "the individual timeouts to the ``timeout`` value passed to this function."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout.from_float:8
 msgid "The legacy timeout value."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout.from_float:10
 msgid "Timeout object"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout.get_connect_duration:1
 msgid "Gets the time elapsed since the call to :meth:`start_connect`."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout.get_connect_duration:3
 msgid "Elapsed time in seconds."
 msgstr ""
@@ -733,24 +733,24 @@ msgstr ""
 msgid "Raises"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout.get_connect_duration:5
 msgid "if you attempt to get duration for a timer that hasn't been started."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.Timeout.read_timeout:1
 msgid "Get the value for the read timeout."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.Timeout.read_timeout:3
 msgid ""
 "This assumes some time has elapsed in the connection timeout and computes "
 "the read timeout appropriately."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.Timeout.read_timeout:6
 msgid ""
 "If self.total is set, the read timeout is dependent on the amount of time "
@@ -758,32 +758,27 @@ msgid ""
 "established, a :exc:`~urllib3.exceptions.TimeoutStateError` will be raised."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.Timeout.read_timeout:11
 msgid "Value to use for the read timeout."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.Timeout.read_timeout:13
 msgid "If :meth:`start_connect` has not yet been called on this object."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout.start_connect:1
 msgid "Start the timeout clock, used during a connect() attempt"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/timeout.py:docstring
 #: of urllib3.util.timeout.Timeout.start_connect:3
 msgid "if you attempt to start a timer that has been started already."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of urllib3.util.url.Url:1
-msgid "Bases: :py:class:`~urllib3.util.url.Url`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.url.Url:1
 msgid ""
 "Data structure for representing an HTTP URL. Used as a return value for :"
@@ -791,51 +786,51 @@ msgid ""
 "case-insensitive according to RFC 3986."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.Url.authority:1
 msgid ""
 "Authority component as defined in RFC 3986 3.2. This includes userinfo "
 "(auth), host and port."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.Url.authority:4
 msgid "i.e."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.Url.authority:5
 msgid "userinfo@host:port"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.Url.hostname:1
 msgid "For backwards-compatibility with urlparse. We're nice like that."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.Url.netloc:1
 msgid "Network location including host and port."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.Url.netloc:3
 msgid ""
 "If you need the equivalent of urllib.parse's ``netloc``, use the "
 "``authority`` property instead."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.Url.request_uri:1
 msgid "Absolute path including the query string."
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.Url.url:1
 msgid "Convert self into a url"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.Url.url:3
 msgid ""
 "This function should more or less round-trip with :func:`.parse_url`. The "
@@ -845,12 +840,13 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of urllib3.util.Url.url:8 urllib3.util.request.make_headers:31
-#: urllib3.util.url.parse_url:12
+#: of urllib3.util.request.make_headers:31 urllib3.util.url.parse_url:12
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
+#: urllib3.util.Url.url:8
 msgid "Example:"
 msgstr ""
 
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.Url.url:10
 msgid ""
 "import urllib3\n"

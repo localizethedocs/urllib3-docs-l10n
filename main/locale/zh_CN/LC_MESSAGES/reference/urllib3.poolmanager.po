@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-06 09:11+0000\n"
+"POT-Creation-Date: 2026-06-08 12:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,6 @@ msgstr ""
 
 #: ../../../reference/urllib3.poolmanager.rst:2
 msgid "Pool Manager"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
-#: of urllib3.poolmanager.PoolManager:1
-msgid "Bases: :py:class:`~urllib3._request_methods.RequestMethods`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
@@ -341,11 +336,6 @@ msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
 #: of urllib3.poolmanager.ProxyManager:1
-msgid "Bases: :py:class:`~urllib3.poolmanager.PoolManager`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
-#: of urllib3.poolmanager.ProxyManager:1
 msgid ""
 "Behaves just like :class:`PoolManager`, but sends all requests through the "
 "defined proxy, using the CONNECT method for HTTPS URLs."
@@ -400,15 +390,17 @@ msgid ""
 "\n"
 "proxy = urllib3.ProxyManager(\"https://localhost:3128/\")\n"
 "\n"
-"resp1 = proxy.request(\"GET\", \"https://google.com/\")\n"
-"resp2 = proxy.request(\"GET\", \"https://httpbin.org/\")\n"
+"resp1 = proxy.request(\"GET\", \"http://google.com/\")\n"
+"resp2 = proxy.request(\"GET\", \"http://httpbin.org/\")\n"
 "\n"
+"# One pool was shared by both plain HTTP requests.\n"
 "print(len(proxy.pools))\n"
 "# 1\n"
 "\n"
 "resp3 = proxy.request(\"GET\", \"https://httpbin.org/\")\n"
 "resp4 = proxy.request(\"GET\", \"https://twitter.com/\")\n"
 "\n"
+"# A separate pool was added for each HTTPS target.\n"
 "print(len(proxy.pools))\n"
 "# 3"
 msgstr ""
@@ -416,11 +408,6 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
 #: of urllib3.poolmanager.ProxyManager.urlopen:1
 msgid "Same as HTTP(S)ConnectionPool.urlopen, ``url`` must be absolute."
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
-#: of urllib3.poolmanager.PoolKey:1
-msgid "Bases: :py:class:`~typing.NamedTuple`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
@@ -436,118 +423,147 @@ msgid ""
 "All custom key schemes should include the fields in this key at a minimum."
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key__proxy:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key__proxy:1
 msgid "Alias for field number 20"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key__proxy_config:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key__proxy_config:1
 msgid "Alias for field number 22"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key__proxy_headers:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key__proxy_headers:1
 msgid "Alias for field number 21"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key__socks_options:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key__socks_options:1
 msgid "Alias for field number 24"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_assert_fingerprint:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_assert_fingerprint:1
 msgid "Alias for field number 26"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_assert_hostname:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_assert_hostname:1
 msgid "Alias for field number 25"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_block:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_block:1
 msgid "Alias for field number 5"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_blocksize:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_blocksize:1
 msgid "Alias for field number 28"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ca_cert_data:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ca_cert_data:1
 msgid "Alias for field number 12"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ca_cert_dir:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ca_cert_dir:1
 msgid "Alias for field number 16"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ca_certs:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ca_certs:1
 msgid "Alias for field number 11"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_cert_file:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_cert_file:1
 msgid "Alias for field number 9"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_cert_reqs:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_cert_reqs:1
 msgid "Alias for field number 10"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_headers:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_headers:1
 msgid "Alias for field number 19"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_host:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_host:1
 msgid "Alias for field number 1"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_key_file:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_key_file:1
 msgid "Alias for field number 7"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_key_password:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_key_password:1
 msgid "Alias for field number 8"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_maxsize:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_maxsize:1
 msgid "Alias for field number 18"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_port:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_port:1
 msgid "Alias for field number 2"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_retries:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_retries:1
 msgid "Alias for field number 4"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_scheme:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_scheme:1
 msgid "Alias for field number 0"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_server_hostname:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_server_hostname:1
 msgid "Alias for field number 27"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_socket_options:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_socket_options:1
 msgid "Alias for field number 23"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_source_address:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_source_address:1
 msgid "Alias for field number 6"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_context:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ssl_context:1
 msgid "Alias for field number 17"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_maximum_version:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ssl_maximum_version:1
 msgid "Alias for field number 15"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_minimum_version:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ssl_minimum_version:1
 msgid "Alias for field number 14"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_ssl_version:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_ssl_version:1
 msgid "Alias for field number 13"
 msgstr ""
 
-#: ../../../docstring of urllib3.poolmanager.PoolKey.key_timeout:1
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
+#: of urllib3.poolmanager.PoolKey.key_timeout:1
 msgid "Alias for field number 3"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-06 09:11+0000\n"
+"POT-Creation-Date: 2026-06-08 12:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,13 +19,6 @@ msgstr ""
 
 #: ../../../reference/urllib3.connectionpool.rst:2
 msgid "Connection Pools"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
-#: of urllib3.connectionpool.HTTPConnectionPool:1
-msgid ""
-"Bases: :py:class:`~urllib3.connectionpool.ConnectionPool`, :py:class:"
-"`~urllib3._request_methods.RequestMethods`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
@@ -296,11 +289,6 @@ msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPSConnectionPool:1
-msgid "Bases: :py:class:`~urllib3.connectionpool.HTTPConnectionPool`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
-#: of urllib3.connectionpool.HTTPSConnectionPool:1
 msgid "Same as :class:`.HTTPConnectionPool`, but HTTPS."
 msgstr ""
 
@@ -319,11 +307,6 @@ msgid ""
 "``ca_cert_dir``, ``ssl_version``, ``key_password`` are only used if :mod:"
 "`ssl` is available and are fed into :meth:`urllib3.util.ssl_wrap_socket` to "
 "upgrade the connection socket into an SSL socket."
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
-#: of urllib3.connectionpool.ConnectionPool:1
-msgid "Bases: :py:class:`object`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring

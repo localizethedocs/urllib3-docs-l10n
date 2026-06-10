@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-06 09:11+0000\n"
+"POT-Creation-Date: 2026-06-08 12:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,42 +104,14 @@ msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
 #: of urllib3.contrib.socks.SOCKSConnection:1
-msgid "Bases: :py:class:`~urllib3.connection.HTTPConnection`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
-#: of urllib3.contrib.socks.SOCKSConnection:1
 msgid "A plain-text HTTP connection that connects via a SOCKS proxy."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
 #: of urllib3.contrib.socks.SOCKSConnection:0
-#: urllib3.contrib.socks.SOCKSHTTPSConnection:0
 #: ../../../reference/contrib/socks.rst:0
 msgid "Parameters"
 msgstr "參數"
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
-#: of urllib3.contrib.socks.SOCKSHTTPConnectionPool:1
-msgid "Bases: :py:class:`~urllib3.connectionpool.HTTPConnectionPool`"
-msgstr "基底類別：:py:class:`~urllib3.connectionpool.HTTPConnectionPool`"
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
-#: of urllib3.contrib.socks.SOCKSHTTPSConnection:1
-msgid ""
-"Bases: :py:class:`~urllib3.contrib.socks.SOCKSConnection`, :py:class:"
-"`~urllib3.connection.HTTPSConnection`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
-#: of urllib3.contrib.socks.SOCKSHTTPSConnectionPool:1
-msgid "Bases: :py:class:`~urllib3.connectionpool.HTTPSConnectionPool`"
-msgstr ""
-
-#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
-#: of urllib3.contrib.socks.SOCKSProxyManager:1
-msgid "Bases: :py:class:`~urllib3.poolmanager.PoolManager`"
-msgstr "基底類別：:py:class:`~urllib3.poolmanager.PoolManager`"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/socks.py:docstring
 #: of urllib3.contrib.socks.SOCKSProxyManager:1
@@ -147,3 +119,9 @@ msgid ""
 "A version of the urllib3 ProxyManager that routes connections via the "
 "defined SOCKS proxy."
 msgstr ""
+
+#~ msgid "Bases: :py:class:`~urllib3.connectionpool.HTTPConnectionPool`"
+#~ msgstr "基底類別：:py:class:`~urllib3.connectionpool.HTTPConnectionPool`"
+
+#~ msgid "Bases: :py:class:`~urllib3.poolmanager.PoolManager`"
+#~ msgstr "基底類別：:py:class:`~urllib3.poolmanager.PoolManager`"

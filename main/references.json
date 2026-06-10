@@ -16,9 +16,9 @@
       "branch" : "main",
       "commit" : 
       {
-        "date" : "2026-04-08 00:13:29 +0300",
-        "hash" : "c21b1c16cd8c08dd26876e223bc198a2b4de4fb3",
-        "title" : "Describe Retry backoff_max and backoff_jitter params in docs (#3788)"
+        "date" : "2026-06-06 01:08:21 +0300",
+        "hash" : "e8a81de5e1fe6b52dbcbdd93345560097c1e58fb",
+        "title" : "Strip fragments from absolute request targets (#5079)"
       }
     },
     "zh_TW" : 
@@ -26,9 +26,9 @@
       "branch" : "main",
       "commit" : 
       {
-        "date" : "2026-04-08 00:13:29 +0300",
-        "hash" : "c21b1c16cd8c08dd26876e223bc198a2b4de4fb3",
-        "title" : "Describe Retry backoff_max and backoff_jitter params in docs (#3788)"
+        "date" : "2026-06-06 01:08:21 +0300",
+        "hash" : "e8a81de5e1fe6b52dbcbdd93345560097c1e58fb",
+        "title" : "Strip fragments from absolute request targets (#5079)"
       }
     }
   },
