@@ -377,9 +377,3 @@ msgid ""
 msgstr ""
 ">>> conn = connection_from_url('http://google.com/')\n"
 ">>> r = conn.request('GET', '/')"
-
-#~ msgid "Bases: :py:class:`~urllib3.connectionpool.HTTPConnectionPool`"
-#~ msgstr "基底類別：:py:class:`~urllib3.connectionpool.HTTPConnectionPool`"
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"

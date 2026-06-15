@@ -285,36 +285,3 @@ msgstr ""
 #: of urllib3.disable_warnings:1
 msgid "Helper for quickly disabling all urllib3 warnings."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~urllib3.exceptions.HTTPError`"
-#~ msgstr "基底類別：:py:class:`~urllib3.exceptions.HTTPError`"
-
-#~ msgid "Bases: :py:class:`~urllib3.exceptions.PoolError`"
-#~ msgstr "基底類別：:py:class:`~urllib3.exceptions.PoolError`"
-
-#~ msgid "Bases: :py:class:`~urllib3.exceptions.TimeoutError`"
-#~ msgstr "基底類別：:py:class:`~urllib3.exceptions.TimeoutError`"
-
-#~ msgid "Bases: :py:class:`~urllib3.exceptions.HTTPWarning`"
-#~ msgstr "基底類別：:py:class:`~urllib3.exceptions.HTTPWarning`"
-
-#~ msgid "Bases: :py:class:`Exception`"
-#~ msgstr "基底類別：:py:class:`Exception`"
-
-#~ msgid "Bases: :py:class:`Warning`"
-#~ msgstr "基底類別：:py:class:`Warning`"
-
-#~ msgid "Bases: :py:class:`~urllib3.exceptions.RequestError`"
-#~ msgstr "基底類別：:py:class:`~urllib3.exceptions.RequestError`"
-
-#~ msgid "Bases: :py:class:`~urllib3.exceptions.SecurityWarning`"
-#~ msgstr "基底類別：:py:class:`~urllib3.exceptions.SecurityWarning`"
-
-#~ msgid "Bases: :py:class:`~urllib3.exceptions.LocationValueError`"
-#~ msgstr "基底類別：:py:class:`~urllib3.exceptions.LocationValueError`"
-
-#~ msgid "Bases: :py:class:`~urllib3.exceptions.NewConnectionError`"
-#~ msgstr "基底類別：:py:class:`~urllib3.exceptions.NewConnectionError`"
-
-#~ msgid "Bases: :py:class:`ValueError`"
-#~ msgstr "基底類別：:py:class:`ValueError`"

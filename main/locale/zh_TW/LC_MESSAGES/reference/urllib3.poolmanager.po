@@ -569,9 +569,3 @@ msgstr "欄位編號 13 的別名"
 #: of urllib3.poolmanager.PoolKey.key_timeout:1
 msgid "Alias for field number 3"
 msgstr "欄位編號 3 的別名"
-
-#~ msgid "Bases: :py:class:`~urllib3.poolmanager.PoolManager`"
-#~ msgstr "基底類別：:py:class:`~urllib3.poolmanager.PoolManager`"
-
-#~ msgid "Bases: :py:class:`~typing.NamedTuple`"
-#~ msgstr "基底類別：:py:class:`~typing.NamedTuple`"

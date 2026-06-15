@@ -462,9 +462,3 @@ msgid ""
 "that applied the encodings MUST generate a Content-Encoding header field "
 "that lists the content codings in the order in which they were applied."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~io.IOBase`"
-#~ msgstr "基底類別：:py:class:`~io.IOBase`"
-
-#~ msgid "Bases: :py:class:`~urllib3.response.BaseHTTPResponse`"
-#~ msgstr "基底類別：:py:class:`~urllib3.response.BaseHTTPResponse`"
