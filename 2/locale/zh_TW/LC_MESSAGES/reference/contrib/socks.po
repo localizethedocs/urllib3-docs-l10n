@@ -119,9 +119,3 @@ msgid ""
 "A version of the urllib3 ProxyManager that routes connections via the "
 "defined SOCKS proxy."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~urllib3.connectionpool.HTTPConnectionPool`"
-#~ msgstr "基底類別：:py:class:`~urllib3.connectionpool.HTTPConnectionPool`"
-
-#~ msgid "Bases: :py:class:`~urllib3.poolmanager.PoolManager`"
-#~ msgstr "基底類別：:py:class:`~urllib3.poolmanager.PoolManager`"

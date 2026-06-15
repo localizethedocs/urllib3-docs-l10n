@@ -162,6 +162,7 @@ msgid ""
 "Renamed to :func:`format_multipart_header_param`. Will be removed in urllib3 "
 "v3.0."
 msgstr ""
+"重新命名為 :func:`format_multipart_header_param`。將在 urllib3 v3.0 中刪除。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.format_header_param_rfc2231:1
@@ -203,6 +204,7 @@ msgid ""
 "Will be removed in urllib3 v3.0. This is not valid for ``multipart/form-"
 "data`` header parameters."
 msgstr ""
+"將在 urllib3 v3.0 中被刪除。這不適用於 ``multipart/form-data`` 標頭參數。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/fields.py:docstring
 #: of urllib3.fields.format_multipart_header_param:1
@@ -292,6 +294,3 @@ msgid ""
 "Supports list of (k, v) tuples and dicts, and lists of :class:`~urllib3."
 "fields.RequestField`."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"

@@ -259,6 +259,3 @@ msgstr "欄位編號 0 的別名"
 #: of urllib3.connection.ProxyConfig.use_forwarding_for_https:1
 msgid "Alias for field number 1"
 msgstr "欄位編號 1 的別名"
-
-#~ msgid "Bases: :py:class:`~typing.NamedTuple`"
-#~ msgstr "基底類別：:py:class:`~typing.NamedTuple`"
