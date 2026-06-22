@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Andrey Petrov
+# This file is distributed under the same license as the urllib3 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: urllib3 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/urllib3.request.rst:2
+msgid "Request Methods"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods:1
+msgid ""
+"Convenience mixin for classes who implement a :meth:`urlopen` method, such "
+"as :class:`urllib3.HTTPConnectionPool` and :class:`urllib3.PoolManager`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods:5
+msgid ""
+"Provides behavior for making common types of HTTP request methods and "
+"decides which type of request field encoding to use."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods:8
+msgid "Specifically,"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods:10
+msgid ""
+":meth:`.request_encode_url` is for sending requests whose fields are encoded "
+"in the URL (such as GET, HEAD, DELETE)."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods:13
+msgid ""
+":meth:`.request_encode_body` is for sending requests whose fields are "
+"encoded in the *body* of the request using multipart or www-form-urlencoded "
+"(such as for POST, PUT, PATCH)."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods:17
+msgid ""
+":meth:`.request` is for making any kind of request, it will look up the "
+"appropriate encoding format and use one of the above two methods to make the "
+"request."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods:21
+msgid "Initializer parameters:"
+msgstr ""
+
+#: ../../../reference/urllib3.request.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods:23
+msgid ""
+"Headers to include with all requests, unless other headers are given "
+"explicitly."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods.request:1
+msgid ""
+"Make a request using :meth:`urlopen` with the appropriate encoding of "
+"``fields`` based on the ``method`` used."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods.request:4
+msgid ""
+"This is a convenience method that requires the least amount of manual "
+"effort. It can be used in most situations, while still having the option to "
+"drop down to more specific methods when necessary, such as :meth:"
+"`request_encode_url`, :meth:`request_encode_body`, or even the lowest level :"
+"meth:`urlopen`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods.request_encode_body:1
+msgid ""
+"Make a request using :meth:`urlopen` with the ``fields`` encoded in the "
+"body. This is useful for request methods like POST, PUT, PATCH, etc."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods.request_encode_body:4
+msgid ""
+"When ``encode_multipart=True`` (default), then :func:`urllib3."
+"encode_multipart_formdata` is used to encode the payload with the "
+"appropriate content type. Otherwise :func:`urllib.parse.urlencode` is used "
+"with the 'application/x-www-form-urlencoded' content type."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods.request_encode_body:10
+msgid ""
+"Multipart encoding must be used when posting files, and it's reasonably safe "
+"to use it in other times too. However, it may break request signing, such as "
+"with OAuth."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods.request_encode_body:14
+msgid ""
+"Supports an optional ``fields`` parameter of key/value strings AND key/"
+"filetuple. A filetuple is a (filename, data, MIME type) tuple where the MIME "
+"type is optional. For example::"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods.request_encode_body:18
+msgid ""
+"fields = {\n"
+"    'foo': 'bar',\n"
+"    'fakefile': ('foofile.txt', 'contents of foofile'),\n"
+"    'realfile': ('barfile.txt', open('realfile').read()),\n"
+"    'typedfile': ('bazfile.bin', open('bazfile').read(),\n"
+"                  'image/jpeg'),\n"
+"    'nonamefile': 'contents of nonamefile field',\n"
+"}"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods.request_encode_body:27
+msgid ""
+"When uploading a file, providing a filename (the first parameter of the "
+"tuple) is optional but recommended to best mimic behavior of browsers."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods.request_encode_body:30
+msgid ""
+"Note that if ``headers`` are supplied, the 'Content-Type' header will be "
+"overwritten because it depends on the dynamic random boundary string which "
+"is used to compose the body of the request. The random boundary string can "
+"be explicitly set with the ``multipart_boundary`` parameter."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
+#: of urllib3.request.RequestMethods.request_encode_url:1
+msgid ""
+"Make a request using :meth:`urlopen` with the ``fields`` encoded in the url. "
+"This is useful for request methods like GET, HEAD, DELETE, etc."
+msgstr ""
