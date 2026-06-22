@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-08 12:40+0000\n"
+"POT-Creation-Date: 2026-06-22 13:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -321,7 +321,7 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.HTTPResponse.seek:8
 msgid ""
-"The offset is interpreted relative to the position indicated by whence. "
+"The offset is interpreted relative to the position indicated by whence.  "
 "Values for whence are:"
 msgstr ""
 
@@ -333,17 +333,17 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
-#: of urllib3.response.HTTPResponse.seek:12
+#: of urllib3.response.HTTPResponse.seek:13
 msgid "os.SEEK_CUR or 1 -- current stream position; offset may be negative"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
-#: of urllib3.response.HTTPResponse.seek:13
+#: of urllib3.response.HTTPResponse.seek:15
 msgid "os.SEEK_END or 2 -- end of stream; offset is usually negative"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
-#: of urllib3.response.HTTPResponse.seek:15
+#: of urllib3.response.HTTPResponse.seek:17
 msgid "Return the new absolute position."
 msgstr ""
 
@@ -398,8 +398,8 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
 #: of urllib3.response.HTTPResponse.truncate:3
 msgid ""
-"File pointer is left unchanged. Size defaults to the current IO position as "
-"reported by tell(). Return the new size."
+"File pointer is left unchanged.  Size defaults to the current IO position as "
+"reported by tell().  Return the new size."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/response.py:docstring
