@@ -1,0 +1,1253 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="../">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Response and Decoders" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="reference/urllib3.response.html" />
+<meta property="og:site_name" content="urllib3" />
+<meta property="og:description" content="Response: Decoders: Decoder classes are used for transforming compressed HTTP bodies using the Content-Encoding into their uncompressed binary representation." />
+<meta name="description" content="Response: Decoders: Decoder classes are used for transforming compressed HTTP bodies using the Content-Encoding into their uncompressed binary representation." />
+<link rel="index" title="索引" href="../genindex.html"><link rel="search" title="搜索" href="../search.html"><link rel="next" title="Fields and Multipart Forms" href="urllib3.fields.html"><link rel="prev" title="Exceptions and Warnings" href="urllib3.exceptions.html">
+        <link rel="canonical" href="https://projects.localizethedocs.org/urllib3-docs-l10n/reference/urllib3.response.html">
+        <link rel="prefetch" href="../_static/banner.svg" as="image">
+        <link rel="prefetch" href="../_static/dark-logo.svg" as="image">
+
+    <link rel="shortcut icon" href="../_static/favicon.png"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
+        <title>Response and Decoders - urllib3 2.7.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f0f0f0;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style>
+
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+<div class="announcement">
+  <aside class="announcement-content">
+     
+        <a style="text-decoration: none; color: white;" 
+           href="https://opencollective.com/urllib3/updates/urllib3-is-fundraising-for-http-2-support">
+           <img src="/en/latest/_static/favicon.png"/> urllib3 is fundraising for HTTP/2 support!
+        </a>
+     
+  </aside>
+</div>
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">urllib3 2.7.0 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/banner.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/dark-logo.svg" alt="Dark Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference external" href="https://tidelift.com/subscription/pkg/pypi-urllib3?utm_source=pypi-urllib3&amp;utm_medium=referral&amp;utm_campaign=docs">For Enterprise</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/urllib3">Community Discord</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sponsors.html">Sponsors and Supporters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced-usage.html">Advanced Usage</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input aria-label="Toggle navigation of API Reference" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="urllib3.request.html">urllib3.request()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urllib3.poolmanager.html">Pool Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urllib3.connectionpool.html">Connection Pools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urllib3.connection.html">Connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urllib3.exceptions.html">Exceptions and Warnings</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Response and Decoders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urllib3.fields.html">Fields and Multipart Forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urllib3.util.html">Utilities</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="contrib/index.html">Third-Party Modules</a><input aria-label="Toggle navigation of Third-Party Modules" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="contrib/emscripten.html">Pyodide, Emscripten, and PyScript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contrib/pyopenssl.html">PyOpenSSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contrib/socks.html">SOCKS Proxies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../v2-migration-guide.html">v2 Migration Guide</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/reference/urllib3.response.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="response-and-decoders">
+<h1>Response and Decoders<a class="headerlink" href="#response-and-decoders" title="链接到此标题。">¶</a></h1>
+<section id="response">
+<h2>Response<a class="headerlink" href="#response" title="链接到此标题。">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">urllib3.response.</span></span><span class="sig-name descname"><span class="pre">BaseHTTPResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="仅关键字参数分隔符 (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version_string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reason</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode_content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse" title="链接到此定义。">¶</a></dt>
+<dd><p>基类：<a class="reference external" href="https://docs.python.org/3/library/io.html#io.IOBase" title="(位于 Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">IOBase</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>headers</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(位于 Python v3.14)"><em>Mapping</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a><em>] </em><em>| </em><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(位于 Python v3.14)"><em>Mapping</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)"><em>bytes</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)"><em>bytes</em></a><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a>)</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a>)</p></li>
+<li><p><strong>version_string</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>decode_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a>)</p></li>
+<li><p><strong>request_url</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>retries</strong> (<a class="reference internal" href="urllib3.util.html#urllib3.util.Retry" title="urllib3.util.Retry"><em>Retry</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.CONTENT_DECODERS">
+<span class="sig-name descname"><span class="pre">CONTENT_DECODERS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['gzip',</span> <span class="pre">'x-gzip',</span> <span class="pre">'deflate',</span> <span class="pre">'br',</span> <span class="pre">'zstd']</span></span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.CONTENT_DECODERS" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.DECODER_ERROR_CLASSES">
+<span class="sig-name descname"><span class="pre">DECODER_ERROR_CLASSES</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(位于 Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(位于 Python v3.14)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(位于 Python v3.14)"><span class="pre">Exception</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;class</span> <span class="pre">'OSError'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'zlib.error'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'brotli.error'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'backports.zstd.ZstdError'&gt;)</span></span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.DECODER_ERROR_CLASSES" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.REDIRECT_STATUSES">
+<span class="sig-name descname"><span class="pre">REDIRECT_STATUSES</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[301,</span> <span class="pre">302,</span> <span class="pre">303,</span> <span class="pre">307,</span> <span class="pre">308]</span></span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.REDIRECT_STATUSES" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.close" title="链接到此定义。">¶</a></dt>
+<dd><p>Flush and close the IO object.</p>
+<p>This method has no effect if the file is already closed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.connection">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">connection</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">BaseHTTPConnection</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.connection" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.data">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">data</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)"><span class="pre">bytes</span></a></span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.data" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.drain_conn">
+<span class="sig-name descname"><span class="pre">drain_conn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.drain_conn" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.get_redirect_location">
+<span class="sig-name descname"><span class="pre">get_redirect_location</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.get_redirect_location" title="链接到此定义。">¶</a></dt>
+<dd><p>Should we redirect and where to?</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Truthy redirect location string if we got a redirect status
+code and valid location. <code class="docutils literal notranslate"><span class="pre">None</span></code> if redirect status and no
+location. <code class="docutils literal notranslate"><span class="pre">False</span></code> if not a redirect status code.</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)">str</a> | None | <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(位于 Python v3.14)"><em>Literal</em></a>[False]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.getheader">
+<span class="sig-name descname"><span class="pre">getheader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.getheader" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>default</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)">str</a> | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.getheaders">
+<span class="sig-name descname"><span class="pre">getheaders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.getheaders" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>HTTPHeaderDict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.geturl">
+<span class="sig-name descname"><span class="pre">geturl</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.geturl" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)">str</a> | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.info">
+<span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.info" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>HTTPHeaderDict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.json">
+<span class="sig-name descname"><span class="pre">json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.json" title="链接到此定义。">¶</a></dt>
+<dd><p>Deserializes the body of the HTTP response as a Python object.</p>
+<p>The body of the HTTP response must be encoded using UTF-8, as per
+<a class="reference external" href="https://www.rfc-editor.org/rfc/rfc8259#section-8.1">RFC 8529 Section 8.1</a>.</p>
+<p>To use a custom JSON decoder pass the result of <a class="reference internal" href="#urllib3.response.HTTPResponse.data" title="urllib3.response.HTTPResponse.data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">HTTPResponse.data</span></code></a> to
+your custom decoder instead.</p>
+<p>If the body of the HTTP response is not decodable to UTF-8, a
+<cite>UnicodeDecodeError</cite> will be raised. If the body of the HTTP response is not a
+valid JSON document, a <cite>json.JSONDecodeError</cite> will be raised.</p>
+<p>Read more <a class="reference internal" href="../user-guide.html#json-content"><span class="std std-ref">here</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The body of the HTTP response as a Python object.</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(位于 Python v3.14)"><em>Any</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode_content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.read" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amt</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>decode_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>cache_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.read1">
+<span class="sig-name descname"><span class="pre">read1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode_content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.read1" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amt</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>decode_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.read_chunked">
+<span class="sig-name descname"><span class="pre">read_chunked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode_content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.read_chunked" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amt</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>decode_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterator" title="(位于 Python v3.14)"><em>Iterator</em></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)">bytes</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.readinto">
+<span class="sig-name descname"><span class="pre">readinto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.readinto" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytearray" title="(位于 Python v3.14)"><em>bytearray</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#memoryview" title="(位于 Python v3.14)"><em>memoryview</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a><em>]</em>)</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.release_conn">
+<span class="sig-name descname"><span class="pre">release_conn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.release_conn" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.retries">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">retries</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="urllib3.util.html#urllib3.util.Retry" title="urllib3.util.retry.Retry"><span class="pre">Retry</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.retries" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.shutdown">
+<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.shutdown" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.stream">
+<span class="sig-name descname"><span class="pre">stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">65536</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode_content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.stream" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amt</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>decode_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterator" title="(位于 Python v3.14)"><em>Iterator</em></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)">bytes</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="urllib3.response.BaseHTTPResponse.url">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">url</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#urllib3.response.BaseHTTPResponse.url" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">urllib3.response.</span></span><span class="sig-name descname"><span class="pre">HTTPResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version_string</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'HTTP/?'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reason</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preload_content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode_content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">original_response</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enforce_content_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_close</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sock_shutdown</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse" title="链接到此定义。">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#urllib3.response.BaseHTTPResponse" title="urllib3.response.BaseHTTPResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseHTTPResponse</span></code></a></p>
+<p>HTTP Response container.</p>
+<p>Backwards-compatible with <a class="reference external" href="https://docs.python.org/3/library/http.client.html#http.client.HTTPResponse" title="(位于 Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">http.client.HTTPResponse</span></code></a> but the response <code class="docutils literal notranslate"><span class="pre">body</span></code> is
+loaded and decoded on-demand when the <code class="docutils literal notranslate"><span class="pre">data</span></code> property is accessed.  This
+class is also compatible with the Python standard library's <a class="reference external" href="https://docs.python.org/3/library/io.html#module-io" title="(位于 Python v3.14)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a>
+module, and can hence be treated as a readable object in the context of that
+framework.</p>
+<p>Extra parameters for behaviour not present in <a class="reference external" href="https://docs.python.org/3/library/http.client.html#http.client.HTTPResponse" title="(位于 Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">http.client.HTTPResponse</span></code></a>:</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>preload_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a>) -- If True, the response's body will be preloaded during construction.</p></li>
+<li><p><strong>decode_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a>) -- If True, will attempt to decode the body based on the
+'content-encoding' header.</p></li>
+<li><p><strong>original_response</strong> (<em>_HttplibHTTPResponse</em><em> | </em><em>None</em>) -- When this HTTPResponse wrapper is generated from an <a class="reference external" href="https://docs.python.org/3/library/http.client.html#http.client.HTTPResponse" title="(位于 Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">http.client.HTTPResponse</span></code></a>
+object, it's convenient to include the original for debug purposes. It's
+otherwise unused.</p></li>
+<li><p><strong>retries</strong> (<a class="reference internal" href="urllib3.util.html#urllib3.util.Retry" title="urllib3.util.Retry"><em>Retry</em></a><em> | </em><em>None</em>) -- The retries contains the last <a class="reference internal" href="urllib3.util.html#urllib3.util.Retry" title="urllib3.util.retry.Retry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Retry</span></code></a> that
+was used during the request.</p></li>
+<li><p><strong>enforce_content_length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a>) -- Enforce content length checking. Body returned by server must match
+value of Content-Length header, if present. Otherwise, raise error.</p></li>
+<li><p><strong>body</strong> (<em>_TYPE_BODY</em>)</p></li>
+<li><p><strong>headers</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(位于 Python v3.14)"><em>Mapping</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a><em>] </em><em>| </em><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(位于 Python v3.14)"><em>Mapping</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)"><em>bytes</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)"><em>bytes</em></a><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a>)</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a>)</p></li>
+<li><p><strong>version_string</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>pool</strong> (<a class="reference internal" href="urllib3.connectionpool.html#urllib3.HTTPConnectionPool" title="urllib3.HTTPConnectionPool"><em>HTTPConnectionPool</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>connection</strong> (<a class="reference internal" href="urllib3.connection.html#urllib3.connection.HTTPConnection" title="urllib3.connection.HTTPConnection"><em>HTTPConnection</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>msg</strong> (<em>_HttplibHTTPMessage</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>request_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>request_url</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>auto_close</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a>)</p></li>
+<li><p><strong>sock_shutdown</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(位于 Python v3.14)"><em>Callable</em></a><em>[</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a><em>]</em><em>, </em><em>None</em><em>] </em><em>| </em><em>None</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.auto_close">
+<span class="sig-name descname"><span class="pre">auto_close</span></span><a class="headerlink" href="#urllib3.response.HTTPResponse.auto_close" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.status">
+<span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#urllib3.response.HTTPResponse.status" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.headers">
+<span class="sig-name descname"><span class="pre">headers</span></span><a class="headerlink" href="#urllib3.response.HTTPResponse.headers" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.CONTENT_DECODERS">
+<span class="sig-name descname"><span class="pre">CONTENT_DECODERS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['gzip',</span> <span class="pre">'x-gzip',</span> <span class="pre">'deflate',</span> <span class="pre">'br',</span> <span class="pre">'zstd']</span></span><a class="headerlink" href="#urllib3.response.HTTPResponse.CONTENT_DECODERS" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.DECODER_ERROR_CLASSES">
+<span class="sig-name descname"><span class="pre">DECODER_ERROR_CLASSES</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(位于 Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(位于 Python v3.14)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(位于 Python v3.14)"><span class="pre">Exception</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;class</span> <span class="pre">'OSError'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'zlib.error'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'brotli.error'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'backports.zstd.ZstdError'&gt;)</span></span><a class="headerlink" href="#urllib3.response.HTTPResponse.DECODER_ERROR_CLASSES" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.REDIRECT_STATUSES">
+<span class="sig-name descname"><span class="pre">REDIRECT_STATUSES</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[301,</span> <span class="pre">302,</span> <span class="pre">303,</span> <span class="pre">307,</span> <span class="pre">308]</span></span><a class="headerlink" href="#urllib3.response.HTTPResponse.REDIRECT_STATUSES" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.chunk_left">
+<span class="sig-name descname"><span class="pre">chunk_left</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#urllib3.response.HTTPResponse.chunk_left" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.close" title="链接到此定义。">¶</a></dt>
+<dd><p>Flush and close the IO object.</p>
+<p>This method has no effect if the file is already closed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.closed">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">closed</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><span class="pre">bool</span></a></span><a class="headerlink" href="#urllib3.response.HTTPResponse.closed" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.connection">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">connection</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="urllib3.connection.html#urllib3.connection.HTTPConnection" title="urllib3.connection.HTTPConnection"><span class="pre">HTTPConnection</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#urllib3.response.HTTPResponse.connection" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.data">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">data</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)"><span class="pre">bytes</span></a></span><a class="headerlink" href="#urllib3.response.HTTPResponse.data" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.drain_conn">
+<span class="sig-name descname"><span class="pre">drain_conn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.drain_conn" title="链接到此定义。">¶</a></dt>
+<dd><p>Read and discard any remaining HTTP response data in the response connection.</p>
+<p>Unread data in the HTTPResponse connection blocks the connection from being released back to the pool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.fileno">
+<span class="sig-name descname"><span class="pre">fileno</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.fileno" title="链接到此定义。">¶</a></dt>
+<dd><p>Return underlying file descriptor if one exists.</p>
+<p>Raise OSError if the IO object does not use a file descriptor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.flush">
+<span class="sig-name descname"><span class="pre">flush</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.flush" title="链接到此定义。">¶</a></dt>
+<dd><p>Flush write buffers, if applicable.</p>
+<p>This is not implemented for read-only and non-blocking streams.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.get_redirect_location">
+<span class="sig-name descname"><span class="pre">get_redirect_location</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.get_redirect_location" title="链接到此定义。">¶</a></dt>
+<dd><p>Should we redirect and where to?</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Truthy redirect location string if we got a redirect status
+code and valid location. <code class="docutils literal notranslate"><span class="pre">None</span></code> if redirect status and no
+location. <code class="docutils literal notranslate"><span class="pre">False</span></code> if not a redirect status code.</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)">str</a> | None | <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(位于 Python v3.14)"><em>Literal</em></a>[False]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.getheader">
+<span class="sig-name descname"><span class="pre">getheader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.getheader" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>default</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)">str</a> | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.getheaders">
+<span class="sig-name descname"><span class="pre">getheaders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.getheaders" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>HTTPHeaderDict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.geturl">
+<span class="sig-name descname"><span class="pre">geturl</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.geturl" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)">str</a> | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.info">
+<span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.info" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>HTTPHeaderDict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.isatty">
+<span class="sig-name descname"><span class="pre">isatty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.isatty" title="链接到此定义。">¶</a></dt>
+<dd><p>Return whether this is an 'interactive' stream.</p>
+<p>Return False if it can't be determined.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.isclosed">
+<span class="sig-name descname"><span class="pre">isclosed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.isclosed" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.json">
+<span class="sig-name descname"><span class="pre">json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.json" title="链接到此定义。">¶</a></dt>
+<dd><p>Deserializes the body of the HTTP response as a Python object.</p>
+<p>The body of the HTTP response must be encoded using UTF-8, as per
+<a class="reference external" href="https://www.rfc-editor.org/rfc/rfc8259#section-8.1">RFC 8529 Section 8.1</a>.</p>
+<p>To use a custom JSON decoder pass the result of <a class="reference internal" href="#urllib3.response.HTTPResponse.data" title="urllib3.response.HTTPResponse.data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">HTTPResponse.data</span></code></a> to
+your custom decoder instead.</p>
+<p>If the body of the HTTP response is not decodable to UTF-8, a
+<cite>UnicodeDecodeError</cite> will be raised. If the body of the HTTP response is not a
+valid JSON document, a <cite>json.JSONDecodeError</cite> will be raised.</p>
+<p>Read more <a class="reference internal" href="../user-guide.html#json-content"><span class="std std-ref">here</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The body of the HTTP response as a Python object.</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(位于 Python v3.14)"><em>Any</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.length_remaining">
+<span class="sig-name descname"><span class="pre">length_remaining</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#urllib3.response.HTTPResponse.length_remaining" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode_content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.read" title="链接到此定义。">¶</a></dt>
+<dd><p>Similar to <a class="reference external" href="https://docs.python.org/3/library/http.client.html#http.client.HTTPResponse.read" title="(位于 Python v3.14)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">http.client.HTTPResponse.read()</span></code></a>, but with two additional
+parameters: <code class="docutils literal notranslate"><span class="pre">decode_content</span></code> and <code class="docutils literal notranslate"><span class="pre">cache_content</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amt</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a><em> | </em><em>None</em>) -- How much of the content to read. If specified, caching is skipped
+because it doesn't make sense to cache partial content as the full
+response.</p></li>
+<li><p><strong>decode_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a><em> | </em><em>None</em>) -- If True, will attempt to decode the body based on the
+'content-encoding' header.</p></li>
+<li><p><strong>cache_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a>) -- If True, will save the returned data such that the same result is
+returned despite of the state of the underlying file object. This
+is useful if you want the <code class="docutils literal notranslate"><span class="pre">.data</span></code> property to continue working
+after having <code class="docutils literal notranslate"><span class="pre">.read()</span></code> the file object. (Overridden if <code class="docutils literal notranslate"><span class="pre">amt</span></code> is
+set.)</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.read1">
+<span class="sig-name descname"><span class="pre">read1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode_content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.read1" title="链接到此定义。">¶</a></dt>
+<dd><p>Similar to <code class="docutils literal notranslate"><span class="pre">http.client.HTTPResponse.read1</span></code> and documented
+in <a class="reference external" href="https://docs.python.org/3/library/io.html#io.BufferedReader.read1" title="(位于 Python v3.14)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">io.BufferedReader.read1()</span></code></a>, but with an additional parameter:
+<code class="docutils literal notranslate"><span class="pre">decode_content</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amt</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a><em> | </em><em>None</em>) -- How much of the content to read.</p></li>
+<li><p><strong>decode_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a><em> | </em><em>None</em>) -- If True, will attempt to decode the body based on the
+'content-encoding' header.</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.read_chunked">
+<span class="sig-name descname"><span class="pre">read_chunked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode_content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.read_chunked" title="链接到此定义。">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#urllib3.response.HTTPResponse.read" title="urllib3.response.HTTPResponse.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HTTPResponse.read()</span></code></a>, but with an additional
+parameter: <code class="docutils literal notranslate"><span class="pre">decode_content</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amt</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a><em> | </em><em>None</em>) -- How much of the content to read. If specified, caching is skipped
+because it doesn't make sense to cache partial content as the full
+response.</p></li>
+<li><p><strong>decode_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a><em> | </em><em>None</em>) -- If True, will attempt to decode the body based on the
+'content-encoding' header.</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generator" title="(位于 Python v3.14)"><em>Generator</em></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)">bytes</a>, None, None]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.readable">
+<span class="sig-name descname"><span class="pre">readable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.readable" title="链接到此定义。">¶</a></dt>
+<dd><p>Return whether object was opened for reading.</p>
+<p>If False, read() will raise OSError.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.readinto">
+<span class="sig-name descname"><span class="pre">readinto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.readinto" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytearray" title="(位于 Python v3.14)"><em>bytearray</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#memoryview" title="(位于 Python v3.14)"><em>memoryview</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a><em>]</em>)</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.readline">
+<span class="sig-name descname"><span class="pre">readline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="仅位置参数分隔符 (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.readline" title="链接到此定义。">¶</a></dt>
+<dd><p>Read and return a line from the stream.</p>
+<p>If size is specified, at most size bytes will be read.</p>
+<p>The line terminator is always b'n' for binary files; for text
+files, the newlines argument to open can be used to select the line
+terminator(s) recognized.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.readlines">
+<span class="sig-name descname"><span class="pre">readlines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="仅位置参数分隔符 (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.readlines" title="链接到此定义。">¶</a></dt>
+<dd><p>Return a list of lines from the stream.</p>
+<p>hint can be specified to control the number of lines read: no more
+lines will be read if the total size (in bytes/characters) of all
+lines so far exceeds hint.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.release_conn">
+<span class="sig-name descname"><span class="pre">release_conn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.release_conn" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.retries">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">retries</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="urllib3.util.html#urllib3.util.Retry" title="urllib3.util.retry.Retry"><span class="pre">Retry</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#urllib3.response.HTTPResponse.retries" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.seek">
+<span class="sig-name descname"><span class="pre">seek</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="仅位置参数分隔符 (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.seek" title="链接到此定义。">¶</a></dt>
+<dd><p>Change the stream position to the given byte offset.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>offset</dt><dd><p>The stream position, relative to 'whence'.</p>
+</dd>
+<dt>whence</dt><dd><p>The relative position to seek from.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The offset is interpreted relative to the position indicated by
+whence.  Values for whence are:</p>
+<ul class="simple">
+<li><p>os.SEEK_SET or 0 -- start of stream (the default); offset should
+be zero or positive</p></li>
+<li><p>os.SEEK_CUR or 1 -- current stream position; offset may be
+negative</p></li>
+<li><p>os.SEEK_END or 2 -- end of stream; offset is usually negative</p></li>
+</ul>
+<p>Return the new absolute position.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.seekable">
+<span class="sig-name descname"><span class="pre">seekable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.seekable" title="链接到此定义。">¶</a></dt>
+<dd><p>Return whether object supports random access.</p>
+<p>If False, seek(), tell() and truncate() will raise OSError.
+This method may need to do a test seek().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.shutdown">
+<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.shutdown" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.stream">
+<span class="sig-name descname"><span class="pre">stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">65536</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode_content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.stream" title="链接到此定义。">¶</a></dt>
+<dd><p>A generator wrapper for the read() method. A call will block until
+<code class="docutils literal notranslate"><span class="pre">amt</span></code> bytes have been read from the connection or until the
+connection is closed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amt</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><em>int</em></a><em> | </em><em>None</em>) -- How much of the content to read. The generator will return up to
+much data per iteration, but may return less. This is particularly
+likely when using compressed data. However, the empty string will
+never be returned.</p></li>
+<li><p><strong>decode_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><em>bool</em></a><em> | </em><em>None</em>) -- If True, will attempt to decode the body based on the
+'content-encoding' header.</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generator" title="(位于 Python v3.14)"><em>Generator</em></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(位于 Python v3.14)">bytes</a>, None, None]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.supports_chunked_reads">
+<span class="sig-name descname"><span class="pre">supports_chunked_reads</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.supports_chunked_reads" title="链接到此定义。">¶</a></dt>
+<dd><p>Checks if the underlying file-like object looks like a
+<a class="reference external" href="https://docs.python.org/3/library/http.client.html#http.client.HTTPResponse" title="(位于 Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">http.client.HTTPResponse</span></code></a> object. We do this by testing for
+the fp attribute. If it is present we assume it returns raw chunks as
+processed by read_chunked().</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.tell">
+<span class="sig-name descname"><span class="pre">tell</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.tell" title="链接到此定义。">¶</a></dt>
+<dd><p>Obtain the number of bytes pulled over the wire so far. May differ from
+the amount of content returned by <a class="reference internal" href="#urllib3.response.HTTPResponse.read" title="urllib3.response.HTTPResponse.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HTTPResponse.read()</span></code></a>
+if bytes are encoded on the wire (e.g, compressed).</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.truncate">
+<span class="sig-name descname"><span class="pre">truncate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="仅位置参数分隔符 (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.truncate" title="链接到此定义。">¶</a></dt>
+<dd><p>Truncate file to size bytes.</p>
+<p>File pointer is left unchanged.  Size defaults to the current IO
+position as reported by tell().  Return the new size.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.url">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">url</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><a class="headerlink" href="#urllib3.response.HTTPResponse.url" title="链接到此定义。">¶</a></dt>
+<dd><p>Returns the URL that was the source of this response.
+If the request that generated this response redirected, this method
+will return the final redirect location.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.writable">
+<span class="sig-name descname"><span class="pre">writable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.writable" title="链接到此定义。">¶</a></dt>
+<dd><p>Return whether object was opened for writing.</p>
+<p>If False, write() will raise OSError.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="urllib3.response.HTTPResponse.writelines">
+<span class="sig-name descname"><span class="pre">writelines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="仅位置参数分隔符 (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.HTTPResponse.writelines" title="链接到此定义。">¶</a></dt>
+<dd><p>Write a list of lines to stream.</p>
+<p>Line separators are not added, so it is usual for each of the
+lines provided to have a line separator at the end.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="decoders">
+<h2>Decoders<a class="headerlink" href="#decoders" title="链接到此标题。">¶</a></h2>
+<p>Decoder classes are used for transforming compressed HTTP bodies
+using the <code class="docutils literal notranslate"><span class="pre">Content-Encoding</span></code> into their uncompressed binary
+representation.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="urllib3.response.BrotliDecoder">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">urllib3.response.</span></span><span class="sig-name descname"><span class="pre">BrotliDecoder</span></span><a class="headerlink" href="#urllib3.response.BrotliDecoder" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="urllib3.response.DeflateDecoder">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">urllib3.response.</span></span><span class="sig-name descname"><span class="pre">DeflateDecoder</span></span><a class="headerlink" href="#urllib3.response.DeflateDecoder" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="urllib3.response.GzipDecoder">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">urllib3.response.</span></span><span class="sig-name descname"><span class="pre">GzipDecoder</span></span><a class="headerlink" href="#urllib3.response.GzipDecoder" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="urllib3.response.ZstdDecoder">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">urllib3.response.</span></span><span class="sig-name descname"><span class="pre">ZstdDecoder</span></span><a class="headerlink" href="#urllib3.response.ZstdDecoder" title="链接到此定义。">¶</a></dt>
+<dd><dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="urllib3.response.MultiDecoder">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">urllib3.response.</span></span><span class="sig-name descname"><span class="pre">MultiDecoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urllib3.response.MultiDecoder" title="链接到此定义。">¶</a></dt>
+<dd><dl class="simple">
+<dt>From RFC7231:</dt><dd><p>If one or more encodings have been applied to a representation, the
+sender that applied the encodings MUST generate a Content-Encoding
+header field that lists the content codings in the order in which
+they were applied.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>modes</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><em>str</em></a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="urllib3.fields.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Fields and Multipart Forms</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="urllib3.exceptions.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Exceptions and Warnings</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2026, Andrey Petrov
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Response and Decoders</a><ul>
+<li><a class="reference internal" href="#response">Response</a><ul>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse</span></code></a><ul>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.CONTENT_DECODERS"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.CONTENT_DECODERS</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.DECODER_ERROR_CLASSES"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.DECODER_ERROR_CLASSES</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.REDIRECT_STATUSES"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.REDIRECT_STATUSES</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.close"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.close()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.connection"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.connection</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.data"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.data</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.drain_conn"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.drain_conn()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.get_redirect_location"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.get_redirect_location()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.getheader"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.getheader()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.getheaders"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.getheaders()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.geturl"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.geturl()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.info"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.info()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.json"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.json()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.read"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.read()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.read1"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.read1()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.read_chunked"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.read_chunked()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.readinto"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.readinto()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.release_conn"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.release_conn()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.retries"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.retries</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.shutdown"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.shutdown()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.stream"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.stream()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.BaseHTTPResponse.url"><code class="docutils literal notranslate"><span class="pre">BaseHTTPResponse.url</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse"><code class="docutils literal notranslate"><span class="pre">HTTPResponse</span></code></a><ul>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.auto_close"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.auto_close</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.status"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.status</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.headers"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.headers</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.CONTENT_DECODERS"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.CONTENT_DECODERS</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.DECODER_ERROR_CLASSES"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.DECODER_ERROR_CLASSES</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.REDIRECT_STATUSES"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.REDIRECT_STATUSES</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.chunk_left"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.chunk_left</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.close"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.close()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.closed"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.closed</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.connection"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.connection</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.data"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.data</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.drain_conn"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.drain_conn()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.fileno"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.fileno()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.flush"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.flush()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.get_redirect_location"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.get_redirect_location()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.getheader"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.getheader()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.getheaders"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.getheaders()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.geturl"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.geturl()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.info"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.info()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.isatty"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.isatty()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.isclosed"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.isclosed()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.json"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.json()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.length_remaining"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.length_remaining</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.read"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.read()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.read1"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.read1()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.read_chunked"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.read_chunked()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.readable"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.readable()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.readinto"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.readinto()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.readline"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.readline()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.readlines"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.readlines()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.release_conn"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.release_conn()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.retries"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.retries</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.seek"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.seek()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.seekable"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.seekable()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.shutdown"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.shutdown()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.stream"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.stream()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.supports_chunked_reads"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.supports_chunked_reads()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.tell"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.tell()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.truncate"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.truncate()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.url"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.url</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.writable"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.writable()</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.HTTPResponse.writelines"><code class="docutils literal notranslate"><span class="pre">HTTPResponse.writelines()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#decoders">Decoders</a><ul>
+<li><a class="reference internal" href="#urllib3.response.BrotliDecoder"><code class="docutils literal notranslate"><span class="pre">BrotliDecoder</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.DeflateDecoder"><code class="docutils literal notranslate"><span class="pre">DeflateDecoder</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.GzipDecoder"><code class="docutils literal notranslate"><span class="pre">GzipDecoder</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.ZstdDecoder"><code class="docutils literal notranslate"><span class="pre">ZstdDecoder</span></code></a></li>
+<li><a class="reference internal" href="#urllib3.response.MultiDecoder"><code class="docutils literal notranslate"><span class="pre">MultiDecoder</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=db72999c"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/translations.js?v=540d3cec"></script>
+    </body>
+</html>

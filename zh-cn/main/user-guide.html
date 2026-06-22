@@ -1,0 +1,955 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="./">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="User Guide" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="user-guide.html" />
+<meta property="og:site_name" content="urllib3" />
+<meta property="og:description" content="Installing: urllib3 can be installed with pip Making Requests: First things first, import the urllib3 module: You&#x27;ll need a PoolManager instance to make requests. This object handles all of th..." />
+<meta name="description" content="Installing: urllib3 can be installed with pip Making Requests: First things first, import the urllib3 module: You&#x27;ll need a PoolManager instance to make requests. This object handles all of th..." />
+<link rel="index" title="索引" href="genindex.html"><link rel="search" title="搜索" href="search.html"><link rel="next" title="Advanced Usage" href="advanced-usage.html"><link rel="prev" title="Sponsors and Supporters" href="sponsors.html">
+        <link rel="canonical" href="https://projects.localizethedocs.org/urllib3-docs-l10n/user-guide.html">
+        <link rel="prefetch" href="_static/banner.svg" as="image">
+        <link rel="prefetch" href="_static/dark-logo.svg" as="image">
+
+    <link rel="shortcut icon" href="_static/favicon.png"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
+        <title>User Guide - urllib3 0.1.dev1 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f0f0f0;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style>
+
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+<div class="announcement">
+  <aside class="announcement-content">
+     
+        <a style="text-decoration: none; color: white;" 
+           href="https://opencollective.com/urllib3/updates/urllib3-is-fundraising-for-http-2-support">
+           <img src="/en/latest/_static/favicon.png"/> urllib3 is fundraising for HTTP/2 support!
+        </a>
+     
+  </aside>
+</div>
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">urllib3 0.1.dev1 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="_static/banner.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="_static/dark-logo.svg" alt="Dark Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference external" href="https://tidelift.com/subscription/pkg/pypi-urllib3?utm_source=pypi-urllib3&amp;utm_medium=referral&amp;utm_campaign=docs">For Enterprise</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/urllib3">Community Discord</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sponsors.html">Sponsors and Supporters</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced-usage.html">Advanced Usage</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="reference/index.html">API Reference</a><input aria-label="Toggle navigation of API Reference" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/urllib3.request.html">urllib3.request()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/urllib3.poolmanager.html">Pool Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/urllib3.connectionpool.html">Connection Pools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/urllib3.connection.html">Connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/urllib3.exceptions.html">Exceptions and Warnings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/urllib3.response.html">Response and Decoders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/urllib3.fields.html">Fields and Multipart Forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/urllib3.util.html">Utilities</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="reference/contrib/index.html">Third-Party Modules</a><input aria-label="Toggle navigation of Third-Party Modules" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="reference/contrib/emscripten.html">Pyodide, Emscripten, and PyScript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference/contrib/pyopenssl.html">PyOpenSSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference/contrib/socks.html">SOCKS Proxies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v2-migration-guide.html">v2 Migration Guide</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/user-guide.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="user-guide">
+<h1>User Guide<a class="headerlink" href="#user-guide" title="链接到此标题。">¶</a></h1>
+<section id="installing">
+<h2>Installing<a class="headerlink" href="#installing" title="链接到此标题。">¶</a></h2>
+<p>urllib3 can be installed with <a class="reference external" href="https://pip.pypa.io">pip</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>urllib3
+</pre></div>
+</div>
+</section>
+<section id="making-requests">
+<h2>Making Requests<a class="headerlink" href="#making-requests" title="链接到此标题。">¶</a></h2>
+<p>First things first, import the urllib3 module:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+</pre></div>
+</div>
+<p>You'll need a <a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager" title="urllib3.poolmanager.PoolManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">PoolManager</span></code></a> instance to make requests.
+This object handles all of the details of connection pooling and thread safety
+so that you don't have to:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">http</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">PoolManager</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>To make a request use <a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager.request" title="urllib3.PoolManager.request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">request()</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="c1"># Creating a PoolManager instance for sending requests.</span>
+<span class="n">http</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">PoolManager</span><span class="p">()</span>
+
+<span class="c1"># Sending a GET request and getting back response as HTTPResponse object.</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://httpbin.org/robots.txt&quot;</span><span class="p">)</span>
+
+<span class="c1"># Print the returned data.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># b&quot;User-agent: *\nDisallow: /deny\n&quot;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">request()</span></code> returns a <a class="reference internal" href="reference/urllib3.response.html#urllib3.response.HTTPResponse" title="urllib3.response.HTTPResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPResponse</span></code></a> object, the
+<a class="reference internal" href="#response-content"><span class="std std-ref">Response Content</span></a> section explains how to handle various responses.</p>
+<p>You can use <a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager.request" title="urllib3.PoolManager.request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">request()</span></code></a> to make requests using any
+HTTP verb:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">PoolManager</span><span class="p">()</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/post&quot;</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;hello&quot;</span><span class="p">:</span> <span class="s2">&quot;world&quot;</span><span class="p">}</span> <span class="c1">#  Add custom form fields</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># b&quot;{\n &quot;form&quot;: {\n &quot;hello&quot;: &quot;world&quot;\n  }, ... }</span>
+</pre></div>
+</div>
+<p>The <a class="reference internal" href="#request-data"><span class="std std-ref">Request Data</span></a> section covers sending other kinds of requests data,
+including JSON, files, and binary data.</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>For quick scripts and experiments you can also use a top-level <code class="docutils literal notranslate"><span class="pre">urllib3.request()</span></code>.
+It uses a module-global <code class="docutils literal notranslate"><span class="pre">PoolManager</span></code> instance.
+Because of that, its side effects could be shared across dependencies relying on it.
+To avoid side effects, create a new <code class="docutils literal notranslate"><span class="pre">PoolManager</span></code> instance and use it instead.
+In addition, the method does not accept the low-level <code class="docutils literal notranslate"><span class="pre">**urlopen_kw</span></code> keyword arguments.
+System CA certificates are loaded on default.</p>
+</div>
+</section>
+<section id="response-content">
+<span id="id1"></span><h2>Response Content<a class="headerlink" href="#response-content" title="链接到此标题。">¶</a></h2>
+<p>The <a class="reference internal" href="reference/urllib3.response.html#urllib3.response.HTTPResponse" title="urllib3.response.HTTPResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPResponse</span></code></a> object provides
+<a class="reference internal" href="reference/urllib3.response.html#urllib3.response.HTTPResponse.status" title="urllib3.response.HTTPResponse.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a>, <a class="reference internal" href="reference/urllib3.response.html#urllib3.response.HTTPResponse.data" title="urllib3.response.HTTPResponse.data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data</span></code></a>, and
+<a class="reference internal" href="reference/urllib3.response.html#urllib3.response.HTTPResponse.headers" title="urllib3.response.HTTPResponse.headers"><code class="xref py py-attr docutils literal notranslate"><span class="pre">headers</span></code></a> attributes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="c1"># Making the request (The request function returns HTTPResponse object)</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://httpbin.org/ip&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>
+<span class="c1"># 200</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># b&quot;{\n  &quot;origin&quot;: &quot;104.232.115.37&quot;\n}\n&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
+<span class="c1"># HTTPHeaderDict({&quot;Content-Length&quot;: &quot;32&quot;, ...})</span>
+</pre></div>
+</div>
+<section id="json-content">
+<span id="id2"></span><h3>JSON Content<a class="headerlink" href="#json-content" title="链接到此标题。">¶</a></h3>
+<p>JSON content can be loaded by <a class="reference internal" href="reference/urllib3.response.html#urllib3.response.HTTPResponse.json" title="urllib3.response.HTTPResponse.json"><code class="xref py py-meth docutils literal notranslate"><span class="pre">json()</span></code></a>
+method of the response:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://httpbin.org/ip&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+<span class="c1"># {&quot;origin&quot;: &quot;127.0.0.1&quot;}</span>
+</pre></div>
+</div>
+<p>Alternatively, Custom JSON libraries such as <cite>orjson</cite> can be used to encode data,
+retrieve data by decoding and deserializing the <a class="reference internal" href="reference/urllib3.response.html#urllib3.response.HTTPResponse.data" title="urllib3.response.HTTPResponse.data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data</span></code></a>
+attribute of the request:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">orjson</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">encoded_data</span> <span class="o">=</span> <span class="n">orjson</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;attribute&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">})</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="s2">&quot;http://httpbin.org/post&quot;</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">encoded_data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">orjson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">data</span><span class="p">)[</span><span class="s2">&quot;json&quot;</span><span class="p">])</span>
+<span class="c1"># {&#39;attribute&#39;: &#39;value&#39;}</span>
+</pre></div>
+</div>
+</section>
+<section id="binary-content">
+<h3>Binary Content<a class="headerlink" href="#binary-content" title="链接到此标题。">¶</a></h3>
+<p>The <a class="reference internal" href="reference/urllib3.response.html#urllib3.response.HTTPResponse.data" title="urllib3.response.HTTPResponse.data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data</span></code></a> attribute of the response is always set
+to a byte string representing the response content:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://httpbin.org/bytes/8&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># b&quot;\xaa\xa5H?\x95\xe9\x9b\x11&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>For responses of large or unknown length, it's sometimes better to
+<a class="reference internal" href="advanced-usage.html#stream"><span class="std std-ref">stream</span></a> the response.</p>
+</div>
+</section>
+<section id="using-io-wrappers-with-response-content">
+<h3>Using io Wrappers with Response Content<a class="headerlink" href="#using-io-wrappers-with-response-content" title="链接到此标题。">¶</a></h3>
+<p>Sometimes you want to use <a class="reference external" href="https://docs.python.org/3/library/io.html#io.TextIOWrapper" title="(位于 Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOWrapper</span></code></a> or similar objects like a CSV reader
+directly with <a class="reference internal" href="reference/urllib3.response.html#urllib3.response.HTTPResponse" title="urllib3.response.HTTPResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPResponse</span></code></a> data. Making these two interfaces play nice
+together requires using the <a class="reference internal" href="reference/urllib3.response.html#urllib3.response.HTTPResponse.auto_close" title="urllib3.response.HTTPResponse.auto_close"><code class="xref py py-attr docutils literal notranslate"><span class="pre">auto_close</span></code></a> attribute by setting it
+to <code class="docutils literal notranslate"><span class="pre">False</span></code>. By default HTTP responses are closed after reading all bytes, this disables that behavior:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span> <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">resp</span><span class="o">.</span><span class="n">auto_close</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">io</span><span class="o">.</span><span class="n">TextIOWrapper</span><span class="p">(</span><span class="n">resp</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="c1"># &lt;!doctype html&gt;</span>
+<span class="c1"># &lt;html&gt;</span>
+<span class="c1"># &lt;head&gt;</span>
+<span class="c1"># ....</span>
+<span class="c1"># &lt;/body&gt;</span>
+<span class="c1"># &lt;/html&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="request-data">
+<span id="id3"></span><h2>Request Data<a class="headerlink" href="#request-data" title="链接到此标题。">¶</a></h2>
+<section id="headers">
+<h3>Headers<a class="headerlink" href="#headers" title="链接到此标题。">¶</a></h3>
+<p>You can specify headers as a dictionary in the <code class="docutils literal notranslate"><span class="pre">headers</span></code> argument in <a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager.request" title="urllib3.PoolManager.request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">request()</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/headers&quot;</span><span class="p">,</span>
+    <span class="n">headers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;X-Something&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;headers&quot;</span><span class="p">])</span>
+<span class="c1"># {&quot;X-Something&quot;: &quot;value&quot;, ...}</span>
+</pre></div>
+</div>
+<p>Or you can use the <code class="docutils literal notranslate"><span class="pre">HTTPHeaderDict</span></code> class to create multi-valued HTTP headers:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="c1"># Create an HTTPHeaderDict and add headers</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">HTTPHeaderDict</span><span class="p">()</span>
+<span class="n">headers</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Accept&quot;</span><span class="p">,</span> <span class="s2">&quot;application/json&quot;</span><span class="p">)</span>
+<span class="n">headers</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Accept&quot;</span><span class="p">,</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">)</span>
+
+<span class="c1"># Make the request using the headers</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/headers&quot;</span><span class="p">,</span>
+    <span class="n">headers</span><span class="o">=</span><span class="n">headers</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;headers&quot;</span><span class="p">])</span>
+<span class="c1"># {&quot;Accept&quot;: &quot;application/json, text/plain&quot;, ...}</span>
+</pre></div>
+</div>
+</section>
+<section id="cookies">
+<h3>Cookies<a class="headerlink" href="#cookies" title="链接到此标题。">¶</a></h3>
+<p>Cookies are specified using the <code class="docutils literal notranslate"><span class="pre">Cookie</span></code> header with a string containing
+the <code class="docutils literal notranslate"><span class="pre">;</span></code> delimited key-value pairs:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/cookies&quot;</span><span class="p">,</span>
+    <span class="n">headers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Cookie&quot;</span><span class="p">:</span> <span class="s2">&quot;session=f3efe9db; id=30&quot;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+<span class="c1"># {&quot;cookies&quot;: {&quot;id&quot;: &quot;30&quot;, &quot;session&quot;: &quot;f3efe9db&quot;}}</span>
+</pre></div>
+</div>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">Cookie</span></code> header will be stripped if the server redirects to a
+different host.</p>
+<p>Cookies provided by the server are stored in the <code class="docutils literal notranslate"><span class="pre">Set-Cookie</span></code> header:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/cookies/set/session/f3efe9db&quot;</span><span class="p">,</span>
+    <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;Set-Cookie&quot;</span><span class="p">])</span>
+<span class="c1"># session=f3efe9db; Path=/</span>
+</pre></div>
+</div>
+</section>
+<section id="query-parameters">
+<h3>Query Parameters<a class="headerlink" href="#query-parameters" title="链接到此标题。">¶</a></h3>
+<p>For <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, and <code class="docutils literal notranslate"><span class="pre">DELETE</span></code> requests, you can simply pass the
+arguments as a dictionary in the <code class="docutils literal notranslate"><span class="pre">fields</span></code> argument to
+<a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager.request" title="urllib3.PoolManager.request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">request()</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/get&quot;</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;arg&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;args&quot;</span><span class="p">])</span>
+<span class="c1"># {&quot;arg&quot;: &quot;value&quot;}</span>
+</pre></div>
+</div>
+<p>For <code class="docutils literal notranslate"><span class="pre">POST</span></code> and <code class="docutils literal notranslate"><span class="pre">PUT</span></code> requests, you need to manually encode query parameters
+in the URL:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">urllib.parse</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlencode</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="c1"># Encode the args into url grammar.</span>
+<span class="n">encoded_args</span> <span class="o">=</span> <span class="n">urlencode</span><span class="p">({</span><span class="s2">&quot;arg&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">})</span>
+
+<span class="c1"># Create a URL with args encoded.</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://httpbin.org/post?&quot;</span> <span class="o">+</span> <span class="n">encoded_args</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;args&quot;</span><span class="p">])</span>
+<span class="c1"># {&quot;arg&quot;: &quot;value&quot;}</span>
+</pre></div>
+</div>
+</section>
+<section id="form-data">
+<span id="id4"></span><h3>Form Data<a class="headerlink" href="#form-data" title="链接到此标题。">¶</a></h3>
+<p>For <code class="docutils literal notranslate"><span class="pre">PUT</span></code> and <code class="docutils literal notranslate"><span class="pre">POST</span></code> requests, urllib3 will automatically form-encode the
+dictionary in the <code class="docutils literal notranslate"><span class="pre">fields</span></code> argument provided to
+<a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager.request" title="urllib3.PoolManager.request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">request()</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/post&quot;</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;form&quot;</span><span class="p">])</span>
+<span class="c1"># {&quot;field&quot;: &quot;value&quot;}</span>
+</pre></div>
+</div>
+</section>
+<section id="json">
+<span id="id5"></span><h3>JSON<a class="headerlink" href="#json" title="链接到此标题。">¶</a></h3>
+<p>To send JSON in the body of a request, provide the data in the <code class="docutils literal notranslate"><span class="pre">json</span></code> argument to
+<a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager.request" title="urllib3.PoolManager.request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">request()</span></code></a> and  urllib3 will automatically encode the data
+using the <code class="docutils literal notranslate"><span class="pre">json</span></code> module with <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code> encoding.
+In addition, when <code class="docutils literal notranslate"><span class="pre">json</span></code> is provided, the <code class="docutils literal notranslate"><span class="pre">&quot;Content-Type&quot;</span></code> in headers is set to
+<code class="docutils literal notranslate"><span class="pre">&quot;application/json&quot;</span></code> if not specified otherwise.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/post&quot;</span><span class="p">,</span>
+    <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;attribute&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">},</span>
+    <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+<span class="c1"># {&#39;headers&#39;: {&#39;Content-Type&#39;: &#39;application/json&#39;, ...},</span>
+<span class="c1">#  &#39;data&#39;: &#39;{&quot;attribute&quot;:&quot;value&quot;}&#39;, &#39;json&#39;: {&#39;attribute&#39;: &#39;value&#39;}, ...}</span>
+</pre></div>
+</div>
+</section>
+<section id="files-binary-data">
+<h3>Files &amp; Binary Data<a class="headerlink" href="#files-binary-data" title="链接到此标题。">¶</a></h3>
+<p>For uploading files using <code class="docutils literal notranslate"><span class="pre">multipart/form-data</span></code> encoding you can use the same
+approach as <a class="reference internal" href="#form-data"><span class="std std-ref">Form Data</span></a> and specify the file field as a tuple of
+<code class="docutils literal notranslate"><span class="pre">(file_name,</span> <span class="pre">file_data)</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="c1"># Reading the text file from local storage.</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+    <span class="n">file_data</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="c1"># Sending the request.</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/post&quot;</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">{</span>
+       <span class="s2">&quot;filefield&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="n">file_data</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;files&quot;</span><span class="p">])</span>
+<span class="c1"># {&quot;filefield&quot;: &quot;...&quot;}</span>
+</pre></div>
+</div>
+<p>While specifying the filename is not strictly required, it's recommended in
+order to match browser behavior. You can also pass a third item in the tuple
+to specify the file's MIME type explicitly:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/post&quot;</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;filefield&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="n">file_data</span><span class="p">,</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>For sending raw binary data simply specify the <code class="docutils literal notranslate"><span class="pre">body</span></code> argument. It's also
+recommended to set the <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> header:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/samad/example.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+    <span class="n">binary_data</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/post&quot;</span><span class="p">,</span>
+    <span class="n">body</span><span class="o">=</span><span class="n">binary_data</span><span class="p">,</span>
+    <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;image/jpeg&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;data&quot;</span><span class="p">])</span>
+<span class="c1"># data:application/octet-stream;base64,...</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="certificate-verification">
+<span id="ssl"></span><h2>Certificate Verification<a class="headerlink" href="#certificate-verification" title="链接到此标题。">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><em>New in version 1.25:</em></p>
+<p>HTTPS connections are now verified by default (<code class="docutils literal notranslate"><span class="pre">cert_reqs</span> <span class="pre">=</span> <span class="pre">&quot;CERT_REQUIRED&quot;</span></code>).</p>
+</div>
+<p>While you can disable certification verification by setting <code class="docutils literal notranslate"><span class="pre">cert_reqs</span> <span class="pre">=</span> <span class="pre">&quot;CERT_NONE&quot;</span></code>, it is highly recommend to leave it on.</p>
+<p>Unless otherwise specified urllib3 will try to load the default system certificate stores.
+The most reliable cross-platform method is to use the <a class="reference external" href="https://certifi.io/">certifi</a>
+package which provides Mozilla's root certificate bundle:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>certifi
+</pre></div>
+</div>
+<p>Once you have certificates, you can create a <a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager" title="urllib3.poolmanager.PoolManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">PoolManager</span></code></a>
+that verifies certificates when making requests:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">certifi</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">PoolManager</span><span class="p">(</span>
+    <span class="n">cert_reqs</span><span class="o">=</span><span class="s2">&quot;CERT_REQUIRED&quot;</span><span class="p">,</span>
+    <span class="n">ca_certs</span><span class="o">=</span><span class="n">certifi</span><span class="o">.</span><span class="n">where</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The <a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager" title="urllib3.poolmanager.PoolManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">PoolManager</span></code></a> will automatically handle certificate
+verification and will raise <a class="reference internal" href="reference/urllib3.exceptions.html#urllib3.exceptions.SSLError" title="urllib3.exceptions.SSLError"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLError</span></code></a> if verification fails:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">certifi</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">PoolManager</span><span class="p">(</span>
+    <span class="n">cert_reqs</span><span class="o">=</span><span class="s2">&quot;CERT_REQUIRED&quot;</span><span class="p">,</span>
+    <span class="n">ca_certs</span><span class="o">=</span><span class="n">certifi</span><span class="o">.</span><span class="n">where</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://httpbin.org/&quot;</span><span class="p">)</span>
+<span class="c1"># (No exception)</span>
+
+<span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://expired.badssl.com&quot;</span><span class="p">)</span>
+<span class="c1"># urllib3.exceptions.SSLError ...</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>You can use OS-provided certificates if desired. Just specify the full
+path to the certificate bundle as the <code class="docutils literal notranslate"><span class="pre">ca_certs</span></code> argument instead of
+<code class="docutils literal notranslate"><span class="pre">certifi.where()</span></code>. For example, most Linux systems store the certificates
+at <code class="docutils literal notranslate"><span class="pre">/etc/ssl/certs/ca-certificates.crt</span></code>. Other operating systems can
+be <a class="reference external" href="https://stackoverflow.com/questions/10095676/openssl-reasonable-default-for-trusted-ca-certificates">difficult</a>.</p>
+</div>
+</section>
+<section id="using-timeouts">
+<h2>Using Timeouts<a class="headerlink" href="#using-timeouts" title="链接到此标题。">¶</a></h2>
+<p>Timeouts allow you to control how long (in seconds) requests are allowed to run
+before being aborted. In simple cases, you can specify a timeout as a <code class="docutils literal notranslate"><span class="pre">float</span></code>
+to <a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager.request" title="urllib3.PoolManager.request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">request()</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/delay/3&quot;</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="mf">4.0</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">resp</span><span class="p">))</span>
+<span class="c1"># &lt;class &quot;urllib3.response.HTTPResponse&quot;&gt;</span>
+
+<span class="c1"># This request will take more time to process than timeout.</span>
+<span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/delay/3&quot;</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="mf">2.5</span>
+<span class="p">)</span>
+<span class="c1"># MaxRetryError caused by ReadTimeoutError</span>
+</pre></div>
+</div>
+<p>For more granular control you can use a <a class="reference internal" href="reference/urllib3.util.html#urllib3.util.Timeout" title="urllib3.util.timeout.Timeout"><code class="xref py py-class docutils literal notranslate"><span class="pre">Timeout</span></code></a>
+instance which lets you specify separate connect and read timeouts:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/delay/3&quot;</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="n">urllib3</span><span class="o">.</span><span class="n">Timeout</span><span class="p">(</span><span class="n">connect</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">resp</span><span class="p">))</span>
+<span class="c1"># &lt;urllib3.response.HTTPResponse&gt;</span>
+
+<span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/delay/3&quot;</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="n">urllib3</span><span class="o">.</span><span class="n">Timeout</span><span class="p">(</span><span class="n">connect</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="c1"># MaxRetryError caused by ReadTimeoutError</span>
+</pre></div>
+</div>
+<p>If you want all requests to be subject to the same timeout, you can specify
+the timeout at the <a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager" title="urllib3.poolmanager.PoolManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">PoolManager</span></code></a> level:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">PoolManager</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mf">3.0</span><span class="p">)</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">PoolManager</span><span class="p">(</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="n">urllib3</span><span class="o">.</span><span class="n">Timeout</span><span class="p">(</span><span class="n">connect</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>You still override this pool-level timeout by specifying <code class="docutils literal notranslate"><span class="pre">timeout</span></code> to
+<a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager.request" title="urllib3.PoolManager.request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">request()</span></code></a>.</p>
+</section>
+<section id="retrying-requests">
+<h2>Retrying Requests<a class="headerlink" href="#retrying-requests" title="链接到此标题。">¶</a></h2>
+<p>urllib3 can automatically retry idempotent requests. This same mechanism also
+handles redirects. You can control the retries using the <code class="docutils literal notranslate"><span class="pre">retries</span></code> parameter
+to <a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager.request" title="urllib3.PoolManager.request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">request()</span></code></a>. By default, urllib3 will retry
+requests 3 times and follow up to 3 redirects.</p>
+<p>To change the number of retries just specify an integer:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://httpbin.org/ip&quot;</span><span class="p">,</span> <span class="n">retries</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To disable all retry and redirect logic specify <code class="docutils literal notranslate"><span class="pre">retries=False</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://nxdomain.example.com&quot;</span><span class="p">,</span>
+    <span class="n">retries</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+<span class="c1"># NewConnectionError</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/redirect/1&quot;</span><span class="p">,</span>
+    <span class="n">retries</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>
+<span class="c1"># 302</span>
+</pre></div>
+</div>
+<p>To disable redirects but keep the retrying logic, specify <code class="docutils literal notranslate"><span class="pre">redirect=False</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/redirect/1&quot;</span><span class="p">,</span>
+    <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>
+<span class="c1"># 302</span>
+</pre></div>
+</div>
+<p>For more granular control you can use a <a class="reference internal" href="reference/urllib3.util.html#urllib3.util.Retry" title="urllib3.util.retry.Retry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Retry</span></code></a> instance.
+This class allows you far greater control of how requests are retried.</p>
+<p>For example, to do a total of 3 retries, but limit to only 2 redirects:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/redirect/3&quot;</span><span class="p">,</span>
+    <span class="n">retries</span><span class="o">=</span><span class="n">urllib3</span><span class="o">.</span><span class="n">Retry</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">redirect</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="c1"># MaxRetryError</span>
+</pre></div>
+</div>
+<p>You can also disable exceptions for too many redirects and just return the
+<code class="docutils literal notranslate"><span class="pre">302</span></code> response:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://httpbin.org/redirect/3&quot;</span><span class="p">,</span>
+    <span class="n">retries</span><span class="o">=</span><span class="n">urllib3</span><span class="o">.</span><span class="n">Retry</span><span class="p">(</span>
+        <span class="n">redirect</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">raise_on_redirect</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>
+<span class="c1"># 302</span>
+</pre></div>
+</div>
+<p>If you want all requests to be subject to the same retry policy, you can
+specify the retry at the <a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager" title="urllib3.poolmanager.PoolManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">PoolManager</span></code></a> level:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">PoolManager</span><span class="p">(</span><span class="n">retries</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">PoolManager</span><span class="p">(</span>
+    <span class="n">retries</span><span class="o">=</span><span class="n">urllib3</span><span class="o">.</span><span class="n">Retry</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">redirect</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>You still override this pool-level retry policy by specifying <code class="docutils literal notranslate"><span class="pre">retries</span></code> to
+<a class="reference internal" href="reference/urllib3.poolmanager.html#urllib3.PoolManager.request" title="urllib3.PoolManager.request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">request()</span></code></a>.</p>
+</section>
+<section id="errors-exceptions">
+<h2>Errors &amp; Exceptions<a class="headerlink" href="#errors-exceptions" title="链接到此标题。">¶</a></h2>
+<p>urllib3 wraps lower-level exceptions, for example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">urllib3</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="s2">&quot;https://nx.example.com&quot;</span><span class="p">,</span> <span class="n">retries</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">NewConnectionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection failed.&quot;</span><span class="p">)</span>
+<span class="c1"># Connection failed.</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="reference/urllib3.exceptions.html#module-urllib3.exceptions" title="urllib3.exceptions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">exceptions</span></code></a> for the full list of all exceptions.</p>
+</section>
+<section id="logging">
+<h2>Logging<a class="headerlink" href="#logging" title="链接到此标题。">¶</a></h2>
+<p>If you are using the standard library <a class="reference external" href="https://docs.python.org/3/library/logging.html#module-logging" title="(位于 Python v3.14)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a> module urllib3 will
+emit several logs. In some cases this can be undesirable. You can use the
+standard logger interface to change the log level for urllib3's logger:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;urllib3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="advanced-usage.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Advanced Usage</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="sponsors.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Sponsors and Supporters</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2026, Andrey Petrov
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">User Guide</a><ul>
+<li><a class="reference internal" href="#installing">Installing</a></li>
+<li><a class="reference internal" href="#making-requests">Making Requests</a></li>
+<li><a class="reference internal" href="#response-content">Response Content</a><ul>
+<li><a class="reference internal" href="#json-content">JSON Content</a></li>
+<li><a class="reference internal" href="#binary-content">Binary Content</a></li>
+<li><a class="reference internal" href="#using-io-wrappers-with-response-content">Using io Wrappers with Response Content</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#request-data">Request Data</a><ul>
+<li><a class="reference internal" href="#headers">Headers</a></li>
+<li><a class="reference internal" href="#cookies">Cookies</a></li>
+<li><a class="reference internal" href="#query-parameters">Query Parameters</a></li>
+<li><a class="reference internal" href="#form-data">Form Data</a></li>
+<li><a class="reference internal" href="#json">JSON</a></li>
+<li><a class="reference internal" href="#files-binary-data">Files &amp; Binary Data</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#certificate-verification">Certificate Verification</a></li>
+<li><a class="reference internal" href="#using-timeouts">Using Timeouts</a></li>
+<li><a class="reference internal" href="#retrying-requests">Retrying Requests</a></li>
+<li><a class="reference internal" href="#errors-exceptions">Errors &amp; Exceptions</a></li>
+<li><a class="reference internal" href="#logging">Logging</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=53c892a7"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/translations.js?v=540d3cec"></script>
+    </body>
+</html>
