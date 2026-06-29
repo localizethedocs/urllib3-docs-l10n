@@ -1,0 +1,212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Andrey Petrov
+# This file is distributed under the same license as the urllib3 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: urllib3 main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-06 09:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../index.rst:4 ../../../index.rst:45
+msgid "For Enterprise"
+msgstr "企業方案"
+
+#: ../../../index.rst:4
+msgid "Community Discord"
+msgstr "Discord 社群"
+
+#: ../../../index.rst:2
+msgid "urllib3"
+msgstr "urllib3"
+
+#: ../../../index.rst:18
+msgid ""
+"urllib3 is a powerful, *user-friendly* HTTP client for Python. :ref:`Much of "
+"the Python ecosystem already uses <who-uses>` urllib3 and you should too."
+msgstr ""
+"urllib3 是一個功能強大且\\ *易於使用*\\ 的 Python HTTP 客戶端。:ref:`許多 "
+"Python 生態系統已經在使用 <who-uses>` urllib3，您也應該使用它。"
+
+#: ../../../index.rst:21
+msgid ""
+"urllib3 brings many critical features that are missing from the Python "
+"standard libraries:"
+msgstr "urllib3 提供了許多 Python 標準程式庫所缺乏的重要功能："
+
+#: ../../../index.rst:24
+msgid "Thread safety."
+msgstr "執行緒安全。"
+
+#: ../../../index.rst:25
+msgid "Connection pooling."
+msgstr "連接池。"
+
+#: ../../../index.rst:26
+msgid "Client-side TLS/SSL verification."
+msgstr "客戶端 TLS/SSL 驗證。"
+
+#: ../../../index.rst:27
+msgid "File uploads with multipart encoding."
+msgstr "使用 multipart 編碼上傳檔案。"
+
+#: ../../../index.rst:28
+msgid "Helpers for retrying requests and dealing with HTTP redirects."
+msgstr "用於重試請求及處理 HTTP 重新導向的輔助工具。"
+
+#: ../../../index.rst:29
+msgid "Support for gzip, deflate, brotli, and zstd encoding."
+msgstr "支援 gzip、deflate、brotli 及 zstd 編碼。"
+
+#: ../../../index.rst:30
+msgid "Proxy support for HTTP and SOCKS."
+msgstr "支援 HTTP 與 SOCKS 代理。"
+
+#: ../../../index.rst:31
+msgid "100% test coverage."
+msgstr "100% 測試覆蓋率。"
+
+#: ../../../index.rst:33
+msgid "urllib3 is powerful and easy to use:"
+msgstr "urllib3 功能強大且易於使用："
+
+#: ../../../index.rst:35
+msgid ""
+">>> import urllib3\n"
+">>> resp = urllib3.request(\"GET\", \"https://httpbin.org/robots.txt\")\n"
+">>> resp.status\n"
+"200\n"
+">>> resp.data\n"
+"b\"User-agent: *\\nDisallow: /deny\\n\""
+msgstr ""
+">>> import urllib3\n"
+">>> resp = urllib3.request(\"GET\", \"https://httpbin.org/robots.txt\")\n"
+">>> resp.status\n"
+"200\n"
+">>> resp.data\n"
+"b\"User-agent: *\\nDisallow: /deny\\n\""
+
+#: ../../../index.rst:54
+msgid "|tideliftlogo|_"
+msgstr "|tideliftlogo|_"
+
+#: ../../../index.rst:47
+msgid "Tidelift"
+msgstr "Tidelift"
+
+#: ../../../index.rst:55
+msgid ""
+"Professional support for urllib3 is available as part of the `Tidelift "
+"Subscription`_.  Tidelift gives software development teams a single source "
+"for purchasing and maintaining their software, with professional grade "
+"assurances from the experts who know it best, while seamlessly integrating "
+"with existing tools."
+msgstr ""
+"urllib3 的專業支援已包含在 `Tidelift 訂閱服務`_\\ 中。Tidelift 為軟體開發團隊"
+"提供單一的採購與維護管道，由最了解軟體的專家提供專業級保障，並能與現有工具無"
+"縫整合。"
+
+#: ../../../index.rst:64
+msgid "|learn-more|_ |request-a-demo|_"
+msgstr "|learn-more|_ |request-a-demo|_"
+
+#: ../../../index.rst:66
+msgid "Learn more about Tidelift Subscription"
+msgstr "了解更多關於 Tidelift 訂閱服務的資訊"
+
+#: ../../../index.rst:71
+msgid "Request a Demo for the Tidelift Subscription"
+msgstr "請求 Tidelift 訂閱服務的示範"
+
+#: ../../../index.rst:77
+msgid "Installing"
+msgstr "安裝方式"
+
+#: ../../../index.rst:79
+msgid "urllib3 can be installed with `pip <https://pip.pypa.io>`_"
+msgstr "urllib3 可以透過 `pip <https://pip.pypa.io>`_ 進行安裝"
+
+#: ../../../index.rst:81
+msgid "$ python -m pip install urllib3"
+msgstr "$ python -m pip install urllib3"
+
+#: ../../../index.rst:85
+msgid ""
+"Alternatively, you can grab the latest source code from `GitHub <https://"
+"github.com/urllib3/urllib3>`_:"
+msgstr ""
+"或者，你也可以從 `GitHub <https://github.com/urllib3/urllib3>`_ 取得最新的來"
+"源碼："
+
+#: ../../../index.rst:87
+msgid ""
+"$ git clone https://github.com/urllib3/urllib3.git\n"
+"$ cd urllib3\n"
+"$ pip install ."
+msgstr ""
+"$ git clone https://github.com/urllib3/urllib3.git\n"
+"$ cd urllib3\n"
+"$ pip install ."
+
+#: ../../../index.rst:94
+msgid "Usage"
+msgstr "使用方式"
+
+#: ../../../index.rst:96
+msgid ""
+"The :doc:`user-guide` is the place to go to learn how to use the library and "
+"accomplish common tasks. The more in-depth :doc:`advanced-usage` guide is "
+"the place to go for lower-level tweaking."
+msgstr ""
+":doc:`user-guide`\\ 是學習如何使用此程式庫以及完成常見任務的地方。更深入的"
+"\\ :doc:`advanced-usage`\\ 指南則適合需要進行底層調整的使用者。"
+
+#: ../../../index.rst:99
+msgid ""
+"The :doc:`reference/index` documentation provides API-level documentation."
+msgstr ":doc:`reference/index`\\ 文件提供了 API 層級的文件。"
+
+#: ../../../index.rst:104
+msgid "Who uses urllib3?"
+msgstr "誰在使用 urllib3？"
+
+#: ../../../index.rst:106
+msgid ""
+"`urllib3 is one of the most downloaded packages on PyPI <https://pypistats."
+"org/top>`_ and is a dependency of many popular Python packages like "
+"`Requests <https://requests.readthedocs.io>`_, `Pip <https://pip.pypa.io>`_, "
+"and more!"
+msgstr ""
+"`urllib3 是 PyPI 上下載量最高的軟體包之一 <https://pypistats.org/top>`_，也是"
+"許多熱門 Python 軟體包（如 `Requests <https://requests.readthedocs.io>`_、"
+"`Pip <https://pip.pypa.io>`_ 等）的依賴項目！"
+
+#: ../../../index.rst:111
+msgid "License"
+msgstr "授權條款"
+
+#: ../../../index.rst:113
+msgid ""
+"urllib3 is made available under the MIT License. For more details, see "
+"`LICENSE.txt <https://github.com/urllib3/urllib3/blob/master/LICENSE.txt>`_."
+msgstr ""
+"urllib3 採用 MIT 授權條款。如需更多細節，請參見 `LICENSE.txt <https://github."
+"com/urllib3/urllib3/blob/master/LICENSE.txt>`_。"
+
+#: ../../../index.rst:116
+msgid "Contributing"
+msgstr "貢獻指南"
+
+#: ../../../index.rst:118
+msgid ""
+"We happily welcome contributions, please see :doc:`contributing` for details."
+msgstr "我們非常歡迎各界的貢獻，詳情請參見\\ :doc:`contributing`\\ 。"
