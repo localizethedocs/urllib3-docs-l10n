@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Andrey Petrov
+# This file is distributed under the same license as the urllib3 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: urllib3 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/contrib/securetransport.rst:2
+msgid "macOS SecureTransport"
+msgstr ""
+
+#: ../../../reference/contrib/securetransport.rst:4
+msgid ""
+"`SecureTranport <https://developer.apple.com/documentation/security/"
+"secure_transport>`_ support for urllib3 via ctypes."
+msgstr ""
+
+#: ../../../reference/contrib/securetransport.rst:7
+msgid ""
+"This makes platform-native TLS available to urllib3 users on macOS without "
+"the use of a compiler. This is an important feature because the Python "
+"Package Index is moving to become a TLSv1.2-or-higher server, and the "
+"default OpenSSL that ships with macOS is not capable of doing TLSv1.2. The "
+"only way to resolve this is to give macOS users an alternative solution to "
+"the problem, and that solution is to use SecureTransport."
+msgstr ""
+
+#: ../../../reference/contrib/securetransport.rst:14
+msgid ""
+"We use ctypes here because this solution must not require a compiler. That's "
+"because Pip is not allowed to require a compiler either."
+msgstr ""
+
+#: ../../../reference/contrib/securetransport.rst:17
+msgid ""
+"This code is a bastardised version of the code found in Will Bond's "
+"`oscrypto <https://github.com/wbond/oscrypto>`_ library. An enormous debt is "
+"owed to him for blazing this trail for us. For that reason, this code should "
+"be considered to be covered both by urllib3's license and by `oscrypto's "
+"<https://github.com/wbond/oscrypto/blob/master/LICENSE>`_."
+msgstr ""
+
+#: ../../../reference/contrib/securetransport.rst:23
+msgid "To use this module, simply import and inject it:"
+msgstr ""
+
+#: ../../../reference/contrib/securetransport.rst:25
+msgid ""
+"import urllib3.contrib.securetransport\n"
+"urllib3.contrib.securetransport.inject_into_urllib3()"
+msgstr ""
