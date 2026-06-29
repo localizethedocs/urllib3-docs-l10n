@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-06-06 01:08:21 +0300",
-      "hash" : "e8a81de5e1fe6b52dbcbdd93345560097c1e58fb",
-      "title" : "Strip fragments from absolute request targets (#5079)"
+      "date" : "2026-06-18 12:19:28 +0300",
+      "hash" : "12ef275e392164e2ae13ea92c9b873da3cbdcdd4",
+      "title" : "Document that `default_socket_options` is not supposed to be changed (#5054)"
     }
   },
   "type" : "branch",
