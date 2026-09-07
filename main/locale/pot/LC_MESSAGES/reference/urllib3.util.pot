@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-08 12:40+0000\n"
+"POT-Creation-Date: 2026-09-07 14:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -439,7 +439,9 @@ msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.Retry.RETRY_AFTER_STATUS_CODES:1
-msgid "Default status codes to be used for ``status_forcelist``"
+msgid ""
+"Default status codes that trigger a retry when a Retry-After header is "
+"present and :attr:`Retry.respect_retry_after_header` is enabled."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
@@ -787,6 +789,53 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
+#: of urllib3.util.url.Url:5
+msgid ""
+"User information as defined in RFC 3986 3.2.1. This component is kept "
+"percent-encoded. Use :attr:`auth_decoded` or :attr:`auth_decoded_joined` to "
+"get the decoded form."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
+#: of urllib3.util.Url.auth_decoded:1
+msgid ""
+"User information with %-escapes decoded as UTF-8, returned as a ``(username, "
+"password)`` tuple."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
+#: of urllib3.util.Url.auth_decoded:4
+msgid ""
+"Both values are ``None`` if ``auth`` is ``None``. ``password`` is ``None`` "
+"if not present in the auth component."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
+#: of urllib3.util.Url.auth_decoded_joined:1
+msgid ""
+"User information with %-escapes decoded as UTF-8, as a string prepared for "
+"encoding into an 'authorization: basic ...' header."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
+#: of urllib3.util.Url.auth_decoded_joined:4
+msgid ""
+"This property does not choose the encoding used for an 'authorization: "
+"basic ...' header. Use the ``basic_auth_encoding`` or "
+"``proxy_basic_auth_encoding`` parameters of :func:`urllib3.util."
+"make_headers` when converting the returned string into Basic authentication "
+"bytes."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
+#: of urllib3.util.Url.auth_decoded_joined:10
+msgid ""
+"This is a convenience property that joins the username and password with a "
+"colon, if both are present. If only the username is present, a trailing "
+"colon is still appended. If ``auth`` is ``None``, this returns ``None``."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.Url.authority:1
 msgid ""
 "Authority component as defined in RFC 3986 3.2. This includes userinfo "
@@ -840,7 +889,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of urllib3.util.request.make_headers:31 urllib3.util.url.parse_url:12
+#: of urllib3.util.request.make_headers:62 urllib3.util.url.parse_url:12
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: urllib3.util.Url.url:8
 msgid "Example:"
@@ -1005,23 +1054,95 @@ msgstr ""
 #: of urllib3.util.request.make_headers:20
 msgid ""
 "Colon-separated username:password string for 'authorization: basic ...' auth "
-"header."
+"header. Basic authentication transmits Base64-encoded bytes, not Unicode "
+"text, so the string is encoded with ``basic_auth_encoding`` before Base64 "
+"encoding.  Must contain decoded credentials (not percent-encoded). For URLs "
+"parsed with :func:`parse_url`, use :attr:`Url.auth_decoded_joined` to get "
+"the properly formatted string."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of urllib3.util.request.make_headers:24
+#: of urllib3.util.request.make_headers:21
+msgid ""
+"Colon-separated username:password string for 'authorization: basic ...' auth "
+"header. Basic authentication transmits Base64-encoded bytes, not Unicode "
+"text, so the string is encoded with ``basic_auth_encoding`` before Base64 "
+"encoding."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: of urllib3.util.request.make_headers:26 urllib3.util.request.make_headers:35
+#: urllib3.util.request.make_headers:45 urllib3.util.request.make_headers:55
+msgid ""
+"Must contain decoded credentials (not percent-encoded). For URLs parsed "
+"with :func:`parse_url`, use :attr:`Url.auth_decoded_joined` to get the "
+"properly formatted string."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: of urllib3.util.request.make_headers:30
+msgid ""
+"Text encoding used to encode ``basic_auth`` before Base64 encoding. Defaults "
+"to \"latin-1\" for backward compatibility. Use \"utf-8\" only when the peer "
+"expects UTF-8 Basic authentication credentials.  Must contain decoded "
+"credentials (not percent-encoded). For URLs parsed with :func:`parse_url`, "
+"use :attr:`Url.auth_decoded_joined` to get the properly formatted string."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: of urllib3.util.request.make_headers:31
+msgid ""
+"Text encoding used to encode ``basic_auth`` before Base64 encoding. Defaults "
+"to \"latin-1\" for backward compatibility. Use \"utf-8\" only when the peer "
+"expects UTF-8 Basic authentication credentials."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: of urllib3.util.request.make_headers:39
 msgid ""
 "Colon-separated username:password string for 'proxy-authorization: "
-"basic ...' auth header."
+"basic ...' auth header. Basic authentication transmits Base64-encoded bytes, "
+"not Unicode text, so the string is encoded with "
+"``proxy_basic_auth_encoding`` before Base64 encoding.  Must contain decoded "
+"credentials (not percent-encoded). For URLs parsed with :func:`parse_url`, "
+"use :attr:`Url.auth_decoded_joined` to get the properly formatted string."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of urllib3.util.request.make_headers:28
+#: of urllib3.util.request.make_headers:40
+msgid ""
+"Colon-separated username:password string for 'proxy-authorization: "
+"basic ...' auth header. Basic authentication transmits Base64-encoded bytes, "
+"not Unicode text, so the string is encoded with "
+"``proxy_basic_auth_encoding`` before Base64 encoding."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: of urllib3.util.request.make_headers:49
+msgid ""
+"Text encoding used to encode ``proxy_basic_auth`` before Base64 encoding. "
+"Defaults to \"latin-1\" for backward compatibility. Use \"utf-8\" only when "
+"the proxy expects UTF-8 Basic authentication credentials.  Must contain "
+"decoded credentials (not percent-encoded). For URLs parsed with :func:"
+"`parse_url`, use :attr:`Url.auth_decoded_joined` to get the properly "
+"formatted string."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: of urllib3.util.request.make_headers:50
+msgid ""
+"Text encoding used to encode ``proxy_basic_auth`` before Base64 encoding. "
+"Defaults to \"latin-1\" for backward compatibility. Use \"utf-8\" only when "
+"the proxy expects UTF-8 Basic authentication credentials."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
+#: of urllib3.util.request.make_headers:59
 msgid "If ``True``, adds 'cache-control: no-cache' header."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
-#: of urllib3.util.request.make_headers:33
+#: of urllib3.util.request.make_headers:64
 msgid ""
 "import urllib3\n"
 "\n"
