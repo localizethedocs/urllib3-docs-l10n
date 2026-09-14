@@ -1,0 +1,490 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Andrey Petrov
+# This file is distributed under the same license as the urllib3 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: urllib3 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-08 13:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../contributing.rst:2
+msgid "Contributing"
+msgstr "貢獻指南"
+
+#: ../../../contributing.rst:4
+msgid ""
+"urllib3 is a community-maintained project and we happily accept "
+"contributions."
+msgstr "urllib3 是一個由社群維護的專案，我們非常歡迎大家的貢獻。"
+
+#: ../../../contributing.rst:6
+msgid "If you wish to add a new feature or fix a bug:"
+msgstr "如果您想要新增功能或修復臭蟲："
+
+#: ../../../contributing.rst:8
+msgid ""
+"`Check for open issues <https://github.com/urllib3/urllib3/issues>`_ or open "
+"a fresh issue to start a discussion around a feature idea or a bug. There is "
+"a *Contributor Friendly* tag for issues that should be ideal for people who "
+"are not very familiar with the codebase yet."
+msgstr ""
+
+#: ../../../contributing.rst:12
+msgid ""
+"Fork the `urllib3 repository on Github <https://github.com/urllib3/"
+"urllib3>`_ to start making your changes."
+msgstr ""
+
+#: ../../../contributing.rst:14
+msgid ""
+"Write a test which shows that the bug was fixed or that the feature works as "
+"expected."
+msgstr ""
+
+#: ../../../contributing.rst:16
+msgid ""
+"Format your changes with black using command ``nox -rs format`` and lint "
+"your changes using command ``nox -rs lint``."
+msgstr ""
+
+#: ../../../contributing.rst:18
+msgid ""
+"Add a `changelog entry <https://github.com/urllib3/urllib3/blob/main/"
+"changelog/README.rst>`__."
+msgstr ""
+
+#: ../../../contributing.rst:20
+msgid ""
+"Send a pull request and bug the maintainer until it gets merged and "
+"published."
+msgstr ""
+
+#: ../../../contributing.rst:24
+msgid "Setting up your development environment"
+msgstr "設定您的開發環境"
+
+#: ../../../contributing.rst:26
+msgid ""
+"In order to setup the development environment all that you need is `nox "
+"<https://nox.thea.codes/en/stable/index.html>`_ installed in your machine::"
+msgstr ""
+"為了設定開發環境，您只需要在機器上安裝 `nox <https://nox.thea.codes/en/"
+"stable/index.html>`_\\ ：\\ ::"
+
+#: ../../../contributing.rst:29
+msgid "$ python -m pip install --user --upgrade nox"
+msgstr "$ python -m pip install --user --upgrade nox"
+
+#: ../../../contributing.rst:33
+msgid "Running the tests"
+msgstr "執行測試"
+
+#: ../../../contributing.rst:35
+msgid ""
+"We use some external dependencies, multiple interpreters and code coverage "
+"analysis while running test suite. Our ``noxfile.py`` handles much of this "
+"for you::"
+msgstr ""
+
+#: ../../../contributing.rst:39
+msgid ""
+"$ nox --reuse-existing-virtualenvs --sessions test-3.12 test-pypy3.11\n"
+"[ Nox will create virtualenv if needed, install the specified dependencies, "
+"and run the commands in order.]"
+msgstr ""
+
+#: ../../../contributing.rst:43
+msgid ""
+"Note that for nox to test different interpreters, the interpreters must be "
+"on the ``PATH`` first. Check with ``which`` to see if the interpreter is on "
+"the ``PATH`` like so::"
+msgstr ""
+
+#: ../../../contributing.rst:48
+msgid ""
+"$ which python3.12\n"
+"~/.pyenv/versions/3.12.1/bin/python3.12\n"
+"\n"
+"$ which pypy3.11\n"
+"~/.pyenv/versions/pypy3.11-7.3.22/bin/pypy3.11"
+msgstr ""
+
+#: ../../../contributing.rst:55
+msgid ""
+"There is also a nox command for running all of our tests and multiple python "
+"versions.::"
+msgstr ""
+
+#: ../../../contributing.rst:58
+msgid "$ nox --reuse-existing-virtualenvs --sessions test"
+msgstr "$ nox --reuse-existing-virtualenvs --sessions test"
+
+#: ../../../contributing.rst:60
+msgid ""
+"Note that code coverage less than 100% is regarded as a failing run. Some "
+"platform-specific tests are skipped unless run in that platform.  To make "
+"sure the code works in all of urllib3's supported platforms, you can run our "
+"``nox`` suite::"
+msgstr ""
+
+#: ../../../contributing.rst:65
+msgid ""
+"$ nox --reuse-existing-virtualenvs --sessions test\n"
+"[ Nox will create virtualenv if needed, install the specified dependencies, "
+"and run the commands in order.]\n"
+".......\n"
+".......\n"
+"nox > Session test-3.10 was successful.\n"
+"nox > Session test-3.11 was successful.\n"
+"nox > Session test-3.12 was successful.\n"
+"nox > Session test-3.13 was successful.\n"
+"nox > Session test-3.14 was successful.\n"
+"nox > Session test-3.15 was successful.\n"
+"nox > Session test-pypy was successful."
+msgstr ""
+"$ nox --reuse-existing-virtualenvs --sessions test\n"
+"[ Nox will create virtualenv if needed, install the specified dependencies, "
+"and run the commands in order.]\n"
+".......\n"
+".......\n"
+"nox > Session test-3.10 was successful.\n"
+"nox > Session test-3.11 was successful.\n"
+"nox > Session test-3.12 was successful.\n"
+"nox > Session test-3.13 was successful.\n"
+"nox > Session test-3.14 was successful.\n"
+"nox > Session test-3.15 was successful.\n"
+"nox > Session test-pypy was successful."
+
+#: ../../../contributing.rst:77
+msgid ""
+"Our test suite `runs continuously on GitHub Actions <https://github.com/"
+"urllib3/urllib3/actions>`_ with every pull request."
+msgstr ""
+
+#: ../../../contributing.rst:80
+msgid ""
+"To run specific tests or quickly re-run without nox recreating the env, do "
+"the following::"
+msgstr ""
+
+#: ../../../contributing.rst:82
+msgid ""
+"$ nox --reuse-existing-virtualenvs --sessions test-3.13 -- pyTestArgument1 "
+"pyTestArgument2 pyTestArgumentN\n"
+"[ Nox will create virtualenv, install the specified dependencies, and run "
+"the commands in order.]\n"
+"nox > Running session test-3.13\n"
+"nox > Re-using existing virtual environment at .nox/test-3-13.\n"
+".......\n"
+".......\n"
+"nox > Session test-3.13 was successful."
+msgstr ""
+
+#: ../../../contributing.rst:90
+msgid ""
+"After the ``--`` indicator, any arguments will be passed to pytest. To "
+"specify an exact test case the following syntax also works: ``test/dir/"
+"module_name.py::TestClassName::test_method_name`` (eg.: ``test/"
+"with_dummyserver/test_https.py::TestHTTPS::test_simple``). The following "
+"argument is another valid example to pass to pytest: ``-k "
+"test_methode_name``. These are useful when developing new test cases and "
+"there is no point re-running the entire test suite every iteration. It is "
+"also possible to further parameterize pytest for local testing."
+msgstr ""
+
+#: ../../../contributing.rst:99
+msgid ""
+"For all valid arguments, check `the pytest documentation <https://docs."
+"pytest.org/en/stable/usage.html#stopping-after-the-first-or-n-failures>`_."
+msgstr ""
+
+#: ../../../contributing.rst:103
+msgid "Getting paid for your contributions"
+msgstr ""
+
+#: ../../../contributing.rst:105
+msgid ""
+"urllib3 has a `pool of money hosted on Open Collective <https://"
+"opencollective.com/urllib3#category-BUDGET>`_ which the team uses to pay "
+"contributors for their work. **That could be you, too!** If you complete all "
+"tasks in an issue that is marked with the `\"💰 Bounty $X00\" label <https://"
+"github.com/urllib3/urllib3/issues?"
+"q=is%3Aopen+is%3Aissue+label%3A%22%F0%9F%92%B0+Bounty+"
+"%24100%22%2C%22%F0%9F%92%B0+Bounty+%24200%22%2C%22%F0%9F%92%B0+Bounty+"
+"%24300%22%2C%22%F0%9F%92%B0+Bounty+%24400%22%2C%22%F0%9F%92%B0+Bounty+"
+"%24500%22+no%3Aassignee>`_ then you're eligible to be paid for your work."
+msgstr ""
+"urllib3 `在 Open Collective 上擁有一筆資金 <https://opencollective.com/"
+"urllib3#category-BUDGET>`_\\ ，團隊會用這筆錢來支付貢獻者的工作報酬。您也可以"
+"成為其中一員！如果你完成了一個標有\\ `「💰 Bounty $X00」標籤 <https://github."
+"com/urllib3/urllib3/issues?"
+"q=is%3Aopen+is%3Aissue+label%3A%22%F0%9F%92%B0+Bounty+"
+"%24100%22%2C%22%F0%9F%92%B0+Bounty+%24200%22%2C%22%F0%9F%92%B0+Bounty+"
+"%24300%22%2C%22%F0%9F%92%B0+Bounty+%24400%22%2C%22%F0%9F%92%B0+Bounty+"
+"%24500%22+no%3Aassignee>`_\\ 的議題中的所有任務，您就有資格獲得該項工作的報"
+"酬。"
+
+#: ../../../contributing.rst:109
+msgid ""
+"Ensure that you're able to `receive funds from Open Collective for working "
+"on OSS <https://docs.opencollective.com/help/expenses-and-getting-paid/"
+"submitting-expenses>`_. Consider your employment contract and taxes for "
+"possible restrictions."
+msgstr ""
+
+#: ../../../contributing.rst:111
+msgid ""
+"If an issue is already assigned to someone on GitHub then it's likely "
+"they've made substantial progress on the issue and will be given the bounty. "
+"If you're interested in bounties you should look for issues which aren't "
+"assigned to anyone."
+msgstr ""
+
+#: ../../../contributing.rst:115
+msgid ""
+"**Don't \"claim\" issues or ask whether someone is already working on an "
+"issue.** Instead, focus on researching and working on the tasks in the "
+"issue. Once you have made considerable progress on the tasks in an issue we "
+"can assign your account to the issue to ensure others don't start working on "
+"it in parallel."
+msgstr ""
+
+#: ../../../contributing.rst:119
+msgid ""
+"If you've been assigned to an issue and haven't made progress or given an "
+"update in over a week you will be unassigned from the issue to allow others "
+"a chance at solving the issue."
+msgstr ""
+
+#: ../../../contributing.rst:122
+msgid ""
+"The amount you will be paid for the completing an issue is shown in the "
+"label (either $100, $200, $300, etc)."
+msgstr ""
+
+#: ../../../contributing.rst:123
+msgid ""
+"If you have questions about how to create an invoice on Open Collective `try "
+"reading their FAQ <https://docs.opencollective.com/help/expenses-and-getting-"
+"paid/expenses>`_."
+msgstr ""
+
+#: ../../../contributing.rst:125
+msgid ""
+"If you have a proposal to work on urllib3 that's not listed in the issue "
+"tracker please open an issue with your proposal and our team will discuss "
+"whether we'd pay for your work on your proposal."
+msgstr ""
+
+#: ../../../contributing.rst:127
+msgid ""
+"If you have other questions get in contact with a maintainer in the `urllib3 "
+"Discord channel <https://discord.gg/urllib3>`_ or via email."
+msgstr ""
+
+#: ../../../contributing.rst:128
+msgid ""
+"The list above isn't an exhaustive list of criteria or rules for how/when "
+"money is distributed. **The final say on whether money will be distributed "
+"is up to maintainers.**"
+msgstr ""
+
+#: ../../../contributing.rst:131
+msgid ""
+"This program is an experiment so if you have positive or negative feedback "
+"on the process you can contact the maintainers through one of the above "
+"channels."
+msgstr ""
+
+#: ../../../contributing.rst:133
+msgid ""
+"Note that this program isn't a \"bug bounty\" program, we don't distribute "
+"funds to reporters of bugs or security vulnerabilities at this time."
+msgstr ""
+
+#: ../../../contributing.rst:136
+msgid "Running local proxies"
+msgstr ""
+
+#: ../../../contributing.rst:138
+msgid ""
+"If the feature you are developing involves a proxy, you can rely on scripts "
+"we have developed to run a proxy locally."
+msgstr ""
+
+#: ../../../contributing.rst:140
+msgid "Run an HTTP proxy locally:"
+msgstr ""
+
+#: ../../../contributing.rst:142
+msgid "$ python -m dummyserver.proxy"
+msgstr "$ python -m dummyserver.proxy"
+
+#: ../../../contributing.rst:146
+msgid "Run an HTTPS proxy locally:"
+msgstr ""
+
+#: ../../../contributing.rst:148
+msgid "$ python -m dummyserver.https_proxy"
+msgstr "$ python -m dummyserver.https_proxy"
+
+#: ../../../contributing.rst:153
+msgid "Contributing to documentation"
+msgstr "貢獻文件"
+
+#: ../../../contributing.rst:155
+msgid "You can build the docs locally using ``nox``:"
+msgstr ""
+
+#: ../../../contributing.rst:157
+msgid "$ nox -rs docs"
+msgstr "$ nox -rs docs"
+
+#: ../../../contributing.rst:161
+msgid "While writing documentation you should follow these guidelines:"
+msgstr ""
+
+#: ../../../contributing.rst:163
+msgid ""
+"Use the top-level ``urllib3.request()`` function for smaller code examples. "
+"For more involved examples use PoolManager, etc."
+msgstr ""
+
+#: ../../../contributing.rst:164
+msgid "Use double quotes for all strings. (Output, Declaration etc.)"
+msgstr ""
+
+#: ../../../contributing.rst:165
+msgid ""
+"Use keyword arguments everywhere except for method and url. (ie ``http."
+"request(\"GET\", \"https://example.com\", headers={...})`` )"
+msgstr ""
+
+#: ../../../contributing.rst:166
+msgid "Use HTTPS in URLs everywhere unless HTTP is needed."
+msgstr ""
+
+#: ../../../contributing.rst:167
+msgid "Rules for code examples and naming variables:"
+msgstr ""
+
+#: ../../../contributing.rst:169
+msgid ""
+"``PoolManager`` instances should be named ``http``. (ie ``http = urllib3."
+"PoolManager(...)``)"
+msgstr ""
+
+#: ../../../contributing.rst:170
+msgid "``ProxyManager`` instances should be named ``proxy``."
+msgstr ""
+
+#: ../../../contributing.rst:171
+msgid "``ConnectionPool`` instances should be named ``pool``."
+msgstr ""
+
+#: ../../../contributing.rst:172
+msgid "``Connection`` instances should be named ``conn``."
+msgstr ""
+
+#: ../../../contributing.rst:173
+msgid "``HTTPResponse`` instances should be named ``resp``."
+msgstr ""
+
+#: ../../../contributing.rst:174
+msgid "Only use ``example.com`` or ``httpbin.org`` for example URLs"
+msgstr ""
+
+#: ../../../contributing.rst:176
+msgid ""
+"Comments within snippets should be useful, if what's being done is apparent "
+"(such as parsing JSON, making a request) then it can be skipped for that "
+"section."
+msgstr ""
+
+#: ../../../contributing.rst:178
+msgid ""
+"Comments should always go above a code section rather than below with the "
+"exception of print statements where the comment containing the result goes "
+"below."
+msgstr ""
+
+#: ../../../contributing.rst:180
+msgid ""
+"Imports should be their own section separated from the rest of the example "
+"with a line of whitespace."
+msgstr ""
+
+#: ../../../contributing.rst:181
+msgid ""
+"Imports should minimized if possible. Use import urllib3 instead of from "
+"urllib3 import X."
+msgstr ""
+
+#: ../../../contributing.rst:182
+msgid ""
+"Sort imports similarly to isort, standard library first and third-party "
+"(like urllib3) come after."
+msgstr ""
+
+#: ../../../contributing.rst:183
+msgid ""
+"No whitespace is required between the sections as normally would be in case "
+"of isort."
+msgstr ""
+
+#: ../../../contributing.rst:184
+msgid ""
+"Add print statements along with a comment below them showing the output, "
+"potentially compressed."
+msgstr ""
+
+#: ../../../contributing.rst:185
+msgid ""
+"This helps users using the copy-paste button immediately see the results "
+"from a script."
+msgstr ""
+
+#: ../../../contributing.rst:188
+msgid "Releases"
+msgstr ""
+
+#: ../../../contributing.rst:190
+msgid "A release candidate can be created by any contributor."
+msgstr ""
+
+#: ../../../contributing.rst:192
+msgid ""
+"Announce intent to release on Discord, see if anyone wants to include last "
+"minute changes."
+msgstr ""
+
+#: ../../../contributing.rst:194
+msgid ""
+"Run ``towncrier build`` to update ``CHANGES.rst`` with the release notes, "
+"adjust as necessary."
+msgstr ""
+
+#: ../../../contributing.rst:196
+msgid "Commit the changes to a ``release-X.Y.Z`` branch."
+msgstr ""
+
+#: ../../../contributing.rst:197
+msgid ""
+"Create a pull request and append ``&expand=1&template=release.md`` to the "
+"URL before submitting in order to include our release checklist in the pull "
+"request description."
+msgstr ""
+
+#: ../../../contributing.rst:199
+msgid "Follow the checklist!"
+msgstr ""
