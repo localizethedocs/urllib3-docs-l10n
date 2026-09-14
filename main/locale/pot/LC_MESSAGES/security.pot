@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Andrey Petrov
+# This file is distributed under the same license as the urllib3 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: urllib3 main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-14 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../../SECURITY.md:1
+msgid "Security Policy"
+msgstr ""
+
+#: ../../../../SECURITY.md:3
+msgid "Reporting a Vulnerability"
+msgstr ""
+
+#: ../../../../SECURITY.md:5
+msgid ""
+"To report a security vulnerability, please use the [Tidelift security "
+"contact](https://tidelift.com/security). Tidelift will coordinate the fix "
+"and disclosure with maintainers."
+msgstr ""
+
+#: ../../../../SECURITY.md:9
+msgid "Please do **not** file a public GitHub issue for security reports."
+msgstr ""
+
+#: ../../../../SECURITY.md:11
+msgid "When reporting, if possible, include:"
+msgstr ""
+
+#: ../../../../SECURITY.md:12
+msgid "A clear description of the issue and potential impact"
+msgstr ""
+
+#: ../../../../SECURITY.md:13
+msgid "Steps to reproduce or a proof of concept"
+msgstr ""
+
+#: ../../../../SECURITY.md:14
+msgid "Affected urllib3 version(s) and environment details"
+msgstr ""
+
+#: ../../../../SECURITY.md:15
+msgid "Any suggested mitigations"
+msgstr ""
+
+#: ../../../../SECURITY.md:17
+msgid "We typically acknowledge reports within a few business days."
+msgstr ""
+
+#: ../../../../SECURITY.md:20
+msgid "Supported Versions"
+msgstr ""
+
+#: ../../../../SECURITY.md:22
+msgid ""
+"Only the main branch (the 2.x release line) receives updates, including "
+"security fixes. Older release lines (e.g., 1.x) are not maintained. If you "
+"are using an older version, please upgrade to the latest 2.x release to "
+"receive fixes."
+msgstr ""
+
+#: ../../../../SECURITY.md:27
+msgid ""
+"When reporting a potential vulnerability, confirm that it reproduces against "
+"the latest 2.x version."
+msgstr ""
+
+#: ../../../../SECURITY.md:31
+msgid "Out of Scope Experimental Features"
+msgstr ""
+
+#: ../../../../SECURITY.md:33
+msgid "urllib3 contains two experimental modules: `emscripten` and `http2`."
+msgstr ""
+
+#: ../../../../SECURITY.md:35
+msgid ""
+"**http2**: Issues in the HTTP/2 module are not considered security "
+"vulnerabilities and should be opened as public GitHub issues after checking "
+"missing features tracked in issue <https://github.com/urllib3/urllib3/"
+"issues/3000>."
+msgstr ""
+
+#: ../../../../SECURITY.md:39
+msgid ""
+"**emscripten**: Potential security issues in the `emscripten` module should "
+"be reported privately. Project maintainers will decide if they qualify as "
+"security issues to be handled through the standard flow or if they should be "
+"considered simple bugs and fixed publicly. Issues that would be considered "
+"security vulnerabilities in the core package may not qualify as such for the "
+"`emscripten` module."
+msgstr ""
+
+#: ../../../../SECURITY.md:47
+msgid "Our Process"
+msgstr ""
+
+#: ../../../../SECURITY.md:49
+msgid ""
+"We follow the [Tidelift security process](https://support.tidelift.com/hc/en-"
+"us/articles/4406287910036-Security-process) for coordinated vulnerability "
+"disclosure. In brief:"
+msgstr ""
+
+#: ../../../../SECURITY.md:51
+msgid ""
+"Intake and triage: Reports are received privately via Tidelift, validated, "
+"and scoped (affected versions, severity)."
+msgstr ""
+
+#: ../../../../SECURITY.md:53
+msgid ""
+"Private coordination: Tidelift facilitates communication between the "
+"reporter and the urllib3 maintainers."
+msgstr ""
+
+#: ../../../../SECURITY.md:55
+msgid ""
+"Fix and review: We develop, review, and prepare patches (including backports "
+"to supported versions when appropriate) and mitigation guidance."
+msgstr ""
+
+#: ../../../../SECURITY.md:57
+msgid ""
+"Timeline and embargo: We agree on a reasonable disclosure timeline based on "
+"impact and fix complexity; timelines may be accelerated for active "
+"exploitation or extended for complex fixes."
+msgstr ""
+
+#: ../../../../SECURITY.md:60
+msgid ""
+"CVE and advisory: We request and manage CVE IDs via GitHub Security "
+"Advisories and prepare public guidance. If desired, we credit the reporter "
+"and involved maintainers in the advisory."
+msgstr ""
+
+#: ../../../../SECURITY.md:63
+msgid ""
+"Coordinated release: We publish patched releases and the advisory at the "
+"agreed time."
+msgstr ""
+
+#: ../../../../SECURITY.md:67
+msgid "Advisories and CVEs"
+msgstr ""
+
+#: ../../../../SECURITY.md:69
+msgid ""
+"We publish our security advisories on GitHub at [the following page](https://"
+"github.com/urllib3/urllib3/security/advisories). We request and manage CVE "
+"IDs using GitHub Security Advisories, and published advisories include CVE "
+"identifiers (when assigned) and severity information."
+msgstr ""
+
+#: ../../../../SECURITY.md:73
+msgid ""
+"To receive notifications when new advisories are published, open the "
+"repository page, choose *Watch* → *Custom*, and enable *Security alerts*. "
+"You can also enable *Releases* to be notified when patched versions are "
+"published."
+msgstr ""

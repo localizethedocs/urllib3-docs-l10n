@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-06 09:11+0000\n"
+"POT-Creation-Date: 2026-09-14 15:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../../index.rst:4 ../../../index.rst:45
+#: ../../../index.rst:4 ../../../index.rst:46
 msgid "For Enterprise"
 msgstr ""
 
@@ -29,55 +29,55 @@ msgstr ""
 msgid "urllib3"
 msgstr ""
 
-#: ../../../index.rst:18
+#: ../../../index.rst:19
 msgid ""
 "urllib3 is a powerful, *user-friendly* HTTP client for Python. :ref:`Much of "
 "the Python ecosystem already uses <who-uses>` urllib3 and you should too."
 msgstr ""
 
-#: ../../../index.rst:21
+#: ../../../index.rst:22
 msgid ""
 "urllib3 brings many critical features that are missing from the Python "
 "standard libraries:"
 msgstr ""
 
-#: ../../../index.rst:24
+#: ../../../index.rst:25
 msgid "Thread safety."
 msgstr ""
 
-#: ../../../index.rst:25
+#: ../../../index.rst:26
 msgid "Connection pooling."
 msgstr ""
 
-#: ../../../index.rst:26
+#: ../../../index.rst:27
 msgid "Client-side TLS/SSL verification."
 msgstr ""
 
-#: ../../../index.rst:27
+#: ../../../index.rst:28
 msgid "File uploads with multipart encoding."
 msgstr ""
 
-#: ../../../index.rst:28
+#: ../../../index.rst:29
 msgid "Helpers for retrying requests and dealing with HTTP redirects."
 msgstr ""
 
-#: ../../../index.rst:29
+#: ../../../index.rst:30
 msgid "Support for gzip, deflate, brotli, and zstd encoding."
 msgstr ""
 
-#: ../../../index.rst:30
+#: ../../../index.rst:31
 msgid "Proxy support for HTTP and SOCKS."
 msgstr ""
 
-#: ../../../index.rst:31
+#: ../../../index.rst:32
 msgid "100% test coverage."
 msgstr ""
 
-#: ../../../index.rst:33
+#: ../../../index.rst:34
 msgid "urllib3 is powerful and easy to use:"
 msgstr ""
 
-#: ../../../index.rst:35
+#: ../../../index.rst:36
 msgid ""
 ">>> import urllib3\n"
 ">>> resp = urllib3.request(\"GET\", \"https://httpbin.org/robots.txt\")\n"
@@ -87,15 +87,15 @@ msgid ""
 "b\"User-agent: *\\nDisallow: /deny\\n\""
 msgstr ""
 
-#: ../../../index.rst:54
+#: ../../../index.rst:55
 msgid "|tideliftlogo|_"
 msgstr ""
 
-#: ../../../index.rst:47
+#: ../../../index.rst:48
 msgid "Tidelift"
 msgstr ""
 
-#: ../../../index.rst:55
+#: ../../../index.rst:56
 msgid ""
 "Professional support for urllib3 is available as part of the `Tidelift "
 "Subscription`_.  Tidelift gives software development teams a single source "
@@ -104,64 +104,64 @@ msgid ""
 "with existing tools."
 msgstr ""
 
-#: ../../../index.rst:64
+#: ../../../index.rst:65
 msgid "|learn-more|_ |request-a-demo|_"
 msgstr ""
 
-#: ../../../index.rst:66
+#: ../../../index.rst:67
 msgid "Learn more about Tidelift Subscription"
 msgstr ""
 
-#: ../../../index.rst:71
+#: ../../../index.rst:72
 msgid "Request a Demo for the Tidelift Subscription"
 msgstr ""
 
-#: ../../../index.rst:77
+#: ../../../index.rst:78
 msgid "Installing"
 msgstr ""
 
-#: ../../../index.rst:79
+#: ../../../index.rst:80
 msgid "urllib3 can be installed with `pip <https://pip.pypa.io>`_"
 msgstr ""
 
-#: ../../../index.rst:81
+#: ../../../index.rst:82
 msgid "$ python -m pip install urllib3"
 msgstr ""
 
-#: ../../../index.rst:85
+#: ../../../index.rst:86
 msgid ""
 "Alternatively, you can grab the latest source code from `GitHub <https://"
 "github.com/urllib3/urllib3>`_:"
 msgstr ""
 
-#: ../../../index.rst:87
+#: ../../../index.rst:88
 msgid ""
 "$ git clone https://github.com/urllib3/urllib3.git\n"
 "$ cd urllib3\n"
 "$ pip install ."
 msgstr ""
 
-#: ../../../index.rst:94
+#: ../../../index.rst:95
 msgid "Usage"
 msgstr ""
 
-#: ../../../index.rst:96
+#: ../../../index.rst:97
 msgid ""
 "The :doc:`user-guide` is the place to go to learn how to use the library and "
 "accomplish common tasks. The more in-depth :doc:`advanced-usage` guide is "
 "the place to go for lower-level tweaking."
 msgstr ""
 
-#: ../../../index.rst:99
+#: ../../../index.rst:100
 msgid ""
 "The :doc:`reference/index` documentation provides API-level documentation."
 msgstr ""
 
-#: ../../../index.rst:104
+#: ../../../index.rst:105
 msgid "Who uses urllib3?"
 msgstr ""
 
-#: ../../../index.rst:106
+#: ../../../index.rst:107
 msgid ""
 "`urllib3 is one of the most downloaded packages on PyPI <https://pypistats."
 "org/top>`_ and is a dependency of many popular Python packages like "
@@ -169,21 +169,21 @@ msgid ""
 "and more!"
 msgstr ""
 
-#: ../../../index.rst:111
+#: ../../../index.rst:112
 msgid "License"
 msgstr ""
 
-#: ../../../index.rst:113
+#: ../../../index.rst:114
 msgid ""
 "urllib3 is made available under the MIT License. For more details, see "
 "`LICENSE.txt <https://github.com/urllib3/urllib3/blob/master/LICENSE.txt>`_."
 msgstr ""
 
-#: ../../../index.rst:116
+#: ../../../index.rst:117
 msgid "Contributing"
 msgstr ""
 
-#: ../../../index.rst:118
+#: ../../../index.rst:119
 msgid ""
 "We happily welcome contributions, please see :doc:`contributing` for details."
 msgstr ""
