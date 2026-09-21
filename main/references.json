@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-06-06 01:08:21 +0300",
-      "hash" : "e8a81de5e1fe6b52dbcbdd93345560097c1e58fb",
-      "title" : "Strip fragments from absolute request targets (#5079)"
+      "date" : "2026-09-20 17:16:40 +0300",
+      "hash" : "56b546f495d1bde32258d0d6fc2f4c534700732e",
+      "title" : "Parallelize botocore tests (#5264)"
     }
   },
   "type" : "branch",
