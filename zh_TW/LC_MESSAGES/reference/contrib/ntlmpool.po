@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Andrey Petrov
+# This file is distributed under the same license as the urllib3 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: urllib3 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/contrib/ntlmpool.rst:2
+msgid "NTLM Authentication"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool:1
+msgid "NTLM authenticating pool, contributed by erikcederstran"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool:3
+msgid "Issue #10, see: http://code.google.com/p/urllib3/issues/detail?id=10"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool:1
+msgid "Implements an NTLM authentication version of an urllib3 connection pool"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:1
+msgid ""
+"Get a connection from the pool and perform an HTTP request. This is the "
+"lowest level call for making a request, so you'll need to specify all the "
+"raw details."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:7
+msgid ""
+"More commonly, it's appropriate to use a convenience method provided by :"
+"class:`.RequestMethods`, such as :meth:`request`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:12
+msgid ""
+"`release_conn` will only behave as expected if `preload_content=False` "
+"because we want to make `preload_content=False` the default behaviour "
+"someday soon without breaking backwards compatibility."
+msgstr ""
+"只有在 `preload_content=False` 時，`release_conn` 的行為才會符合預期，因為我"
+"們希望在不久的將來將 `preload_content=False` 設為默認行為，同時又不破壞向後相"
+"容性。"
+
+#: ../../../reference/contrib/ntlmpool.rst:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:17
+msgid "HTTP request method (such as GET, POST, PUT, etc.)"
+msgstr "HTTP 請求方法（例如 GET、POST、PUT 等）"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:20
+msgid "The URL to perform the request on."
+msgstr "執行請求的 URL。"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:23
+msgid ""
+"Data to send in the request body, either :class:`str`, :class:`bytes`, an "
+"iterable of :class:`str`/:class:`bytes`, or a file-like object."
+msgstr ""
+"要發送到請求正文中的資料，可以是 :class:`str`、:class:`bytes`、:class:`str`/:"
+"class:`bytes` 的可疊代物件，或是類似檔案的物件。"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:27
+msgid ""
+"Dictionary of custom headers to send, such as User-Agent, If-None-Match, "
+"etc. If None, pool headers are used. If provided, these headers completely "
+"replace any pool-specific headers."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:32
+msgid ""
+"Configure the number of retries to allow before raising a :class:`~urllib3."
+"exceptions.MaxRetryError` exception.  Pass ``None`` to retry until you "
+"receive a response. Pass a :class:`~urllib3.util.retry.Retry` object for "
+"fine-grained control over different types of retries. Pass an integer number "
+"to retry connection errors that many times, but no other types of errors. "
+"Pass zero to never retry.  If ``False``, then retries are disabled and any "
+"exception is raised immediately. Also, instead of raising a MaxRetryError on "
+"redirects, the redirect response will be returned."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:33
+msgid ""
+"Configure the number of retries to allow before raising a :class:`~urllib3."
+"exceptions.MaxRetryError` exception."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:36
+msgid ""
+"Pass ``None`` to retry until you receive a response. Pass a :class:`~urllib3."
+"util.retry.Retry` object for fine-grained control over different types of "
+"retries. Pass an integer number to retry connection errors that many times, "
+"but no other types of errors. Pass zero to never retry."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:42
+msgid ""
+"If ``False``, then retries are disabled and any exception is raised "
+"immediately. Also, instead of raising a MaxRetryError on redirects, the "
+"redirect response will be returned."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:48
+msgid ""
+"If True, automatically handle redirects (status codes 301, 302, 303, 307, "
+"308). Each redirect counts as a retry. Disabling retries will disable "
+"redirect, too."
+msgstr ""
+"若為 True，則自動處理重新導向（狀態碼 301、302、303、307、308）。每次重新導向"
+"都算是重試。停用重試也會停用重新導向。"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:53
+msgid ""
+"If ``True``, will make sure that the host of the pool requests is consistent "
+"else will raise HostChangedError. When ``False``, you can use the pool on an "
+"HTTP proxy and request foreign hosts."
+msgstr ""
+"若為 ``True``，則確保請求池中的主機保持一致；否則，將引發 HostChangedError。"
+"若為 ``False``，則可以在 HTTP 代理上使用請求池並請求外部主機。"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:58
+msgid ""
+"If specified, overrides the default timeout for this one request. It may be "
+"a float (in seconds) or an instance of :class:`urllib3.util.Timeout`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:63
+msgid ""
+"If set and the pool is set to block=True, then this method will block for "
+"``pool_timeout`` seconds and raise EmptyPoolError if no connection is "
+"available within the time period."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:68
+msgid ""
+"If False, then the urlopen call will not release the connection back into "
+"the pool once a response is received (but will release if you read the "
+"entire contents of the response such as when `preload_content=True`). This "
+"is useful if you're not preloading the response's content immediately. You "
+"will need to call ``r.release_conn()`` on the response ``r`` to return the "
+"connection back into the pool. If None, it takes the value of ``response_kw."
+"get('preload_content', True)``."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:78
+msgid ""
+"If True, urllib3 will send the body using chunked transfer encoding. "
+"Otherwise, urllib3 will send the body using the standard content-length "
+"form. Defaults to False."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:83
+msgid ""
+"Position to seek to in file-like body in the event of a retry or redirect. "
+"Typically this won't need to be set because urllib3 will auto-populate the "
+"value when needed."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
+#: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:88
+msgid ""
+"Additional parameters are passed to :meth:`urllib3.response.HTTPResponse."
+"from_httplib`"
+msgstr ""
