@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-06-06 01:08:21 +0300",
-      "hash" : "e8a81de5e1fe6b52dbcbdd93345560097c1e58fb",
-      "title" : "Strip fragments from absolute request targets (#5079)"
+      "date" : "2026-09-25 20:24:30 +0300",
+      "hash" : "ed0ed075c6b93f7c515ebd3abe9a7248507ef8c5",
+      "title" : "Fix several issues with IPv6 and IPv6 zone IDs (#5260)"
     }
   },
   "type" : "branch",
