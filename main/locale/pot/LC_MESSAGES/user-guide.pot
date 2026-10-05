@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-06 09:11+0000\n"
+"POT-Creation-Date: 2026-10-05 16:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -525,27 +525,34 @@ msgid ""
 "# data:application/octet-stream;base64,..."
 msgstr ""
 
-#: ../../../user-guide.rst:412
-msgid "Certificate Verification"
-msgstr ""
-
-#: ../../../user-guide.rst:414
-msgid "*New in version 1.25:*"
+#: ../../../user-guide.rst:409
+msgid ""
+"To stream a raw file upload, pass the open binary file itself as ``body`` "
+"instead of calling ``fp.read()`` first. See :ref:`upload_buffering` for an "
+"example and guidance on tuning ``blocksize`` for large uploads."
 msgstr ""
 
 #: ../../../user-guide.rst:416
+msgid "Certificate Verification"
+msgstr ""
+
+#: ../../../user-guide.rst:418
+msgid "*New in version 1.25:*"
+msgstr ""
+
+#: ../../../user-guide.rst:420
 msgid ""
 "HTTPS connections are now verified by default (``cert_reqs = "
 "\"CERT_REQUIRED\"``)."
 msgstr ""
 
-#: ../../../user-guide.rst:418
+#: ../../../user-guide.rst:422
 msgid ""
 "While you can disable certification verification by setting ``cert_reqs = "
 "\"CERT_NONE\"``, it is highly recommend to leave it on."
 msgstr ""
 
-#: ../../../user-guide.rst:420
+#: ../../../user-guide.rst:424
 msgid ""
 "Unless otherwise specified urllib3 will try to load the default system "
 "certificate stores. The most reliable cross-platform method is to use the "
@@ -553,17 +560,17 @@ msgid ""
 "certificate bundle:"
 msgstr ""
 
-#: ../../../user-guide.rst:424
+#: ../../../user-guide.rst:428
 msgid "$ python -m pip install certifi"
 msgstr ""
 
-#: ../../../user-guide.rst:428
+#: ../../../user-guide.rst:432
 msgid ""
 "Once you have certificates, you can create a :class:`~poolmanager."
 "PoolManager` that verifies certificates when making requests:"
 msgstr ""
 
-#: ../../../user-guide.rst:431
+#: ../../../user-guide.rst:435
 msgid ""
 "import certifi\n"
 "import urllib3\n"
@@ -574,14 +581,14 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../user-guide.rst:441
+#: ../../../user-guide.rst:445
 msgid ""
 "The :class:`~poolmanager.PoolManager` will automatically handle certificate "
 "verification and will raise :class:`~exceptions.SSLError` if verification "
 "fails:"
 msgstr ""
 
-#: ../../../user-guide.rst:444
+#: ../../../user-guide.rst:448
 msgid ""
 "import certifi\n"
 "import urllib3\n"
@@ -598,7 +605,7 @@ msgid ""
 "# urllib3.exceptions.SSLError ..."
 msgstr ""
 
-#: ../../../user-guide.rst:460
+#: ../../../user-guide.rst:464
 msgid ""
 "You can use OS-provided certificates if desired. Just specify the full path "
 "to the certificate bundle as the ``ca_certs`` argument instead of ``certifi."
@@ -608,18 +615,18 @@ msgid ""
 "trusted-ca-certificates>`_."
 msgstr ""
 
-#: ../../../user-guide.rst:467
+#: ../../../user-guide.rst:471
 msgid "Using Timeouts"
 msgstr ""
 
-#: ../../../user-guide.rst:469
+#: ../../../user-guide.rst:473
 msgid ""
 "Timeouts allow you to control how long (in seconds) requests are allowed to "
 "run before being aborted. In simple cases, you can specify a timeout as a "
 "``float`` to :meth:`~urllib3.PoolManager.request`:"
 msgstr ""
 
-#: ../../../user-guide.rst:473
+#: ../../../user-guide.rst:477
 msgid ""
 "import urllib3\n"
 "\n"
@@ -641,13 +648,13 @@ msgid ""
 "# MaxRetryError caused by ReadTimeoutError"
 msgstr ""
 
-#: ../../../user-guide.rst:494
+#: ../../../user-guide.rst:498
 msgid ""
 "For more granular control you can use a :class:`~util.timeout.Timeout` "
 "instance which lets you specify separate connect and read timeouts:"
 msgstr ""
 
-#: ../../../user-guide.rst:497
+#: ../../../user-guide.rst:501
 msgid ""
 "import urllib3\n"
 "\n"
@@ -668,13 +675,13 @@ msgid ""
 "# MaxRetryError caused by ReadTimeoutError"
 msgstr ""
 
-#: ../../../user-guide.rst:518
+#: ../../../user-guide.rst:522
 msgid ""
 "If you want all requests to be subject to the same timeout, you can specify "
 "the timeout at the :class:`~urllib3.poolmanager.PoolManager` level:"
 msgstr ""
 
-#: ../../../user-guide.rst:521
+#: ../../../user-guide.rst:525
 msgid ""
 "import urllib3\n"
 "\n"
@@ -685,17 +692,17 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../user-guide.rst:531
+#: ../../../user-guide.rst:535
 msgid ""
 "You still override this pool-level timeout by specifying ``timeout`` to :"
 "meth:`~urllib3.PoolManager.request`."
 msgstr ""
 
-#: ../../../user-guide.rst:535
+#: ../../../user-guide.rst:539
 msgid "Retrying Requests"
 msgstr ""
 
-#: ../../../user-guide.rst:537
+#: ../../../user-guide.rst:541
 msgid ""
 "urllib3 can automatically retry idempotent requests. This same mechanism "
 "also handles redirects. You can control the retries using the ``retries`` "
@@ -703,22 +710,22 @@ msgid ""
 "retry requests 3 times and follow up to 3 redirects."
 msgstr ""
 
-#: ../../../user-guide.rst:542
+#: ../../../user-guide.rst:546
 msgid "To change the number of retries just specify an integer:"
 msgstr ""
 
-#: ../../../user-guide.rst:544
+#: ../../../user-guide.rst:548
 msgid ""
 "import urllib3\n"
 "\n"
 "urllib3.request(\"GET\", \"https://httpbin.org/ip\", retries=10)"
 msgstr ""
 
-#: ../../../user-guide.rst:550
+#: ../../../user-guide.rst:554
 msgid "To disable all retry and redirect logic specify ``retries=False``:"
 msgstr ""
 
-#: ../../../user-guide.rst:552
+#: ../../../user-guide.rst:556
 msgid ""
 "import urllib3\n"
 "\n"
@@ -739,12 +746,12 @@ msgid ""
 "# 302"
 msgstr ""
 
-#: ../../../user-guide.rst:572
+#: ../../../user-guide.rst:576
 msgid ""
 "To disable redirects but keep the retrying logic, specify ``redirect=False``:"
 msgstr ""
 
-#: ../../../user-guide.rst:574
+#: ../../../user-guide.rst:578
 msgid ""
 "resp = urllib3.request(\n"
 "    \"GET\",\n"
@@ -756,17 +763,17 @@ msgid ""
 "# 302"
 msgstr ""
 
-#: ../../../user-guide.rst:585
+#: ../../../user-guide.rst:589
 msgid ""
 "For more granular control you can use a :class:`~util.retry.Retry` instance. "
 "This class allows you far greater control of how requests are retried."
 msgstr ""
 
-#: ../../../user-guide.rst:588
+#: ../../../user-guide.rst:592
 msgid "For example, to do a total of 3 retries, but limit to only 2 redirects:"
 msgstr ""
 
-#: ../../../user-guide.rst:590
+#: ../../../user-guide.rst:594
 msgid ""
 "urllib3.request(\n"
 "    \"GET\",\n"
@@ -776,13 +783,13 @@ msgid ""
 "# MaxRetryError"
 msgstr ""
 
-#: ../../../user-guide.rst:599
+#: ../../../user-guide.rst:603
 msgid ""
 "You can also disable exceptions for too many redirects and just return the "
 "``302`` response:"
 msgstr ""
 
-#: ../../../user-guide.rst:602
+#: ../../../user-guide.rst:606
 msgid ""
 "resp = urllib3.request(\n"
 "    \"GET\",\n"
@@ -797,13 +804,13 @@ msgid ""
 "# 302"
 msgstr ""
 
-#: ../../../user-guide.rst:616
+#: ../../../user-guide.rst:620
 msgid ""
 "If you want all requests to be subject to the same retry policy, you can "
 "specify the retry at the :class:`~urllib3.poolmanager.PoolManager` level:"
 msgstr ""
 
-#: ../../../user-guide.rst:619
+#: ../../../user-guide.rst:623
 msgid ""
 "import urllib3\n"
 "\n"
@@ -814,21 +821,75 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../user-guide.rst:629
-msgid ""
-"You still override this pool-level retry policy by specifying ``retries`` "
-"to :meth:`~urllib3.PoolManager.request`."
-msgstr ""
-
 #: ../../../user-guide.rst:633
-msgid "Errors & Exceptions"
-msgstr ""
-
-#: ../../../user-guide.rst:635
-msgid "urllib3 wraps lower-level exceptions, for example:"
+msgid ""
+"You can still override this pool-level retry policy by specifying "
+"``retries`` to :meth:`~urllib3.PoolManager.request`."
 msgstr ""
 
 #: ../../../user-guide.rst:637
+msgid "Configuring Exponential Backoff"
+msgstr ""
+
+#: ../../../user-guide.rst:639
+msgid ""
+"By default, :class:`~urllib3.util.Retry` does not sleep between retry "
+"attempts (``backoff_factor=0``), though it will still respect delays "
+"requested by the server when a response includes a ``Retry-After`` header "
+"(see ``respect_retry_after_header``). In production systems, retrying "
+"immediately without backoff can overwhelm a recovering server or quickly "
+"exhaust API rate limits."
+msgstr ""
+
+#: ../../../user-guide.rst:646
+msgid ""
+"When no server-requested delay is applied, you can set a non-zero "
+"``backoff_factor`` to introduce exponential delays between retries. The "
+"sleep delay is calculated using the formula::"
+msgstr ""
+
+#: ../../../user-guide.rst:650
+msgid "{backoff factor} * (2 ** ({number of previous retries}))"
+msgstr ""
+
+#: ../../../user-guide.rst:652
+msgid ""
+"seconds, with no delay before the second attempt (the first retry) because "
+"most transient errors resolve immediately. For example, a ``backoff_factor`` "
+"of ``0.5`` yields retry sleeps of ``0.0s``, ``1.0s``, ``2.0s``, etc., up to "
+"``backoff_max``:"
+msgstr ""
+
+#: ../../../user-guide.rst:657
+msgid ""
+"import urllib3\n"
+"\n"
+"# Retries wait 0.0s (immediate 2nd attempt), 1.0s, and 2.0s (plus jitter)\n"
+"retries = urllib3.Retry(\n"
+"    total=3,\n"
+"    backoff_factor=0.5,\n"
+"    backoff_jitter=0.5,\n"
+"    status_forcelist=[429, 500, 502, 503, 504],\n"
+")\n"
+"http = urllib3.PoolManager(retries=retries)"
+msgstr ""
+
+#: ../../../user-guide.rst:670
+msgid ""
+"Adding ``backoff_jitter`` introduces random variance to avoid the "
+"\"thundering herd\" problem where many clients retry in lockstep against a "
+"server."
+msgstr ""
+
+#: ../../../user-guide.rst:674
+msgid "Errors & Exceptions"
+msgstr ""
+
+#: ../../../user-guide.rst:676
+msgid "urllib3 wraps lower-level exceptions, for example:"
+msgstr ""
+
+#: ../../../user-guide.rst:678
 msgid ""
 "import urllib3\n"
 "\n"
@@ -840,21 +901,21 @@ msgid ""
 "# Connection failed."
 msgstr ""
 
-#: ../../../user-guide.rst:648
+#: ../../../user-guide.rst:689
 msgid "See :mod:`~urllib3.exceptions` for the full list of all exceptions."
 msgstr ""
 
-#: ../../../user-guide.rst:651
+#: ../../../user-guide.rst:692
 msgid "Logging"
 msgstr ""
 
-#: ../../../user-guide.rst:653
+#: ../../../user-guide.rst:694
 msgid ""
 "If you are using the standard library :mod:`logging` module urllib3 will "
 "emit several logs. In some cases this can be undesirable. You can use the "
 "standard logger interface to change the log level for urllib3's logger:"
 msgstr ""
 
-#: ../../../user-guide.rst:657
+#: ../../../user-guide.rst:698
 msgid "logging.getLogger(\"urllib3\").setLevel(logging.WARNING)"
 msgstr ""

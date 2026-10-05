@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-08 12:40+0000\n"
+"POT-Creation-Date: 2026-10-05 16:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,6 +43,15 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
 #: of urllib3.connection.HTTPConnection:8
 msgid ""
+"``blocksize``: Read size for file-like request bodies, in bytes. Defaults to "
+"16384 (16 KiB). Does not split or resize elements of iterable bodies. Larger "
+"values may improve upload throughput but use more memory per active upload. "
+"See :ref:`upload_buffering` for tuning guidance."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:12
+msgid ""
 "``socket_options``: Set specific options on the underlying socket. If not "
 "specified, then defaults are loaded from ``HTTPConnection."
 "default_socket_options`` which includes disabling Nagle's algorithm (sets "
@@ -50,14 +59,14 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
-#: of urllib3.connection.HTTPConnection:12
+#: of urllib3.connection.HTTPConnection:16
 msgid ""
 "For example, if you wish to enable TCP Keep Alive in addition to the "
 "defaults, you might pass:"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
-#: of urllib3.connection.HTTPConnection:15
+#: of urllib3.connection.HTTPConnection:19
 msgid ""
 "HTTPConnection.default_socket_options + [\n"
 "    (socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1),\n"
@@ -65,7 +74,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
-#: of urllib3.connection.HTTPConnection:21
+#: of urllib3.connection.HTTPConnection:25
 msgid ""
 "Or you may want to disable the defaults by passing an empty list (e.g., "
 "``[]``)."
@@ -108,6 +117,14 @@ msgstr ""
 msgid ""
 "Disable Nagle's algorithm by default. ``[(socket.IPPROTO_TCP, socket."
 "TCP_NODELAY, 1)]``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.default_socket_options:4
+msgid ""
+"Use the ``socket_options`` parameter of :class:`~urllib3.PoolManager`, :"
+"class:`~urllib3.ProxyManager`, or :class:`~urllib3.HTTPConnectionPool` to "
+"change this behavior."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
