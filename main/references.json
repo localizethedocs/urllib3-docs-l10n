@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-06-06 01:08:21 +0300",
-      "hash" : "e8a81de5e1fe6b52dbcbdd93345560097c1e58fb",
-      "title" : "Strip fragments from absolute request targets (#5079)"
+      "date" : "2026-10-04 00:01:03 +0300",
+      "hash" : "a164d79c8cf760f222daa2dc7f67d0e1ca7fb17c",
+      "title" : "Fix HTTP/2 probe cache lock leak (#5254)"
     }
   },
   "type" : "branch",
