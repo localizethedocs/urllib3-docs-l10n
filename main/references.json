@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-06-06 01:08:21 +0300",
-      "hash" : "e8a81de5e1fe6b52dbcbdd93345560097c1e58fb",
-      "title" : "Strip fragments from absolute request targets (#5079)"
+      "date" : "2026-10-08 18:33:43 +0300",
+      "hash" : "5ebe9bf9f691646dcabdb259ffabfc6108ded5e8",
+      "title" : "Avoid unnecessary copy in single-output gzip decompression (#5304)"
     }
   },
   "type" : "branch",
