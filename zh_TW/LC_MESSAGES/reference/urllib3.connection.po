@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Andrey Petrov
+# This file is distributed under the same license as the urllib3 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: urllib3 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/urllib3.connection.rst:2
+msgid "Connections"
+msgstr "連接"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:1
+msgid ""
+"Based on :class:`http.client.HTTPConnection` but provides an extra "
+"constructor backwards-compatibility layer between older and newer Pythons."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:4
+msgid ""
+"Additional keyword parameters are used to configure attributes of the "
+"connection. Accepted parameters include:"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:7
+msgid ""
+"``strict``: See the documentation on :class:`urllib3.connectionpool."
+"HTTPConnectionPool`"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:8
+msgid "``source_address``: Set the source address for the current connection."
+msgstr "``source_address``：設定當前連接的來源地址。"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:9
+msgid ""
+"``socket_options``: Set specific options on the underlying socket. If not "
+"specified, then defaults are loaded from ``HTTPConnection."
+"default_socket_options`` which includes disabling Nagle's algorithm (sets "
+"TCP_NODELAY to 1) unless the connection is behind a proxy."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:13
+msgid ""
+"For example, if you wish to enable TCP Keep Alive in addition to the "
+"defaults, you might pass:"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:16
+msgid ""
+"HTTPConnection.default_socket_options + [\n"
+"    (socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1),\n"
+"]"
+msgstr ""
+"HTTPConnection.default_socket_options + [\n"
+"    (socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1),\n"
+"]"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection:22
+msgid ""
+"Or you may want to disable the defaults by passing an empty list (e.g., "
+"``[]``)."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.connect:1
+#: urllib3.connection.HTTPSConnection.connect:1
+msgid "Connect to the host and port specified in __init__."
+msgstr "連接到 __init__ 中指定的主機和埠號。"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.default_socket_options:1
+msgid ""
+"Disable Nagle's algorithm by default. ``[(socket.IPPROTO_TCP, socket."
+"TCP_NODELAY, 1)]``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.host:1
+msgid ""
+"Getter method to remove any trailing dots that indicate the hostname is an "
+"FQDN."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.host:3
+msgid ""
+"In general, SSL certificates don't include the trailing dot indicating a "
+"fully-qualified domain name, and thus, they don't validate properly when "
+"checked against a domain name that includes the dot. In addition, some "
+"servers may not expect to receive the trailing dot when provided."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.host:8
+msgid ""
+"However, the hostname with trailing dot is critical to DNS resolution; doing "
+"a lookup with the trailing dot will properly only resolve the appropriate "
+"FQDN, whereas a lookup without a trailing dot will search the system's "
+"search domain list. Thus, it's important to keep the original host around "
+"for use only in those cases where it's appropriate (i.e., when doing DNS "
+"lookup to establish the actual TCP connection across which we're going to "
+"send HTTP requests)."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.is_verified:1
+msgid "Whether this connection verifies the host's certificate."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.proxy_is_verified:1
+msgid ""
+"Whether this proxy connection (if used) verifies the proxy host's "
+"certificate."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.request:1
+msgid "Send a complete request to the server."
+msgstr "向伺服器發送完整的請求。"
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.request_chunked:1
+msgid ""
+"Alternative to the common request method, which sends the body with chunked "
+"encoding and not as one block"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.socket_options:1
+msgid ""
+"The socket options provided by the user. If no options are provided, we use "
+"the default options."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPSConnection:1
+msgid ""
+"Many of the parameters to this constructor are passed to the underlying SSL "
+"socket by means of :py:func:`urllib3.util.ssl_wrap_socket`."
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPSConnection.set_cert:1
+msgid "This method should only be called once, before the connection is used."
+msgstr ""
