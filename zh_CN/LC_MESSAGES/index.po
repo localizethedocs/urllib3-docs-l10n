@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Andrey Petrov
+# This file is distributed under the same license as the urllib3 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: urllib3 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-29 08:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../index.rst:4 ../../../index.rst:44
+msgid "For Enterprise"
+msgstr ""
+
+#: ../../../index.rst:2
+msgid "urllib3"
+msgstr ""
+
+#: ../../../index.rst:16
+msgid ""
+"urllib3 is a powerful, *user-friendly* HTTP client for Python. :ref:`Much of "
+"the Python ecosystem already uses <who-uses>` urllib3 and you should too."
+msgstr ""
+
+#: ../../../index.rst:19
+msgid ""
+"urllib3 brings many critical features that are missing from the Python "
+"standard libraries:"
+msgstr ""
+
+#: ../../../index.rst:22
+msgid "Thread safety."
+msgstr ""
+
+#: ../../../index.rst:23
+msgid "Connection pooling."
+msgstr ""
+
+#: ../../../index.rst:24
+msgid "Client-side TLS/SSL verification."
+msgstr ""
+
+#: ../../../index.rst:25
+msgid "File uploads with multipart encoding."
+msgstr ""
+
+#: ../../../index.rst:26
+msgid "Helpers for retrying requests and dealing with HTTP redirects."
+msgstr ""
+
+#: ../../../index.rst:27
+msgid "Support for gzip, deflate, and brotli encoding."
+msgstr ""
+
+#: ../../../index.rst:28
+msgid "Proxy support for HTTP and SOCKS."
+msgstr ""
+
+#: ../../../index.rst:29
+msgid "100% test coverage."
+msgstr ""
+
+#: ../../../index.rst:31
+msgid "urllib3 is powerful and easy to use:"
+msgstr ""
+
+#: ../../../index.rst:33
+msgid ""
+">>> import urllib3\n"
+">>> http = urllib3.PoolManager()\n"
+">>> r = http.request('GET', 'http://httpbin.org/robots.txt')\n"
+">>> r.status\n"
+"200\n"
+">>> r.data\n"
+"'User-agent: *\\nDisallow: /deny\\n'"
+msgstr ""
+
+#: ../../../index.rst:53
+msgid "|tideliftlogo|_"
+msgstr ""
+
+#: ../../../index.rst:46
+msgid "Tidelift"
+msgstr ""
+
+#: ../../../index.rst:54
+msgid ""
+"Professional support for urllib3 is available as part of the `Tidelift "
+"Subscription`_.  Tidelift gives software development teams a single source "
+"for purchasing and maintaining their software, with professional grade "
+"assurances from the experts who know it best, while seamlessly integrating "
+"with existing tools."
+msgstr ""
+
+#: ../../../index.rst:63
+msgid "|learn-more|_ |request-a-demo|_"
+msgstr ""
+
+#: ../../../index.rst:65
+msgid "Learn more about Tidelift Subscription"
+msgstr ""
+
+#: ../../../index.rst:70
+msgid "Request a Demo for the Tidelift Subscription"
+msgstr ""
+
+#: ../../../index.rst:76
+msgid "Installing"
+msgstr ""
+
+#: ../../../index.rst:78
+msgid "urllib3 can be installed with `pip <https://pip.pypa.io>`_"
+msgstr ""
+
+#: ../../../index.rst:80
+msgid "$ python -m pip install urllib3"
+msgstr ""
+
+#: ../../../index.rst:84
+msgid ""
+"Alternatively, you can grab the latest source code from `GitHub <https://"
+"github.com/urllib3/urllib3>`_:"
+msgstr ""
+
+#: ../../../index.rst:86
+msgid ""
+"$ git clone https://github.com/urllib3/urllib3.git\n"
+"$ cd urllib3\n"
+"$ git checkout 1.26.x\n"
+"$ pip install ."
+msgstr ""
+
+#: ../../../index.rst:94
+msgid "Usage"
+msgstr ""
+
+#: ../../../index.rst:96
+msgid ""
+"The :doc:`user-guide` is the place to go to learn how to use the library and "
+"accomplish common tasks. The more in-depth :doc:`advanced-usage` guide is "
+"the place to go for lower-level tweaking."
+msgstr ""
+
+#: ../../../index.rst:99
+msgid ""
+"The :doc:`reference/index` documentation provides API-level documentation."
+msgstr ""
+
+#: ../../../index.rst:104
+msgid "Who uses urllib3?"
+msgstr ""
+
+#: ../../../index.rst:106
+msgid ""
+"`urllib3 is one of the most downloaded packages on PyPI <https://pypistats."
+"org/top>`_ and is a dependency of many popular Python packages like "
+"`Requests <https://requests.readthedocs.io>`_, `Pip <https://pip.pypa.io>`_, "
+"and more!"
+msgstr ""
+
+#: ../../../index.rst:111
+msgid "License"
+msgstr ""
+
+#: ../../../index.rst:113
+msgid ""
+"urllib3 is made available under the MIT License. For more details, see "
+"`LICENSE.txt <https://github.com/urllib3/urllib3/blob/master/LICENSE.txt>`_."
+msgstr ""
+
+#: ../../../index.rst:116
+msgid "Contributing"
+msgstr ""
+
+#: ../../../index.rst:118
+msgid ""
+"We happily welcome contributions, please see :doc:`contributing` for details."
+msgstr ""
