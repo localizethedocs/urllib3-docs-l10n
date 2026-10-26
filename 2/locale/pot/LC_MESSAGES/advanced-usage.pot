@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-08 13:54+0000\n"
+"POT-Creation-Date: 2026-10-26 16:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,11 +27,12 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:10
 msgid ""
-"The :class:`~poolmanager.PoolManager` class automatically handles creating :"
-"class:`~connectionpool.ConnectionPool` instances for each host as needed. By "
-"default, it will keep a maximum of 10 :class:`~connectionpool."
-"ConnectionPool` instances. If you're making requests to many different hosts "
-"it might improve performance to increase this number."
+"The :class:`~poolmanager.PoolManager` class automatically handles "
+"creating :class:`~connectionpool.ConnectionPool` instances for each host as "
+"needed. By default, it will keep a maximum of "
+"10 :class:`~connectionpool.ConnectionPool` instances. If you're making "
+"requests to many different hosts it might improve performance to increase "
+"this number."
 msgstr ""
 
 #: ../../../advanced-usage.rst:16
@@ -129,8 +130,9 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:83
 msgid ""
-"After all data is read you can call :meth:`~response.HTTPResponse."
-"release_conn` to release the connection into the pool."
+"After all data is read you can "
+"call :meth:`~response.HTTPResponse.release_conn` to release the connection "
+"into the pool."
 msgstr ""
 
 #: ../../../advanced-usage.rst:86
@@ -255,8 +257,8 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:183
 msgid ""
-"The usage of :class:`~poolmanager.ProxyManager` is the same as :class:"
-"`~poolmanager.PoolManager`."
+"The usage of :class:`~poolmanager.ProxyManager` is the same "
+"as :class:`~poolmanager.PoolManager`."
 msgstr ""
 
 #: ../../../advanced-usage.rst:186
@@ -289,8 +291,8 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:201
 msgid ""
-"Your request will be forwarded with the `absolute URI <https://datatracker."
-"ietf.org/doc/html/rfc9112#name-absolute-form>`_."
+"Your request will be forwarded with the `absolute URI <https://"
+"datatracker.ietf.org/doc/html/rfc9112#name-absolute-form>`_."
 msgstr ""
 
 #: ../../../advanced-usage.rst:204
@@ -299,9 +301,10 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:205
 msgid ""
-"A TCP tunnel will be established with a `HTTP CONNECT <https://datatracker."
-"ietf.org/doc/html/rfc9110#name-connect>`_. Afterward a TLS connection will "
-"be established with the destination and your request will be sent."
+"A TCP tunnel will be established with a `HTTP CONNECT <https://"
+"datatracker.ietf.org/doc/html/rfc9110#name-connect>`_. Afterward a TLS "
+"connection will be established with the destination and your request will be "
+"sent."
 msgstr ""
 
 #: ../../../advanced-usage.rst:210
@@ -322,11 +325,11 @@ msgstr ""
 #: ../../../advanced-usage.rst:216
 msgid ""
 "A TLS-in-TLS tunnel will be established.  An initial TLS connection will be "
-"established to the proxy, then an `HTTP CONNECT <https://datatracker.ietf."
-"org/doc/html/rfc9110#name-connect>`_ will be sent to establish a TCP "
-"connection to the destination and finally a second TLS connection will be "
-"established to the destination. You can customize the :class:`ssl."
-"SSLContext` used for the proxy TLS connection through the "
+"established to the proxy, then an `HTTP CONNECT <https://"
+"datatracker.ietf.org/doc/html/rfc9110#name-connect>`_ will be sent to "
+"establish a TCP connection to the destination and finally a second TLS "
+"connection will be established to the destination. You can customize "
+"the :class:`ssl.SSLContext` used for the proxy TLS connection through the "
 "``proxy_ssl_context`` argument of the :class:`~poolmanager.ProxyManager` "
 "class."
 msgstr ""
@@ -354,8 +357,9 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:239
 msgid ""
-"If you're using ``urllib3`` directly, make sure the URL you're passing into :"
-"class:`urllib3.ProxyManager` starts with ``http://`` instead of ``https://``:"
+"If you're using ``urllib3`` directly, make sure the URL you're passing "
+"into :class:`urllib3.ProxyManager` starts with ``http://`` instead of "
+"``https://``:"
 msgstr ""
 
 #: ../../../advanced-usage.rst:242
@@ -393,8 +397,8 @@ msgid ""
 "$ export HTTPS_PROXY=\"http://127.0.0.1:8888\"\n"
 "$ python test-proxy.py  # This should now pass.\n"
 "\n"
-"# Persist your change in your shell 'profile' (~/.bashrc, ~/.profile, ~/."
-"bash_profile, etc)\n"
+"# Persist your change in your shell 'profile' (~/.bashrc, ~/.profile, "
+"~/.bash_profile, etc)\n"
 "# You may need to logout and log back in to ensure this works across all "
 "programs.\n"
 "$ vim ~/.bashrc"
@@ -464,8 +468,8 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:316
 msgid ""
-"Once PySocks is installed, you can use :class:`~contrib.socks."
-"SOCKSProxyManager`:"
+"Once PySocks is installed, you can "
+"use :class:`~contrib.socks.SOCKSProxyManager`:"
 msgstr ""
 
 #: ../../../advanced-usage.rst:319
@@ -510,9 +514,9 @@ msgstr ""
 #: ../../../advanced-usage.rst:353
 msgid ""
 "When you specify your own certificate bundle only requests that can be "
-"verified with that bundle will succeed. It's recommended to use a separate :"
-"class:`~poolmanager.PoolManager` to make requests to URLs that do not need "
-"the custom certificate."
+"verified with that bundle will succeed. It's recommended to use a "
+"separate :class:`~poolmanager.PoolManager` to make requests to URLs that do "
+"not need the custom certificate."
 msgstr ""
 
 #: ../../../advanced-usage.rst:361
@@ -596,8 +600,8 @@ msgid ""
 "You can also specify a client certificate. This is useful when both the "
 "server and the client need to verify each other's identity. Typically these "
 "certificates are issued from the same authority. To use a client "
-"certificate, provide the full path when creating a :class:`~poolmanager."
-"PoolManager`:"
+"certificate, provide the full path when creating "
+"a :class:`~poolmanager.PoolManager`:"
 msgstr ""
 
 #: ../../../advanced-usage.rst:428
@@ -724,8 +728,8 @@ msgstr ""
 #: ../../../advanced-usage.rst:515
 msgid ""
 "Making unverified HTTPS requests is **strongly** discouraged, however, if "
-"you understand the risks and wish to disable these warnings, you can use :"
-"func:`~urllib3.disable_warnings`:"
+"you understand the risks and wish to disable these warnings, you can "
+"use :func:`~urllib3.disable_warnings`:"
 msgstr ""
 
 #: ../../../advanced-usage.rst:518
@@ -760,9 +764,9 @@ msgstr ""
 msgid ""
 "Brotli is a compression algorithm created by Google with better compression "
 "than gzip and deflate and is supported by urllib3 if the `Brotli <https://"
-"pypi.org/Brotli>`_ package or `brotlicffi <https://github.com/python-hyper/"
-"brotlicffi>`_ package is installed. You may also request the package be "
-"installed via the ``urllib3[brotli]`` extra:"
+"pypi.org/project/brotli/>`_ package or `brotlicffi <https://github.com/"
+"python-hyper/brotlicffi>`_ package is installed. You may also request the "
+"package be installed via the ``urllib3[brotli]`` extra:"
 msgstr ""
 
 #: ../../../advanced-usage.rst:543
@@ -865,17 +869,17 @@ msgstr ""
 msgid ""
 "You can exercise fine-grained control over the urllib3 SSL configuration by "
 "providing a :class:`ssl.SSLContext <python:ssl.SSLContext>` object. For "
-"purposes of compatibility, we recommend you obtain one from :func:`~urllib3."
-"util.create_urllib3_context`."
+"purposes of compatibility, we recommend you obtain one "
+"from :func:`~urllib3.util.create_urllib3_context`."
 msgstr ""
 
 #: ../../../advanced-usage.rst:616
 msgid ""
 "Once you have a context object, you can mutate it to achieve whatever effect "
 "you'd like. For example, the code below loads the default SSL certificates, "
-"sets the :data:`ssl.OP_ENABLE_MIDDLEBOX_COMPAT<python:ssl."
-"OP_ENABLE_MIDDLEBOX_COMPAT>` flag that isn't set by default, and then makes "
-"a HTTPS request:"
+"sets "
+"the :data:`ssl.OP_ENABLE_MIDDLEBOX_COMPAT<python:ssl.OP_ENABLE_MIDDLEBOX_COMPAT>` "
+"flag that isn't set by default, and then makes a HTTPS request:"
 msgstr ""
 
 #: ../../../advanced-usage.rst:621
@@ -895,7 +899,7 @@ msgstr ""
 
 #: ../../../advanced-usage.rst:635
 msgid ""
-"Note that this is different from passing an ``options`` argument to :func:"
-"`~urllib3.util.create_urllib3_context` because we don't overwrite the "
-"default options: we only add a new one."
+"Note that this is different from passing an ``options`` argument "
+"to :func:`~urllib3.util.create_urllib3_context` because we don't overwrite "
+"the default options: we only add a new one."
 msgstr ""

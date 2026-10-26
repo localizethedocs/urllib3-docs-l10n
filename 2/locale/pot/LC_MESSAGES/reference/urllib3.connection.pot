@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-08 13:54+0000\n"
+"POT-Creation-Date: 2026-10-26 16:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,9 +44,9 @@ msgstr ""
 #: of urllib3.connection.HTTPConnection:8
 msgid ""
 "``socket_options``: Set specific options on the underlying socket. If not "
-"specified, then defaults are loaded from ``HTTPConnection."
-"default_socket_options`` which includes disabling Nagle's algorithm (sets "
-"TCP_NODELAY to 1) unless the connection is behind a proxy."
+"specified, then defaults are loaded from "
+"``HTTPConnection.default_socket_options`` which includes disabling Nagle's "
+"algorithm (sets TCP_NODELAY to 1) unless the connection is behind a proxy."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
@@ -106,8 +106,16 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
 #: of urllib3.connection.HTTPConnection.default_socket_options:1
 msgid ""
-"Disable Nagle's algorithm by default. ``[(socket.IPPROTO_TCP, socket."
-"TCP_NODELAY, 1)]``"
+"Disable Nagle's algorithm by default. ``[(socket.IPPROTO_TCP, "
+"socket.TCP_NODELAY, 1)]``"
+msgstr ""
+
+#: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
+#: of urllib3.connection.HTTPConnection.default_socket_options:4
+msgid ""
+"Use the ``socket_options`` parameter "
+"of :class:`~urllib3.PoolManager`, :class:`~urllib3.ProxyManager`, "
+"or :class:`~urllib3.HTTPConnectionPool` to change this behavior."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connection.py:docstring
