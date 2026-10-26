@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: urllib3 main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-06 09:11+0000\n"
+"POT-Creation-Date: 2026-10-26 15:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,8 +77,8 @@ msgstr ""
 
 #: ../../../user-guide.rst:49
 msgid ""
-"``request()`` returns a :class:`~response.HTTPResponse` object, the :ref:"
-"`response_content` section explains how to handle various responses."
+"``request()`` returns a :class:`~response.HTTPResponse` object, "
+"the :ref:`response_content` section explains how to handle various responses."
 msgstr ""
 
 #: ../../../user-guide.rst:52
@@ -110,11 +110,11 @@ msgstr ""
 
 #: ../../../user-guide.rst:72
 msgid ""
-"For quick scripts and experiments you can also use a top-level ``urllib3."
-"request()``. It uses a module-global ``PoolManager`` instance. Because of "
-"that, its side effects could be shared across dependencies relying on it. To "
-"avoid side effects, create a new ``PoolManager`` instance and use it "
-"instead. In addition, the method does not accept the low-level "
+"For quick scripts and experiments you can also use a top-level "
+"``urllib3.request()``. It uses a module-global ``PoolManager`` instance. "
+"Because of that, its side effects could be shared across dependencies "
+"relying on it. To avoid side effects, create a new ``PoolManager`` instance "
+"and use it instead. In addition, the method does not accept the low-level "
 "``**urlopen_kw`` keyword arguments. System CA certificates are loaded on "
 "default."
 msgstr ""
@@ -125,9 +125,9 @@ msgstr ""
 
 #: ../../../user-guide.rst:84
 msgid ""
-"The :class:`~response.HTTPResponse` object provides :attr:`~response."
-"HTTPResponse.status`, :attr:`~response.HTTPResponse.data`, and :attr:"
-"`~response.HTTPResponse.headers` attributes:"
+"The :class:`~response.HTTPResponse` object "
+"provides :attr:`~response.HTTPResponse.status`, :attr:`~response.HTTPResponse.data`, "
+"and :attr:`~response.HTTPResponse.headers` attributes:"
 msgstr ""
 
 #: ../../../user-guide.rst:88
@@ -168,34 +168,40 @@ msgstr ""
 #: ../../../user-guide.rst:118
 msgid ""
 "Alternatively, Custom JSON libraries such as `orjson` can be used to encode "
-"data, retrieve data by decoding and deserializing the :attr:`~response."
-"HTTPResponse.data` attribute of the request:"
+"data, retrieve data by decoding and deserializing "
+"the :attr:`~response.HTTPResponse.data` attribute of the response. When "
+"sending pre-encoded JSON with ``body``, set the ``Content-Type`` header "
+"explicitly; urllib3 does not infer it from the bytes:"
 msgstr ""
 
-#: ../../../user-guide.rst:122
+#: ../../../user-guide.rst:123
 msgid ""
 "import orjson\n"
 "import urllib3\n"
 "\n"
 "encoded_data = orjson.dumps({\"attribute\": \"value\"})\n"
-"resp = urllib3.request(method=\"POST\", url=\"http://httpbin.org/post\", "
-"body=encoded_data)\n"
+"resp = urllib3.request(\n"
+"    \"POST\",\n"
+"    \"https://httpbin.org/post\",\n"
+"    body=encoded_data,\n"
+"    headers={\"Content-Type\": \"application/json\"},\n"
+")\n"
 "\n"
 "print(orjson.loads(resp.data)[\"json\"])\n"
 "# {'attribute': 'value'}"
 msgstr ""
 
-#: ../../../user-guide.rst:134
+#: ../../../user-guide.rst:140
 msgid "Binary Content"
 msgstr ""
 
-#: ../../../user-guide.rst:136
+#: ../../../user-guide.rst:142
 msgid ""
 "The :attr:`~response.HTTPResponse.data` attribute of the response is always "
 "set to a byte string representing the response content:"
 msgstr ""
 
-#: ../../../user-guide.rst:139
+#: ../../../user-guide.rst:145
 msgid ""
 "import urllib3\n"
 "\n"
@@ -205,27 +211,27 @@ msgid ""
 "# b\"\\xaa\\xa5H?\\x95\\xe9\\x9b\\x11\""
 msgstr ""
 
-#: ../../../user-guide.rst:148
+#: ../../../user-guide.rst:154
 msgid ""
-"For responses of large or unknown length, it's sometimes better to :ref:"
-"`stream <stream>` the response."
+"For responses of large or unknown length, it's sometimes better "
+"to :ref:`stream <stream>` the response."
 msgstr ""
 
-#: ../../../user-guide.rst:152
+#: ../../../user-guide.rst:158
 msgid "Using io Wrappers with Response Content"
 msgstr ""
 
-#: ../../../user-guide.rst:154
+#: ../../../user-guide.rst:160
 msgid ""
 "Sometimes you want to use :class:`io.TextIOWrapper` or similar objects like "
 "a CSV reader directly with :class:`~response.HTTPResponse` data. Making "
-"these two interfaces play nice together requires using the :attr:`~response."
-"HTTPResponse.auto_close` attribute by setting it to ``False``. By default "
-"HTTP responses are closed after reading all bytes, this disables that "
-"behavior:"
+"these two interfaces play nice together requires using "
+"the :attr:`~response.HTTPResponse.auto_close` attribute by setting it to "
+"``False``. By default HTTP responses are closed after reading all bytes, "
+"this disables that behavior:"
 msgstr ""
 
-#: ../../../user-guide.rst:159
+#: ../../../user-guide.rst:165
 msgid ""
 "import io\n"
 "import urllib3\n"
@@ -244,21 +250,21 @@ msgid ""
 "# </html>"
 msgstr ""
 
-#: ../../../user-guide.rst:179
+#: ../../../user-guide.rst:185
 msgid "Request Data"
 msgstr ""
 
-#: ../../../user-guide.rst:182
+#: ../../../user-guide.rst:188
 msgid "Headers"
 msgstr ""
 
-#: ../../../user-guide.rst:184
+#: ../../../user-guide.rst:190
 msgid ""
-"You can specify headers as a dictionary in the ``headers`` argument in :meth:"
-"`~urllib3.PoolManager.request`:"
+"You can specify headers as a dictionary in the ``headers`` argument "
+"in :meth:`~urllib3.PoolManager.request`:"
 msgstr ""
 
-#: ../../../user-guide.rst:186
+#: ../../../user-guide.rst:192
 msgid ""
 "import urllib3\n"
 "\n"
@@ -274,13 +280,13 @@ msgid ""
 "# {\"X-Something\": \"value\", ...}"
 msgstr ""
 
-#: ../../../user-guide.rst:201
+#: ../../../user-guide.rst:207
 msgid ""
 "Or you can use the ``HTTPHeaderDict`` class to create multi-valued HTTP "
 "headers:"
 msgstr ""
 
-#: ../../../user-guide.rst:203
+#: ../../../user-guide.rst:209
 msgid ""
 "import urllib3\n"
 "\n"
@@ -300,17 +306,17 @@ msgid ""
 "# {\"Accept\": \"application/json, text/plain\", ...}"
 msgstr ""
 
-#: ../../../user-guide.rst:223
+#: ../../../user-guide.rst:229
 msgid "Cookies"
 msgstr ""
 
-#: ../../../user-guide.rst:225
+#: ../../../user-guide.rst:231
 msgid ""
 "Cookies are specified using the ``Cookie`` header with a string containing "
 "the ``;`` delimited key-value pairs:"
 msgstr ""
 
-#: ../../../user-guide.rst:228
+#: ../../../user-guide.rst:234
 msgid ""
 "import urllib3\n"
 "\n"
@@ -326,17 +332,17 @@ msgid ""
 "# {\"cookies\": {\"id\": \"30\", \"session\": \"f3efe9db\"}}"
 msgstr ""
 
-#: ../../../user-guide.rst:243
+#: ../../../user-guide.rst:249
 msgid ""
 "Note that the ``Cookie`` header will be stripped if the server redirects to "
 "a different host."
 msgstr ""
 
-#: ../../../user-guide.rst:246
+#: ../../../user-guide.rst:252
 msgid "Cookies provided by the server are stored in the ``Set-Cookie`` header:"
 msgstr ""
 
-#: ../../../user-guide.rst:248
+#: ../../../user-guide.rst:254
 msgid ""
 "import urllib3\n"
 "\n"
@@ -350,18 +356,18 @@ msgid ""
 "# session=f3efe9db; Path=/"
 msgstr ""
 
-#: ../../../user-guide.rst:262
+#: ../../../user-guide.rst:268
 msgid "Query Parameters"
 msgstr ""
 
-#: ../../../user-guide.rst:264
+#: ../../../user-guide.rst:270
 msgid ""
 "For ``GET``, ``HEAD``, and ``DELETE`` requests, you can simply pass the "
-"arguments as a dictionary in the ``fields`` argument to :meth:`~urllib3."
-"PoolManager.request`:"
+"arguments as a dictionary in the ``fields`` argument "
+"to :meth:`~urllib3.PoolManager.request`:"
 msgstr ""
 
-#: ../../../user-guide.rst:268
+#: ../../../user-guide.rst:274
 msgid ""
 "import urllib3\n"
 "\n"
@@ -375,13 +381,13 @@ msgid ""
 "# {\"arg\": \"value\"}"
 msgstr ""
 
-#: ../../../user-guide.rst:281
+#: ../../../user-guide.rst:287
 msgid ""
 "For ``POST`` and ``PUT`` requests, you need to manually encode query "
 "parameters in the URL:"
 msgstr ""
 
-#: ../../../user-guide.rst:284
+#: ../../../user-guide.rst:290
 msgid ""
 "from urllib.parse import urlencode\n"
 "import urllib3\n"
@@ -397,18 +403,18 @@ msgid ""
 "# {\"arg\": \"value\"}"
 msgstr ""
 
-#: ../../../user-guide.rst:303
+#: ../../../user-guide.rst:309
 msgid "Form Data"
 msgstr ""
 
-#: ../../../user-guide.rst:305
+#: ../../../user-guide.rst:311
 msgid ""
 "For ``PUT`` and ``POST`` requests, urllib3 will automatically form-encode "
-"the dictionary in the ``fields`` argument provided to :meth:`~urllib3."
-"PoolManager.request`:"
+"the dictionary in the ``fields`` argument provided "
+"to :meth:`~urllib3.PoolManager.request`:"
 msgstr ""
 
-#: ../../../user-guide.rst:309
+#: ../../../user-guide.rst:315
 msgid ""
 "import urllib3\n"
 "\n"
@@ -422,11 +428,11 @@ msgid ""
 "# {\"field\": \"value\"}"
 msgstr ""
 
-#: ../../../user-guide.rst:325
+#: ../../../user-guide.rst:331
 msgid "JSON"
 msgstr ""
 
-#: ../../../user-guide.rst:327
+#: ../../../user-guide.rst:333
 msgid ""
 "To send JSON in the body of a request, provide the data in the ``json`` "
 "argument to :meth:`~urllib3.PoolManager.request` and  urllib3 will "
@@ -435,7 +441,7 @@ msgid ""
 "in headers is set to ``\"application/json\"`` if not specified otherwise."
 msgstr ""
 
-#: ../../../user-guide.rst:333
+#: ../../../user-guide.rst:339
 msgid ""
 "import urllib3\n"
 "\n"
@@ -451,18 +457,18 @@ msgid ""
 "#  'data': '{\"attribute\":\"value\"}', 'json': {'attribute': 'value'}, ...}"
 msgstr ""
 
-#: ../../../user-guide.rst:349
+#: ../../../user-guide.rst:355
 msgid "Files & Binary Data"
 msgstr ""
 
-#: ../../../user-guide.rst:351
+#: ../../../user-guide.rst:357
 msgid ""
 "For uploading files using ``multipart/form-data`` encoding you can use the "
 "same approach as :ref:`form_data` and specify the file field as a tuple of "
 "``(file_name, file_data)``:"
 msgstr ""
 
-#: ../../../user-guide.rst:355
+#: ../../../user-guide.rst:361
 msgid ""
 "import urllib3\n"
 "\n"
@@ -483,14 +489,14 @@ msgid ""
 "# {\"filefield\": \"...\"}"
 msgstr ""
 
-#: ../../../user-guide.rst:375
+#: ../../../user-guide.rst:381
 msgid ""
 "While specifying the filename is not strictly required, it's recommended in "
 "order to match browser behavior. You can also pass a third item in the tuple "
 "to specify the file's MIME type explicitly:"
 msgstr ""
 
-#: ../../../user-guide.rst:379
+#: ../../../user-guide.rst:385
 msgid ""
 "resp = urllib3.request(\n"
 "    \"POST\",\n"
@@ -501,13 +507,13 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../user-guide.rst:389
+#: ../../../user-guide.rst:395
 msgid ""
 "For sending raw binary data simply specify the ``body`` argument. It's also "
 "recommended to set the ``Content-Type`` header:"
 msgstr ""
 
-#: ../../../user-guide.rst:392
+#: ../../../user-guide.rst:398
 msgid ""
 "import urllib3\n"
 "\n"
@@ -525,27 +531,34 @@ msgid ""
 "# data:application/octet-stream;base64,..."
 msgstr ""
 
-#: ../../../user-guide.rst:412
+#: ../../../user-guide.rst:415
+msgid ""
+"To stream a raw file upload, pass the open binary file itself as ``body`` "
+"instead of calling ``fp.read()`` first. See :ref:`upload_buffering` for an "
+"example and guidance on tuning ``blocksize`` for large uploads."
+msgstr ""
+
+#: ../../../user-guide.rst:422
 msgid "Certificate Verification"
 msgstr ""
 
-#: ../../../user-guide.rst:414
+#: ../../../user-guide.rst:424
 msgid "*New in version 1.25:*"
 msgstr ""
 
-#: ../../../user-guide.rst:416
+#: ../../../user-guide.rst:426
 msgid ""
 "HTTPS connections are now verified by default (``cert_reqs = "
 "\"CERT_REQUIRED\"``)."
 msgstr ""
 
-#: ../../../user-guide.rst:418
+#: ../../../user-guide.rst:428
 msgid ""
 "While you can disable certification verification by setting ``cert_reqs = "
 "\"CERT_NONE\"``, it is highly recommend to leave it on."
 msgstr ""
 
-#: ../../../user-guide.rst:420
+#: ../../../user-guide.rst:430
 msgid ""
 "Unless otherwise specified urllib3 will try to load the default system "
 "certificate stores. The most reliable cross-platform method is to use the "
@@ -553,17 +566,18 @@ msgid ""
 "certificate bundle:"
 msgstr ""
 
-#: ../../../user-guide.rst:424
+#: ../../../user-guide.rst:434
 msgid "$ python -m pip install certifi"
 msgstr ""
 
-#: ../../../user-guide.rst:428
+#: ../../../user-guide.rst:438
 msgid ""
-"Once you have certificates, you can create a :class:`~poolmanager."
-"PoolManager` that verifies certificates when making requests:"
+"Once you have certificates, you can create "
+"a :class:`~poolmanager.PoolManager` that verifies certificates when making "
+"requests:"
 msgstr ""
 
-#: ../../../user-guide.rst:431
+#: ../../../user-guide.rst:441
 msgid ""
 "import certifi\n"
 "import urllib3\n"
@@ -574,14 +588,14 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../user-guide.rst:441
+#: ../../../user-guide.rst:451
 msgid ""
 "The :class:`~poolmanager.PoolManager` will automatically handle certificate "
 "verification and will raise :class:`~exceptions.SSLError` if verification "
 "fails:"
 msgstr ""
 
-#: ../../../user-guide.rst:444
+#: ../../../user-guide.rst:454
 msgid ""
 "import certifi\n"
 "import urllib3\n"
@@ -598,28 +612,28 @@ msgid ""
 "# urllib3.exceptions.SSLError ..."
 msgstr ""
 
-#: ../../../user-guide.rst:460
+#: ../../../user-guide.rst:470
 msgid ""
 "You can use OS-provided certificates if desired. Just specify the full path "
-"to the certificate bundle as the ``ca_certs`` argument instead of ``certifi."
-"where()``. For example, most Linux systems store the certificates at ``/etc/"
-"ssl/certs/ca-certificates.crt``. Other operating systems can be `difficult "
-"<https://stackoverflow.com/questions/10095676/openssl-reasonable-default-for-"
-"trusted-ca-certificates>`_."
+"to the certificate bundle as the ``ca_certs`` argument instead of "
+"``certifi.where()``. For example, most Linux systems store the certificates "
+"at ``/etc/ssl/certs/ca-certificates.crt``. Other operating systems can be "
+"`difficult <https://stackoverflow.com/questions/10095676/openssl-reasonable-"
+"default-for-trusted-ca-certificates>`_."
 msgstr ""
 
-#: ../../../user-guide.rst:467
+#: ../../../user-guide.rst:477
 msgid "Using Timeouts"
 msgstr ""
 
-#: ../../../user-guide.rst:469
+#: ../../../user-guide.rst:479
 msgid ""
 "Timeouts allow you to control how long (in seconds) requests are allowed to "
 "run before being aborted. In simple cases, you can specify a timeout as a "
 "``float`` to :meth:`~urllib3.PoolManager.request`:"
 msgstr ""
 
-#: ../../../user-guide.rst:473
+#: ../../../user-guide.rst:483
 msgid ""
 "import urllib3\n"
 "\n"
@@ -641,13 +655,13 @@ msgid ""
 "# MaxRetryError caused by ReadTimeoutError"
 msgstr ""
 
-#: ../../../user-guide.rst:494
+#: ../../../user-guide.rst:504
 msgid ""
 "For more granular control you can use a :class:`~util.timeout.Timeout` "
 "instance which lets you specify separate connect and read timeouts:"
 msgstr ""
 
-#: ../../../user-guide.rst:497
+#: ../../../user-guide.rst:507
 msgid ""
 "import urllib3\n"
 "\n"
@@ -668,13 +682,13 @@ msgid ""
 "# MaxRetryError caused by ReadTimeoutError"
 msgstr ""
 
-#: ../../../user-guide.rst:518
+#: ../../../user-guide.rst:528
 msgid ""
 "If you want all requests to be subject to the same timeout, you can specify "
 "the timeout at the :class:`~urllib3.poolmanager.PoolManager` level:"
 msgstr ""
 
-#: ../../../user-guide.rst:521
+#: ../../../user-guide.rst:531
 msgid ""
 "import urllib3\n"
 "\n"
@@ -685,17 +699,17 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../user-guide.rst:531
+#: ../../../user-guide.rst:541
 msgid ""
-"You still override this pool-level timeout by specifying ``timeout`` to :"
-"meth:`~urllib3.PoolManager.request`."
+"You still override this pool-level timeout by specifying ``timeout`` "
+"to :meth:`~urllib3.PoolManager.request`."
 msgstr ""
 
-#: ../../../user-guide.rst:535
+#: ../../../user-guide.rst:545
 msgid "Retrying Requests"
 msgstr ""
 
-#: ../../../user-guide.rst:537
+#: ../../../user-guide.rst:547
 msgid ""
 "urllib3 can automatically retry idempotent requests. This same mechanism "
 "also handles redirects. You can control the retries using the ``retries`` "
@@ -703,22 +717,22 @@ msgid ""
 "retry requests 3 times and follow up to 3 redirects."
 msgstr ""
 
-#: ../../../user-guide.rst:542
+#: ../../../user-guide.rst:552
 msgid "To change the number of retries just specify an integer:"
 msgstr ""
 
-#: ../../../user-guide.rst:544
+#: ../../../user-guide.rst:554
 msgid ""
 "import urllib3\n"
 "\n"
 "urllib3.request(\"GET\", \"https://httpbin.org/ip\", retries=10)"
 msgstr ""
 
-#: ../../../user-guide.rst:550
+#: ../../../user-guide.rst:560
 msgid "To disable all retry and redirect logic specify ``retries=False``:"
 msgstr ""
 
-#: ../../../user-guide.rst:552
+#: ../../../user-guide.rst:562
 msgid ""
 "import urllib3\n"
 "\n"
@@ -739,12 +753,12 @@ msgid ""
 "# 302"
 msgstr ""
 
-#: ../../../user-guide.rst:572
+#: ../../../user-guide.rst:582
 msgid ""
 "To disable redirects but keep the retrying logic, specify ``redirect=False``:"
 msgstr ""
 
-#: ../../../user-guide.rst:574
+#: ../../../user-guide.rst:584
 msgid ""
 "resp = urllib3.request(\n"
 "    \"GET\",\n"
@@ -756,17 +770,17 @@ msgid ""
 "# 302"
 msgstr ""
 
-#: ../../../user-guide.rst:585
+#: ../../../user-guide.rst:595
 msgid ""
 "For more granular control you can use a :class:`~util.retry.Retry` instance. "
 "This class allows you far greater control of how requests are retried."
 msgstr ""
 
-#: ../../../user-guide.rst:588
+#: ../../../user-guide.rst:598
 msgid "For example, to do a total of 3 retries, but limit to only 2 redirects:"
 msgstr ""
 
-#: ../../../user-guide.rst:590
+#: ../../../user-guide.rst:600
 msgid ""
 "urllib3.request(\n"
 "    \"GET\",\n"
@@ -776,13 +790,13 @@ msgid ""
 "# MaxRetryError"
 msgstr ""
 
-#: ../../../user-guide.rst:599
+#: ../../../user-guide.rst:609
 msgid ""
 "You can also disable exceptions for too many redirects and just return the "
 "``302`` response:"
 msgstr ""
 
-#: ../../../user-guide.rst:602
+#: ../../../user-guide.rst:612
 msgid ""
 "resp = urllib3.request(\n"
 "    \"GET\",\n"
@@ -797,13 +811,13 @@ msgid ""
 "# 302"
 msgstr ""
 
-#: ../../../user-guide.rst:616
+#: ../../../user-guide.rst:626
 msgid ""
 "If you want all requests to be subject to the same retry policy, you can "
 "specify the retry at the :class:`~urllib3.poolmanager.PoolManager` level:"
 msgstr ""
 
-#: ../../../user-guide.rst:619
+#: ../../../user-guide.rst:629
 msgid ""
 "import urllib3\n"
 "\n"
@@ -814,21 +828,75 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../user-guide.rst:629
+#: ../../../user-guide.rst:639
 msgid ""
-"You still override this pool-level retry policy by specifying ``retries`` "
-"to :meth:`~urllib3.PoolManager.request`."
+"You can still override this pool-level retry policy by specifying "
+"``retries`` to :meth:`~urllib3.PoolManager.request`."
 msgstr ""
 
-#: ../../../user-guide.rst:633
+#: ../../../user-guide.rst:643
+msgid "Configuring Exponential Backoff"
+msgstr ""
+
+#: ../../../user-guide.rst:645
+msgid ""
+"By default, :class:`~urllib3.util.Retry` does not sleep between retry "
+"attempts (``backoff_factor=0``), though it will still respect delays "
+"requested by the server when a response includes a ``Retry-After`` header "
+"(see ``respect_retry_after_header``). In production systems, retrying "
+"immediately without backoff can overwhelm a recovering server or quickly "
+"exhaust API rate limits."
+msgstr ""
+
+#: ../../../user-guide.rst:652
+msgid ""
+"When no server-requested delay is applied, you can set a non-zero "
+"``backoff_factor`` to introduce exponential delays between retries. The "
+"sleep delay is calculated using the formula::"
+msgstr ""
+
+#: ../../../user-guide.rst:656
+msgid "{backoff factor} * (2 ** ({number of previous retries}))"
+msgstr ""
+
+#: ../../../user-guide.rst:658
+msgid ""
+"seconds, with no delay before the second attempt (the first retry) because "
+"most transient errors resolve immediately. For example, a ``backoff_factor`` "
+"of ``0.5`` yields retry sleeps of ``0.0s``, ``1.0s``, ``2.0s``, etc., up to "
+"``backoff_max``:"
+msgstr ""
+
+#: ../../../user-guide.rst:663
+msgid ""
+"import urllib3\n"
+"\n"
+"# Retries wait 0.0s (immediate 2nd attempt), 1.0s, and 2.0s (plus jitter)\n"
+"retries = urllib3.Retry(\n"
+"    total=3,\n"
+"    backoff_factor=0.5,\n"
+"    backoff_jitter=0.5,\n"
+"    status_forcelist=[429, 500, 502, 503, 504],\n"
+")\n"
+"http = urllib3.PoolManager(retries=retries)"
+msgstr ""
+
+#: ../../../user-guide.rst:676
+msgid ""
+"Adding ``backoff_jitter`` introduces random variance to avoid the "
+"\"thundering herd\" problem where many clients retry in lockstep against a "
+"server."
+msgstr ""
+
+#: ../../../user-guide.rst:680
 msgid "Errors & Exceptions"
 msgstr ""
 
-#: ../../../user-guide.rst:635
+#: ../../../user-guide.rst:682
 msgid "urllib3 wraps lower-level exceptions, for example:"
 msgstr ""
 
-#: ../../../user-guide.rst:637
+#: ../../../user-guide.rst:684
 msgid ""
 "import urllib3\n"
 "\n"
@@ -840,21 +908,21 @@ msgid ""
 "# Connection failed."
 msgstr ""
 
-#: ../../../user-guide.rst:648
+#: ../../../user-guide.rst:695
 msgid "See :mod:`~urllib3.exceptions` for the full list of all exceptions."
 msgstr ""
 
-#: ../../../user-guide.rst:651
+#: ../../../user-guide.rst:698
 msgid "Logging"
 msgstr ""
 
-#: ../../../user-guide.rst:653
+#: ../../../user-guide.rst:700
 msgid ""
 "If you are using the standard library :mod:`logging` module urllib3 will "
 "emit several logs. In some cases this can be undesirable. You can use the "
 "standard logger interface to change the log level for urllib3's logger:"
 msgstr ""
 
-#: ../../../user-guide.rst:657
+#: ../../../user-guide.rst:704
 msgid "logging.getLogger(\"urllib3\").setLevel(logging.WARNING)"
 msgstr ""
