@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-06-06 01:08:21 +0300",
-      "hash" : "e8a81de5e1fe6b52dbcbdd93345560097c1e58fb",
-      "title" : "Strip fragments from absolute request targets (#5079)"
+      "date" : "2026-10-23 00:27:54 +0300",
+      "hash" : "8883fd900057ee65f553586389ecd70269f05e04",
+      "title" : "Speed up parse_url() by ~28% for common ASCII hosts and plain paths (#5314)"
     }
   },
   "type" : "branch",
