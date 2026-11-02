@@ -51,8 +51,9 @@ msgid ""
 "Data to send in the request body, either :class:`str`, :class:`bytes`, an "
 "iterable of :class:`str`/:class:`bytes`, or a file-like object."
 msgstr ""
-"要發送到請求正文中的資料，可以是 :class:`str`、:class:`bytes`、:class:`str`/:"
-"class:`bytes` 的可疊代物件，或是類似檔案的物件。"
+"要發送到請求正文中的資料，可以"
+"是 :class:`str`、:class:`bytes`、:class:`str`/:class:`bytes` 的可疊代物件，或"
+"是類似檔案的物件。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
 #: of urllib3.request:16
@@ -90,28 +91,29 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
 #: of urllib3.request:35
 msgid ""
-"Configure the number of retries to allow before raising a :class:`~urllib3."
-"exceptions.MaxRetryError` exception.  If ``None`` (default) will retry 3 "
-"times, see ``Retry.DEFAULT``. Pass a :class:`~urllib3.util.retry.Retry` "
-"object for fine-grained control over different types of retries. Pass an "
-"integer number to retry connection errors that many times, but no other "
-"types of errors. Pass zero to never retry.  If ``False``, then retries are "
-"disabled and any exception is raised immediately. Also, instead of raising a "
-"MaxRetryError on redirects, the redirect response will be returned."
+"Configure the number of retries to allow before raising "
+"a :class:`~urllib3.exceptions.MaxRetryError` exception.  If ``None`` "
+"(default) will retry 3 times, see ``Retry.DEFAULT``. Pass "
+"a :class:`~urllib3.util.retry.Retry` object for fine-grained control over "
+"different types of retries. Pass an integer number to retry connection "
+"errors that many times, but no other types of errors. Pass zero to never "
+"retry.  If ``False``, then retries are disabled and any exception is raised "
+"immediately. Also, instead of raising a MaxRetryError on redirects, the "
+"redirect response will be returned."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
 #: of urllib3.request:36
 msgid ""
-"Configure the number of retries to allow before raising a :class:`~urllib3."
-"exceptions.MaxRetryError` exception."
+"Configure the number of retries to allow before raising "
+"a :class:`~urllib3.exceptions.MaxRetryError` exception."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/__init__.py:docstring
 #: of urllib3.request:39
 msgid ""
-"If ``None`` (default) will retry 3 times, see ``Retry.DEFAULT``. Pass a :"
-"class:`~urllib3.util.retry.Retry` object for fine-grained control over "
+"If ``None`` (default) will retry 3 times, see ``Retry.DEFAULT``. Pass "
+"a :class:`~urllib3.util.retry.Retry` object for fine-grained control over "
 "different types of retries. Pass an integer number to retry connection "
 "errors that many times, but no other types of errors. Pass zero to never "
 "retry."

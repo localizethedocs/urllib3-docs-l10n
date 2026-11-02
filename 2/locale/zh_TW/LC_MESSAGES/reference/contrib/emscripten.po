@@ -72,9 +72,9 @@ msgstr "開始使用"
 msgid ""
 "Using urllib3 with Pyodide means you need to `get started with Pyodide first "
 "<https://pyodide.org/en/stable/usage/quickstart.html>`_. The Pyodide project "
-"provides a `useful online REPL <https://pyodide.org/en/stable/console."
-"html>`_ to try in your browser without any setup or installation to test out "
-"the code examples below."
+"provides a `useful online REPL <https://pyodide.org/en/stable/"
+"console.html>`_ to try in your browser without any setup or installation to "
+"test out the code examples below."
 msgstr ""
 
 #: ../../../reference/contrib/emscripten.rst:31
@@ -194,8 +194,8 @@ msgstr ""
 msgid ""
 "To access the fetch API and do HTTP response streaming with urllib3 you must "
 "be running the code within a Web Worker and set specific HTTP headers for "
-"the serving website to enable `Cross-Origin Isolation <https://developer."
-"mozilla.org/en-US/docs/Web/API/crossOriginIsolated>`_."
+"the serving website to enable `Cross-Origin Isolation <https://"
+"developer.mozilla.org/en-US/docs/Web/API/crossOriginIsolated>`_."
 msgstr ""
 
 #: ../../../reference/contrib/emscripten.rst:83

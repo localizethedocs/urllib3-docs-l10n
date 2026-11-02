@@ -48,9 +48,9 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:15
 msgid ""
-"During the second ``HTTPResponse.read(amt=N)`` or ``HTTPResponse."
-"stream(amt=N)`` call when the response was decompressed using the official "
-"`Brotli <https://pypi.org/project/brotli/>`__ library."
+"During the second ``HTTPResponse.read(amt=N)`` or "
+"``HTTPResponse.stream(amt=N)`` call when the response was decompressed using "
+"the official `Brotli <https://pypi.org/project/brotli/>`__ library."
 msgstr ""
 
 #: ../../../../CHANGES.rst:19
@@ -121,8 +121,8 @@ msgstr ""
 #: ../../../../CHANGES.rst:52
 msgid ""
 "Fixed ``HTTPResponse.stream()`` and ``HTTPResponse.read_chunked()`` to "
-"handle ``amt=0``. (`#3793 <https://github.com/urllib3/urllib3/"
-"issues/3793>`__)"
+"handle ``amt=0``. (`#3793 <https://github.com/urllib3/urllib3/issues/"
+"3793>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:55
@@ -142,9 +142,10 @@ msgstr ""
 #: ../../../../CHANGES.rst:61
 msgid ""
 "Fixed ``BaseHTTPResponse.readinto()`` type annotation to accept "
-"``memoryview`` in addition to ``bytearray``, matching the ``io.RawIOBase."
-"readinto`` contract and enabling use with ``io.BufferedReader`` without type "
-"errors. (`#3764 <https://github.com/urllib3/urllib3/issues/3764>`__)"
+"``memoryview`` in addition to ``bytearray``, matching the "
+"``io.RawIOBase.readinto`` contract and enabling use with "
+"``io.BufferedReader`` without type errors. (`#3764 <https://github.com/"
+"urllib3/urllib3/issues/3764>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:69
@@ -188,9 +189,9 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:91
 msgid ""
-"Restore previously removed ``HTTPResponse.getheaders()`` and ``HTTPResponse."
-"getheader()`` methods. (`#3731 <https://github.com/urllib3/urllib3/"
-"issues/3731>`__)"
+"Restore previously removed ``HTTPResponse.getheaders()`` and "
+"``HTTPResponse.getheader()`` methods. (`#3731 <https://github.com/urllib3/"
+"urllib3/issues/3731>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:97
@@ -241,15 +242,15 @@ msgstr ""
 #: ../../../../CHANGES.rst:127
 msgid ""
 "Enabled retrieval, deletion, and membership testing in ``HTTPHeaderDict`` "
-"using bytes keys. (`#3653 <https://github.com/urllib3/urllib3/"
-"issues/3653>`__)"
+"using bytes keys. (`#3653 <https://github.com/urllib3/urllib3/issues/"
+"3653>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:128
 msgid ""
 "Added host and port information to string representations of "
-"``HTTPConnection``. (`#3666 <https://github.com/urllib3/urllib3/"
-"issues/3666>`__)"
+"``HTTPConnection``. (`#3666 <https://github.com/urllib3/urllib3/issues/"
+"3666>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:129
@@ -264,10 +265,10 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:135
 msgid ""
-"Removed the ``HTTPResponse.getheaders()`` method in favor of ``HTTPResponse."
-"headers``. Removed the ``HTTPResponse.getheader(name, default)`` method in "
-"favor of ``HTTPResponse.headers.get(name, default)``. (`#3622 <https://"
-"github.com/urllib3/urllib3/issues/3622>`__)"
+"Removed the ``HTTPResponse.getheaders()`` method in favor of "
+"``HTTPResponse.headers``. Removed the ``HTTPResponse.getheader(name, "
+"default)`` method in favor of ``HTTPResponse.headers.get(name, default)``. "
+"(`#3622 <https://github.com/urllib3/urllib3/issues/3622>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:142
@@ -352,8 +353,8 @@ msgstr ""
 #: ../../../../CHANGES.rst:176
 msgid ""
 "Raised exception for ``HTTPResponse.shutdown`` on a connection already "
-"released to the pool. (`#3581 <https://github.com/urllib3/urllib3/"
-"issues/3581>`__)"
+"released to the pool. (`#3581 <https://github.com/urllib3/urllib3/issues/"
+"3581>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:177
@@ -376,8 +377,8 @@ msgstr ""
 #: ../../../../CHANGES.rst:187
 msgid ""
 "Updated exceptions to save and restore more properties during the pickle/"
-"serialization process. (`#3567 <https://github.com/urllib3/urllib3/"
-"issues/3567>`__)"
+"serialization process. (`#3567 <https://github.com/urllib3/urllib3/issues/"
+"3567>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:188
@@ -430,22 +431,22 @@ msgstr ""
 #: ../../../../CHANGES.rst:213
 msgid ""
 "Added the ``proxy_is_tunneling`` property to ``HTTPConnection`` and "
-"``HTTPSConnection``. (`#3285 <https://github.com/urllib3/urllib3/"
-"issues/3285>`__)"
+"``HTTPSConnection``. (`#3285 <https://github.com/urllib3/urllib3/issues/"
+"3285>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:214
 msgid ""
 "Added pickling support to ``NewConnectionError`` and "
-"``NameResolutionError``. (`#3480 <https://github.com/urllib3/urllib3/"
-"issues/3480>`__)"
+"``NameResolutionError``. (`#3480 <https://github.com/urllib3/urllib3/issues/"
+"3480>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:220
 msgid ""
-"Fixed an issue in debug logs where the HTTP version was rendering as "
-"\"HTTP/11\" instead of \"HTTP/1.1\". (`#3489 <https://github.com/urllib3/"
-"urllib3/issues/3489>`__)"
+"Fixed an issue in debug logs where the HTTP version was rendering as \"HTTP/"
+"11\" instead of \"HTTP/1.1\". (`#3489 <https://github.com/urllib3/urllib3/"
+"issues/3489>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:226
@@ -468,8 +469,8 @@ msgstr ""
 msgid ""
 "Fixed the default encoding of chunked request bodies to be UTF-8 instead of "
 "ISO-8859-1. All other methods of supplying a request body already use UTF-8 "
-"starting in urllib3 v2.0. (`#3053 <https://github.com/urllib3/urllib3/"
-"issues/3053>`__)"
+"starting in urllib3 v2.0. (`#3053 <https://github.com/urllib3/urllib3/issues/"
+"3053>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:242
@@ -488,8 +489,8 @@ msgstr ""
 #: ../../../../CHANGES.rst:244
 msgid ""
 "Fixed a crash where certain standard library hash functions were absent in "
-"restricted environments. (`#3432 <https://github.com/urllib3/urllib3/"
-"issues/3432>`__)"
+"restricted environments. (`#3432 <https://github.com/urllib3/urllib3/issues/"
+"3432>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:245
@@ -518,21 +519,21 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:255
 msgid ""
-"Now only accepting supported h2 major version 4.x.x. (`#3290 <https://github."
-"com/urllib3/urllib3/issues/3290>`__)"
+"Now only accepting supported h2 major version 4.x.x. (`#3290 <https://"
+"github.com/urllib3/urllib3/issues/3290>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:256
 msgid ""
 "Added a probing mechanism for determining whether a given target origin "
-"supports HTTP/2 via ALPN. (`#3301 <https://github.com/urllib3/urllib3/"
-"issues/3301>`__)"
+"supports HTTP/2 via ALPN. (`#3301 <https://github.com/urllib3/urllib3/issues/"
+"3301>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:258
 msgid ""
-"Add support for sending a request body with HTTP/2 (`#3302 <https://github."
-"com/urllib3/urllib3/issues/3302>`__)"
+"Add support for sending a request body with HTTP/2 (`#3302 <https://"
+"github.com/urllib3/urllib3/issues/3302>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:264
@@ -544,8 +545,8 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:265
 msgid ""
-"Drop support for end-of-life PyPy3.8 and PyPy3.9. (`#3475 <https://github."
-"com/urllib3/urllib3/issues/3475>`__)"
+"Drop support for end-of-life PyPy3.8 and PyPy3.9. (`#3475 <https://"
+"github.com/urllib3/urllib3/issues/3475>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:269
@@ -561,9 +562,9 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:272
 msgid ""
-"Allowed passing negative integers as ``amt`` to read methods of ``http."
-"client.HTTPResponse`` as an alternative to ``None``. (`#3122 <https://github."
-"com/urllib3/urllib3/issues/3122>`__)"
+"Allowed passing negative integers as ``amt`` to read methods of "
+"``http.client.HTTPResponse`` as an alternative to ``None``. (`#3122 <https://"
+"github.com/urllib3/urllib3/issues/3122>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:273
@@ -618,8 +619,8 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:288
 msgid ""
-"Added support for ``HTTPResponse.read1()`` method. (`#3186 <https://github."
-"com/urllib3/urllib3/issues/3186>`__)"
+"Added support for ``HTTPResponse.read1()`` method. (`#3186 <https://"
+"github.com/urllib3/urllib3/issues/3186>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:289
@@ -637,10 +638,10 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:292
 msgid ""
-"Fixed ``HTTPConnection.proxy_is_verified`` and ``HTTPSConnection."
-"proxy_is_verified`` to be always set to a boolean after connecting to a "
-"proxy. It could be ``None`` in some cases previously. (`#3130 <https://"
-"github.com/urllib3/urllib3/issues/3130>`__)"
+"Fixed ``HTTPConnection.proxy_is_verified`` and "
+"``HTTPSConnection.proxy_is_verified`` to be always set to a boolean after "
+"connecting to a proxy. It could be ``None`` in some cases previously. "
+"(`#3130 <https://github.com/urllib3/urllib3/issues/3130>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:295
@@ -659,8 +660,8 @@ msgstr ""
 #: ../../../../CHANGES.rst:298
 msgid ""
 "Fixed handling of new error message from OpenSSL 3.2.0 when configuring an "
-"HTTP proxy as HTTPS (`#3268 <https://github.com/urllib3/urllib3/"
-"issues/3268>`__)"
+"HTTP proxy as HTTPS (`#3268 <https://github.com/urllib3/urllib3/issues/"
+"3268>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:299
@@ -760,15 +761,16 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:337
 msgid ""
-"Added ``BaseHTTPResponse`` to ``urllib3.__all__`` (`#3078 <https://github."
-"com/urllib3/urllib3/issues/3078>`__)"
+"Added ``BaseHTTPResponse`` to ``urllib3.__all__`` (`#3078 <https://"
+"github.com/urllib3/urllib3/issues/3078>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:338
 msgid ""
-"Fixed ``urllib3.connection.HTTPConnection`` to raise the ``http.client."
-"connect`` audit event to have the same behavior as the standard library HTTP "
-"client (`#2757 <https://github.com/urllib3/urllib3/issues/2757>`__)"
+"Fixed ``urllib3.connection.HTTPConnection`` to raise the "
+"``http.client.connect`` audit event to have the same behavior as the "
+"standard library HTTP client (`#2757 <https://github.com/urllib3/urllib3/"
+"issues/2757>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:339
@@ -790,8 +792,8 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:346
 msgid ""
-"Deprecated URLs which don't have an explicit scheme (`#2950 <https://github."
-"com/urllib3/urllib3/pull/2950>`_)"
+"Deprecated URLs which don't have an explicit scheme (`#2950 <https://"
+"github.com/urllib3/urllib3/pull/2950>`_)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:347
@@ -861,9 +863,9 @@ msgid ""
 "Removed fallback on certificate ``commonName`` in ``match_hostname()`` "
 "function. This behavior was deprecated in May 2000 in RFC 2818. Instead only "
 "``subjectAltName`` is used to verify the hostname by default. To enable "
-"verifying the hostname against ``commonName`` use ``SSLContext."
-"hostname_checks_common_name = True`` (`#2113 <https://github.com/urllib3/"
-"urllib3/issues/2113>`__)."
+"verifying the hostname against ``commonName`` use "
+"``SSLContext.hostname_checks_common_name = True`` (`#2113 <https://"
+"github.com/urllib3/urllib3/issues/2113>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:379
@@ -878,8 +880,8 @@ msgstr ""
 msgid ""
 "Removed support for OpenSSL versions earlier than 1.1.1 or that don't have "
 "SNI support. When an incompatible OpenSSL version is detected an "
-"``ImportError`` is raised (`#2168 <https://github.com/urllib3/urllib3/"
-"issues/2168>`__)."
+"``ImportError`` is raised (`#2168 <https://github.com/urllib3/urllib3/issues/"
+"2168>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:383
@@ -942,8 +944,9 @@ msgstr ""
 #: ../../../../CHANGES.rst:393
 msgid ""
 "Removed ``DEFAULT_CIPHERS``, ``HAS_SNI``, "
-"``USE_DEFAULT_SSLCONTEXT_CIPHERS``, from the private module ``urllib3.util."
-"ssl_`` (`#2168 <https://github.com/urllib3/urllib3/issues/2168>`__)."
+"``USE_DEFAULT_SSLCONTEXT_CIPHERS``, from the private module "
+"``urllib3.util.ssl_`` (`#2168 <https://github.com/urllib3/urllib3/issues/"
+"2168>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:394
@@ -956,23 +959,24 @@ msgstr ""
 msgid ""
 "Removed the ``_prepare_conn`` method from ``HTTPConnectionPool``. Previously "
 "this was only used to call ``HTTPSConnection.set_cert()`` by "
-"``HTTPSConnectionPool`` (`#1985 <https://github.com/urllib3/urllib3/"
-"issues/1985>`__)."
+"``HTTPSConnectionPool`` (`#1985 <https://github.com/urllib3/urllib3/issues/"
+"1985>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:396
 msgid ""
 "Removed ``tls_in_tls_required`` property from ``HTTPSConnection``. This is "
-"now determined from the ``scheme`` parameter in ``HTTPConnection."
-"set_tunnel()`` (`#1985 <https://github.com/urllib3/urllib3/issues/1985>`__)."
+"now determined from the ``scheme`` parameter in "
+"``HTTPConnection.set_tunnel()`` (`#1985 <https://github.com/urllib3/urllib3/"
+"issues/1985>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:397
 msgid ""
 "Removed the ``strict`` parameter/attribute from ``HTTPConnection``, "
 "``HTTPSConnection``, ``HTTPConnectionPool``, ``HTTPSConnectionPool``, and "
-"``HTTPResponse`` (`#2064 <https://github.com/urllib3/urllib3/"
-"issues/2064>`__)."
+"``HTTPResponse`` (`#2064 <https://github.com/urllib3/urllib3/issues/"
+"2064>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:400
@@ -982,10 +986,10 @@ msgstr ""
 #: ../../../../CHANGES.rst:402
 msgid ""
 "Deprecated ``HTTPResponse.getheaders()`` and ``HTTPResponse.getheader()`` "
-"which will be removed in urllib3 v2.1.0. Instead use ``HTTPResponse."
-"headers`` and ``HTTPResponse.headers.get(name, default)``. (`#1543 <https://"
-"github.com/urllib3/urllib3/issues/1543>`__, `#2814 <https://github.com/"
-"urllib3/urllib3/issues/2814>`__)."
+"which will be removed in urllib3 v2.1.0. Instead use "
+"``HTTPResponse.headers`` and ``HTTPResponse.headers.get(name, default)``. "
+"(`#1543 <https://github.com/urllib3/urllib3/issues/1543>`__, `#2814 <https://"
+"github.com/urllib3/urllib3/issues/2814>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:403
@@ -997,30 +1001,30 @@ msgstr ""
 #: ../../../../CHANGES.rst:404
 msgid ""
 "Deprecated ``urllib3.contrib.securetransport`` module which will be removed "
-"in urllib3 v2.1.0 (`#2692 <https://github.com/urllib3/urllib3/"
-"issues/2692>`__)."
+"in urllib3 v2.1.0 (`#2692 <https://github.com/urllib3/urllib3/issues/"
+"2692>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:405
 msgid ""
 "Deprecated ``ssl_version`` option in favor of ``ssl_minimum_version``. "
-"``ssl_version`` will be removed in urllib3 v2.1.0 (`#2110 <https://github."
-"com/urllib3/urllib3/issues/2110>`__)."
+"``ssl_version`` will be removed in urllib3 v2.1.0 (`#2110 <https://"
+"github.com/urllib3/urllib3/issues/2110>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:406
 msgid ""
-"Deprecated the ``strict`` parameter of ``PoolManager."
-"connection_from_context()`` as it's not longer needed in Python 3.x. It will "
-"be removed in urllib3 v2.1.0 (`#2267 <https://github.com/urllib3/urllib3/"
-"issues/2267>`__)"
+"Deprecated the ``strict`` parameter of "
+"``PoolManager.connection_from_context()`` as it's not longer needed in "
+"Python 3.x. It will be removed in urllib3 v2.1.0 (`#2267 <https://github.com/"
+"urllib3/urllib3/issues/2267>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:407
 msgid ""
 "Deprecated the ``NewConnectionError.pool`` attribute which will be removed "
-"in urllib3 v2.1.0 (`#2271 <https://github.com/urllib3/urllib3/"
-"issues/2271>`__)."
+"in urllib3 v2.1.0 (`#2271 <https://github.com/urllib3/urllib3/issues/"
+"2271>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:408
@@ -1033,8 +1037,8 @@ msgstr ""
 #: ../../../../CHANGES.rst:409
 msgid ""
 "Deprecated ``RequestField.header_formatter`` parameter which will be removed "
-"in urllib3 v2.1.0 (`#2257 <https://github.com/urllib3/urllib3/"
-"issues/2257>`__)."
+"in urllib3 v2.1.0 (`#2257 <https://github.com/urllib3/urllib3/issues/"
+"2257>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:410
@@ -1047,8 +1051,9 @@ msgstr ""
 #: ../../../../CHANGES.rst:411
 msgid ""
 "Deprecated ``HTTPConnection.request_chunked()`` method which will be removed "
-"in urllib3 v2.1.0. Instead pass ``chunked=True`` to ``HTTPConnection."
-"request()`` (`#1985 <https://github.com/urllib3/urllib3/issues/1985>`__)."
+"in urllib3 v2.1.0. Instead pass ``chunked=True`` to "
+"``HTTPConnection.request()`` (`#1985 <https://github.com/urllib3/urllib3/"
+"issues/1985>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:414
@@ -1064,12 +1069,12 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:417
 msgid ""
-"Added the ``json`` parameter to ``urllib3.request()``, ``PoolManager."
-"request()``, and ``ConnectionPool.request()`` methods to send JSON bodies in "
-"requests. Using this parameter will set the header ``Content-Type: "
-"application/json`` if ``Content-Type`` isn't already defined. Added support "
-"for parsing JSON response bodies with ``HTTPResponse.json()`` method (`#2243 "
-"<https://github.com/urllib3/urllib3/issues/2243>`__)."
+"Added the ``json`` parameter to ``urllib3.request()``, "
+"``PoolManager.request()``, and ``ConnectionPool.request()`` methods to send "
+"JSON bodies in requests. Using this parameter will set the header ``Content-"
+"Type: application/json`` if ``Content-Type`` isn't already defined. Added "
+"support for parsing JSON response bodies with ``HTTPResponse.json()`` method "
+"(`#2243 <https://github.com/urllib3/urllib3/issues/2243>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:419
@@ -1095,8 +1100,8 @@ msgstr ""
 #: ../../../../CHANGES.rst:424
 msgid ""
 "Added ``urllib3.response.BaseHTTPResponse`` class. All future response "
-"classes will be subclasses of ``BaseHTTPResponse`` (`#2083 <https://github."
-"com/urllib3/urllib3/issues/2083>`__)."
+"classes will be subclasses of ``BaseHTTPResponse`` (`#2083 <https://"
+"github.com/urllib3/urllib3/issues/2083>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:425
@@ -1131,8 +1136,8 @@ msgstr ""
 #: ../../../../CHANGES.rst:433
 msgid ""
 "Added ``proxy_assert_hostname`` and ``proxy_assert_fingerprint`` kwargs to "
-"``ProxyManager`` (`#2409 <https://github.com/urllib3/urllib3/"
-"issues/2409>`__)."
+"``ProxyManager`` (`#2409 <https://github.com/urllib3/urllib3/issues/"
+"2409>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:434
@@ -1199,8 +1204,8 @@ msgstr ""
 msgid ""
 "If you want each ``urllib3.response.HTTPResponse.read`` call to issue a "
 "single system call, you need to disable decompression by setting "
-"``decode_content=False`` (`#2128 <https://github.com/urllib3/urllib3/"
-"issues/2128>`__)."
+"``decode_content=False`` (`#2128 <https://github.com/urllib3/urllib3/issues/"
+"2128>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:452
@@ -1212,18 +1217,18 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:453
 msgid ""
-"Changed ``ssl_version`` to instead set the corresponding ``SSLContext."
-"minimum_version`` and ``SSLContext.maximum_version`` values.  Regardless of "
-"``ssl_version`` passed ``SSLContext`` objects are now constructed using "
-"``ssl.PROTOCOL_TLS_CLIENT`` (`#2110 <https://github.com/urllib3/urllib3/"
-"issues/2110>`__)."
+"Changed ``ssl_version`` to instead set the corresponding "
+"``SSLContext.minimum_version`` and ``SSLContext.maximum_version`` values.  "
+"Regardless of ``ssl_version`` passed ``SSLContext`` objects are now "
+"constructed using ``ssl.PROTOCOL_TLS_CLIENT`` (`#2110 <https://github.com/"
+"urllib3/urllib3/issues/2110>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:456
 msgid ""
 "Changed default ``SSLContext.minimum_version`` to be ``TLSVersion.TLSv1_2`` "
-"in line with Python 3.10 (`#2373 <https://github.com/urllib3/urllib3/"
-"issues/2373>`__)."
+"in line with Python 3.10 (`#2373 <https://github.com/urllib3/urllib3/issues/"
+"2373>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:457
@@ -1245,15 +1250,15 @@ msgstr ""
 msgid ""
 "Changed ``multipart/form-data`` header parameter formatting matches the "
 "WHATWG HTML Standard as of 2021-06-10. Control characters in filenames are "
-"no longer percent encoded (`#2257 <https://github.com/urllib3/urllib3/"
-"issues/2257>`__)."
+"no longer percent encoded (`#2257 <https://github.com/urllib3/urllib3/issues/"
+"2257>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:461
 msgid ""
 "Changed the error raised when connecting via HTTPS when the ``ssl`` module "
-"isn't available from ``SSLError`` to ``ImportError`` (`#2589 <https://github."
-"com/urllib3/urllib3/issues/2589>`__)."
+"isn't available from ``SSLError`` to ``ImportError`` (`#2589 <https://"
+"github.com/urllib3/urllib3/issues/2589>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:462
@@ -1279,9 +1284,10 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:465
 msgid ""
-"Changed the ``urllib3.contrib.pyopenssl`` module to wrap ``OpenSSL.SSL."
-"Error`` with ``ssl.SSLError`` in ``PyOpenSSLContext.load_cert_chain`` "
-"(`#2628 <https://github.com/urllib3/urllib3/issues/2628>`__)."
+"Changed the ``urllib3.contrib.pyopenssl`` module to wrap "
+"``OpenSSL.SSL.Error`` with ``ssl.SSLError`` in "
+"``PyOpenSSLContext.load_cert_chain`` (`#2628 <https://github.com/urllib3/"
+"urllib3/issues/2628>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:466
@@ -1328,8 +1334,8 @@ msgstr ""
 #: ../../../../CHANGES.rst:473
 msgid ""
 "Changed ``server_hostname`` to behave like other parameters only used by "
-"``HTTPSConnectionPool`` (`#2537 <https://github.com/urllib3/urllib3/"
-"pull/2537>`__)."
+"``HTTPSConnectionPool`` (`#2537 <https://github.com/urllib3/urllib3/pull/"
+"2537>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:474
@@ -1360,22 +1366,24 @@ msgstr ""
 msgid ""
 "Fixed an issue where an ``HTTPConnection`` instance would erroneously reuse "
 "the socket read timeout value from reading the previous response instead of "
-"a newly configured connect timeout. Instead now if ``HTTPConnection."
-"timeout`` is updated before sending the next request the new timeout value "
-"will be used (`#2645 <https://github.com/urllib3/urllib3/issues/2645>`__)."
+"a newly configured connect timeout. Instead now if "
+"``HTTPConnection.timeout`` is updated before sending the next request the "
+"new timeout value will be used (`#2645 <https://github.com/urllib3/urllib3/"
+"issues/2645>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:483
 msgid ""
-"Fixed ``socket.error.errno`` when raised from pyOpenSSL's ``OpenSSL.SSL."
-"SysCallError`` (`#2118 <https://github.com/urllib3/urllib3/issues/2118>`__)."
+"Fixed ``socket.error.errno`` when raised from pyOpenSSL's "
+"``OpenSSL.SSL.SysCallError`` (`#2118 <https://github.com/urllib3/urllib3/"
+"issues/2118>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:484
 msgid ""
 "Fixed the default value of ``HTTPSConnection.socket_options`` to match "
-"``HTTPConnection`` (`#2213 <https://github.com/urllib3/urllib3/"
-"issues/2213>`__)."
+"``HTTPConnection`` (`#2213 <https://github.com/urllib3/urllib3/issues/"
+"2213>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:485
@@ -1387,9 +1395,9 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:486
 msgid ""
-"Fixed a reference cycle bug in ``urllib3.util.connection."
-"create_connection()`` (`#2277 <https://github.com/urllib3/urllib3/"
-"issues/2277>`__)."
+"Fixed a reference cycle bug in "
+"``urllib3.util.connection.create_connection()`` (`#2277 <https://github.com/"
+"urllib3/urllib3/issues/2277>`__)."
 msgstr ""
 
 #: ../../../../CHANGES.rst:487
@@ -1400,9 +1408,9 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:488
 msgid ""
-"Fixed ``urllib3.contrib.pyopenssl.WrappedSocket`` and ``urllib3.contrib."
-"securetransport.WrappedSocket`` close methods (`#2970 <https://github.com/"
-"urllib3/urllib3/issues/2970>`__)"
+"Fixed ``urllib3.contrib.pyopenssl.WrappedSocket`` and "
+"``urllib3.contrib.securetransport.WrappedSocket`` close methods (`#2970 "
+"<https://github.com/urllib3/urllib3/issues/2970>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:491
@@ -1425,8 +1433,8 @@ msgstr ""
 #: ../../../../CHANGES.rst:498
 msgid ""
 "Took into account macOS setting ``ECONNRESET`` instead of ``EPROTOTYPE`` in "
-"its newer versions. (`#3416 <https://github.com/urllib3/urllib3/"
-"pull/3416>`__)"
+"its newer versions. (`#3416 <https://github.com/urllib3/urllib3/pull/"
+"3416>`__)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:501
@@ -1518,8 +1526,8 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:544
 msgid ""
-"Deprecated the ``HTTPResponse.getheaders()`` and ``HTTPResponse."
-"getheader()`` methods."
+"Deprecated the ``HTTPResponse.getheaders()`` and "
+"``HTTPResponse.getheader()`` methods."
 msgstr ""
 
 #: ../../../../CHANGES.rst:545
@@ -1543,9 +1551,9 @@ msgstr ""
 #: ../../../../CHANGES.rst:553
 msgid ""
 "Deprecated the `urllib3[secure]` extra and the `urllib3.contrib.pyopenssl` "
-"module. Both will be removed in v2.x. See this `GitHub issue <https://github."
-"com/urllib3/urllib3/issues/2680>`_ for justification and info on how to "
-"migrate."
+"module. Both will be removed in v2.x. See this `GitHub issue <https://"
+"github.com/urllib3/urllib3/issues/2680>`_ for justification and info on how "
+"to migrate."
 msgstr ""
 
 #: ../../../../CHANGES.rst:558
@@ -1554,8 +1562,9 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:560
 msgid ""
-"Fixed an issue where reading more than 2 GiB in a call to ``HTTPResponse."
-"read`` would raise an ``OverflowError`` on Python 3.9 and earlier."
+"Fixed an issue where reading more than 2 GiB in a call to "
+"``HTTPResponse.read`` would raise an ``OverflowError`` on Python 3.9 and "
+"earlier."
 msgstr ""
 
 #: ../../../../CHANGES.rst:564
@@ -1621,17 +1630,17 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:587
 msgid ""
-"Deprecated the ``Retry.MAX_BACKOFF`` class property in favor of ``Retry."
-"DEFAULT_MAX_BACKOFF`` to better match the rest of the default parameter "
-"names. ``Retry.MAX_BACKOFF`` is removed in v2.0."
+"Deprecated the ``Retry.MAX_BACKOFF`` class property in favor of "
+"``Retry.DEFAULT_MAX_BACKOFF`` to better match the rest of the default "
+"parameter names. ``Retry.MAX_BACKOFF`` is removed in v2.0."
 msgstr ""
 
 #: ../../../../CHANGES.rst:589
 msgid ""
 "Changed location of the vendored ``ssl.match_hostname`` function from "
-"``urllib3.packages.ssl_match_hostname`` to ``urllib3.util."
-"ssl_match_hostname`` to ensure Python 3.10+ compatibility after being "
-"repackaged by downstream distributors."
+"``urllib3.packages.ssl_match_hostname`` to "
+"``urllib3.util.ssl_match_hostname`` to ensure Python 3.10+ compatibility "
+"after being repackaged by downstream distributors."
 msgstr ""
 
 #: ../../../../CHANGES.rst:592
@@ -1675,8 +1684,8 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:612
 msgid ""
-"Fixed typo in deprecation message to recommend ``Retry."
-"DEFAULT_ALLOWED_METHODS``."
+"Fixed typo in deprecation message to recommend "
+"``Retry.DEFAULT_ALLOWED_METHODS``."
 msgstr ""
 
 #: ../../../../CHANGES.rst:616
@@ -1768,11 +1777,13 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:668
 msgid ""
-"Deprecated ``Retry`` options ``Retry.DEFAULT_METHOD_WHITELIST``, ``Retry."
-"DEFAULT_REDIRECT_HEADERS_BLACKLIST`` and ``Retry(method_whitelist=...)`` in "
-"favor of ``Retry.DEFAULT_ALLOWED_METHODS``, ``Retry."
-"DEFAULT_REMOVE_HEADERS_ON_REDIRECT``, and ``Retry(allowed_methods=...)`` "
-"(Pull #2000) **Starting in urllib3 v2.0: Deprecated options will be removed**"
+"Deprecated ``Retry`` options ``Retry.DEFAULT_METHOD_WHITELIST``, "
+"``Retry.DEFAULT_REDIRECT_HEADERS_BLACKLIST`` and "
+"``Retry(method_whitelist=...)`` in favor of "
+"``Retry.DEFAULT_ALLOWED_METHODS``, "
+"``Retry.DEFAULT_REMOVE_HEADERS_ON_REDIRECT``, and "
+"``Retry(allowed_methods=...)`` (Pull #2000) **Starting in urllib3 v2.0: "
+"Deprecated options will be removed**"
 msgstr ""
 
 #: ../../../../CHANGES.rst:673
@@ -1843,8 +1854,8 @@ msgstr ""
 #: ../../../../CHANGES.rst:705
 msgid ""
 "Fix issue where an error would be raised when the ``SSLKEYLOGFILE`` "
-"environment variable was set to the empty string. Now ``SSLContext."
-"keylog_file`` is not set in this situation (Pull #2016)"
+"environment variable was set to the empty string. Now "
+"``SSLContext.keylog_file`` is not set in this situation (Pull #2016)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:711
@@ -2020,8 +2031,8 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:806
 msgid ""
-"Percent-encode invalid characters in URL for ``HTTPConnectionPool."
-"request()`` (Pull #1673)"
+"Percent-encode invalid characters in URL for "
+"``HTTPConnectionPool.request()`` (Pull #1673)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:810
@@ -2375,8 +2386,8 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:996
 msgid ""
-"Added ``contrib`` module for using SecureTransport on macOS: ``urllib3."
-"contrib.securetransport``.  (Pull #1122)"
+"Added ``contrib`` module for using SecureTransport on macOS: "
+"``urllib3.contrib.securetransport``.  (Pull #1122)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:999
@@ -3114,22 +3125,22 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:1418
 msgid ""
-"All raised exceptions should now wrapped in a ``urllib3.exceptions."
-"HTTPException``-extending exception. (Issue #326)"
+"All raised exceptions should now wrapped in a "
+"``urllib3.exceptions.HTTPException``-extending exception. (Issue #326)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:1421
 msgid ""
-"All errors during a retry-enabled request should be wrapped in ``urllib3."
-"exceptions.MaxRetryError``, including timeout-related exceptions which were "
-"previously exempt. Underlying error is accessible from the ``.reason`` "
-"property. (Issue #326)"
+"All errors during a retry-enabled request should be wrapped in "
+"``urllib3.exceptions.MaxRetryError``, including timeout-related exceptions "
+"which were previously exempt. Underlying error is accessible from the "
+"``.reason`` property. (Issue #326)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:1426
 msgid ""
-"``urllib3.exceptions.ConnectionError`` renamed to ``urllib3.exceptions."
-"ProtocolError``. (Issue #326)"
+"``urllib3.exceptions.ConnectionError`` renamed to "
+"``urllib3.exceptions.ProtocolError``. (Issue #326)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:1429
@@ -3140,14 +3151,14 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:1432
 msgid ""
-"Requesting an empty host will raise ``urllib3.exceptions."
-"LocationValueError``. (Issue #417)"
+"Requesting an empty host will raise "
+"``urllib3.exceptions.LocationValueError``. (Issue #417)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:1435
 msgid ""
-"Catch read timeouts over SSL connections as ``urllib3.exceptions."
-"ReadTimeoutError``. (Issue #419)"
+"Catch read timeouts over SSL connections as "
+"``urllib3.exceptions.ReadTimeoutError``. (Issue #419)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:1438
@@ -3169,8 +3180,8 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:1448
 msgid ""
-"Wrap ``socket.timeout`` exception with ``urllib3.exceptions."
-"ReadTimeoutError``. (Issue #399)"
+"Wrap ``socket.timeout`` exception with "
+"``urllib3.exceptions.ReadTimeoutError``. (Issue #399)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:1451
@@ -3187,8 +3198,8 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:1457
 msgid ""
-"Removed ``HTTPConnection.tcp_nodelay`` in favor of ``HTTPConnection."
-"default_socket_options``. (Issue #397)"
+"Removed ``HTTPConnection.tcp_nodelay`` in favor of "
+"``HTTPConnection.default_socket_options``. (Issue #397)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:1460
@@ -3291,8 +3302,9 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:1517
 msgid ""
-"Headers are now passed and stored as a custom ``urllib3.collections_."
-"HTTPHeaderDict`` object rather than a plain ``dict``. (Issue #329, #333)"
+"Headers are now passed and stored as a custom "
+"``urllib3.collections_.HTTPHeaderDict`` object rather than a plain ``dict``. "
+"(Issue #329, #333)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:1521
@@ -3369,8 +3381,8 @@ msgstr ""
 
 #: ../../../../CHANGES.rst:1561
 msgid ""
-"Fixed thread race condition in ``urllib3.poolmanager.PoolManager."
-"connection_from_host(...)`` (Issue #204)"
+"Fixed thread race condition in "
+"``urllib3.poolmanager.PoolManager.connection_from_host(...)`` (Issue #204)"
 msgstr ""
 
 #: ../../../../CHANGES.rst:1564
@@ -3553,8 +3565,8 @@ msgstr ""
 #: ../../../../CHANGES.rst:1658
 msgid ""
 "Fixed bug with pool depletion and leaking connections (Issue #76). Added "
-"explicit connection closing on pool eviction. Added ``urllib3.PoolManager."
-"clear()``."
+"explicit connection closing on pool eviction. Added "
+"``urllib3.PoolManager.clear()``."
 msgstr ""
 
 #: ../../../../CHANGES.rst:1662

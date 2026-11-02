@@ -163,10 +163,10 @@ msgstr ""
 
 #: ../../../index.rst:106
 msgid ""
-"`urllib3 is one of the most downloaded packages on PyPI <https://pypistats."
-"org/top>`_ and is a dependency of many popular Python packages like "
-"`Requests <https://requests.readthedocs.io>`_, `Pip <https://pip.pypa.io>`_, "
-"and more!"
+"`urllib3 is one of the most downloaded packages on PyPI <https://"
+"pypistats.org/top>`_ and is a dependency of many popular Python packages "
+"like `Requests <https://requests.readthedocs.io>`_, `Pip <https://"
+"pip.pypa.io>`_, and more!"
 msgstr ""
 
 #: ../../../index.rst:111

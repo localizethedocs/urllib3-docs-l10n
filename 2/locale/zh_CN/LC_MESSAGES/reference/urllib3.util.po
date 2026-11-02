@@ -29,9 +29,9 @@ msgstr ""
 
 #: ../../../reference/urllib3.util.rst:7
 msgid ""
-"At the very core, just like its predecessors, urllib3 is built on top of :"
-"mod:`http.client` -- the lowest level HTTP library included in the Python "
-"standard library."
+"At the very core, just like its predecessors, urllib3 is built on top "
+"of :mod:`http.client` -- the lowest level HTTP library included in the "
+"Python standard library."
 msgstr ""
 
 #: ../../../reference/urllib3.util.rst:11
@@ -265,8 +265,9 @@ msgstr ""
 msgid ""
 "Set of uppercased HTTP method verbs that we should retry on.  By default, we "
 "only retry on methods which are considered to be idempotent (multiple "
-"requests with the same parameters end with the same state). See :attr:`Retry."
-"DEFAULT_ALLOWED_METHODS`.  Set to a ``None`` value to retry on any verb."
+"requests with the same parameters end with the same state). "
+"See :attr:`Retry.DEFAULT_ALLOWED_METHODS`.  Set to a ``None`` value to retry "
+"on any verb."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
@@ -278,8 +279,8 @@ msgstr ""
 #: of urllib3.util.retry.Retry:89
 msgid ""
 "By default, we only retry on methods which are considered to be idempotent "
-"(multiple requests with the same parameters end with the same state). See :"
-"attr:`Retry.DEFAULT_ALLOWED_METHODS`."
+"(multiple requests with the same parameters end with the same state). "
+"See :attr:`Retry.DEFAULT_ALLOWED_METHODS`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
@@ -390,16 +391,16 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:136
 msgid ""
-"The history of the request encountered during each call to :meth:`~Retry."
-"increment`. The list is in the order the requests occurred. Each list item "
-"is of class :class:`RequestHistory`."
+"The history of the request encountered during each call "
+"to :meth:`~Retry.increment`. The list is in the order the requests occurred. "
+"Each list item is of class :class:`RequestHistory`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:140
 msgid ""
-"Whether to respect Retry-After header on status codes defined as :attr:"
-"`Retry.RETRY_AFTER_STATUS_CODES` or not."
+"Whether to respect Retry-After header on status codes defined "
+"as :attr:`Retry.RETRY_AFTER_STATUS_CODES` or not."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
@@ -781,9 +782,9 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.url.Url:1
 msgid ""
-"Data structure for representing an HTTP URL. Used as a return value for :"
-"func:`parse_url`. Both the scheme and host are normalized as they are both "
-"case-insensitive according to RFC 3986."
+"Data structure for representing an HTTP URL. Used as a return value "
+"for :func:`parse_url`. Both the scheme and host are normalized as they are "
+"both case-insensitive according to RFC 3986."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
@@ -834,9 +835,9 @@ msgstr ""
 #: of urllib3.util.Url.url:3
 msgid ""
 "This function should more or less round-trip with :func:`.parse_url`. The "
-"returned url may not be exactly the same as the url inputted to :func:`."
-"parse_url`, but it should be equivalent by the RFC (e.g., urls with a blank "
-"port will have : removed)."
+"returned url may not be exactly the same as the url inputted "
+"to :func:`.parse_url`, but it should be equivalent by the RFC (e.g., urls "
+"with a blank port will have : removed)."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
@@ -919,22 +920,22 @@ msgstr ""
 #: of urllib3.util.ssl_.create_urllib3_context:11
 msgid ""
 "The maximum version of TLS to be used. Use the 'ssl.TLSVersion' enum for "
-"specifying the value. Not recommended to set to anything other than 'ssl."
-"TLSVersion.MAXIMUM_SUPPORTED' which is the default value."
+"specifying the value. Not recommended to set to anything other than "
+"'ssl.TLSVersion.MAXIMUM_SUPPORTED' which is the default value."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
 #: of urllib3.util.ssl_.create_urllib3_context:15
 msgid ""
-"Whether to require the certificate verification. This defaults to ``ssl."
-"CERT_REQUIRED``."
+"Whether to require the certificate verification. This defaults to "
+"``ssl.CERT_REQUIRED``."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
 #: of urllib3.util.ssl_.create_urllib3_context:18
 msgid ""
-"Specific OpenSSL options. These default to ``ssl.OP_NO_SSLv2``, ``ssl."
-"OP_NO_SSLv3``, ``ssl.OP_NO_COMPRESSION``, and ``ssl.OP_NO_TICKET``."
+"Specific OpenSSL options. These default to ``ssl.OP_NO_SSLv2``, "
+"``ssl.OP_NO_SSLv3``, ``ssl.OP_NO_COMPRESSION``, and ``ssl.OP_NO_TICKET``."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
@@ -948,8 +949,9 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
 #: of urllib3.util.ssl_.create_urllib3_context:24
 msgid ""
-"The flags for certificate verification operations. These default to ``ssl."
-"VERIFY_X509_PARTIAL_CHAIN`` and ``ssl.VERIFY_X509_STRICT`` for Python 3.13+."
+"The flags for certificate verification operations. These default to "
+"``ssl.VERIFY_X509_PARTIAL_CHAIN`` and ``ssl.VERIFY_X509_STRICT`` for Python "
+"3.13+."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
@@ -1025,8 +1027,8 @@ msgstr ""
 msgid ""
 "import urllib3\n"
 "\n"
-"print(urllib3.util.make_headers(keep_alive=True, "
-"user_agent=\"Batman/1.0\"))\n"
+"print(urllib3.util.make_headers(keep_alive=True, user_agent=\"Batman/"
+"1.0\"))\n"
 "# {'connection': 'keep-alive', 'user-agent': 'Batman/1.0'}\n"
 "print(urllib3.util.make_headers(accept_encoding=True))\n"
 "# {'accept-encoding': 'gzip,deflate'}"
@@ -1076,12 +1078,12 @@ msgstr ""
 #: of urllib3.util.ssl_.resolve_cert_reqs:1
 msgid ""
 "Resolves the argument to a numeric constant, which can be passed to the "
-"wrap_socket function/method from the ssl module. Defaults to :data:`ssl."
-"CERT_REQUIRED`. If given a string it is assumed to be the name of the "
-"constant in the :mod:`ssl` module or its abbreviation. (So you can specify "
-"`REQUIRED` instead of `CERT_REQUIRED`. If it's neither `None` nor a string "
-"we assume it is already the numeric constant which can directly be passed to "
-"wrap_socket."
+"wrap_socket function/method from the ssl module. Defaults "
+"to :data:`ssl.CERT_REQUIRED`. If given a string it is assumed to be the name "
+"of the constant in the :mod:`ssl` module or its abbreviation. (So you can "
+"specify `REQUIRED` instead of `CERT_REQUIRED`. If it's neither `None` nor a "
+"string we assume it is already the numeric constant which can directly be "
+"passed to wrap_socket."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
@@ -1093,9 +1095,9 @@ msgstr ""
 #: of urllib3.util.ssl_.ssl_wrap_socket:1
 msgid ""
 "All arguments except for server_hostname, ssl_context, tls_in_tls, "
-"ca_cert_data and ca_cert_dir have the same meaning as they do when using :"
-"func:`ssl.create_default_context`, :meth:`ssl.SSLContext.load_cert_chain`, :"
-"meth:`ssl.SSLContext.set_ciphers` and :meth:`ssl.SSLContext.wrap_socket`."
+"ca_cert_data and ca_cert_dir have the same meaning as they do when "
+"using :func:`ssl.create_default_context`, :meth:`ssl.SSLContext.load_cert_chain`, :meth:`ssl.SSLContext.set_ciphers` "
+"and :meth:`ssl.SSLContext.wrap_socket`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
@@ -1119,8 +1121,8 @@ msgstr ""
 #: of urllib3.util.ssl_.ssl_wrap_socket:13
 msgid ""
 "A directory containing CA certificates in multiple separate files, as "
-"supported by OpenSSL's -CApath flag or the capath argument to SSLContext."
-"load_verify_locations()."
+"supported by OpenSSL's -CApath flag or the capath argument to "
+"SSLContext.load_verify_locations()."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring

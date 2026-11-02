@@ -118,8 +118,8 @@ msgstr ""
 
 #: ../../../v2-migration-guide.rst:39
 msgid ""
-"For a full list of changes you can look at `the changelog <https://github."
-"com/urllib3/urllib3/blob/main/CHANGES.rst>`_."
+"For a full list of changes you can look at `the changelog <https://"
+"github.com/urllib3/urllib3/blob/main/CHANGES.rst>`_."
 msgstr ""
 
 #: ../../../v2-migration-guide.rst:44
@@ -187,8 +187,8 @@ msgid ""
 "**Read the Docs**: Upgrade your `configuration file to use Ubuntu 22.04 "
 "<https://docs.readthedocs.io/en/stable/config-file/v2.html>`_ by using ``os: "
 "ubuntu-22.04`` in the ``build`` section. Feel free to use the `urllib3 "
-"configuration <https://github.com/urllib3/urllib3/blob/2.0.0/.readthedocs."
-"yml>`_ as an inspiration."
+"configuration <https://github.com/urllib3/urllib3/blob/"
+"2.0.0/.readthedocs.yml>`_ as an inspiration."
 msgstr ""
 
 #: ../../../v2-migration-guide.rst:84
@@ -218,8 +218,8 @@ msgstr ""
 
 #: ../../../v2-migration-guide.rst:98
 msgid ""
-"``ImportError: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util."
-"ssl_'``"
+"``ImportError: cannot import name 'DEFAULT_CIPHERS' from "
+"'urllib3.util.ssl_'``"
 msgstr ""
 
 #: ../../../v2-migration-guide.rst:100
@@ -257,8 +257,9 @@ msgstr ""
 
 #: ../../../v2-migration-guide.rst:118
 msgid ""
-"Note that the new name of this class is :class:`~urllib3.connection."
-"HTTPSConnection`. It can be used starting from urllib3 1.25.9."
+"Note that the new name of this class "
+"is :class:`~urllib3.connection.HTTPSConnection`. It can be used starting "
+"from urllib3 1.25.9."
 msgstr ""
 
 #: ../../../v2-migration-guide.rst:122
