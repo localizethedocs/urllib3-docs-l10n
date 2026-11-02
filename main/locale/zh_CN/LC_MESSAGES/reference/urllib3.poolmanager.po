@@ -57,8 +57,8 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
 #: of urllib3.poolmanager.PoolManager:12
 msgid ""
-"Additional parameters are used to create fresh :class:`urllib3."
-"connectionpool.ConnectionPool` instances."
+"Additional parameters are used to create "
+"fresh :class:`urllib3.connectionpool.ConnectionPool` instances."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
@@ -161,10 +161,10 @@ msgstr ""
 #: of urllib3.poolmanager.PoolManager.connection_from_url:3
 msgid ""
 "If ``pool_kwargs`` is not provided and a new pool needs to be constructed, "
-"``self.connection_pool_kw`` is used to initialize the :class:`urllib3."
-"connectionpool.ConnectionPool`. If ``pool_kwargs`` is provided, it is used "
-"instead. Note that if a new pool does not need to be created for the "
-"request, the provided ``pool_kwargs`` are not used."
+"``self.connection_pool_kw`` is used to initialize "
+"the :class:`urllib3.connectionpool.ConnectionPool`. If ``pool_kwargs`` is "
+"provided, it is used instead. Note that if a new pool does not need to be "
+"created for the request, the provided ``pool_kwargs`` are not used."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
@@ -179,9 +179,9 @@ msgstr ""
 msgid ""
 "This is a convenience method that requires the least amount of manual "
 "effort. It can be used in most situations, while still having the option to "
-"drop down to more specific methods when necessary, such as :meth:"
-"`request_encode_url`, :meth:`request_encode_body`, or even the lowest level :"
-"meth:`urlopen`."
+"drop down to more specific methods when necessary, such "
+"as :meth:`request_encode_url`, :meth:`request_encode_body`, or even the "
+"lowest level :meth:`urlopen`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
@@ -239,10 +239,10 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
 #: of urllib3._request_methods.RequestMethods.request_encode_body:4
 msgid ""
-"When ``encode_multipart=True`` (default), then :func:`urllib3."
-"encode_multipart_formdata` is used to encode the payload with the "
-"appropriate content type. Otherwise :func:`urllib.parse.urlencode` is used "
-"with the 'application/x-www-form-urlencoded' content type."
+"When ``encode_multipart=True`` (default), "
+"then :func:`urllib3.encode_multipart_formdata` is used to encode the payload "
+"with the appropriate content type. Otherwise :func:`urllib.parse.urlencode` "
+"is used with the 'application/x-www-form-urlencoded' content type."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
@@ -304,8 +304,8 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
 #: of urllib3._request_methods.RequestMethods.request_encode_body:53
 msgid ""
-"If not specified, then a random boundary will be generated using :func:"
-"`urllib3.filepost.choose_boundary`."
+"If not specified, then a random boundary will be generated "
+"using :func:`urllib3.filepost.choose_boundary`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
@@ -330,8 +330,9 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
 #: of urllib3.poolmanager.PoolManager.urlopen:5
 msgid ""
-"The given ``url`` parameter must be absolute, such that an appropriate :"
-"class:`urllib3.connectionpool.ConnectionPool` can be chosen for it."
+"The given ``url`` parameter must be absolute, such that an "
+"appropriate :class:`urllib3.connectionpool.ConnectionPool` can be chosen for "
+"it."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring

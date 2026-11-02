@@ -190,8 +190,9 @@ msgstr ""
 
 #: ../../../contributing.rst:99
 msgid ""
-"For all valid arguments, check `the pytest documentation <https://docs."
-"pytest.org/en/stable/usage.html#stopping-after-the-first-or-n-failures>`_."
+"For all valid arguments, check `the pytest documentation <https://"
+"docs.pytest.org/en/stable/usage.html#stopping-after-the-first-or-n-"
+"failures>`_."
 msgstr ""
 
 #: ../../../contributing.rst:103
@@ -343,8 +344,8 @@ msgstr ""
 
 #: ../../../contributing.rst:165
 msgid ""
-"Use keyword arguments everywhere except for method and url. (ie ``http."
-"request(\"GET\", \"https://example.com\", headers={...})`` )"
+"Use keyword arguments everywhere except for method and url. (ie "
+"``http.request(\"GET\", \"https://example.com\", headers={...})`` )"
 msgstr ""
 
 #: ../../../contributing.rst:166
@@ -357,8 +358,8 @@ msgstr ""
 
 #: ../../../contributing.rst:169
 msgid ""
-"``PoolManager`` instances should be named ``http``. (ie ``http = urllib3."
-"PoolManager(...)``)"
+"``PoolManager`` instances should be named ``http``. (ie ``http = "
+"urllib3.PoolManager(...)``)"
 msgstr ""
 
 #: ../../../contributing.rst:170

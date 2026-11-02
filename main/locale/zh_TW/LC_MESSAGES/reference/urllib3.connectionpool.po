@@ -36,15 +36,15 @@ msgstr "參數"
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool:3
 msgid ""
-"Host used for this HTTP Connection (e.g. \"localhost\"), passed into :class:"
-"`http.client.HTTPConnection`."
+"Host used for this HTTP Connection (e.g. \"localhost\"), passed "
+"into :class:`http.client.HTTPConnection`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool:7
 msgid ""
-"Port used for this HTTP Connection (None is equivalent to 80), passed into :"
-"class:`http.client.HTTPConnection`."
+"Port used for this HTTP Connection (None is equivalent to 80), passed "
+"into :class:`http.client.HTTPConnection`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
@@ -93,22 +93,23 @@ msgstr "該連線池中的請求默認使用的重試組態。"
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool:38
 msgid ""
-"Parsed proxy URL, should not be used directly, instead, see :class:`urllib3."
-"ProxyManager`"
+"Parsed proxy URL, should not be used directly, instead, "
+"see :class:`urllib3.ProxyManager`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool:42
 msgid ""
-"A dictionary with proxy headers, should not be used directly, instead, see :"
-"class:`urllib3.ProxyManager`"
+"A dictionary with proxy headers, should not be used directly, instead, "
+"see :class:`urllib3.ProxyManager`"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool:46
 msgid ""
-"Additional parameters are used to create fresh :class:`urllib3.connection."
-"HTTPConnection`, :class:`urllib3.connection.HTTPSConnection` instances."
+"Additional parameters are used to create "
+"fresh :class:`urllib3.connection.HTTPConnection`, :class:`urllib3.connection.HTTPSConnection` "
+"instances."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
@@ -144,8 +145,8 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool.urlopen:7
 msgid ""
-"More commonly, it's appropriate to use a convenience method such as :meth:"
-"`request`."
+"More commonly, it's appropriate to use a convenience method such "
+"as :meth:`request`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
@@ -175,8 +176,9 @@ msgid ""
 "Data to send in the request body, either :class:`str`, :class:`bytes`, an "
 "iterable of :class:`str`/:class:`bytes`, or a file-like object."
 msgstr ""
-"要發送到請求正文中的資料，可以是 :class:`str`、:class:`bytes`、:class:`str`/:"
-"class:`bytes` 的可疊代物件，或是類似檔案的物件。"
+"要發送到請求正文中的資料，可以"
+"是 :class:`str`、:class:`bytes`、:class:`str`/:class:`bytes` 的可疊代物件，或"
+"是類似檔案的物件。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool.urlopen:27
@@ -189,28 +191,29 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool.urlopen:32
 msgid ""
-"Configure the number of retries to allow before raising a :class:`~urllib3."
-"exceptions.MaxRetryError` exception.  If ``None`` (default) will retry 3 "
-"times, see ``Retry.DEFAULT``. Pass a :class:`~urllib3.util.retry.Retry` "
-"object for fine-grained control over different types of retries. Pass an "
-"integer number to retry connection errors that many times, but no other "
-"types of errors. Pass zero to never retry.  If ``False``, then retries are "
-"disabled and any exception is raised immediately. Also, instead of raising a "
-"MaxRetryError on redirects, the redirect response will be returned."
+"Configure the number of retries to allow before raising "
+"a :class:`~urllib3.exceptions.MaxRetryError` exception.  If ``None`` "
+"(default) will retry 3 times, see ``Retry.DEFAULT``. Pass "
+"a :class:`~urllib3.util.retry.Retry` object for fine-grained control over "
+"different types of retries. Pass an integer number to retry connection "
+"errors that many times, but no other types of errors. Pass zero to never "
+"retry.  If ``False``, then retries are disabled and any exception is raised "
+"immediately. Also, instead of raising a MaxRetryError on redirects, the "
+"redirect response will be returned."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool.urlopen:33
 msgid ""
-"Configure the number of retries to allow before raising a :class:`~urllib3."
-"exceptions.MaxRetryError` exception."
+"Configure the number of retries to allow before raising "
+"a :class:`~urllib3.exceptions.MaxRetryError` exception."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.HTTPConnectionPool.urlopen:36
 msgid ""
-"If ``None`` (default) will retry 3 times, see ``Retry.DEFAULT``. Pass a :"
-"class:`~urllib3.util.retry.Retry` object for fine-grained control over "
+"If ``None`` (default) will retry 3 times, see ``Retry.DEFAULT``. Pass "
+"a :class:`~urllib3.util.retry.Retry` object for fine-grained control over "
 "different types of retries. Pass an integer number to retry connection "
 "errors that many times, but no other types of errors. Pass zero to never "
 "retry."
@@ -317,9 +320,10 @@ msgstr ""
 #: of urllib3.connectionpool.HTTPSConnectionPool:7
 msgid ""
 "The ``key_file``, ``cert_file``, ``cert_reqs``, ``ca_certs``, "
-"``ca_cert_dir``, ``ssl_version``, ``key_password`` are only used if :mod:"
-"`ssl` is available and are fed into :meth:`urllib3.util.ssl_wrap_socket` to "
-"upgrade the connection socket into an SSL socket."
+"``ca_cert_dir``, ``ssl_version``, ``key_password`` are only used "
+"if :mod:`ssl` is available and are fed "
+"into :meth:`urllib3.util.ssl_wrap_socket` to upgrade the connection socket "
+"into an SSL socket."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
@@ -328,8 +332,8 @@ msgid ""
 "Base class for all connection pools, such as :class:`.HTTPConnectionPool` "
 "and :class:`.HTTPSConnectionPool`."
 msgstr ""
-"所有連接池的基底類別，例如 :class:`.HTTPConnectionPool` 和 :class:`."
-"HTTPSConnectionPool`。"
+"所有連接池的基底類別，例如 :class:`.HTTPConnectionPool` "
+"和 :class:`.HTTPSConnectionPool`。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.ConnectionPool:5
@@ -359,9 +363,9 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring
 #: of urllib3.connectionpool.connection_from_url:9
 msgid ""
-"Passes additional parameters to the constructor of the appropriate :class:`."
-"ConnectionPool`. Useful for specifying things like timeout, maxsize, "
-"headers, etc."
+"Passes additional parameters to the constructor of the "
+"appropriate :class:`.ConnectionPool`. Useful for specifying things like "
+"timeout, maxsize, headers, etc."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/connectionpool.py:docstring

@@ -88,11 +88,11 @@ msgstr ""
 
 #: ../../../user-guide.rst:49
 msgid ""
-"``request()`` returns a :class:`~response.HTTPResponse` object, the :ref:"
-"`response_content` section explains how to handle various responses."
+"``request()`` returns a :class:`~response.HTTPResponse` object, "
+"the :ref:`response_content` section explains how to handle various responses."
 msgstr ""
-"``request()`` 會回傳一個 :class:`~response.HTTPResponse` 物件，:ref:"
-"`response_content` 小節解釋了如何處理各種回應。"
+"``request()`` 會回傳一個 :class:`~response.HTTPResponse` 物"
+"件，:ref:`response_content` 小節解釋了如何處理各種回應。"
 
 #: ../../../user-guide.rst:52
 msgid ""
@@ -134,11 +134,11 @@ msgstr ""
 
 #: ../../../user-guide.rst:72
 msgid ""
-"For quick scripts and experiments you can also use a top-level ``urllib3."
-"request()``. It uses a module-global ``PoolManager`` instance. Because of "
-"that, its side effects could be shared across dependencies relying on it. To "
-"avoid side effects, create a new ``PoolManager`` instance and use it "
-"instead. In addition, the method does not accept the low-level "
+"For quick scripts and experiments you can also use a top-level "
+"``urllib3.request()``. It uses a module-global ``PoolManager`` instance. "
+"Because of that, its side effects could be shared across dependencies "
+"relying on it. To avoid side effects, create a new ``PoolManager`` instance "
+"and use it instead. In addition, the method does not accept the low-level "
 "``**urlopen_kw`` keyword arguments. System CA certificates are loaded on "
 "default."
 msgstr ""
@@ -149,9 +149,9 @@ msgstr "回應內容"
 
 #: ../../../user-guide.rst:84
 msgid ""
-"The :class:`~response.HTTPResponse` object provides :attr:`~response."
-"HTTPResponse.status`, :attr:`~response.HTTPResponse.data`, and :attr:"
-"`~response.HTTPResponse.headers` attributes:"
+"The :class:`~response.HTTPResponse` object "
+"provides :attr:`~response.HTTPResponse.status`, :attr:`~response.HTTPResponse.data`, "
+"and :attr:`~response.HTTPResponse.headers` attributes:"
 msgstr ""
 
 #: ../../../user-guide.rst:88
@@ -198,8 +198,8 @@ msgstr ""
 #: ../../../user-guide.rst:118
 msgid ""
 "Alternatively, Custom JSON libraries such as `orjson` can be used to encode "
-"data, retrieve data by decoding and deserializing the :attr:`~response."
-"HTTPResponse.data` attribute of the request:"
+"data, retrieve data by decoding and deserializing "
+"the :attr:`~response.HTTPResponse.data` attribute of the request:"
 msgstr ""
 
 #: ../../../user-guide.rst:122
@@ -243,8 +243,8 @@ msgstr ""
 
 #: ../../../user-guide.rst:148
 msgid ""
-"For responses of large or unknown length, it's sometimes better to :ref:"
-"`stream <stream>` the response."
+"For responses of large or unknown length, it's sometimes better "
+"to :ref:`stream <stream>` the response."
 msgstr ""
 
 #: ../../../user-guide.rst:152
@@ -255,10 +255,10 @@ msgstr ""
 msgid ""
 "Sometimes you want to use :class:`io.TextIOWrapper` or similar objects like "
 "a CSV reader directly with :class:`~response.HTTPResponse` data. Making "
-"these two interfaces play nice together requires using the :attr:`~response."
-"HTTPResponse.auto_close` attribute by setting it to ``False``. By default "
-"HTTP responses are closed after reading all bytes, this disables that "
-"behavior:"
+"these two interfaces play nice together requires using "
+"the :attr:`~response.HTTPResponse.auto_close` attribute by setting it to "
+"``False``. By default HTTP responses are closed after reading all bytes, "
+"this disables that behavior:"
 msgstr ""
 
 #: ../../../user-guide.rst:159
@@ -305,8 +305,8 @@ msgstr ""
 
 #: ../../../user-guide.rst:184
 msgid ""
-"You can specify headers as a dictionary in the ``headers`` argument in :meth:"
-"`~urllib3.PoolManager.request`:"
+"You can specify headers as a dictionary in the ``headers`` argument "
+"in :meth:`~urllib3.PoolManager.request`:"
 msgstr ""
 
 #: ../../../user-guide.rst:186
@@ -442,8 +442,8 @@ msgstr "查詢參數"
 #: ../../../user-guide.rst:264
 msgid ""
 "For ``GET``, ``HEAD``, and ``DELETE`` requests, you can simply pass the "
-"arguments as a dictionary in the ``fields`` argument to :meth:`~urllib3."
-"PoolManager.request`:"
+"arguments as a dictionary in the ``fields`` argument "
+"to :meth:`~urllib3.PoolManager.request`:"
 msgstr ""
 
 #: ../../../user-guide.rst:268
@@ -499,8 +499,8 @@ msgstr "標單資料"
 #: ../../../user-guide.rst:305
 msgid ""
 "For ``PUT`` and ``POST`` requests, urllib3 will automatically form-encode "
-"the dictionary in the ``fields`` argument provided to :meth:`~urllib3."
-"PoolManager.request`:"
+"the dictionary in the ``fields`` argument provided "
+"to :meth:`~urllib3.PoolManager.request`:"
 msgstr ""
 
 #: ../../../user-guide.rst:309
@@ -697,8 +697,9 @@ msgstr "$ python -m pip install certifi"
 
 #: ../../../user-guide.rst:428
 msgid ""
-"Once you have certificates, you can create a :class:`~poolmanager."
-"PoolManager` that verifies certificates when making requests:"
+"Once you have certificates, you can create "
+"a :class:`~poolmanager.PoolManager` that verifies certificates when making "
+"requests:"
 msgstr ""
 
 #: ../../../user-guide.rst:431
@@ -746,11 +747,11 @@ msgstr ""
 #: ../../../user-guide.rst:460
 msgid ""
 "You can use OS-provided certificates if desired. Just specify the full path "
-"to the certificate bundle as the ``ca_certs`` argument instead of ``certifi."
-"where()``. For example, most Linux systems store the certificates at ``/etc/"
-"ssl/certs/ca-certificates.crt``. Other operating systems can be `difficult "
-"<https://stackoverflow.com/questions/10095676/openssl-reasonable-default-for-"
-"trusted-ca-certificates>`_."
+"to the certificate bundle as the ``ca_certs`` argument instead of "
+"``certifi.where()``. For example, most Linux systems store the certificates "
+"at ``/etc/ssl/certs/ca-certificates.crt``. Other operating systems can be "
+"`difficult <https://stackoverflow.com/questions/10095676/openssl-reasonable-"
+"default-for-trusted-ca-certificates>`_."
 msgstr ""
 
 #: ../../../user-guide.rst:467
@@ -874,8 +875,8 @@ msgstr ""
 
 #: ../../../user-guide.rst:531
 msgid ""
-"You still override this pool-level timeout by specifying ``timeout`` to :"
-"meth:`~urllib3.PoolManager.request`."
+"You still override this pool-level timeout by specifying ``timeout`` "
+"to :meth:`~urllib3.PoolManager.request`."
 msgstr ""
 
 #: ../../../user-guide.rst:535
