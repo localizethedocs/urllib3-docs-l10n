@@ -69,11 +69,11 @@ msgstr ""
 
 #: ../../../user-guide.rst:41
 msgid ""
-"``request()`` returns a :class:`~response.HTTPResponse` object, the :ref:"
-"`response_content` section explains how to handle various responses."
+"``request()`` returns a :class:`~response.HTTPResponse` object, "
+"the :ref:`response_content` section explains how to handle various responses."
 msgstr ""
-"``request()`` 會回傳一個 :class:`~response.HTTPResponse` 物件，:ref:"
-"`response_content` 小節解釋了如何處理各種回應。"
+"``request()`` 會回傳一個 :class:`~response.HTTPResponse` 物"
+"件，:ref:`response_content` 小節解釋了如何處理各種回應。"
 
 #: ../../../user-guide.rst:44
 msgid ""
@@ -102,9 +102,9 @@ msgstr "回應內容"
 
 #: ../../../user-guide.rst:63
 msgid ""
-"The :class:`~response.HTTPResponse` object provides :attr:`~response."
-"HTTPResponse.status`, :attr:`~response.HTTPResponse.data`, and :attr:"
-"`~response.HTTPResponse.headers` attributes:"
+"The :class:`~response.HTTPResponse` object "
+"provides :attr:`~response.HTTPResponse.status`, :attr:`~response.HTTPResponse.data`, "
+"and :attr:`~response.HTTPResponse.headers` attributes:"
 msgstr ""
 
 #: ../../../user-guide.rst:67
@@ -124,8 +124,8 @@ msgstr "JSON 內容"
 
 #: ../../../user-guide.rst:80
 msgid ""
-"JSON content can be loaded by decoding and deserializing the :attr:"
-"`~response.HTTPResponse.data` attribute of the request:"
+"JSON content can be loaded by decoding and deserializing "
+"the :attr:`~response.HTTPResponse.data` attribute of the request:"
 msgstr ""
 
 #: ../../../user-guide.rst:83
@@ -167,10 +167,10 @@ msgstr ""
 msgid ""
 "Sometimes you want to use :class:`io.TextIOWrapper` or similar objects like "
 "a CSV reader directly with :class:`~response.HTTPResponse` data. Making "
-"these two interfaces play nice together requires using the :attr:`~response."
-"HTTPResponse.auto_close` attribute by setting it to ``False``. By default "
-"HTTP responses are closed after reading all bytes, this disables that "
-"behavior:"
+"these two interfaces play nice together requires using "
+"the :attr:`~response.HTTPResponse.auto_close` attribute by setting it to "
+"``False``. By default HTTP responses are closed after reading all bytes, "
+"this disables that behavior:"
 msgstr ""
 
 #: ../../../user-guide.rst:113
@@ -192,8 +192,8 @@ msgstr ""
 
 #: ../../../user-guide.rst:129
 msgid ""
-"You can specify headers as a dictionary in the ``headers`` argument in :meth:"
-"`~poolmanager.PoolManager.request`:"
+"You can specify headers as a dictionary in the ``headers`` argument "
+"in :meth:`~poolmanager.PoolManager.request`:"
 msgstr ""
 
 #: ../../../user-guide.rst:131
@@ -216,8 +216,8 @@ msgstr "查詢參數"
 #: ../../../user-guide.rst:146
 msgid ""
 "For ``GET``, ``HEAD``, and ``DELETE`` requests, you can simply pass the "
-"arguments as a dictionary in the ``fields`` argument to :meth:`~poolmanager."
-"PoolManager.request`:"
+"arguments as a dictionary in the ``fields`` argument "
+"to :meth:`~poolmanager.PoolManager.request`:"
 msgstr ""
 
 #: ../../../user-guide.rst:150
@@ -254,8 +254,8 @@ msgstr "標單資料"
 #: ../../../user-guide.rst:178
 msgid ""
 "For ``PUT`` and ``POST`` requests, urllib3 will automatically form-encode "
-"the dictionary in the ``fields`` argument provided to :meth:`~poolmanager."
-"PoolManager.request`:"
+"the dictionary in the ``fields`` argument provided "
+"to :meth:`~poolmanager.PoolManager.request`:"
 msgstr ""
 
 #: ../../../user-guide.rst:182
@@ -276,8 +276,8 @@ msgstr ""
 #: ../../../user-guide.rst:195
 msgid ""
 "You can send a JSON request by specifying the encoded data as the ``body`` "
-"argument and setting the ``Content-Type`` header when calling :meth:"
-"`~poolmanager.PoolManager.request`:"
+"argument and setting the ``Content-Type`` header when "
+"calling :meth:`~poolmanager.PoolManager.request`:"
 msgstr ""
 
 #: ../../../user-guide.rst:199
@@ -403,14 +403,15 @@ msgstr ""
 
 #: ../../../user-guide.rst:290
 msgid ""
-"If you're using Python 2 you may need additional packages. See the :ref:"
-"`section below <ssl_py2>` for more details."
+"If you're using Python 2 you may need additional packages. See "
+"the :ref:`section below <ssl_py2>` for more details."
 msgstr ""
 
 #: ../../../user-guide.rst:292
 msgid ""
-"Once you have certificates, you can create a :class:`~poolmanager."
-"PoolManager` that verifies certificates when making requests:"
+"Once you have certificates, you can create "
+"a :class:`~poolmanager.PoolManager` that verifies certificates when making "
+"requests:"
 msgstr ""
 
 #: ../../../user-guide.rst:295 ../../../user-guide.rst:355
@@ -441,11 +442,11 @@ msgstr ""
 #: ../../../user-guide.rst:314
 msgid ""
 "You can use OS-provided certificates if desired. Just specify the full path "
-"to the certificate bundle as the ``ca_certs`` argument instead of ``certifi."
-"where()``. For example, most Linux systems store the certificates at ``/etc/"
-"ssl/certs/ca-certificates.crt``. Other operating systems can be `difficult "
-"<https://stackoverflow.com/questions/10095676/openssl-reasonable-default-for-"
-"trusted-ca-certificates>`_."
+"to the certificate bundle as the ``ca_certs`` argument instead of "
+"``certifi.where()``. For example, most Linux systems store the certificates "
+"at ``/etc/ssl/certs/ca-certificates.crt``. Other operating systems can be "
+"`difficult <https://stackoverflow.com/questions/10095676/openssl-reasonable-"
+"default-for-trusted-ca-certificates>`_."
 msgstr ""
 
 #: ../../../user-guide.rst:323
@@ -454,10 +455,10 @@ msgstr ""
 
 #: ../../../user-guide.rst:325
 msgid ""
-"Older versions of Python 2 are built with an :mod:`ssl` module that lacks :"
-"ref:`SNI support <sni_warning>` and can lag behind security updates. For "
-"these reasons it's recommended to use `pyOpenSSL <https://pyopenssl."
-"readthedocs.io/en/latest/>`_."
+"Older versions of Python 2 are built with an :mod:`ssl` module that "
+"lacks :ref:`SNI support <sni_warning>` and can lag behind security updates. "
+"For these reasons it's recommended to use `pyOpenSSL <https://"
+"pyopenssl.readthedocs.io/en/latest/>`_."
 msgstr ""
 
 #: ../../../user-guide.rst:329
@@ -483,8 +484,8 @@ msgstr ""
 
 #: ../../../user-guide.rst:345
 msgid ""
-"Once installed, you can tell urllib3 to use pyOpenSSL by using :mod:`urllib3."
-"contrib.pyopenssl`:"
+"Once installed, you can tell urllib3 to use pyOpenSSL by "
+"using :mod:`urllib3.contrib.pyopenssl`:"
 msgstr ""
 
 #: ../../../user-guide.rst:347
@@ -501,10 +502,10 @@ msgstr ""
 
 #: ../../../user-guide.rst:364
 msgid ""
-"If you do not wish to use pyOpenSSL, you can simply omit the call to :func:"
-"`urllib3.contrib.pyopenssl.inject_into_urllib3`. urllib3 will fall back to "
-"the standard-library :mod:`ssl` module. You may experience :ref:`several "
-"warnings <ssl_warnings>` when doing this."
+"If you do not wish to use pyOpenSSL, you can simply omit the call "
+"to :func:`urllib3.contrib.pyopenssl.inject_into_urllib3`. urllib3 will fall "
+"back to the standard-library :mod:`ssl` module. You may "
+"experience :ref:`several warnings <ssl_warnings>` when doing this."
 msgstr ""
 
 #: ../../../user-guide.rst:369
@@ -590,8 +591,8 @@ msgstr ""
 
 #: ../../../user-guide.rst:431
 msgid ""
-"You still override this pool-level timeout by specifying ``timeout`` to :"
-"meth:`~poolmanager.PoolManager.request`."
+"You still override this pool-level timeout by specifying ``timeout`` "
+"to :meth:`~poolmanager.PoolManager.request`."
 msgstr ""
 
 #: ../../../user-guide.rst:435

@@ -24,8 +24,8 @@ msgstr "PyOpenSSL"
 #: ../../../reference/contrib/pyopenssl.rst:4
 msgid ""
 "DEPRECATED: This module is deprecated and will be removed in a future 2.x "
-"release. Read more in this `issue <https://github.com/urllib3/urllib3/"
-"issues/2680>`_."
+"release. Read more in this `issue <https://github.com/urllib3/urllib3/issues/"
+"2680>`_."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
@@ -78,10 +78,11 @@ msgstr "$ python -m pip install pyopenssl cryptography idna"
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring
 #: of urllib3.contrib.pyopenssl:21
 msgid ""
-"To activate certificate checking, call :func:`~urllib3.contrib.pyopenssl."
-"inject_into_urllib3` from your Python code before you begin making HTTP "
-"requests. This can be done in a ``sitecustomize`` module, or at any other "
-"time before your application begins using ``urllib3``, like this:"
+"To activate certificate checking, "
+"call :func:`~urllib3.contrib.pyopenssl.inject_into_urllib3` from your Python "
+"code before you begin making HTTP requests. This can be done in a "
+"``sitecustomize`` module, or at any other time before your application "
+"begins using ``urllib3``, like this:"
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/pyopenssl.py:docstring

@@ -49,8 +49,8 @@ msgstr "除非明確提供其他標頭，否則所有請求都會包含的標頭
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
 #: of urllib3.poolmanager.PoolManager:12
 msgid ""
-"Additional parameters are used to create fresh :class:`urllib3."
-"connectionpool.ConnectionPool` instances."
+"Additional parameters are used to create "
+"fresh :class:`urllib3.connectionpool.ConnectionPool` instances."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
@@ -136,10 +136,10 @@ msgstr "與 :func:`urllib3.connectionpool.connection_from_url` 相似。"
 #: of urllib3.poolmanager.PoolManager.connection_from_url:3
 msgid ""
 "If ``pool_kwargs`` is not provided and a new pool needs to be constructed, "
-"``self.connection_pool_kw`` is used to initialize the :class:`urllib3."
-"connectionpool.ConnectionPool`. If ``pool_kwargs`` is provided, it is used "
-"instead. Note that if a new pool does not need to be created for the "
-"request, the provided ``pool_kwargs`` are not used."
+"``self.connection_pool_kw`` is used to initialize "
+"the :class:`urllib3.connectionpool.ConnectionPool`. If ``pool_kwargs`` is "
+"provided, it is used instead. Note that if a new pool does not need to be "
+"created for the request, the provided ``pool_kwargs`` are not used."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
@@ -152,8 +152,9 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring
 #: of urllib3.poolmanager.PoolManager.urlopen:5
 msgid ""
-"The given ``url`` parameter must be absolute, such that an appropriate :"
-"class:`urllib3.connectionpool.ConnectionPool` can be chosen for it."
+"The given ``url`` parameter must be absolute, such that an "
+"appropriate :class:`urllib3.connectionpool.ConnectionPool` can be chosen for "
+"it."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/poolmanager.py:docstring

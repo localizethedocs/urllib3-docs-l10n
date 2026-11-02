@@ -91,9 +91,9 @@ msgstr ""
 msgid ""
 "This is a convenience method that requires the least amount of manual "
 "effort. It can be used in most situations, while still having the option to "
-"drop down to more specific methods when necessary, such as :meth:"
-"`request_encode_url`, :meth:`request_encode_body`, or even the lowest level :"
-"meth:`urlopen`."
+"drop down to more specific methods when necessary, such "
+"as :meth:`request_encode_url`, :meth:`request_encode_body`, or even the "
+"lowest level :meth:`urlopen`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
@@ -106,10 +106,10 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring
 #: of urllib3.request.RequestMethods.request_encode_body:4
 msgid ""
-"When ``encode_multipart=True`` (default), then :func:`urllib3."
-"encode_multipart_formdata` is used to encode the payload with the "
-"appropriate content type. Otherwise :func:`urllib.parse.urlencode` is used "
-"with the 'application/x-www-form-urlencoded' content type."
+"When ``encode_multipart=True`` (default), "
+"then :func:`urllib3.encode_multipart_formdata` is used to encode the payload "
+"with the appropriate content type. Otherwise :func:`urllib.parse.urlencode` "
+"is used with the 'application/x-www-form-urlencoded' content type."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/request.py:docstring

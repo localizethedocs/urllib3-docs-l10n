@@ -47,8 +47,8 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:7
 msgid ""
-"More commonly, it's appropriate to use a convenience method provided by :"
-"class:`.RequestMethods`, such as :meth:`request`."
+"More commonly, it's appropriate to use a convenience method provided "
+"by :class:`.RequestMethods`, such as :meth:`request`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
@@ -82,8 +82,9 @@ msgid ""
 "Data to send in the request body, either :class:`str`, :class:`bytes`, an "
 "iterable of :class:`str`/:class:`bytes`, or a file-like object."
 msgstr ""
-"要發送到請求正文中的資料，可以是 :class:`str`、:class:`bytes`、:class:`str`/:"
-"class:`bytes` 的可疊代物件，或是類似檔案的物件。"
+"要發送到請求正文中的資料，可以"
+"是 :class:`str`、:class:`bytes`、:class:`str`/:class:`bytes` 的可疊代物件，或"
+"是類似檔案的物件。"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:27
@@ -96,30 +97,32 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:32
 msgid ""
-"Configure the number of retries to allow before raising a :class:`~urllib3."
-"exceptions.MaxRetryError` exception.  Pass ``None`` to retry until you "
-"receive a response. Pass a :class:`~urllib3.util.retry.Retry` object for "
-"fine-grained control over different types of retries. Pass an integer number "
-"to retry connection errors that many times, but no other types of errors. "
-"Pass zero to never retry.  If ``False``, then retries are disabled and any "
-"exception is raised immediately. Also, instead of raising a MaxRetryError on "
-"redirects, the redirect response will be returned."
+"Configure the number of retries to allow before raising "
+"a :class:`~urllib3.exceptions.MaxRetryError` exception.  Pass ``None`` to "
+"retry until you receive a response. Pass "
+"a :class:`~urllib3.util.retry.Retry` object for fine-grained control over "
+"different types of retries. Pass an integer number to retry connection "
+"errors that many times, but no other types of errors. Pass zero to never "
+"retry.  If ``False``, then retries are disabled and any exception is raised "
+"immediately. Also, instead of raising a MaxRetryError on redirects, the "
+"redirect response will be returned."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:33
 msgid ""
-"Configure the number of retries to allow before raising a :class:`~urllib3."
-"exceptions.MaxRetryError` exception."
+"Configure the number of retries to allow before raising "
+"a :class:`~urllib3.exceptions.MaxRetryError` exception."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:36
 msgid ""
-"Pass ``None`` to retry until you receive a response. Pass a :class:`~urllib3."
-"util.retry.Retry` object for fine-grained control over different types of "
-"retries. Pass an integer number to retry connection errors that many times, "
-"but no other types of errors. Pass zero to never retry."
+"Pass ``None`` to retry until you receive a response. Pass "
+"a :class:`~urllib3.util.retry.Retry` object for fine-grained control over "
+"different types of retries. Pass an integer number to retry connection "
+"errors that many times, but no other types of errors. Pass zero to never "
+"retry."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
@@ -173,8 +176,8 @@ msgid ""
 "entire contents of the response such as when `preload_content=True`). This "
 "is useful if you're not preloading the response's content immediately. You "
 "will need to call ``r.release_conn()`` on the response ``r`` to return the "
-"connection back into the pool. If None, it takes the value of ``response_kw."
-"get('preload_content', True)``."
+"connection back into the pool. If None, it takes the value of "
+"``response_kw.get('preload_content', True)``."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
@@ -196,6 +199,6 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/contrib/ntlmpool.py:docstring
 #: of urllib3.contrib.ntlmpool.NTLMConnectionPool.urlopen:88
 msgid ""
-"Additional parameters are passed to :meth:`urllib3.response.HTTPResponse."
-"from_httplib`"
+"Additional parameters are passed "
+"to :meth:`urllib3.response.HTTPResponse.from_httplib`"
 msgstr ""

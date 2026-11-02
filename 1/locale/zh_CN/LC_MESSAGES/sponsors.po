@@ -63,9 +63,9 @@ msgstr ""
 
 #: ../../../sponsors.rst:29
 msgid ""
-"➤ `Contribute to the \"Silver v2.0 Sponsor\" tier <https://opencollective."
-"com/urllib3/contribute/silver-v2-sponsor-20442/checkout>`_ on Open "
-"Collective."
+"➤ `Contribute to the \"Silver v2.0 Sponsor\" tier <https://"
+"opencollective.com/urllib3/contribute/silver-v2-sponsor-20442/checkout>`_ on "
+"Open Collective."
 msgstr ""
 
 #: ../../../sponsors.rst:34

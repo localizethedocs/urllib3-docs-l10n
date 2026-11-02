@@ -36,9 +36,9 @@ msgstr ""
 
 #: ../../../reference/urllib3.util.rst:11
 msgid ""
-"To aid the limited functionality of the :mod:`http.client` module, :mod:"
-"`urllib3` provides various helper methods which are used with the higher "
-"level components but can also be used independently."
+"To aid the limited functionality of the :mod:`http.client` "
+"module, :mod:`urllib3` provides various helper methods which are used with "
+"the higher level components but can also be used independently."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
@@ -256,9 +256,9 @@ msgstr ""
 msgid ""
 "Set of uppercased HTTP method verbs that we should retry on.  By default, we "
 "only retry on methods which are considered to be idempotent (multiple "
-"requests with the same parameters end with the same state). See :attr:`Retry."
-"DEFAULT_ALLOWED_METHODS`.  Set to a ``False`` value to retry on any "
-"verb.  .. warning::      Previously this parameter was named "
+"requests with the same parameters end with the same state). "
+"See :attr:`Retry.DEFAULT_ALLOWED_METHODS`.  Set to a ``False`` value to "
+"retry on any verb.  .. warning::      Previously this parameter was named "
 "``method_whitelist``, that     usage is deprecated in v1.26.0 and will be "
 "removed in v2.0."
 msgstr ""
@@ -272,8 +272,8 @@ msgstr ""
 #: of urllib3.util.retry.Retry:83
 msgid ""
 "By default, we only retry on methods which are considered to be idempotent "
-"(multiple requests with the same parameters end with the same state). See :"
-"attr:`Retry.DEFAULT_ALLOWED_METHODS`."
+"(multiple requests with the same parameters end with the same state). "
+"See :attr:`Retry.DEFAULT_ALLOWED_METHODS`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
@@ -317,8 +317,9 @@ msgid ""
 "are resolved immediately by a second try without a delay). urllib3 will "
 "sleep for::      {backoff factor} * (2 ** ({number of total retries} - 1))  "
 "seconds. If the backoff_factor is 0.1, then :func:`.sleep` will sleep for "
-"[0.0s, 0.2s, 0.4s, ...] between retries. It will never be longer than :attr:"
-"`Retry.DEFAULT_BACKOFF_MAX`.  By default, backoff is disabled (set to 0)."
+"[0.0s, 0.2s, 0.4s, ...] between retries. It will never be longer "
+"than :attr:`Retry.DEFAULT_BACKOFF_MAX`.  By default, backoff is disabled "
+"(set to 0)."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
@@ -338,8 +339,8 @@ msgstr ""
 #: of urllib3.util.retry.Retry:108
 msgid ""
 "seconds. If the backoff_factor is 0.1, then :func:`.sleep` will sleep for "
-"[0.0s, 0.2s, 0.4s, ...] between retries. It will never be longer than :attr:"
-"`Retry.DEFAULT_BACKOFF_MAX`."
+"[0.0s, 0.2s, 0.4s, ...] between retries. It will never be longer "
+"than :attr:`Retry.DEFAULT_BACKOFF_MAX`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
@@ -365,16 +366,16 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:123
 msgid ""
-"The history of the request encountered during each call to :meth:`~Retry."
-"increment`. The list is in the order the requests occurred. Each list item "
-"is of class :class:`RequestHistory`."
+"The history of the request encountered during each call "
+"to :meth:`~Retry.increment`. The list is in the order the requests occurred. "
+"Each list item is of class :class:`RequestHistory`."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
 #: of urllib3.util.retry.Retry:127
 msgid ""
-"Whether to respect Retry-After header on status codes defined as :attr:"
-"`Retry.RETRY_AFTER_STATUS_CODES` or not."
+"Whether to respect Retry-After header on status codes defined "
+"as :attr:`Retry.RETRY_AFTER_STATUS_CODES` or not."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/retry.py:docstring
@@ -739,9 +740,9 @@ msgstr ""
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
 #: of urllib3.util.url.Url:1
 msgid ""
-"Data structure for representing an HTTP URL. Used as a return value for :"
-"func:`parse_url`. Both the scheme and host are normalized as they are both "
-"case-insensitive according to RFC 3986."
+"Data structure for representing an HTTP URL. Used as a return value "
+"for :func:`parse_url`. Both the scheme and host are normalized as they are "
+"both case-insensitive according to RFC 3986."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
@@ -768,9 +769,9 @@ msgstr ""
 #: of urllib3.util.Url.url:3
 msgid ""
 "This function should more or less round-trip with :func:`.parse_url`. The "
-"returned url may not be exactly the same as the url inputted to :func:`."
-"parse_url`, but it should be equivalent by the RFC (e.g., urls with a blank "
-"port will have : removed)."
+"returned url may not be exactly the same as the url inputted "
+"to :func:`.parse_url`, but it should be equivalent by the RFC (e.g., urls "
+"with a blank port will have : removed)."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/url.py:docstring
@@ -943,12 +944,12 @@ msgstr ""
 #: of urllib3.util.ssl_.resolve_cert_reqs:1
 msgid ""
 "Resolves the argument to a numeric constant, which can be passed to the "
-"wrap_socket function/method from the ssl module. Defaults to :data:`ssl."
-"CERT_REQUIRED`. If given a string it is assumed to be the name of the "
-"constant in the :mod:`ssl` module or its abbreviation. (So you can specify "
-"`REQUIRED` instead of `CERT_REQUIRED`. If it's neither `None` nor a string "
-"we assume it is already the numeric constant which can directly be passed to "
-"wrap_socket."
+"wrap_socket function/method from the ssl module. Defaults "
+"to :data:`ssl.CERT_REQUIRED`. If given a string it is assumed to be the name "
+"of the constant in the :mod:`ssl` module or its abbreviation. (So you can "
+"specify `REQUIRED` instead of `CERT_REQUIRED`. If it's neither `None` nor a "
+"string we assume it is already the numeric constant which can directly be "
+"passed to wrap_socket."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
@@ -1011,8 +1012,8 @@ msgstr ""
 #: of urllib3.util.ssl_.ssl_wrap_socket:11
 msgid ""
 "A directory containing CA certificates in multiple separate files, as "
-"supported by OpenSSL's -CApath flag or the capath argument to SSLContext."
-"load_verify_locations()."
+"supported by OpenSSL's -CApath flag or the capath argument to "
+"SSLContext.load_verify_locations()."
 msgstr ""
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/urllib3/util/__init__.py:docstring
