@@ -16,9 +16,9 @@
       "branch" : "main",
       "commit" : 
       {
-        "date" : "2026-06-06 01:08:21 +0300",
-        "hash" : "e8a81de5e1fe6b52dbcbdd93345560097c1e58fb",
-        "title" : "Strip fragments from absolute request targets (#5079)"
+        "date" : "2026-11-02 10:31:56 +0400",
+        "hash" : "c5347bbd39203d68d7b0e3ffb83ced3e3b4b9109",
+        "title" : "Bump the github-actions group with 10 updates (#5353)"
       }
     },
     "zh_TW" : 
@@ -26,9 +26,9 @@
       "branch" : "main",
       "commit" : 
       {
-        "date" : "2026-06-06 01:08:21 +0300",
-        "hash" : "e8a81de5e1fe6b52dbcbdd93345560097c1e58fb",
-        "title" : "Strip fragments from absolute request targets (#5079)"
+        "date" : "2026-11-02 10:31:56 +0400",
+        "hash" : "c5347bbd39203d68d7b0e3ffb83ced3e3b4b9109",
+        "title" : "Bump the github-actions group with 10 updates (#5353)"
       }
     }
   },
