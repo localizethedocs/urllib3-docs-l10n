@@ -1059,8 +1059,6 @@ msgid ""
 "You still override this pool-level retry policy by specifying ``retries`` "
 "to :meth:`~urllib3.PoolManager.request`."
 msgstr ""
-"您仍然可以透過在 :meth:`~urllib3.PoolManager.request` 中指定 ``retries`` 來覆"
-"蓋此池層級的重試方針。"
 
 #: ../../../user-guide.rst:633
 msgid "Errors & Exceptions"
