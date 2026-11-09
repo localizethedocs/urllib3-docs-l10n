@@ -1173,10 +1173,3 @@ msgstr ""
 #: ../../../user-guide.rst:704
 msgid "logging.getLogger(\"urllib3\").setLevel(logging.WARNING)"
 msgstr "logging.getLogger(\"urllib3\").setLevel(logging.WARNING)"
-
-#~ msgid ""
-#~ "You still override this pool-level retry policy by specifying ``retries`` "
-#~ "to :meth:`~urllib3.PoolManager.request`."
-#~ msgstr ""
-#~ "您仍然可以透過在 :meth:`~urllib3.PoolManager.request` 中指定 ``retries`` "
-#~ "來覆蓋此池層級的重試方針。"
