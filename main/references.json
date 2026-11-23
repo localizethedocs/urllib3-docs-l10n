@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-11-02 10:31:56 +0400",
-      "hash" : "c5347bbd39203d68d7b0e3ffb83ced3e3b4b9109",
-      "title" : "Bump the github-actions group with 10 updates (#5353)"
+      "date" : "2026-11-14 23:45:32 +0200",
+      "hash" : "d9f9b0ad5b99247e06aa9a50b7a5747aa5c2e35d",
+      "title" : "Reject decoding mode switches before consuming response data (#5344)"
     }
   },
   "type" : "branch",
